@@ -1,4 +1,4 @@
-<?php //e6a7bce0fc4fbc3efe885c7033d5b05e
+<?php //b9b63f84d832dd3502f1ca52d4caa790
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\Laravel\Sanctum {
@@ -10,7 +10,7 @@ namespace LaravelIdea\Helper\Laravel\Sanctum {
     use Laravel\Sanctum\PersonalAccessToken;
     use LaravelIdea\Helper\_BaseBuilder;
     use LaravelIdea\Helper\_BaseCollection;
-
+    
     /**
      * @method PersonalAccessToken|null getOrPut($key, $value)
      * @method PersonalAccessToken|$this shift(int $count = 1)
@@ -36,7 +36,7 @@ namespace LaravelIdea\Helper\Laravel\Sanctum {
             return [];
         }
     }
-
+    
     /**
      * @method _IH_PersonalAccessToken_QB whereId($value)
      * @method _IH_PersonalAccessToken_QB whereTokenableId($value)
@@ -45,6 +45,7 @@ namespace LaravelIdea\Helper\Laravel\Sanctum {
      * @method _IH_PersonalAccessToken_QB whereToken($value)
      * @method _IH_PersonalAccessToken_QB whereAbilities($value)
      * @method _IH_PersonalAccessToken_QB whereLastUsedAt($value)
+     * @method _IH_PersonalAccessToken_QB whereExpiresAt($value)
      * @method _IH_PersonalAccessToken_QB whereCreatedAt($value)
      * @method _IH_PersonalAccessToken_QB whereUpdatedAt($value)
      * @method PersonalAccessToken baseSole(array|string $columns = ['*'])

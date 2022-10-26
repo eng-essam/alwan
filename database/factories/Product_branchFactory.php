@@ -13,8 +13,11 @@ class Product_branchFactory extends Factory
     public function definition(): array
     {
         return [
-            'product_branch_name' => $this->faker->name(),
-            'product_branch_img' => $this->faker->word(),
+            'product_branch_name' => json_encode([
+                'en' => $this->faker->word,
+                'ar' => $this->faker->word
+            ]),
+            'product_branch_img' => 'product_branchs/' . 1 . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

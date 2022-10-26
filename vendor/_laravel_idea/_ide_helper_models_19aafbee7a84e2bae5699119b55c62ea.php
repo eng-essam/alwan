@@ -1,4 +1,4 @@
-<?php //31f8c0c851d35817c1656b15798a3da9
+<?php //269d592cc2408e0154d68e27157799e1
 /** @noinspection all */
 
 namespace Laravel\Sanctum {
@@ -8,7 +8,7 @@ namespace Laravel\Sanctum {
     use Illuminate\Support\Carbon;
     use LaravelIdea\Helper\Laravel\Sanctum\_IH_PersonalAccessToken_C;
     use LaravelIdea\Helper\Laravel\Sanctum\_IH_PersonalAccessToken_QB;
-
+    
     /**
      * @property int $id
      * @property int $tokenable_id
@@ -17,6 +17,7 @@ namespace Laravel\Sanctum {
      * @property string $token
      * @property array|null $abilities
      * @property Carbon|null $last_used_at
+     * @property Carbon|null $expires_at
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @property Model $tokenable

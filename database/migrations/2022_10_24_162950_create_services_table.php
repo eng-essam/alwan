@@ -13,9 +13,9 @@ return new class extends Migration {
             $table->foreignId('service_branch_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('service_name');
             $table->string('first_img');
-            $table->string('first_desc');
+            $table->mediumText('first_desc');
             $table->string('second_img');
-            $table->string('second_desc');
+            $table->mediumText('second_desc');
             $table->timestamps();
         });
     }

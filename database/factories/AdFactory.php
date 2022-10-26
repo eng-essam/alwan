@@ -13,8 +13,8 @@ class AdFactory extends Factory
     public function definition(): array
     {
         return [
-            'ad_img' => $this->faker->word(),
-            'ad_url' => $this->faker->url(),
+            'ad_img' => 'ads/' . 1 . '.png',
+            'ad_url' => $this->faker->url,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

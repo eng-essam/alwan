@@ -13,8 +13,11 @@ class Service_branchFactory extends Factory
     public function definition(): array
     {
         return [
-            'service_branch_img' => $this->faker->word(),
-            'service_branch_name' => $this->faker->name(),
+            'service_branch_name' => json_encode([
+                'en' => $this->faker->word,
+                'ar' => $this->faker->word
+            ]),
+            'service_branch_img' => 'service_branchs/' . 1 . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

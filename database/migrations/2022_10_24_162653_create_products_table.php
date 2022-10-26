@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->foreignId('product_branch_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('product_name');
             $table->string('product_img');
-            $table->tinyText('product_desc');
+            $table->mediumText('product_desc');
             $table->tinyText('Product_quantities');
             $table->float('Product_price');
             $table->timestamps();

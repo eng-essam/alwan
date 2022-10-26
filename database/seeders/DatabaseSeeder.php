@@ -3,6 +3,14 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Ad;
+use App\Models\Company_branch;
+use App\Models\Notification;
+use App\Models\Product;
+use App\Models\Product_branch;
+use App\Models\Service;
+use App\Models\Service_branch;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +22,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        //User::factory(10)->create();
+        //Product_branch::factory(5)->create();
+        //Service_branch::factory(5)->create();
+        //Service::factory(5)->create();
+        //Product::factory(5)->create();
+        Notification::factory(5)->create();
+        Ad::factory(5)->create();
     }
 }

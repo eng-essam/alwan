@@ -1,4 +1,4 @@
-<?php //779f1bad00d9ccf5356d6851f3302ef7
+<?php //d7ba8fe2a184412542b90f298c71592d
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\Illuminate\Notifications {
@@ -11,7 +11,7 @@ namespace LaravelIdea\Helper\Illuminate\Notifications {
     use Illuminate\Pagination\Paginator;
     use LaravelIdea\Helper\_BaseBuilder;
     use LaravelIdea\Helper\_BaseCollection;
-
+    
     /**
      * @method DatabaseNotification|null getOrPut($key, $value)
      * @method DatabaseNotification|$this shift(int $count = 1)
@@ -38,8 +38,14 @@ namespace LaravelIdea\Helper\Illuminate\Notifications {
             return [];
         }
     }
-
+    
     /**
+     * @method _IH_DatabaseNotification_QB whereId($value)
+     * @method _IH_DatabaseNotification_QB whereUserId($value)
+     * @method _IH_DatabaseNotification_QB whereNotificationText($value)
+     * @method _IH_DatabaseNotification_QB whereNotificationImg($value)
+     * @method _IH_DatabaseNotification_QB whereCreatedAt($value)
+     * @method _IH_DatabaseNotification_QB whereUpdatedAt($value)
      * @method DatabaseNotification baseSole(array|string $columns = ['*'])
      * @method DatabaseNotification create(array $attributes = [])
      * @method _IH_DatabaseNotification_C|DatabaseNotification[] cursor()

@@ -13,8 +13,14 @@ class Company_branchFactory extends Factory
     public function definition(): array
     {
         return [
-            'company_name' => $this->faker->name(),
-            'company_address' => $this->faker->address(),
+            'company_name' => json_encode([
+                'en' => $this->faker->name(),
+                'ar' =>$this->faker->name()
+            ]),
+            'company_address' =>json_encode([
+                'en' => $this->faker->address(),
+                'ar' => $this->faker->address(),
+            ]),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

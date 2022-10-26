@@ -14,12 +14,14 @@ class NotificationFactory extends Factory
     public function definition(): array
     {
         return [
-            'notification_img' => $this->faker->word(),
-            'notification_url' => $this->faker->url(),
+            'notification_img' => 'notifications/' . 1 . '.png',
+            'notification_text' => json_encode([
+                'en' => $this->faker->text,
+                'ar' => $this->faker->text
+            ]),
+            'user_id' => User::inRandomOrder()->first()->id,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
-
-            'user_id' => User::factory(),
         ];
     }
 }

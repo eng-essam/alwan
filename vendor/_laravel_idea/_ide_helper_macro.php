@@ -1,8 +1,8 @@
-<?php //1b86f5fd64dff08c1adda5f760401108
+<?php //bc7a0ea14e8b8eb0ed196c7b8aaf1f12
 /** @noinspection all */
 
 namespace Illuminate\Database\Eloquent {
-
+    
     /**
      * @method $this onlyTrashed()
      * @method int restore()
@@ -13,7 +13,7 @@ namespace Illuminate\Database\Eloquent {
 }
 
 namespace Illuminate\Http {
-
+    
     /**
      * @method bool hasValidRelativeSignature()
      * @method bool hasValidSignature($absolute = true)
@@ -22,4 +22,15 @@ namespace Illuminate\Http {
      * @method array validateWithBag(string $errorBag, array $rules, ...$params)
      */
     class Request {}
+}
+
+namespace Illuminate\Support\Facades {
+    
+    /**
+     * @method void auth($options = [])
+     * @method void confirmPassword()
+     * @method void emailVerification()
+     * @method void resetPassword()
+     */
+    class Route {}
 }

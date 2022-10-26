@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Company_branch;
 use App\Models\Service;
 use App\Models\Service_branch;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -14,16 +15,24 @@ class ServiceFactory extends Factory
     public function definition(): array
     {
         return [
-            'company_branch_id' => $this->faker->randomNumber(),
-            'service_name' => $this->faker->name(),
-            'first_img' => $this->faker->word(),
-            'first_desc' => $this->faker->word(),
-            'second_img' => $this->faker->word(),
-            'second_desc' => $this->faker->word(),
+            'company_branch_id' => Company_branch::inRandomOrder()->first()->id,
+            'service_branch_id' => Service_branch::inRandomOrder()->first()->id,
+            'service_name' => json_encode([
+                'en' => $this->faker->word,
+                'ar' => $this->faker->word
+            ]),
+            'first_img' => 'services/' . 1 .'.png',
+            'first_desc' => json_encode([
+                'en' => $this->faker->text,
+                'ar' => $this->faker->text
+            ]),
+            'second_img' => 'services/' . 2 .'.png',
+            'second_desc' => json_encode([
+                'en' => $this->faker->text,
+                'ar' => $this->faker->text
+            ]),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
-
-            'service_branch_id' => Service_branch::factory(),
         ];
     }
 }
