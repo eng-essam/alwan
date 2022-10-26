@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('test', function () {
+
+});
+
+Route::get('/logout/page', function () {
+    Auth::logout();
+    return Redirect(url('login'));
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,4 +27,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('superAdmin')->middleware(['auth', 'userAccess:superAdmin'])->group(function () {
+    Route::get('/home', [HomeController::class, 'superAdminHome']);
+});
+
+
+Route::prefix('admin')->middleware(['auth', 'userAccess:admin'])->group(function () {
+    Route::get('/home', [HomeController::class, 'adminHome']);
+});
+
+Route::middleware(['auth', 'userAccess:user'])->group(function () {
+    Route::get('/home', [HomeController::class, 'userHome']);
+});
+
+
+
+
