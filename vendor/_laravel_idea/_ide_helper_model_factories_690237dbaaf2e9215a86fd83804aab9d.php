@@ -1,4 +1,4 @@
-<?php //4f858ec7a24f2e56c1e972cf3305bb9f
+<?php //5be8f91d0076706b4f75a5196a298689
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -23,7 +23,7 @@ namespace Database\Factories {
     class NotificationFactory extends Factory {}
     
     /**
-     * @method $this forCompany($attributes = [])
+     * @method $this forCompany_branch($attributes = [])
      * @method $this forProduct_branch($attributes = [])
      * @method $this hasUsers(int $count = 1, $attributes = [])
      */
@@ -35,7 +35,7 @@ namespace Database\Factories {
     class Product_branchFactory extends Factory {}
     
     /**
-     * @method $this forCompany($attributes = [])
+     * @method $this forCompany_branch($attributes = [])
      * @method $this forService_branch($attributes = [])
      * @method $this hasUsers(int $count = 1, $attributes = [])
      */

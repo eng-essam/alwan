@@ -1,4 +1,4 @@
-<?php //d7ba8fe2a184412542b90f298c71592d
+<?php //89f1e522d63e026d4d332e6a33536a2d
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\Illuminate\Notifications {
@@ -44,6 +44,7 @@ namespace LaravelIdea\Helper\Illuminate\Notifications {
      * @method _IH_DatabaseNotification_QB whereUserId($value)
      * @method _IH_DatabaseNotification_QB whereNotificationText($value)
      * @method _IH_DatabaseNotification_QB whereNotificationImg($value)
+     * @method _IH_DatabaseNotification_QB whereReadNotification($value)
      * @method _IH_DatabaseNotification_QB whereCreatedAt($value)
      * @method _IH_DatabaseNotification_QB whereUpdatedAt($value)
      * @method DatabaseNotification baseSole(array|string $columns = ['*'])

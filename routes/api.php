@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['lang','password'])->get('/test', function (Request $request) {
+
+    $products=\App\Models\Product::get();
+    return \App\Http\Resources\ProductResource::collection($products);
+
 });
+

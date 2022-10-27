@@ -5,6 +5,8 @@ namespace Database\Factories;
 use App\Models\Product_branch;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
+use Laravolt\Avatar\Facade as Avatar;
 
 class Product_branchFactory extends Factory
 {
@@ -12,12 +14,16 @@ class Product_branchFactory extends Factory
 
     public function definition(): array
     {
+
+        $ImgID = Str::random(30);
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/product_branchs/' . $ImgID . '.png'));
+
         return [
             'product_branch_name' => json_encode([
                 'en' => $this->faker->word,
                 'ar' => $this->faker->word
             ]),
-            'product_branch_img' => 'product_branchs/' . 1 . '.png',
+            'product_branch_img' => 'product_branchs/' . $ImgID . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

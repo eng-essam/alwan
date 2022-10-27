@@ -6,7 +6,7 @@ use App\Models\Company_branch;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-
+use Laravolt\Avatar\Facade as Avatar;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
@@ -19,10 +19,12 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        $i=1;
+        $ImgID =Str::random(30);
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/user_imgs/' . $ImgID . '.png'));
+
         return [
             'name' => $this->faker->name(),
-            'img' => 'user_imgs/user.png',
+            'img' => "user_imgs/$ImgID.png",
             'email' => $this->faker->unique()->safeEmail(),
             'password' => Hash::make(12345678),
             'phone' => $this->faker->phoneNumber(),
@@ -32,7 +34,7 @@ class UserFactory extends Factory
             'company_branch_id' => Company_branch::inRandomOrder()->first()->id,
             'email_verified_at' => now(),
         ];
-        $i++;
+
     }
 
     /**

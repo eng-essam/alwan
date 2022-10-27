@@ -1,4 +1,4 @@
-<?php //e8a35040d4875c2adfb19b0a1a12439b
+<?php //6c91dc39b15d11bb35e5857554dad151
 /** @noinspection all */
 
 namespace App\Models {
@@ -96,6 +96,7 @@ namespace App\Models {
      * @property int $user_id
      * @property string $notification_text
      * @property string $notification_img
+     * @property string $read_notification
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @property User $user
@@ -125,8 +126,8 @@ namespace App\Models {
      * @property float $Product_price
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
-     * @property Company_branch $company
-     * @method BelongsTo|_IH_Company_branch_QB company()
+     * @property Company_branch $company_branch
+     * @method BelongsTo|_IH_Company_branch_QB company_branch()
      * @property Product_branch $product_branch
      * @method BelongsTo|_IH_Product_branch_QB product_branch()
      * @property _IH_User_C|User[] $users
@@ -199,14 +200,13 @@ namespace App\Models {
      * @property int $company_branch_id
      * @property int $service_branch_id
      * @property string $service_name
-     * @property string $first_img
-     * @property string $first_desc
-     * @property string $second_img
-     * @property string $second_desc
+     * @property string $main_img
+     * @property string $service_desc
+     * @property string $sub_img
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
-     * @property Company_branch $company
-     * @method BelongsTo|_IH_Company_branch_QB company()
+     * @property Company_branch $company_branch
+     * @method BelongsTo|_IH_Company_branch_QB company_branch()
      * @property Service_branch $service_branch
      * @method BelongsTo|_IH_Service_branch_QB service_branch()
      * @property _IH_User_C|User[] $users

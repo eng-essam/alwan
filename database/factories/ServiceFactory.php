@@ -7,6 +7,8 @@ use App\Models\Service;
 use App\Models\Service_branch;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
+use Laravolt\Avatar\Facade as Avatar;
 
 class ServiceFactory extends Factory
 {
@@ -14,6 +16,11 @@ class ServiceFactory extends Factory
 
     public function definition(): array
     {
+        $ImgID1 =Str::random(30);
+        $ImgID2 =Str::random(30);
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/services/' . $ImgID1 . '.png'));
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/services/' . $ImgID2 . '.png'));
+
         return [
             'company_branch_id' => Company_branch::inRandomOrder()->first()->id,
             'service_branch_id' => Service_branch::inRandomOrder()->first()->id,
@@ -21,16 +28,12 @@ class ServiceFactory extends Factory
                 'en' => $this->faker->word,
                 'ar' => $this->faker->word
             ]),
-            'first_img' => 'services/' . 1 .'.png',
-            'first_desc' => json_encode([
+            'main_img' => 'services/' . $ImgID1 . '.png',
+            'service_desc' => json_encode([
                 'en' => $this->faker->text,
                 'ar' => $this->faker->text
             ]),
-            'second_img' => 'services/' . 2 .'.png',
-            'second_desc' => json_encode([
-                'en' => $this->faker->text,
-                'ar' => $this->faker->text
-            ]),
+            'sub_img' => 'services/' . $ImgID2 . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

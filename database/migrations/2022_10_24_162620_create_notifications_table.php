@@ -12,6 +12,7 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->mediumText('notification_text');
             $table->string('notification_img');
+            $table->enum('read_notification',['0','1']);
             $table->timestamps();
         });
     }

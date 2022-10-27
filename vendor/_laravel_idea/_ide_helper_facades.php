@@ -1,4 +1,4 @@
-<?php //1ae37ad0b15beb202d44d265061bd9ce
+<?php //8cbc4535c052f274cf99171f46cd3b41
 /** @noinspection all */
 
 namespace Illuminate\Support\Facades {
@@ -2616,6 +2616,7 @@ namespace {
     class Arr extends Illuminate\Support\Arr {}
     class Artisan extends Illuminate\Support\Facades\Artisan {}
     class Auth extends Illuminate\Support\Facades\Auth {}
+    class Avatar extends Laravolt\Avatar\Facade {}
     class Blade extends Illuminate\Support\Facades\Blade {}
     class Broadcast extends Illuminate\Support\Facades\Broadcast {}
     class Bus extends Illuminate\Support\Facades\Bus {}
@@ -2632,6 +2633,7 @@ namespace {
     class Gate extends Illuminate\Support\Facades\Gate {}
     class Hash extends Illuminate\Support\Facades\Hash {}
     class Http extends Illuminate\Support\Facades\Http {}
+    class Image extends Intervention\Image\Facades\Image {}
     class Js extends Illuminate\Support\Js {}
     class Lang extends Illuminate\Support\Facades\Lang {}
     class Log extends Illuminate\Support\Facades\Log {}

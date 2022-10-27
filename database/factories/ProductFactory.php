@@ -7,6 +7,9 @@ use App\Models\Product;
 use App\Models\Product_branch;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
+use Laravolt\Avatar\Facade as Avatar;
+
 
 class ProductFactory extends Factory
 {
@@ -14,6 +17,9 @@ class ProductFactory extends Factory
 
     public function definition(): array
     {
+        $ImgID =Str::random(30)  ;
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/products/' . $ImgID . '.png'));
+
         return [
             'company_branch_id' => Company_branch::inRandomOrder()->first()->id,
             'product_branch_id' => Product_branch::inRandomOrder()->first()->id,
@@ -21,7 +27,7 @@ class ProductFactory extends Factory
                 'en' => $this->faker->name(),
                 'ar' => $this->faker->name()
             ]) ,
-            'product_img' => 'products/' . 1 . '.png',
+            'product_img' => 'products/' . $ImgID . '.png',
             'product_desc' => json_encode([
                 'en' => $this->faker->text(),
                 'ar' => $this->faker->text()

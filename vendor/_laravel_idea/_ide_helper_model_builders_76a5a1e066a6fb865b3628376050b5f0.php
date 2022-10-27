@@ -1,4 +1,4 @@
-<?php //9a3fa532c2ba5b36b40b82971589b2ac
+<?php //4f895b8383537833eef84eca5709cb53
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -172,6 +172,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Notification_QB whereUserId($value)
      * @method _IH_Notification_QB whereNotificationText($value)
      * @method _IH_Notification_QB whereNotificationImg($value)
+     * @method _IH_Notification_QB whereReadNotification($value)
      * @method _IH_Notification_QB whereCreatedAt($value)
      * @method _IH_Notification_QB whereUpdatedAt($value)
      * @method Notification baseSole(array|string $columns = ['*'])
@@ -420,10 +421,9 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Service_QB whereCompanyBranchId($value)
      * @method _IH_Service_QB whereServiceBranchId($value)
      * @method _IH_Service_QB whereServiceName($value)
-     * @method _IH_Service_QB whereFirstImg($value)
-     * @method _IH_Service_QB whereFirstDesc($value)
-     * @method _IH_Service_QB whereSecondImg($value)
-     * @method _IH_Service_QB whereSecondDesc($value)
+     * @method _IH_Service_QB whereMainImg($value)
+     * @method _IH_Service_QB whereServiceDesc($value)
+     * @method _IH_Service_QB whereSubImg($value)
      * @method _IH_Service_QB whereCreatedAt($value)
      * @method _IH_Service_QB whereUpdatedAt($value)
      * @method Service baseSole(array|string $columns = ['*'])

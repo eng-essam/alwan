@@ -5,6 +5,8 @@ namespace Database\Factories;
 use App\Models\Service_branch;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
+use Laravolt\Avatar\Facade as Avatar;
 
 class Service_branchFactory extends Factory
 {
@@ -12,12 +14,14 @@ class Service_branchFactory extends Factory
 
     public function definition(): array
     {
+        $ImgID =Str::random(30);
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/service_branchs/' . $ImgID . '.png'));
         return [
             'service_branch_name' => json_encode([
                 'en' => $this->faker->word,
                 'ar' => $this->faker->word
             ]),
-            'service_branch_img' => 'service_branchs/' . 1 . '.png',
+            'service_branch_img' => 'service_branchs/' . $ImgID . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
