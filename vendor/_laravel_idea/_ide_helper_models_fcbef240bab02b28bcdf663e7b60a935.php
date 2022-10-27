@@ -1,4 +1,4 @@
-<?php //6c91dc39b15d11bb35e5857554dad151
+<?php //44ac4aec394105b8bf529b48d6eb61f6
 /** @noinspection all */
 
 namespace App\Models {
@@ -96,7 +96,7 @@ namespace App\Models {
      * @property int $user_id
      * @property string $notification_text
      * @property string $notification_img
-     * @property string $read_notification
+     * @property bool $read_notification
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @property User $user

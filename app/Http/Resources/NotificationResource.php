@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\App;
 
-/** @mixin \App\Models\Product_branch */
-class Product_branchResource extends JsonResource
+/** @mixin \App\Models\Notification */
+class NotificationResource extends JsonResource
 {
     /**
      * @param Request $request
@@ -18,8 +18,9 @@ class Product_branchResource extends JsonResource
         $lang = App::getLocale();
         return [
             'id' => $this->id,
-            'product_branch_name' => $this->product_branch_name($lang),
-            'product_branch_img' => asset("uploads/$this->product_branch_img") ,
+            'notification_text' => $this->notification_text($lang),
+            'notification_img' => asset("uploads/$this->notification_img") ,
+            'created_at' => $this->created_at,
         ];
     }
 }
