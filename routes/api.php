@@ -2,19 +2,33 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\AuthController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::middleware(['lang'])->group(callback: function () {
 
-Route::middleware(['auth:sanctum','lang'])->get('/test', function (Request $request) {
-    $products=\App\Models\Product::get();
-    return \App\Http\Resources\ProductResource::collection($products);
+    Route::post('/register', [AuthController::class, 'register']); //register
+
+    Route::post('verify/email/code', [AuthController::class, 'verifyEmailCodeCorrect']); //verify Email Code Correct
+
+    Route::post('send/code/reset/password', [AuthController::class, 'sendCodeResetPassword']); //sendCodeResetPassword
+
+    Route::post('verify/password/code', [AuthController::class, 'verifyPasswordCodeCorrect']); //verify Password Code Correct
+
+    Route::post('reset/password', [AuthController::class, 'resetPassword']); //resetPassword
+
+
+    Route::post('login', [AuthController::class, 'login']); //login
+
+    Route::post('resend/code', [AuthController::class, 'resendCode']); //resend Code
+
+
+
+
+
+    Route::middleware(['auth:sanctum', 'verified'])->group(callback: function () {
+
+    });
+
 });
+
+

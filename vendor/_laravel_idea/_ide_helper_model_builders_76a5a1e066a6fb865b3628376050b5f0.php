@@ -1,10 +1,11 @@
-<?php //4f895b8383537833eef84eca5709cb53
+<?php //cdf374ea623a765dd6711ba0c986e873
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
 
     use App\Models\Ad;
     use App\Models\Company_branch;
+    use App\Models\Email_code;
     use App\Models\Notification;
     use App\Models\Product;
     use App\Models\Product_branch;
@@ -140,6 +141,67 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Company_branch updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_Company_branch_QB extends _BaseBuilder {}
+    
+    /**
+     * @method Email_code|null getOrPut($key, $value)
+     * @method Email_code|$this shift(int $count = 1)
+     * @method Email_code|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Email_code|$this pop(int $count = 1)
+     * @method Email_code|null pull($key, $default = null)
+     * @method Email_code|null last(callable $callback = null, $default = null)
+     * @method Email_code|$this random($number = null)
+     * @method Email_code|null sole($key = null, $operator = null, $value = null)
+     * @method Email_code|null get($key, $default = null)
+     * @method Email_code|null first(callable $callback = null, $default = null)
+     * @method Email_code|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method Email_code|null find($key, $default = null)
+     * @method Email_code[] all()
+     */
+    class _IH_Email_code_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return Email_code[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_Email_code_QB whereId($value)
+     * @method _IH_Email_code_QB whereEmail($value)
+     * @method _IH_Email_code_QB whereCode($value)
+     * @method _IH_Email_code_QB whereCreatedAt($value)
+     * @method _IH_Email_code_QB whereUpdatedAt($value)
+     * @method Email_code baseSole(array|string $columns = ['*'])
+     * @method Email_code create(array $attributes = [])
+     * @method _IH_Email_code_C|Email_code[] cursor()
+     * @method Email_code|null|_IH_Email_code_C|Email_code[] find($id, array|string $columns = ['*'])
+     * @method _IH_Email_code_C|Email_code[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method Email_code|_IH_Email_code_C|Email_code[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Email_code|_IH_Email_code_C|Email_code[] findOrFail($id, array|string $columns = ['*'])
+     * @method Email_code|_IH_Email_code_C|Email_code[] findOrNew($id, array|string $columns = ['*'])
+     * @method Email_code first(array|string $columns = ['*'])
+     * @method Email_code firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Email_code firstOrCreate(array $attributes = [], array $values = [])
+     * @method Email_code firstOrFail(array|string $columns = ['*'])
+     * @method Email_code firstOrNew(array $attributes = [], array $values = [])
+     * @method Email_code firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Email_code forceCreate(array $attributes)
+     * @method _IH_Email_code_C|Email_code[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_Email_code_C|Email_code[] get(array|string $columns = ['*'])
+     * @method Email_code getModel()
+     * @method Email_code[] getModels(array|string $columns = ['*'])
+     * @method _IH_Email_code_C|Email_code[] hydrate(array $items)
+     * @method Email_code make(array $attributes = [])
+     * @method Email_code newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|Email_code[]|_IH_Email_code_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|Email_code[]|_IH_Email_code_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Email_code sole(array|string $columns = ['*'])
+     * @method Email_code updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_Email_code_QB extends _BaseBuilder {}
     
     /**
      * @method Notification|null getOrPut($key, $value)
@@ -551,6 +613,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_User_QB whereEmail($value)
      * @method _IH_User_QB wherePhonekey($value)
      * @method _IH_User_QB wherePhone($value)
+     * @method _IH_User_QB whereFullphone($value)
      * @method _IH_User_QB whereEmailVerifiedAt($value)
      * @method _IH_User_QB wherePassword($value)
      * @method _IH_User_QB whereRememberToken($value)

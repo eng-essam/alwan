@@ -1,4 +1,4 @@
-<?php //050ed5bd093691f6c76d3f3b3763fab2
+<?php //8cbc4535c052f274cf99171f46cd3b41
 /** @noinspection all */
 
 namespace Illuminate\Support\Facades {
@@ -1467,7 +1467,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Http\Request::hasValidSignatureWhileIgnoring
      * @method static bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
      * @see \Illuminate\Http\Request::validateWithBag
-     * @method static void validateWithBag(string $errorBag, array $rules, ...$params)
+     * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
      * @see \Illuminate\Http\Request::hasValidRelativeSignature
      * @method static bool hasValidRelativeSignature()
      * @see \Illuminate\Http\Request::validate

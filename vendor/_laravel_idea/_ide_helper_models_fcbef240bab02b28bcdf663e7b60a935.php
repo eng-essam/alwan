@@ -1,4 +1,4 @@
-<?php //44ac4aec394105b8bf529b48d6eb61f6
+<?php //d7df51660b4c27335edd625c7a271c8d
 /** @noinspection all */
 
 namespace App\Models {
@@ -22,6 +22,8 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_Ad_QB;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_C;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_QB;
+    use LaravelIdea\Helper\App\Models\_IH_Email_code_C;
+    use LaravelIdea\Helper\App\Models\_IH_Email_code_QB;
     use LaravelIdea\Helper\App\Models\_IH_Notification_C;
     use LaravelIdea\Helper\App\Models\_IH_Notification_QB;
     use LaravelIdea\Helper\App\Models\_IH_Product_branch_C;
@@ -90,6 +92,25 @@ namespace App\Models {
      * @method static Company_branchFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
     class Company_branch extends Model {}
+    
+    /**
+     * @property int $id
+     * @property string $email
+     * @property string $code
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @method static _IH_Email_code_QB onWriteConnection()
+     * @method _IH_Email_code_QB newQuery()
+     * @method static _IH_Email_code_QB on(null|string $connection = null)
+     * @method static _IH_Email_code_QB query()
+     * @method static _IH_Email_code_QB with(array|string $relations)
+     * @method _IH_Email_code_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_Email_code_C|Email_code[] all()
+     * @mixin _IH_Email_code_QB
+     */
+    class Email_code extends Model {}
     
     /**
      * @property int $id
@@ -261,6 +282,7 @@ namespace App\Models {
      * @property string $email
      * @property string|null $phoneKey
      * @property string|null $phone
+     * @property string|null $fullPhone
      * @property Carbon|null $email_verified_at
      * @property string $password
      * @property string|null $remember_token
