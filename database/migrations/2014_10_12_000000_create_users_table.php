@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('img');
             $table->foreignId('role_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('company_branch_id')->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('email')->unique();
@@ -24,8 +23,9 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('fullPhone')->nullable();
             $table->tinyText('address')->nullable();
+            $table->string('img')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

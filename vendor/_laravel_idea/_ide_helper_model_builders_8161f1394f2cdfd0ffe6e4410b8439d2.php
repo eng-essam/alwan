@@ -1,4 +1,4 @@
-<?php //b9b63f84d832dd3502f1ca52d4caa790
+<?php //43280c4a57123ac6ea1bbf2dfbd3beb2
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\Laravel\Sanctum {
@@ -25,6 +25,34 @@ namespace LaravelIdea\Helper\Laravel\Sanctum {
      * @method PersonalAccessToken|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method PersonalAccessToken|null find($key, $default = null)
      * @method PersonalAccessToken[] all()
+     * @property-read _IH_PersonalAccessToken_CP $keyBy
+     * @property-read _IH_PersonalAccessToken_CP $partition
+     * @property-read _IH_PersonalAccessToken_CP $max
+     * @property-read _IH_PersonalAccessToken_CP $doesntContain
+     * @property-read _IH_PersonalAccessToken_CP $flatMap
+     * @property-read _IH_PersonalAccessToken_CP $each
+     * @property-read _IH_PersonalAccessToken_CP $map
+     * @property-read _IH_PersonalAccessToken_CP $filter
+     * @property-read _IH_PersonalAccessToken_CP $unique
+     * @property-read _IH_PersonalAccessToken_CP $groupBy
+     * @property-read _IH_PersonalAccessToken_CP $sortBy
+     * @property-read _IH_PersonalAccessToken_CP $contains
+     * @property-read _IH_PersonalAccessToken_CP $sum
+     * @property-read _IH_PersonalAccessToken_CP $until
+     * @property-read _IH_PersonalAccessToken_CP $every
+     * @property-read _IH_PersonalAccessToken_CP $average
+     * @property-read _IH_PersonalAccessToken_CP $when
+     * @property-read _IH_PersonalAccessToken_CP $some
+     * @property-read _IH_PersonalAccessToken_CP $skipWhile
+     * @property-read _IH_PersonalAccessToken_CP $sortByDesc
+     * @property-read _IH_PersonalAccessToken_CP $unless
+     * @property-read _IH_PersonalAccessToken_CP $takeUntil
+     * @property-read _IH_PersonalAccessToken_CP $avg
+     * @property-read _IH_PersonalAccessToken_CP $skipUntil
+     * @property-read _IH_PersonalAccessToken_CP $first
+     * @property-read _IH_PersonalAccessToken_CP $takeWhile
+     * @property-read _IH_PersonalAccessToken_CP $min
+     * @property-read _IH_PersonalAccessToken_CP $reject
      */
     class _IH_PersonalAccessToken_C extends _BaseCollection {
         /**

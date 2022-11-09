@@ -1,4 +1,4 @@
-<?php //d7df51660b4c27335edd625c7a271c8d
+<?php //cb4aa9caa8e6c469e148b7a041ed6a75
 /** @noinspection all */
 
 namespace App\Models {
@@ -143,6 +143,7 @@ namespace App\Models {
      * @property int $product_branch_id
      * @property string $product_name
      * @property string $product_img
+     * @property bool $is_offer
      * @property string $product_desc
      * @property float $Product_price
      * @property Carbon|null $created_at
@@ -221,8 +222,10 @@ namespace App\Models {
      * @property int $company_branch_id
      * @property int $service_branch_id
      * @property string $service_name
+     * @property bool $is_offer
      * @property string $main_img
-     * @property string $service_desc
+     * @property string $service_first_desc
+     * @property string $service_second_desc
      * @property string $sub_img
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
@@ -276,15 +279,15 @@ namespace App\Models {
     /**
      * @property int $id
      * @property string $name
-     * @property string $img
      * @property int $role_id
      * @property int|null $company_branch_id
      * @property string $email
      * @property string|null $phoneKey
      * @property string|null $phone
      * @property string|null $fullPhone
+     * @property string|null $img
      * @property Carbon|null $email_verified_at
-     * @property string $password
+     * @property string|null $password
      * @property string|null $remember_token
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at

@@ -10,28 +10,33 @@ class Product extends Model
 {
     use HasFactory;
 
-    public $guarded = ['id' , 'created_at' , 'updated_at'];
+    public $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function product_name($lang = null){
-        $lang =$lang ?? App::getLocale();
+    public function product_name($lang = null)
+    {
+        $lang = $lang ?? App::getLocale();
         return json_decode($this->product_name)->$lang;
     }
 
-    public function product_desc($lang = null){
-        $lang =$lang ?? App::getLocale();
+    public function product_desc($lang = null)
+    {
+        $lang = $lang ?? App::getLocale();
         return json_decode($this->product_desc)->$lang;
     }
 
-    public function company_branch(){
+    public function company_branch()
+    {
         return $this->belongsTo(Company_branch::class);
     }
 
-    public function product_branch(){
+    public function product_branch()
+    {
         return $this->belongsTo(Product_branch::class);
     }
 
-    public function users(){
-        return $this->belongsToMany(User::class,'product_user')
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'product_user')
             ->withTimestamps()->withPivot(['status']);
     }
 }

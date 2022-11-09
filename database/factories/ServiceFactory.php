@@ -29,11 +29,16 @@ class ServiceFactory extends Factory
                 'ar' => $this->faker->word
             ]),
             'main_img' => 'services/' . $ImgID1 . '.png',
-            'service_desc' => json_encode([
+            'service_first_desc' => json_encode([
+                'en' => $this->faker->text,
+                'ar' => $this->faker->text
+            ]),
+            'service_second_desc' => json_encode([
                 'en' => $this->faker->text,
                 'ar' => $this->faker->text
             ]),
             'sub_img' => 'services/' . $ImgID2 . '.png',
+            'is_offer' => 0,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

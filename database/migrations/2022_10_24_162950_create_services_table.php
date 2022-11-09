@@ -12,8 +12,10 @@ return new class extends Migration {
             $table->foreignId('company_branch_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('service_branch_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('service_name');
+            $table->boolean('is_offer')->default(0);
             $table->string('main_img');
-            $table->mediumText('service_desc');
+            $table->mediumText('service_first_desc');
+            $table->mediumText('service_second_desc');
             $table->string('sub_img');
             $table->timestamps();
         });

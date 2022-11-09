@@ -34,6 +34,7 @@ class ProductFactory extends Factory
             ]) ,
             'Product_price' => $this->faker->randomFloat(),
             'Product_quantities' => '100 , 200 , 300',
+            'is_offer' => 0,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

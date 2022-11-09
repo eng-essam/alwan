@@ -10,14 +10,16 @@ class Product_branch extends Model
 {
     use HasFactory;
 
-    public $guarded = ['id' , 'created_at' , 'updated_at'];
+    public $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function product_branch_name($lang = null){
-        $lang =$lang ?? App::getLocale();
+    public function product_branch_name($lang = null)
+    {
+        $lang = $lang ?? App::getLocale();
         return json_decode($this->product_branch_name)->$lang;
     }
 
-    public function products(){
+    public function products()
+    {
         return $this->hasMany(Product::class);
     }
 }

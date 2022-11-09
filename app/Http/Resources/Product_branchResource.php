@@ -18,8 +18,9 @@ class Product_branchResource extends JsonResource
         $lang = App::getLocale();
         return [
             'id' => $this->id,
-            'product_branch_name' => $this->product_branch_name($lang),
-            'product_branch_img' => asset("uploads/$this->product_branch_img") ,
+            'MainProductName' => $this->product_branch_name($lang),
+            'MainProductImg' => asset("uploads/$this->product_branch_img"),
+            'numberOfProduct' => $this->products()->count(),
         ];
     }
 }

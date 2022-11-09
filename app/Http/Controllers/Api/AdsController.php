@@ -3,37 +3,17 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AdResource;
 use App\Models\Ad;
-use Illuminate\Http\Request;
+use App\Traits\ReturnJson;
 
 class AdsController extends Controller
 {
-    public function index()
-    {
+    use ReturnJson;
 
+    public function allAds()
+    {
+        return $this->requestSuccess(null, AdResource::collection(Ad::get()));
     }
 
-    public function create()
-    {
-    }
-
-    public function store(Request $request)
-    {
-    }
-
-    public function show(Ad $ad)
-    {
-    }
-
-    public function edit(Ad $ad)
-    {
-    }
-
-    public function update(Request $request, Ad $ad)
-    {
-    }
-
-    public function destroy(Ad $ad)
-    {
-    }
 }

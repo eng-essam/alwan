@@ -19,8 +19,9 @@ class Service_branchResource extends JsonResource
         $lang = App::getLocale();
         return [
             'id' => $this->id,
-            'service_branch_name' => $this->service_branch_name($lang),
-            'service_branch_img' => asset("uploads/$this->service_branch_img"),
+            'mainServiceName' => $this->service_branch_name($lang),
+            'mainServiceImg' => asset("uploads/$this->service_branch_img"),
+            'numberSubService' => $this->services()->count(),
         ];
     }
 }

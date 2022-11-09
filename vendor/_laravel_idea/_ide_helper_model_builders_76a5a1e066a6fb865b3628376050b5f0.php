@@ -1,4 +1,4 @@
-<?php //cdf374ea623a765dd6711ba0c986e873
+<?php //833aede8530b651ed0ea4355353da4ba
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -34,6 +34,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Ad|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Ad|null find($key, $default = null)
      * @method Ad[] all()
+     * @property-read _IH_Ad_CP $keyBy
+     * @property-read _IH_Ad_CP $partition
+     * @property-read _IH_Ad_CP $max
+     * @property-read _IH_Ad_CP $doesntContain
+     * @property-read _IH_Ad_CP $flatMap
+     * @property-read _IH_Ad_CP $each
+     * @property-read _IH_Ad_CP $map
+     * @property-read _IH_Ad_CP $filter
+     * @property-read _IH_Ad_CP $unique
+     * @property-read _IH_Ad_CP $groupBy
+     * @property-read _IH_Ad_CP $sortBy
+     * @property-read _IH_Ad_CP $contains
+     * @property-read _IH_Ad_CP $sum
+     * @property-read _IH_Ad_CP $until
+     * @property-read _IH_Ad_CP $every
+     * @property-read _IH_Ad_CP $average
+     * @property-read _IH_Ad_CP $when
+     * @property-read _IH_Ad_CP $some
+     * @property-read _IH_Ad_CP $skipWhile
+     * @property-read _IH_Ad_CP $sortByDesc
+     * @property-read _IH_Ad_CP $unless
+     * @property-read _IH_Ad_CP $takeUntil
+     * @property-read _IH_Ad_CP $avg
+     * @property-read _IH_Ad_CP $skipUntil
+     * @property-read _IH_Ad_CP $first
+     * @property-read _IH_Ad_CP $takeWhile
+     * @property-read _IH_Ad_CP $min
+     * @property-read _IH_Ad_CP $reject
      */
     class _IH_Ad_C extends _BaseCollection {
         /**
@@ -95,6 +123,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Company_branch|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Company_branch|null find($key, $default = null)
      * @method Company_branch[] all()
+     * @property-read _IH_Company_branch_CP $keyBy
+     * @property-read _IH_Company_branch_CP $partition
+     * @property-read _IH_Company_branch_CP $max
+     * @property-read _IH_Company_branch_CP $doesntContain
+     * @property-read _IH_Company_branch_CP $flatMap
+     * @property-read _IH_Company_branch_CP $each
+     * @property-read _IH_Company_branch_CP $map
+     * @property-read _IH_Company_branch_CP $filter
+     * @property-read _IH_Company_branch_CP $unique
+     * @property-read _IH_Company_branch_CP $groupBy
+     * @property-read _IH_Company_branch_CP $sortBy
+     * @property-read _IH_Company_branch_CP $contains
+     * @property-read _IH_Company_branch_CP $sum
+     * @property-read _IH_Company_branch_CP $until
+     * @property-read _IH_Company_branch_CP $every
+     * @property-read _IH_Company_branch_CP $average
+     * @property-read _IH_Company_branch_CP $when
+     * @property-read _IH_Company_branch_CP $some
+     * @property-read _IH_Company_branch_CP $skipWhile
+     * @property-read _IH_Company_branch_CP $sortByDesc
+     * @property-read _IH_Company_branch_CP $unless
+     * @property-read _IH_Company_branch_CP $takeUntil
+     * @property-read _IH_Company_branch_CP $avg
+     * @property-read _IH_Company_branch_CP $skipUntil
+     * @property-read _IH_Company_branch_CP $first
+     * @property-read _IH_Company_branch_CP $takeWhile
+     * @property-read _IH_Company_branch_CP $min
+     * @property-read _IH_Company_branch_CP $reject
      */
     class _IH_Company_branch_C extends _BaseCollection {
         /**
@@ -156,6 +212,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Email_code|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Email_code|null find($key, $default = null)
      * @method Email_code[] all()
+     * @property-read _IH_Email_code_CP $keyBy
+     * @property-read _IH_Email_code_CP $partition
+     * @property-read _IH_Email_code_CP $max
+     * @property-read _IH_Email_code_CP $doesntContain
+     * @property-read _IH_Email_code_CP $flatMap
+     * @property-read _IH_Email_code_CP $each
+     * @property-read _IH_Email_code_CP $map
+     * @property-read _IH_Email_code_CP $filter
+     * @property-read _IH_Email_code_CP $unique
+     * @property-read _IH_Email_code_CP $groupBy
+     * @property-read _IH_Email_code_CP $sortBy
+     * @property-read _IH_Email_code_CP $contains
+     * @property-read _IH_Email_code_CP $sum
+     * @property-read _IH_Email_code_CP $until
+     * @property-read _IH_Email_code_CP $every
+     * @property-read _IH_Email_code_CP $average
+     * @property-read _IH_Email_code_CP $when
+     * @property-read _IH_Email_code_CP $some
+     * @property-read _IH_Email_code_CP $skipWhile
+     * @property-read _IH_Email_code_CP $sortByDesc
+     * @property-read _IH_Email_code_CP $unless
+     * @property-read _IH_Email_code_CP $takeUntil
+     * @property-read _IH_Email_code_CP $avg
+     * @property-read _IH_Email_code_CP $skipUntil
+     * @property-read _IH_Email_code_CP $first
+     * @property-read _IH_Email_code_CP $takeWhile
+     * @property-read _IH_Email_code_CP $min
+     * @property-read _IH_Email_code_CP $reject
      */
     class _IH_Email_code_C extends _BaseCollection {
         /**
@@ -217,6 +301,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Notification|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Notification|null find($key, $default = null)
      * @method Notification[] all()
+     * @property-read _IH_Notification_CP $keyBy
+     * @property-read _IH_Notification_CP $partition
+     * @property-read _IH_Notification_CP $max
+     * @property-read _IH_Notification_CP $doesntContain
+     * @property-read _IH_Notification_CP $flatMap
+     * @property-read _IH_Notification_CP $each
+     * @property-read _IH_Notification_CP $map
+     * @property-read _IH_Notification_CP $filter
+     * @property-read _IH_Notification_CP $unique
+     * @property-read _IH_Notification_CP $groupBy
+     * @property-read _IH_Notification_CP $sortBy
+     * @property-read _IH_Notification_CP $contains
+     * @property-read _IH_Notification_CP $sum
+     * @property-read _IH_Notification_CP $until
+     * @property-read _IH_Notification_CP $every
+     * @property-read _IH_Notification_CP $average
+     * @property-read _IH_Notification_CP $when
+     * @property-read _IH_Notification_CP $some
+     * @property-read _IH_Notification_CP $skipWhile
+     * @property-read _IH_Notification_CP $sortByDesc
+     * @property-read _IH_Notification_CP $unless
+     * @property-read _IH_Notification_CP $takeUntil
+     * @property-read _IH_Notification_CP $avg
+     * @property-read _IH_Notification_CP $skipUntil
+     * @property-read _IH_Notification_CP $first
+     * @property-read _IH_Notification_CP $takeWhile
+     * @property-read _IH_Notification_CP $min
+     * @property-read _IH_Notification_CP $reject
      */
     class _IH_Notification_C extends _BaseCollection {
         /**
@@ -280,6 +392,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Product|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Product|null find($key, $default = null)
      * @method Product[] all()
+     * @property-read _IH_Product_CP $keyBy
+     * @property-read _IH_Product_CP $partition
+     * @property-read _IH_Product_CP $max
+     * @property-read _IH_Product_CP $doesntContain
+     * @property-read _IH_Product_CP $flatMap
+     * @property-read _IH_Product_CP $each
+     * @property-read _IH_Product_CP $map
+     * @property-read _IH_Product_CP $filter
+     * @property-read _IH_Product_CP $unique
+     * @property-read _IH_Product_CP $groupBy
+     * @property-read _IH_Product_CP $sortBy
+     * @property-read _IH_Product_CP $contains
+     * @property-read _IH_Product_CP $sum
+     * @property-read _IH_Product_CP $until
+     * @property-read _IH_Product_CP $every
+     * @property-read _IH_Product_CP $average
+     * @property-read _IH_Product_CP $when
+     * @property-read _IH_Product_CP $some
+     * @property-read _IH_Product_CP $skipWhile
+     * @property-read _IH_Product_CP $sortByDesc
+     * @property-read _IH_Product_CP $unless
+     * @property-read _IH_Product_CP $takeUntil
+     * @property-read _IH_Product_CP $avg
+     * @property-read _IH_Product_CP $skipUntil
+     * @property-read _IH_Product_CP $first
+     * @property-read _IH_Product_CP $takeWhile
+     * @property-read _IH_Product_CP $min
+     * @property-read _IH_Product_CP $reject
      */
     class _IH_Product_C extends _BaseCollection {
         /**
@@ -298,6 +438,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Product_QB whereProductBranchId($value)
      * @method _IH_Product_QB whereProductName($value)
      * @method _IH_Product_QB whereProductImg($value)
+     * @method _IH_Product_QB whereIsOffer($value)
      * @method _IH_Product_QB whereProductDesc($value)
      * @method _IH_Product_QB whereProductPrice($value)
      * @method _IH_Product_QB whereCreatedAt($value)
@@ -345,6 +486,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Product_branch|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Product_branch|null find($key, $default = null)
      * @method Product_branch[] all()
+     * @property-read _IH_Product_branch_CP $keyBy
+     * @property-read _IH_Product_branch_CP $partition
+     * @property-read _IH_Product_branch_CP $max
+     * @property-read _IH_Product_branch_CP $doesntContain
+     * @property-read _IH_Product_branch_CP $flatMap
+     * @property-read _IH_Product_branch_CP $each
+     * @property-read _IH_Product_branch_CP $map
+     * @property-read _IH_Product_branch_CP $filter
+     * @property-read _IH_Product_branch_CP $unique
+     * @property-read _IH_Product_branch_CP $groupBy
+     * @property-read _IH_Product_branch_CP $sortBy
+     * @property-read _IH_Product_branch_CP $contains
+     * @property-read _IH_Product_branch_CP $sum
+     * @property-read _IH_Product_branch_CP $until
+     * @property-read _IH_Product_branch_CP $every
+     * @property-read _IH_Product_branch_CP $average
+     * @property-read _IH_Product_branch_CP $when
+     * @property-read _IH_Product_branch_CP $some
+     * @property-read _IH_Product_branch_CP $skipWhile
+     * @property-read _IH_Product_branch_CP $sortByDesc
+     * @property-read _IH_Product_branch_CP $unless
+     * @property-read _IH_Product_branch_CP $takeUntil
+     * @property-read _IH_Product_branch_CP $avg
+     * @property-read _IH_Product_branch_CP $skipUntil
+     * @property-read _IH_Product_branch_CP $first
+     * @property-read _IH_Product_branch_CP $takeWhile
+     * @property-read _IH_Product_branch_CP $min
+     * @property-read _IH_Product_branch_CP $reject
      */
     class _IH_Product_branch_C extends _BaseCollection {
         /**
@@ -406,6 +575,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Role|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Role|null find($key, $default = null)
      * @method Role[] all()
+     * @property-read _IH_Role_CP $keyBy
+     * @property-read _IH_Role_CP $partition
+     * @property-read _IH_Role_CP $max
+     * @property-read _IH_Role_CP $doesntContain
+     * @property-read _IH_Role_CP $flatMap
+     * @property-read _IH_Role_CP $each
+     * @property-read _IH_Role_CP $map
+     * @property-read _IH_Role_CP $filter
+     * @property-read _IH_Role_CP $unique
+     * @property-read _IH_Role_CP $groupBy
+     * @property-read _IH_Role_CP $sortBy
+     * @property-read _IH_Role_CP $contains
+     * @property-read _IH_Role_CP $sum
+     * @property-read _IH_Role_CP $until
+     * @property-read _IH_Role_CP $every
+     * @property-read _IH_Role_CP $average
+     * @property-read _IH_Role_CP $when
+     * @property-read _IH_Role_CP $some
+     * @property-read _IH_Role_CP $skipWhile
+     * @property-read _IH_Role_CP $sortByDesc
+     * @property-read _IH_Role_CP $unless
+     * @property-read _IH_Role_CP $takeUntil
+     * @property-read _IH_Role_CP $avg
+     * @property-read _IH_Role_CP $skipUntil
+     * @property-read _IH_Role_CP $first
+     * @property-read _IH_Role_CP $takeWhile
+     * @property-read _IH_Role_CP $min
+     * @property-read _IH_Role_CP $reject
      */
     class _IH_Role_C extends _BaseCollection {
         /**
@@ -466,6 +663,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Service|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Service|null find($key, $default = null)
      * @method Service[] all()
+     * @property-read _IH_Service_CP $keyBy
+     * @property-read _IH_Service_CP $partition
+     * @property-read _IH_Service_CP $max
+     * @property-read _IH_Service_CP $doesntContain
+     * @property-read _IH_Service_CP $flatMap
+     * @property-read _IH_Service_CP $each
+     * @property-read _IH_Service_CP $map
+     * @property-read _IH_Service_CP $filter
+     * @property-read _IH_Service_CP $unique
+     * @property-read _IH_Service_CP $groupBy
+     * @property-read _IH_Service_CP $sortBy
+     * @property-read _IH_Service_CP $contains
+     * @property-read _IH_Service_CP $sum
+     * @property-read _IH_Service_CP $until
+     * @property-read _IH_Service_CP $every
+     * @property-read _IH_Service_CP $average
+     * @property-read _IH_Service_CP $when
+     * @property-read _IH_Service_CP $some
+     * @property-read _IH_Service_CP $skipWhile
+     * @property-read _IH_Service_CP $sortByDesc
+     * @property-read _IH_Service_CP $unless
+     * @property-read _IH_Service_CP $takeUntil
+     * @property-read _IH_Service_CP $avg
+     * @property-read _IH_Service_CP $skipUntil
+     * @property-read _IH_Service_CP $first
+     * @property-read _IH_Service_CP $takeWhile
+     * @property-read _IH_Service_CP $min
+     * @property-read _IH_Service_CP $reject
      */
     class _IH_Service_C extends _BaseCollection {
         /**
@@ -483,8 +708,10 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Service_QB whereCompanyBranchId($value)
      * @method _IH_Service_QB whereServiceBranchId($value)
      * @method _IH_Service_QB whereServiceName($value)
+     * @method _IH_Service_QB whereIsOffer($value)
      * @method _IH_Service_QB whereMainImg($value)
-     * @method _IH_Service_QB whereServiceDesc($value)
+     * @method _IH_Service_QB whereServiceFirstDesc($value)
+     * @method _IH_Service_QB whereServiceSecondDesc($value)
      * @method _IH_Service_QB whereSubImg($value)
      * @method _IH_Service_QB whereCreatedAt($value)
      * @method _IH_Service_QB whereUpdatedAt($value)
@@ -531,6 +758,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Service_branch|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Service_branch|null find($key, $default = null)
      * @method Service_branch[] all()
+     * @property-read _IH_Service_branch_CP $keyBy
+     * @property-read _IH_Service_branch_CP $partition
+     * @property-read _IH_Service_branch_CP $max
+     * @property-read _IH_Service_branch_CP $doesntContain
+     * @property-read _IH_Service_branch_CP $flatMap
+     * @property-read _IH_Service_branch_CP $each
+     * @property-read _IH_Service_branch_CP $map
+     * @property-read _IH_Service_branch_CP $filter
+     * @property-read _IH_Service_branch_CP $unique
+     * @property-read _IH_Service_branch_CP $groupBy
+     * @property-read _IH_Service_branch_CP $sortBy
+     * @property-read _IH_Service_branch_CP $contains
+     * @property-read _IH_Service_branch_CP $sum
+     * @property-read _IH_Service_branch_CP $until
+     * @property-read _IH_Service_branch_CP $every
+     * @property-read _IH_Service_branch_CP $average
+     * @property-read _IH_Service_branch_CP $when
+     * @property-read _IH_Service_branch_CP $some
+     * @property-read _IH_Service_branch_CP $skipWhile
+     * @property-read _IH_Service_branch_CP $sortByDesc
+     * @property-read _IH_Service_branch_CP $unless
+     * @property-read _IH_Service_branch_CP $takeUntil
+     * @property-read _IH_Service_branch_CP $avg
+     * @property-read _IH_Service_branch_CP $skipUntil
+     * @property-read _IH_Service_branch_CP $first
+     * @property-read _IH_Service_branch_CP $takeWhile
+     * @property-read _IH_Service_branch_CP $min
+     * @property-read _IH_Service_branch_CP $reject
      */
     class _IH_Service_branch_C extends _BaseCollection {
         /**
@@ -592,6 +847,34 @@ namespace LaravelIdea\Helper\App\Models {
      * @method User|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method User|null find($key, $default = null)
      * @method User[] all()
+     * @property-read _IH_User_CP $keyBy
+     * @property-read _IH_User_CP $partition
+     * @property-read _IH_User_CP $max
+     * @property-read _IH_User_CP $doesntContain
+     * @property-read _IH_User_CP $flatMap
+     * @property-read _IH_User_CP $each
+     * @property-read _IH_User_CP $map
+     * @property-read _IH_User_CP $filter
+     * @property-read _IH_User_CP $unique
+     * @property-read _IH_User_CP $groupBy
+     * @property-read _IH_User_CP $sortBy
+     * @property-read _IH_User_CP $contains
+     * @property-read _IH_User_CP $sum
+     * @property-read _IH_User_CP $until
+     * @property-read _IH_User_CP $every
+     * @property-read _IH_User_CP $average
+     * @property-read _IH_User_CP $when
+     * @property-read _IH_User_CP $some
+     * @property-read _IH_User_CP $skipWhile
+     * @property-read _IH_User_CP $sortByDesc
+     * @property-read _IH_User_CP $unless
+     * @property-read _IH_User_CP $takeUntil
+     * @property-read _IH_User_CP $avg
+     * @property-read _IH_User_CP $skipUntil
+     * @property-read _IH_User_CP $first
+     * @property-read _IH_User_CP $takeWhile
+     * @property-read _IH_User_CP $min
+     * @property-read _IH_User_CP $reject
      */
     class _IH_User_C extends _BaseCollection {
         /**
@@ -607,13 +890,13 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method _IH_User_QB whereId($value)
      * @method _IH_User_QB whereName($value)
-     * @method _IH_User_QB whereImg($value)
      * @method _IH_User_QB whereRoleId($value)
      * @method _IH_User_QB whereCompanyBranchId($value)
      * @method _IH_User_QB whereEmail($value)
      * @method _IH_User_QB wherePhonekey($value)
      * @method _IH_User_QB wherePhone($value)
      * @method _IH_User_QB whereFullphone($value)
+     * @method _IH_User_QB whereImg($value)
      * @method _IH_User_QB whereEmailVerifiedAt($value)
      * @method _IH_User_QB wherePassword($value)
      * @method _IH_User_QB whereRememberToken($value)

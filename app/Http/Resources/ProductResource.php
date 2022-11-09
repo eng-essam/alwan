@@ -19,12 +19,12 @@ class ProductResource extends JsonResource
         $lang = App::getLocale();
         return [
             'id' => $this->id,
-            'product_name' => $this->product_name($lang),
-            'product_desc' => $this->product_desc($lang),
-            'Product_price' => $this->Product_price,
-            'product_branch_name' => $this->product_branch->product_branch_name($lang),
-            'company_branch_name' => $this->company_branch->company_name($lang),
-            'product_img' => asset("uploads/$this->product_img"),
+            'productName' => $this->product_name($lang),
+            'productDesc' => $this->product_desc($lang),
+            'productPrice' => $this->Product_price,
+            'productImg' => asset("uploads/$this->product_img"),
+            'mainProductName' => $this->product_branch->product_branch_name($lang),
+            'companyName' => $this->company_branch->company_name($lang),
         ];
     }
 }

@@ -17,9 +17,14 @@ class Service extends Model
         return json_decode($this->service_name)->$lang;
     }
 
-    public function service_desc($lang = null){
+    public function service_first_desc($lang = null){
         $lang =$lang ?? App::getLocale();
-        return json_decode($this->service_desc)->$lang;
+        return json_decode($this->service_first_desc)->$lang;
+    }
+
+    public function service_second_desc($lang = null){
+        $lang =$lang ?? App::getLocale();
+        return json_decode($this->service_second_desc)->$lang;
     }
 
     public function company_branch(){

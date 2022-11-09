@@ -1,4 +1,4 @@
-<?php //89f1e522d63e026d4d332e6a33536a2d
+<?php //16a5ce3b4916e6451fd4f1b0e557b6b3
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\Illuminate\Notifications {
@@ -26,6 +26,34 @@ namespace LaravelIdea\Helper\Illuminate\Notifications {
      * @method DatabaseNotification|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method DatabaseNotification|null find($key, $default = null)
      * @method DatabaseNotification[] all()
+     * @property-read _IH_DatabaseNotification_CP $keyBy
+     * @property-read _IH_DatabaseNotification_CP $partition
+     * @property-read _IH_DatabaseNotification_CP $max
+     * @property-read _IH_DatabaseNotification_CP $doesntContain
+     * @property-read _IH_DatabaseNotification_CP $flatMap
+     * @property-read _IH_DatabaseNotification_CP $each
+     * @property-read _IH_DatabaseNotification_CP $map
+     * @property-read _IH_DatabaseNotification_CP $filter
+     * @property-read _IH_DatabaseNotification_CP $unique
+     * @property-read _IH_DatabaseNotification_CP $groupBy
+     * @property-read _IH_DatabaseNotification_CP $sortBy
+     * @property-read _IH_DatabaseNotification_CP $contains
+     * @property-read _IH_DatabaseNotification_CP $sum
+     * @property-read _IH_DatabaseNotification_CP $until
+     * @property-read _IH_DatabaseNotification_CP $every
+     * @property-read _IH_DatabaseNotification_CP $average
+     * @property-read _IH_DatabaseNotification_CP $when
+     * @property-read _IH_DatabaseNotification_CP $some
+     * @property-read _IH_DatabaseNotification_CP $skipWhile
+     * @property-read _IH_DatabaseNotification_CP $sortByDesc
+     * @property-read _IH_DatabaseNotification_CP $unless
+     * @property-read _IH_DatabaseNotification_CP $takeUntil
+     * @property-read _IH_DatabaseNotification_CP $avg
+     * @property-read _IH_DatabaseNotification_CP $skipUntil
+     * @property-read _IH_DatabaseNotification_CP $first
+     * @property-read _IH_DatabaseNotification_CP $takeWhile
+     * @property-read _IH_DatabaseNotification_CP $min
+     * @property-read _IH_DatabaseNotification_CP $reject
      * @mixin DatabaseNotificationCollection
      */
     class _IH_DatabaseNotification_C extends _BaseCollection {

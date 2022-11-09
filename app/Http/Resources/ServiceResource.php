@@ -19,13 +19,13 @@ class ServiceResource extends JsonResource
 
         return [
             'id' => $this->id,
-            'service_name' => $this->service_name($lang),
-            'main_img' => asset("uploads/ads/$this->main_img") ,
-            'service_desc' => $this->service_desc($lang),
-            'sub_img' => asset("uploads/ads/$this->sub_img") ,
-            'service_branch_name' => $this->service_branch->service_branch_name($lang),
-            'company_branch_name' => $this->company_branch->company_name($lang),
-
+            'subServiceName' => $this->service_name($lang),
+            'subServiceMainImg' => asset("uploads/ads/$this->main_img") ,
+            'subServiceSubImg' => asset("uploads/ads/$this->sub_img") ,
+            'subServiceFirstDesc' => $this->service_first_desc($lang),
+            'subServiceSecondDesc' => $this->service_second_desc($lang),
+            'mainServiceName' => $this->service_branch->service_branch_name($lang),
+            'companyName' => $this->company_branch->company_name($lang),
         ];
     }
 }

@@ -10,7 +10,7 @@ trait SendCode
 {
     public function sendCode($email)
     {
-        $code = rand(100000, 999999);
+        $code = rand(1000, 9999);
         Mail::to($email)->send(new UserEmailVerified($code));
         Email_code::where('email', $email)->delete();
         Email_code::create([
