@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['lang'])->group(function () {
 
-    Route::post('/register', [GuestController::class, 'register']); //register
+    Route::post('register', [GuestController::class, 'register']); //register
 
     Route::post('verify/email/code', [GuestController::class, 'verifyEmailCodeCorrect']); //verify Email Code Correct
 
@@ -26,7 +26,7 @@ Route::middleware(['lang'])->group(function () {
 
     Route::post('login', [GuestController::class, 'login']); //login
 
-    Route::post('/register/social', [GuestController::class, 'registerSocial']); //register Social
+    Route::post('register/social', [GuestController::class, 'registerSocial']); //register Social
 
     Route::post('login/social', [GuestController::class, 'loginSocial']); //login Social
 
@@ -35,8 +35,6 @@ Route::middleware(['lang'])->group(function () {
 
     //Products
     Route::get('all/main/product', [ProductBranchController::class, 'allMainProduct']); //all Main Product
-
-
 
     Route::get('all/sub/product', [ProductController::class, 'allSubProduct']); //all Sub Product
 
@@ -55,7 +53,6 @@ Route::middleware(['lang'])->group(function () {
 
     //offers
     Route::get('all/offers', [OfferController::class, 'allOffers']); //all Offers
-
 
     Route::middleware(['auth:sanctum', 'verified'])->group(callback: function () {
         //Edit Name
