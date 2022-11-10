@@ -10,8 +10,7 @@ use App\{Http\Controllers\Api\AdsController,
     Http\Controllers\Api\ServiceController};
 use Illuminate\Support\Facades\Route;
 
-
-Route::middleware(['lang'])->group(callback: function () {
+Route::middleware(['lang'])->group(function () {
 
     Route::post('/register', [GuestController::class, 'register']); //register
 
