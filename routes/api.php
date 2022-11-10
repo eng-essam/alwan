@@ -37,6 +37,8 @@ Route::middleware(['lang'])->group(callback: function () {
     //Products
     Route::get('all/main/product', [ProductBranchController::class, 'allMainProduct']); //all Main Product
 
+
+
     Route::get('all/sub/product', [ProductController::class, 'allSubProduct']); //all Sub Product
 
     Route::post('all/sub/product/belong/main/product', [ProductController::class, 'all_sub_product_belong_main_product']); //all sub product belong main product
@@ -69,6 +71,8 @@ Route::middleware(['lang'])->group(callback: function () {
 
         //Edit password
         Route::post('edit/password', [EditInformationController::class, 'editPassword']); //edit Password
+
+
     });
 
 });

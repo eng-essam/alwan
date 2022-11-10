@@ -18,7 +18,7 @@
         <div style="margin-bottom: 20px;" class="card-header">
             <h3 class="card-title">
                     <span class="mailbox-attachment-icon has-img">
-                        <img width="100px" height="100px" src="#" >
+                        <img width="100px" height="100px" src="{{asset('alwaan/alwaan_logo.png')}}" >
                     </span>
             </h3 >
 

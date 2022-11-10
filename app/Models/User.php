@@ -71,4 +71,8 @@ class User extends Authenticatable
         return $this->belongsToMany(Product::class,'product_user')
             ->withTimestamps()->withPivot(['status']);
     }
+
+    public function addresses(){
+        return $this->hasMany(Address::class);
+    }
 }

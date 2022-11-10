@@ -11,7 +11,9 @@ trait DeletUserWithEmailNotVerified
         $userExist = User::where('email', $email)->first();
         if ($userExist) {
             if ($userExist->email_verified_at == null) {
-                Storage::disk('uploads')->delete($userExist->img);
+                if ($userExist->img != null){
+                    Storage::disk('uploads')->delete($userExist->img);
+                }
                 $userExist->delete();
             }
         }
