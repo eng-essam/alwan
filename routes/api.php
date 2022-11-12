@@ -1,13 +1,15 @@
 <?php
 
-use App\{Http\Controllers\Api\AdsController,
-    Http\Controllers\Api\EditInformationController,
-    Http\Controllers\Api\GuestController,
-    Http\Controllers\Api\OfferController,
-    Http\Controllers\Api\ProductBranchController,
-    Http\Controllers\Api\ProductController,
-    Http\Controllers\Api\ServiceBranchController,
-    Http\Controllers\Api\ServiceController};
+use App\Http\Controllers\Api\{AdsController,
+    AuthController,
+    EditInformationController,
+    GuestController,
+    OfferController,
+    ProductBranchController,
+    ProductController,
+    ServiceBranchController,
+    ServiceController,
+};
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['lang'])->group(function () {
@@ -55,6 +57,10 @@ Route::middleware(['lang'])->group(function () {
     Route::get('all/offers', [OfferController::class, 'allOffers']); //all Offers
 
     Route::middleware(['auth:sanctum', 'verified'])->group(callback: function () {
+
+        //User
+        Route::get('user/info', [AuthController::class, 'userInfo']); //userInfo
+
         //Edit Name
         Route::post('edit/name', [EditInformationController::class, 'editName']); //edit Name
 

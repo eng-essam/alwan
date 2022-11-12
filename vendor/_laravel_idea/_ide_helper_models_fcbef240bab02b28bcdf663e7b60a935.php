@@ -1,4 +1,4 @@
-<?php //cb4aa9caa8e6c469e148b7a041ed6a75
+<?php //0819d876cc8e41a71dfd1facf49f9b27
 /** @noinspection all */
 
 namespace App\Models {
@@ -18,6 +18,8 @@ namespace App\Models {
     use Illuminate\Database\Eloquent\Relations\MorphToMany;
     use Illuminate\Notifications\DatabaseNotification;
     use Illuminate\Support\Carbon;
+    use LaravelIdea\Helper\App\Models\_IH_Address_C;
+    use LaravelIdea\Helper\App\Models\_IH_Address_QB;
     use LaravelIdea\Helper\App\Models\_IH_Ad_C;
     use LaravelIdea\Helper\App\Models\_IH_Ad_QB;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_C;
@@ -62,6 +64,32 @@ namespace App\Models {
      * @method static AdFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
     class Ad extends Model {}
+    
+    /**
+     * @property int $id
+     * @property int $user_id
+     * @property string $region
+     * @property string $city
+     * @property string $fullAddress
+     * @property string $addressType
+     * @property bool $default
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @property User $user
+     * @method BelongsTo|_IH_User_QB user()
+     * @method static _IH_Address_QB onWriteConnection()
+     * @method _IH_Address_QB newQuery()
+     * @method static _IH_Address_QB on(null|string $connection = null)
+     * @method static _IH_Address_QB query()
+     * @method static _IH_Address_QB with(array|string $relations)
+     * @method _IH_Address_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_Address_C|Address[] all()
+     * @ownLinks user_id,\App\Models\User,id
+     * @mixin _IH_Address_QB
+     */
+    class Address extends Model {}
     
     /**
      * @property int $id
@@ -291,6 +319,9 @@ namespace App\Models {
      * @property string|null $remember_token
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
+     * @property _IH_Address_C|Address[] $addresses
+     * @property-read int $addresses_count
+     * @method HasMany|_IH_Address_QB addresses()
      * @property _IH_Ad_C|Ad[] $ads
      * @property-read int $ads_count
      * @method HasMany|_IH_Ad_QB ads()
@@ -323,7 +354,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_User_C|User[] all()
      * @ownLinks role_id,\App\Models\Role,id|company_branch_id,\App\Models\Company_branch,id
-     * @foreignLinks id,\App\Models\Notification,user_id
+     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id
      * @mixin _IH_User_QB
      * @method static UserFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */

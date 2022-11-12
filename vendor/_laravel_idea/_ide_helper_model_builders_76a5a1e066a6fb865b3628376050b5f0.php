@@ -1,9 +1,10 @@
-<?php //833aede8530b651ed0ea4355353da4ba
+<?php //6c65a56df4b17fff5e24e9ed5d8da8a6
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
 
     use App\Models\Ad;
+    use App\Models\Address;
     use App\Models\Company_branch;
     use App\Models\Email_code;
     use App\Models\Notification;
@@ -108,6 +109,99 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Ad updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_Ad_QB extends _BaseBuilder {}
+    
+    /**
+     * @method Address|null getOrPut($key, $value)
+     * @method Address|$this shift(int $count = 1)
+     * @method Address|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Address|$this pop(int $count = 1)
+     * @method Address|null pull($key, $default = null)
+     * @method Address|null last(callable $callback = null, $default = null)
+     * @method Address|$this random($number = null)
+     * @method Address|null sole($key = null, $operator = null, $value = null)
+     * @method Address|null get($key, $default = null)
+     * @method Address|null first(callable $callback = null, $default = null)
+     * @method Address|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method Address|null find($key, $default = null)
+     * @method Address[] all()
+     * @property-read _IH_Address_CP $keyBy
+     * @property-read _IH_Address_CP $partition
+     * @property-read _IH_Address_CP $max
+     * @property-read _IH_Address_CP $doesntContain
+     * @property-read _IH_Address_CP $flatMap
+     * @property-read _IH_Address_CP $each
+     * @property-read _IH_Address_CP $map
+     * @property-read _IH_Address_CP $filter
+     * @property-read _IH_Address_CP $unique
+     * @property-read _IH_Address_CP $groupBy
+     * @property-read _IH_Address_CP $sortBy
+     * @property-read _IH_Address_CP $contains
+     * @property-read _IH_Address_CP $sum
+     * @property-read _IH_Address_CP $until
+     * @property-read _IH_Address_CP $every
+     * @property-read _IH_Address_CP $average
+     * @property-read _IH_Address_CP $when
+     * @property-read _IH_Address_CP $some
+     * @property-read _IH_Address_CP $skipWhile
+     * @property-read _IH_Address_CP $sortByDesc
+     * @property-read _IH_Address_CP $unless
+     * @property-read _IH_Address_CP $takeUntil
+     * @property-read _IH_Address_CP $avg
+     * @property-read _IH_Address_CP $skipUntil
+     * @property-read _IH_Address_CP $first
+     * @property-read _IH_Address_CP $takeWhile
+     * @property-read _IH_Address_CP $min
+     * @property-read _IH_Address_CP $reject
+     */
+    class _IH_Address_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return Address[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_Address_QB whereId($value)
+     * @method _IH_Address_QB whereUserId($value)
+     * @method _IH_Address_QB whereRegion($value)
+     * @method _IH_Address_QB whereCity($value)
+     * @method _IH_Address_QB whereFulladdress($value)
+     * @method _IH_Address_QB whereAddresstype($value)
+     * @method _IH_Address_QB whereDefault($value)
+     * @method _IH_Address_QB whereCreatedAt($value)
+     * @method _IH_Address_QB whereUpdatedAt($value)
+     * @method Address baseSole(array|string $columns = ['*'])
+     * @method Address create(array $attributes = [])
+     * @method _IH_Address_C|Address[] cursor()
+     * @method Address|null|_IH_Address_C|Address[] find($id, array|string $columns = ['*'])
+     * @method _IH_Address_C|Address[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method Address|_IH_Address_C|Address[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Address|_IH_Address_C|Address[] findOrFail($id, array|string $columns = ['*'])
+     * @method Address|_IH_Address_C|Address[] findOrNew($id, array|string $columns = ['*'])
+     * @method Address first(array|string $columns = ['*'])
+     * @method Address firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Address firstOrCreate(array $attributes = [], array $values = [])
+     * @method Address firstOrFail(array|string $columns = ['*'])
+     * @method Address firstOrNew(array $attributes = [], array $values = [])
+     * @method Address firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Address forceCreate(array $attributes)
+     * @method _IH_Address_C|Address[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_Address_C|Address[] get(array|string $columns = ['*'])
+     * @method Address getModel()
+     * @method Address[] getModels(array|string $columns = ['*'])
+     * @method _IH_Address_C|Address[] hydrate(array $items)
+     * @method Address make(array $attributes = [])
+     * @method Address newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|Address[]|_IH_Address_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|Address[]|_IH_Address_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Address sole(array|string $columns = ['*'])
+     * @method Address updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_Address_QB extends _BaseBuilder {}
     
     /**
      * @method Company_branch|null getOrPut($key, $value)

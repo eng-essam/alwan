@@ -1,4 +1,4 @@
-<?php //5be8f91d0076706b4f75a5196a298689
+<?php //47b816510b174e614f1d98e71fc22357
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -47,6 +47,7 @@ namespace Database\Factories {
     class Service_branchFactory extends Factory {}
     
     /**
+     * @method $this hasAddresses(int $count = 1, $attributes = [])
      * @method $this hasAds(int $count = 1, $attributes = [])
      * @method $this forCompany($attributes = [])
      * @method $this hasNotifications(int $count = 1, $attributes = [])

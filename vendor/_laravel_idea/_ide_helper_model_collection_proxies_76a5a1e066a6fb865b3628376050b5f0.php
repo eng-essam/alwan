@@ -1,4 +1,4 @@
-<?php //ae1263abf62748cb30770704f7d57c2f
+<?php //d0fdced664f70e0ebdbab7f614fb1e6c
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -23,6 +23,28 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Ad_C delete()
      */
     class _IH_Ad_CP {}
+    
+    /**
+     * @property _IH_Address_C|mixed $id
+     * @property _IH_Address_C|mixed $user_id
+     * @property _IH_Address_C|mixed $region
+     * @property _IH_Address_C|mixed $city
+     * @property _IH_Address_C|mixed $fullAddress
+     * @property _IH_Address_C|mixed $addressType
+     * @property _IH_Address_C|mixed $default
+     * @property _IH_Address_C|mixed $created_at
+     * @property _IH_Address_C|mixed $updated_at
+     * @property _IH_Address_C|mixed $user
+     * @method _IH_Address_C refresh()
+     * @method _IH_Address_C update(array $attributes = [], array $options = [])
+     * @method _IH_Address_C save(array $options = [])
+     * @method _IH_Address_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Address_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Address_C touch(null|string $attribute = null)
+     * @method _IH_Address_C fill(array $attributes)
+     * @method _IH_Address_C delete()
+     */
+    class _IH_Address_CP {}
     
     /**
      * @property _IH_Company_branch_C|mixed $id
@@ -95,7 +117,6 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Product_C|mixed $company_branch
      * @property _IH_Product_C|mixed $product_branch
      * @method _IH_Product_C product_name($lang = null)
-     * @method _IH_Product_C offers()
      * @method _IH_Product_C product_desc($lang = null)
      * @method _IH_Product_C refresh()
      * @method _IH_Product_C update(array $attributes = [], array $options = [])
