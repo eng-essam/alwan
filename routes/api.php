@@ -59,33 +59,32 @@ Route::middleware(['lang'])->group(function () {
 
     Route::middleware(['auth:sanctum', 'verified'])->group(callback: function () {
 
-        //User
+        //Auth
         Route::get('user/info', [AuthController::class, 'userInfo']); //userInfo
 
-        //Delete Account
         Route::get('delete/account', [AuthController::class, 'deleteAccount']); //delete Account
 
-        //Edit Name
+        Route::get('logout', [AuthController::class, 'logout']); //Logout
+
+        //Edit Information
         Route::post('edit/name', [EditInformationController::class, 'editName']); //edit Name
 
-        //Edit email
         Route::post('edit/email', [EditInformationController::class, 'editEmail']); //edit Email
+
         Route::post('check/code/to/change/email', [EditInformationController::class, 'changeEmail']); //change Email
 
-        //Edit phone
         Route::post('edit/phone', [EditInformationController::class, 'editPhone']); //edit Phone
 
-        //Edit password
         Route::post('edit/password', [EditInformationController::class, 'editPassword']); //edit Password
 
-        //all Notification
-        Route::get('all/notification', [NotificationsController::class, 'allNotification']); //all Notification
+        //Notification
+        Route::get('all/notifications', [NotificationsController::class, 'allNotification']); //all Notification
 
-        //all Notification
-        Route::get('all/notification', [NotificationsController::class, 'allNotification']); //all Notification
+        Route::get('delete/all/notifications', [NotificationsController::class, 'deleteAllNotification']); //delete All Notification
 
-        //Delete One Notification
-        Route::get('delete/one/notification', [NotificationsController::class, 'deleteOneNotification']); //delete One Notification
+        Route::post('delete/one/notification', [NotificationsController::class, 'deleteOneNotification']); //delete One Notification
+
+        Route::get('number/of/notifications', [NotificationsController::class, 'numberOfNotification']); //number Of Notification
 
     });
 

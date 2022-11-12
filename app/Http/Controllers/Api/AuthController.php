@@ -28,4 +28,10 @@ class AuthController extends Controller
         return $this->requestSuccess(__('lang.delete_account'));
     }
 
+    public function logout(Request $request)
+    {
+        $request->user()->tokens()->delete();
+        return $this->requestSuccess(__('lang.logout_successfully'));
+    }
+
 }

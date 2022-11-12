@@ -19,5 +19,7 @@ return [
     'Phone_already_exists'=>'Phone number already exists',
     'Phone_edit_successfully' => 'The Phone number has been successfully modified',
     'delete_account'=>'The account has been deleted successfully',
+    'logout_successfully'=>'Logout successfully',
+    'deleted_notification'=>'Successfully deleted',
 
 ];

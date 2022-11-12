@@ -129,7 +129,7 @@ class GuestController extends Controller
         }
 
         User::where('email', $request->email)->update([
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->newPassword)
         ]);
 
         return $this->requestSuccess(__('lang.password_changed_successfully'));

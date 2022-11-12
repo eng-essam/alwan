@@ -19,6 +19,9 @@ return [
     'Phone_already_exists'=>'رقم الهاتف موجود بالفعل',
     'Phone_edit_successfully' => 'تم تعديل رقم الهاتف بنجاح',
     'delete_account'=>'تم حذف الحساب بنجاح',
+    'logout_successfully'=>'تم تسجيل الخروج بنجاح',
+    'deleted_notification'=>'تم الحذف بنجاح',
+
 
 
 
