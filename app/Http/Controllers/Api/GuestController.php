@@ -74,7 +74,7 @@ class GuestController extends Controller
             'img' => $this->createImg($request->name),
         ]);
 
-        return $this->requestUserLogin($request->email);
+        return $this->requestUserLogin(__('lang.mail_confirmed_successfully'), $request->email);
 
         //return $this->requestSuccess(__('lang.mail_confirmed_successfully'));
 
@@ -120,7 +120,7 @@ class GuestController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'email', 'exists:users,email'],
             'newPassword' => ['required', 'min:8'],
-            'password_confirmation' => ['required','same:newPassword'],
+            'password_confirmation' => ['required', 'same:newPassword'],
 
         ]);
 

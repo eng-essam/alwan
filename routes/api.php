@@ -80,6 +80,13 @@ Route::middleware(['lang'])->group(function () {
 
         //all Notification
         Route::get('all/notification', [NotificationsController::class, 'allNotification']); //all Notification
+
+        //all Notification
+        Route::get('all/notification', [NotificationsController::class, 'allNotification']); //all Notification
+
+        //Delete One Notification
+        Route::get('delete/one/notification', [NotificationsController::class, 'deleteOneNotification']); //delete One Notification
+
     });
 
 });
