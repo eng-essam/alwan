@@ -12,10 +12,16 @@ class Product_branch extends Model
 
     public $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function product_branch_name($lang = null)
+    public function product_branch_name()
     {
-        $lang = $lang ?? App::getLocale();
+        $lang = App::getLocale();
         return json_decode($this->product_branch_name)->$lang;
+    }
+
+    public function product_branch_desc()
+    {
+        $lang = App::getLocale();
+        return json_decode($this->product_branch_desc)->$lang;
     }
 
     public function products()

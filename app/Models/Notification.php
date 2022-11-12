@@ -10,14 +10,16 @@ class Notification extends Model
 {
     use HasFactory;
 
-    public $guarded = ['id' , 'created_at' , 'updated_at'];
+    public $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function notification_text($lang = null){
-        $lang =$lang ?? App::getLocale();
+    public function notification_text()
+    {
+        $lang = App::getLocale();
         return json_decode($this->notification_text)->$lang;
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

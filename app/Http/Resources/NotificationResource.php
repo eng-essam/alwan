@@ -15,10 +15,9 @@ class NotificationResource extends JsonResource
      */
     public function toArray($request)
     {
-        $lang = App::getLocale();
         return [
             'id' => $this->id,
-            'notification_text' => $this->notification_text($lang),
+            'notification_text' => $this->notification_text(),
             'notification_img' => asset("uploads/$this->notification_img") ,
             'created_at' => $this->created_at,
         ];

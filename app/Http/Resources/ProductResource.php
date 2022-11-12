@@ -16,15 +16,14 @@ class ProductResource extends JsonResource
      */
     public function toArray($request)
     {
-        $lang = App::getLocale();
         return [
             'id' => $this->id,
-            'productName' => $this->product_name($lang),
-            'productDesc' => $this->product_desc($lang),
+            'productName' => $this->product_name(),
+            'productDesc' => $this->product_desc(),
             'productPrice' => $this->Product_price,
             'productImg' => asset("uploads/$this->product_img"),
-            'mainProductName' => $this->product_branch->product_branch_name($lang),
-            'companyName' => $this->company_branch->company_name($lang),
+            'mainProductName' => $this->product_branch->product_branch_name(),
+            'companyName' => $this->company_branch->company_name(),
         ];
     }
 }

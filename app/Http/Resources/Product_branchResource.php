@@ -2,11 +2,11 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Product_branch;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Support\Facades\App;
 
-/** @mixin \App\Models\Product_branch */
+/** @mixin Product_branch */
 class Product_branchResource extends JsonResource
 {
     /**
@@ -15,10 +15,10 @@ class Product_branchResource extends JsonResource
      */
     public function toArray($request)
     {
-        $lang = App::getLocale();
         return [
             'id' => $this->id,
-            'MainProductName' => $this->product_branch_name($lang),
+            'MainProductName' => $this->product_branch_name(),
+            'MainProductDesc' => $this->product_branch_desc(),
             'MainProductImg' => asset("uploads/$this->product_branch_img"),
             'numberOfProduct' => $this->products()->count(),
         ];

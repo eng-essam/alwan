@@ -1,4 +1,4 @@
-<?php //0819d876cc8e41a71dfd1facf49f9b27
+<?php //6f76365eec77eab0585fb06ddc1229fe
 /** @noinspection all */
 
 namespace App\Models {
@@ -202,6 +202,7 @@ namespace App\Models {
     /**
      * @property int $id
      * @property string $product_branch_name
+     * @property string $product_branch_desc
      * @property string $product_branch_img
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at

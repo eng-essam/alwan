@@ -1,4 +1,4 @@
-<?php //6c65a56df4b17fff5e24e9ed5d8da8a6
+<?php //af335566778b80a4f2b0cc390483209d
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -623,6 +623,7 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method _IH_Product_branch_QB whereId($value)
      * @method _IH_Product_branch_QB whereProductBranchName($value)
+     * @method _IH_Product_branch_QB whereProductBranchDesc($value)
      * @method _IH_Product_branch_QB whereProductBranchImg($value)
      * @method _IH_Product_branch_QB whereCreatedAt($value)
      * @method _IH_Product_branch_QB whereUpdatedAt($value)

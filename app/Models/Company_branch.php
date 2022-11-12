@@ -10,30 +10,34 @@ class Company_branch extends Model
 {
     use HasFactory;
 
-    public $guarded = ['id' , 'created_at' , 'updated_at'];
+    public $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function company_name($lang = null){
-        $lang =$lang ?? App::getLocale();
+    public function company_name()
+    {
+        $lang = App::getLocale();
         return json_decode($this->company_name)->$lang;
     }
 
-    public function company_address($lang = null){
-        $lang =$lang ?? App::getLocale();
+    public function company_address()
+    {
+        $lang = App::getLocale();
         return json_decode($this->company_address)->$lang;
     }
 
-    public function users(){
+    public function users()
+    {
         return $this->hasMany(User::class);
     }
 
-    public function products(){
+    public function products()
+    {
         return $this->hasMany(Product::class);
     }
 
-    public function services(){
+    public function services()
+    {
         return $this->hasMany(Service::class);
     }
-
 
 
 }

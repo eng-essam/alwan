@@ -2,11 +2,11 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Support\Facades\App;
 
-/** @mixin \App\Models\Service */
+/** @mixin Service */
 class ServiceResource extends JsonResource
 {
     /**
@@ -15,17 +15,15 @@ class ServiceResource extends JsonResource
      */
     public function toArray($request)
     {
-        $lang = App::getLocale();
-
         return [
             'id' => $this->id,
-            'subServiceName' => $this->service_name($lang),
-            'subServiceMainImg' => asset("uploads/ads/$this->main_img") ,
-            'subServiceSubImg' => asset("uploads/ads/$this->sub_img") ,
-            'subServiceFirstDesc' => $this->service_first_desc($lang),
-            'subServiceSecondDesc' => $this->service_second_desc($lang),
-            'mainServiceName' => $this->service_branch->service_branch_name($lang),
-            'companyName' => $this->company_branch->company_name($lang),
+            'subServiceName' => $this->service_name(),
+            'subServiceMainImg' => asset("uploads/ads/$this->main_img"),
+            'subServiceSubImg' => asset("uploads/ads/$this->sub_img"),
+            'subServiceFirstDesc' => $this->service_first_desc(),
+            'subServiceSecondDesc' => $this->service_second_desc(),
+            'mainServiceName' => $this->service_branch->service_branch_name(),
+            'companyName' => $this->company_branch->company_name(),
         ];
     }
 }

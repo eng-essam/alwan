@@ -10,6 +10,7 @@ return new class extends Migration {
         Schema::create('product_branches', function (Blueprint $table) {
             $table->id();
             $table->string('product_branch_name');
+            $table->string('product_branch_desc');
             $table->string('product_branch_img');
             $table->timestamps();
         });

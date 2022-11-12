@@ -23,6 +23,10 @@ class Product_branchFactory extends Factory
                 'en' => $this->faker->word,
                 'ar' => $this->faker->word
             ]),
+            'product_branch_desc' => json_encode([
+                'en' => $this->faker->word,
+                'ar' => $this->faker->word
+            ]),
             'product_branch_img' => 'product_branchs/' . $ImgID . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),

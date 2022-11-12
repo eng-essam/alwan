@@ -9,6 +9,8 @@ use App\Http\Controllers\Api\{AdsController,
     ProductController,
     ServiceBranchController,
     ServiceController,
+    NotificationsController,
+
 };
 use Illuminate\Support\Facades\Route;
 
@@ -74,7 +76,8 @@ Route::middleware(['lang'])->group(function () {
         //Edit password
         Route::post('edit/password', [EditInformationController::class, 'editPassword']); //edit Password
 
-
+        //all Notification
+        Route::post('all/notification', [NotificationsController::class, 'allNotification']); //all Notification
     });
 
 });

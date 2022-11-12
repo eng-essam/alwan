@@ -1,4 +1,4 @@
-<?php //d0fdced664f70e0ebdbab7f614fb1e6c
+<?php //6fe6bf2bc96b0623acca84287e581630
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -52,8 +52,8 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Company_branch_C|mixed $company_address
      * @property _IH_Company_branch_C|mixed $created_at
      * @property _IH_Company_branch_C|mixed $updated_at
-     * @method _IH_Company_branch_C company_name($lang = null)
-     * @method _IH_Company_branch_C company_address($lang = null)
+     * @method _IH_Company_branch_C company_name()
+     * @method _IH_Company_branch_C company_address()
      * @method _IH_Company_branch_C refresh()
      * @method _IH_Company_branch_C update(array $attributes = [], array $options = [])
      * @method _IH_Company_branch_C save(array $options = [])
@@ -91,7 +91,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Notification_C|mixed $created_at
      * @property _IH_Notification_C|mixed $updated_at
      * @property _IH_Notification_C|mixed $user
-     * @method _IH_Notification_C notification_text($lang = null)
+     * @method _IH_Notification_C notification_text()
      * @method _IH_Notification_C refresh()
      * @method _IH_Notification_C update(array $attributes = [], array $options = [])
      * @method _IH_Notification_C save(array $options = [])
@@ -116,8 +116,8 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Product_C|mixed $updated_at
      * @property _IH_Product_C|mixed $company_branch
      * @property _IH_Product_C|mixed $product_branch
-     * @method _IH_Product_C product_name($lang = null)
-     * @method _IH_Product_C product_desc($lang = null)
+     * @method _IH_Product_C product_name()
+     * @method _IH_Product_C product_desc()
      * @method _IH_Product_C refresh()
      * @method _IH_Product_C update(array $attributes = [], array $options = [])
      * @method _IH_Product_C save(array $options = [])
@@ -132,10 +132,12 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @property _IH_Product_branch_C|mixed $id
      * @property _IH_Product_branch_C|mixed $product_branch_name
+     * @property _IH_Product_branch_C|mixed $product_branch_desc
      * @property _IH_Product_branch_C|mixed $product_branch_img
      * @property _IH_Product_branch_C|mixed $created_at
      * @property _IH_Product_branch_C|mixed $updated_at
-     * @method _IH_Product_branch_C product_branch_name($lang = null)
+     * @method _IH_Product_branch_C product_branch_name()
+     * @method _IH_Product_branch_C product_branch_desc()
      * @method _IH_Product_branch_C refresh()
      * @method _IH_Product_branch_C update(array $attributes = [], array $options = [])
      * @method _IH_Product_branch_C save(array $options = [])
@@ -177,9 +179,9 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Service_C|mixed $updated_at
      * @property _IH_Service_C|mixed $company_branch
      * @property _IH_Service_C|mixed $service_branch
-     * @method _IH_Service_C service_first_desc($lang = null)
-     * @method _IH_Service_C service_second_desc($lang = null)
-     * @method _IH_Service_C service_name($lang = null)
+     * @method _IH_Service_C service_first_desc()
+     * @method _IH_Service_C service_second_desc()
+     * @method _IH_Service_C service_name()
      * @method _IH_Service_C refresh()
      * @method _IH_Service_C update(array $attributes = [], array $options = [])
      * @method _IH_Service_C save(array $options = [])
@@ -197,7 +199,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Service_branch_C|mixed $service_branch_name
      * @property _IH_Service_branch_C|mixed $created_at
      * @property _IH_Service_branch_C|mixed $updated_at
-     * @method _IH_Service_branch_C service_branch_name($lang = null)
+     * @method _IH_Service_branch_C service_branch_name()
      * @method _IH_Service_branch_C refresh()
      * @method _IH_Service_branch_C update(array $attributes = [], array $options = [])
      * @method _IH_Service_branch_C save(array $options = [])

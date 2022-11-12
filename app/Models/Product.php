@@ -12,15 +12,15 @@ class Product extends Model
 
     public $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function product_name($lang = null)
+    public function product_name()
     {
-        $lang = $lang ?? App::getLocale();
+        $lang = App::getLocale();
         return json_decode($this->product_name)->$lang;
     }
 
-    public function product_desc($lang = null)
+    public function product_desc()
     {
-        $lang = $lang ?? App::getLocale();
+        $lang = App::getLocale();
         return json_decode($this->product_desc)->$lang;
     }
 
