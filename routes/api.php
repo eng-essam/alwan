@@ -4,13 +4,12 @@ use App\Http\Controllers\Api\{AdsController,
     AuthController,
     EditInformationController,
     GuestController,
+    NotificationsController,
     OfferController,
     ProductBranchController,
     ProductController,
     ServiceBranchController,
     ServiceController,
-    NotificationsController,
-
 };
 use Illuminate\Support\Facades\Route;
 
@@ -63,6 +62,9 @@ Route::middleware(['lang'])->group(function () {
         //User
         Route::get('user/info', [AuthController::class, 'userInfo']); //userInfo
 
+        //Delete Account
+        Route::get('delete/account', [AuthController::class, 'deleteAccount']); //delete Account
+
         //Edit Name
         Route::post('edit/name', [EditInformationController::class, 'editName']); //edit Name
 
@@ -77,7 +79,7 @@ Route::middleware(['lang'])->group(function () {
         Route::post('edit/password', [EditInformationController::class, 'editPassword']); //edit Password
 
         //all Notification
-        Route::post('all/notification', [NotificationsController::class, 'allNotification']); //all Notification
+        Route::get('all/notification', [NotificationsController::class, 'allNotification']); //all Notification
     });
 
 });

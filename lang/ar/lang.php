@@ -18,6 +18,7 @@ return [
     'email_edit_successfully'=>'تم تعديل البريد البريد الالكتروني بنجاح',
     'Phone_already_exists'=>'رقم الهاتف موجود بالفعل',
     'Phone_edit_successfully' => 'تم تعديل رقم الهاتف بنجاح',
+    'delete_account'=>'تم حذف الحساب بنجاح',
 
 
 

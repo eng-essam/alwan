@@ -18,5 +18,6 @@ return [
     'email_edit_successfully'=>'Email has been modified successfully',
     'Phone_already_exists'=>'Phone number already exists',
     'Phone_edit_successfully' => 'The Phone number has been successfully modified',
+    'delete_account'=>'The account has been deleted successfully',
 
 ];
