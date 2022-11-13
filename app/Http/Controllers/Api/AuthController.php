@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Traits\ReturnJson;
 use Illuminate\Http\Request;
@@ -15,7 +16,10 @@ class AuthController extends Controller
     public function userInfo(Request $request)
     {
         $user = User::findOrFail($request->user()->id);
-        return $this->requestUserInformation($user->id);
+        $data = [
+            'user' => new UserResource($user)
+        ];
+        return $this->requestSuccess($message = null, $data);
     }
 
     public function deleteAccount(Request $request)
