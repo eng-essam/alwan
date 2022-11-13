@@ -31,7 +31,7 @@ class ProductFactory extends Factory
                 'en' => $this->faker->text(),
                 'ar' => $this->faker->text()
             ]),
-            'Product_quantity_price' => collect([
+            'product_quantity_price' => collect([
                 ['quantity' => rand(1000, 9000), 'price' => rand(1000, 9000)],
                 ['quantity' => rand(1000, 9000), 'price' => rand(1000, 9000)],
                 ['quantity' => rand(1000, 9000), 'price' => rand(1000, 9000)],
