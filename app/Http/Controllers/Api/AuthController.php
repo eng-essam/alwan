@@ -15,11 +15,11 @@ class AuthController extends Controller
 
     public function userInfo(Request $request)
     {
-        return $user = User::findOrFail($request->user()->id);
-        $data = [
-            'user' => new UserResource($user)
-        ];
-        return $this->requestSuccess($message = null, $data);
+        return 'essam';
+//        $data = [
+//            'user' => new UserResource($user)
+//        ];
+//        return $this->requestSuccess($message = null, $data);
     }
 
     public function deleteAccount(Request $request)
