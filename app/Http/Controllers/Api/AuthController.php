@@ -14,7 +14,8 @@ class AuthController extends Controller
 
     public function userInfo(Request $request)
     {
-        return $this->requestUserInformation($request->user()->id);
+        $user = User::findOrFail($request->user()->id);
+        return $this->requestUserInformation($user->id);
     }
 
     public function deleteAccount(Request $request)
