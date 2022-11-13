@@ -15,7 +15,7 @@ class AuthController extends Controller
 
     public function userInfo(Request $request)
     {
-        $user = User::findOrFail($request->user()->id);
+        return $user = User::findOrFail($request->user()->id);
         $data = [
             'user' => new UserResource($user)
         ];
