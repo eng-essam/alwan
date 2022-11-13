@@ -1,4 +1,4 @@
-<?php //47b816510b174e614f1d98e71fc22357
+<?php //07b5f6b2ec3bfb3719f41737b0b7a453
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -24,6 +24,7 @@ namespace Database\Factories {
     
     /**
      * @method $this forCompany_branch($attributes = [])
+     * @method $this hasFavoriteUsers(int $count = 1, $attributes = [])
      * @method $this forProduct_branch($attributes = [])
      * @method $this hasUsers(int $count = 1, $attributes = [])
      */
@@ -50,6 +51,7 @@ namespace Database\Factories {
      * @method $this hasAddresses(int $count = 1, $attributes = [])
      * @method $this hasAds(int $count = 1, $attributes = [])
      * @method $this forCompany($attributes = [])
+     * @method $this hasFavoriteProducts(int $count = 1, $attributes = [])
      * @method $this hasNotifications(int $count = 1, $attributes = [])
      * @method $this hasProducts(int $count = 1, $attributes = [])
      * @method $this hasReadNotifications(int $count = 1, $attributes = [])

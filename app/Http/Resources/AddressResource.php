@@ -3,12 +3,15 @@
 namespace App\Http\Resources;
 
 use App\Models\Address;
+use App\Traits\ReturnBoolean;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 /** @mixin Address */
 class AddressResource extends JsonResource
 {
+    use ReturnBoolean;
+
     /**
      * @param Request $request
      * @return array
@@ -21,7 +24,7 @@ class AddressResource extends JsonResource
             'city' => $this->city,
             'fullAddress' => $this->fullAddress,
             'addressType' => $this->addressType,
-            'default' => $this->default,
+            'default' => $this->returnTrueOrfalse($this->default),
         ];
     }
 }

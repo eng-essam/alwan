@@ -17,7 +17,7 @@ class ProductFactory extends Factory
 
     public function definition(): array
     {
-        $ImgID =Str::random(30)  ;
+        $ImgID = Str::random(30);
         Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/products/' . $ImgID . '.png'));
 
         return [
@@ -26,17 +26,21 @@ class ProductFactory extends Factory
             'product_name' => json_encode([
                 'en' => $this->faker->name(),
                 'ar' => $this->faker->name()
-            ]) ,
-            'product_img' => 'products/' . $ImgID . '.png',
+            ]),
             'product_desc' => json_encode([
                 'en' => $this->faker->text(),
                 'ar' => $this->faker->text()
-            ]) ,
-            'Product_price' => $this->faker->randomFloat(),
-            'Product_quantities' => '100 , 200 , 300',
+            ]),
+            'Product_quantity_price' => collect([
+                ['quantity' => rand(1000, 9000), 'price' => rand(1000, 9000)],
+                ['quantity' => rand(1000, 9000), 'price' => rand(1000, 9000)],
+                ['quantity' => rand(1000, 9000), 'price' => rand(1000, 9000)],
+            ]),
+            'product_img' => 'products/' . $ImgID . '.png',
             'is_offer' => 0,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
     }
 }
+

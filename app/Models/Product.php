@@ -39,4 +39,9 @@ class Product extends Model
         return $this->belongsToMany(User::class, 'product_user')
             ->withTimestamps()->withPivot(['status']);
     }
+
+    public function favoriteUsers()
+    {
+        return $this->belongsToMany(User::class,'favorites')->withTimestamps();
+    }
 }

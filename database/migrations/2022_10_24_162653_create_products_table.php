@@ -15,8 +15,7 @@ return new class extends Migration {
             $table->string('product_img');
             $table->boolean('is_offer')->default(0);
             $table->mediumText('product_desc');
-            $table->tinyText('Product_quantities')->nullable();
-            $table->float('Product_price');
+            $table->text('Product_quantity_price')->nullable();
             $table->timestamps();
         });
     }

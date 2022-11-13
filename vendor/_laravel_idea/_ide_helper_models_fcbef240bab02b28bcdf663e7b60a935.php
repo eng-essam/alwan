@@ -1,4 +1,4 @@
-<?php //6f76365eec77eab0585fb06ddc1229fe
+<?php //9212c8e4a4f75d166971a11c92667f8e
 /** @noinspection all */
 
 namespace App\Models {
@@ -26,6 +26,8 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_QB;
     use LaravelIdea\Helper\App\Models\_IH_Email_code_C;
     use LaravelIdea\Helper\App\Models\_IH_Email_code_QB;
+    use LaravelIdea\Helper\App\Models\_IH_Favorite_C;
+    use LaravelIdea\Helper\App\Models\_IH_Favorite_QB;
     use LaravelIdea\Helper\App\Models\_IH_Notification_C;
     use LaravelIdea\Helper\App\Models\_IH_Notification_QB;
     use LaravelIdea\Helper\App\Models\_IH_Product_branch_C;
@@ -143,6 +145,26 @@ namespace App\Models {
     /**
      * @property int $id
      * @property int $user_id
+     * @property int $product_id
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @method static _IH_Favorite_QB onWriteConnection()
+     * @method _IH_Favorite_QB newQuery()
+     * @method static _IH_Favorite_QB on(null|string $connection = null)
+     * @method static _IH_Favorite_QB query()
+     * @method static _IH_Favorite_QB with(array|string $relations)
+     * @method _IH_Favorite_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_Favorite_C|Favorite[] all()
+     * @ownLinks user_id,\App\Models\User,id|product_id,\App\Models\Product,id
+     * @mixin _IH_Favorite_QB
+     */
+    class Favorite extends Model {}
+    
+    /**
+     * @property int $id
+     * @property int $user_id
      * @property string $notification_text
      * @property string $notification_img
      * @property bool $read_notification
@@ -173,11 +195,14 @@ namespace App\Models {
      * @property string $product_img
      * @property bool $is_offer
      * @property string $product_desc
-     * @property float $Product_price
+     * @property string|null $Product_quantity_price
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @property Company_branch $company_branch
      * @method BelongsTo|_IH_Company_branch_QB company_branch()
+     * @property _IH_User_C|User[] $favoriteUsers
+     * @property-read int $favorite_users_count
+     * @method BelongsToMany|_IH_User_QB favoriteUsers()
      * @property Product_branch $product_branch
      * @method BelongsTo|_IH_Product_branch_QB product_branch()
      * @property _IH_User_C|User[] $users
@@ -193,7 +218,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Product_C|Product[] all()
      * @ownLinks company_branch_id,\App\Models\Company_branch,id|product_branch_id,\App\Models\Product_branch,id
-     * @foreignLinks 
+     * @foreignLinks id,\App\Models\Favorite,product_id
      * @mixin _IH_Product_QB
      * @method static ProductFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
@@ -328,6 +353,9 @@ namespace App\Models {
      * @method HasMany|_IH_Ad_QB ads()
      * @property Company_branch $company
      * @method BelongsTo|_IH_Company_branch_QB company()
+     * @property _IH_Product_C|Product[] $favoriteProducts
+     * @property-read int $favorite_products_count
+     * @method BelongsToMany|_IH_Product_QB favoriteProducts()
      * @property _IH_DatabaseNotification_C|DatabaseNotification[] $notifications
      * @property-read int $notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB notifications()
@@ -355,7 +383,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_User_C|User[] all()
      * @ownLinks role_id,\App\Models\Role,id|company_branch_id,\App\Models\Company_branch,id
-     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id
+     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id|id,\App\Models\Favorite,user_id
      * @mixin _IH_User_QB
      * @method static UserFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */

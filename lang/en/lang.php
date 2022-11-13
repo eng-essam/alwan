@@ -22,5 +22,10 @@ return [
     'logout_successfully' => 'Logout successfully',
     'deleted_notification' => 'Successfully deleted',
     'successfully' => 'Successfully',
-    'add_new_address_successfully' => 'A new address has been added successfully'
+    'add_new_address_successfully' => 'A new address has been added successfully',
+    'add_product_favourites_successfully'=>'The product has been successfully added to your favourites',
+    'delete_product_favourites_successfully'=>'The product has been successfully deleted to your favourites'
+
+
+
 ];

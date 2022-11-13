@@ -1,4 +1,4 @@
-<?php //af335566778b80a4f2b0cc390483209d
+<?php //f7e7916a9a0c4911c95a08aa0d1d628e
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -7,6 +7,7 @@ namespace LaravelIdea\Helper\App\Models {
     use App\Models\Address;
     use App\Models\Company_branch;
     use App\Models\Email_code;
+    use App\Models\Favorite;
     use App\Models\Notification;
     use App\Models\Product;
     use App\Models\Product_branch;
@@ -382,6 +383,95 @@ namespace LaravelIdea\Helper\App\Models {
     class _IH_Email_code_QB extends _BaseBuilder {}
     
     /**
+     * @method Favorite|null getOrPut($key, $value)
+     * @method Favorite|$this shift(int $count = 1)
+     * @method Favorite|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Favorite|$this pop(int $count = 1)
+     * @method Favorite|null pull($key, $default = null)
+     * @method Favorite|null last(callable $callback = null, $default = null)
+     * @method Favorite|$this random($number = null)
+     * @method Favorite|null sole($key = null, $operator = null, $value = null)
+     * @method Favorite|null get($key, $default = null)
+     * @method Favorite|null first(callable $callback = null, $default = null)
+     * @method Favorite|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method Favorite|null find($key, $default = null)
+     * @method Favorite[] all()
+     * @property-read _IH_Favorite_CP $keyBy
+     * @property-read _IH_Favorite_CP $partition
+     * @property-read _IH_Favorite_CP $max
+     * @property-read _IH_Favorite_CP $doesntContain
+     * @property-read _IH_Favorite_CP $flatMap
+     * @property-read _IH_Favorite_CP $each
+     * @property-read _IH_Favorite_CP $map
+     * @property-read _IH_Favorite_CP $filter
+     * @property-read _IH_Favorite_CP $unique
+     * @property-read _IH_Favorite_CP $groupBy
+     * @property-read _IH_Favorite_CP $sortBy
+     * @property-read _IH_Favorite_CP $contains
+     * @property-read _IH_Favorite_CP $sum
+     * @property-read _IH_Favorite_CP $until
+     * @property-read _IH_Favorite_CP $every
+     * @property-read _IH_Favorite_CP $average
+     * @property-read _IH_Favorite_CP $when
+     * @property-read _IH_Favorite_CP $some
+     * @property-read _IH_Favorite_CP $skipWhile
+     * @property-read _IH_Favorite_CP $sortByDesc
+     * @property-read _IH_Favorite_CP $unless
+     * @property-read _IH_Favorite_CP $takeUntil
+     * @property-read _IH_Favorite_CP $avg
+     * @property-read _IH_Favorite_CP $skipUntil
+     * @property-read _IH_Favorite_CP $first
+     * @property-read _IH_Favorite_CP $takeWhile
+     * @property-read _IH_Favorite_CP $min
+     * @property-read _IH_Favorite_CP $reject
+     */
+    class _IH_Favorite_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return Favorite[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_Favorite_QB whereId($value)
+     * @method _IH_Favorite_QB whereUserId($value)
+     * @method _IH_Favorite_QB whereProductId($value)
+     * @method _IH_Favorite_QB whereCreatedAt($value)
+     * @method _IH_Favorite_QB whereUpdatedAt($value)
+     * @method Favorite baseSole(array|string $columns = ['*'])
+     * @method Favorite create(array $attributes = [])
+     * @method _IH_Favorite_C|Favorite[] cursor()
+     * @method Favorite|null|_IH_Favorite_C|Favorite[] find($id, array|string $columns = ['*'])
+     * @method _IH_Favorite_C|Favorite[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method Favorite|_IH_Favorite_C|Favorite[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Favorite|_IH_Favorite_C|Favorite[] findOrFail($id, array|string $columns = ['*'])
+     * @method Favorite|_IH_Favorite_C|Favorite[] findOrNew($id, array|string $columns = ['*'])
+     * @method Favorite first(array|string $columns = ['*'])
+     * @method Favorite firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Favorite firstOrCreate(array $attributes = [], array $values = [])
+     * @method Favorite firstOrFail(array|string $columns = ['*'])
+     * @method Favorite firstOrNew(array $attributes = [], array $values = [])
+     * @method Favorite firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Favorite forceCreate(array $attributes)
+     * @method _IH_Favorite_C|Favorite[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_Favorite_C|Favorite[] get(array|string $columns = ['*'])
+     * @method Favorite getModel()
+     * @method Favorite[] getModels(array|string $columns = ['*'])
+     * @method _IH_Favorite_C|Favorite[] hydrate(array $items)
+     * @method Favorite make(array $attributes = [])
+     * @method Favorite newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|Favorite[]|_IH_Favorite_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|Favorite[]|_IH_Favorite_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Favorite sole(array|string $columns = ['*'])
+     * @method Favorite updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_Favorite_QB extends _BaseBuilder {}
+    
+    /**
      * @method Notification|null getOrPut($key, $value)
      * @method Notification|$this shift(int $count = 1)
      * @method Notification|null firstOrFail($key = null, $operator = null, $value = null)
@@ -534,7 +624,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Product_QB whereProductImg($value)
      * @method _IH_Product_QB whereIsOffer($value)
      * @method _IH_Product_QB whereProductDesc($value)
-     * @method _IH_Product_QB whereProductPrice($value)
+     * @method _IH_Product_QB whereProductQuantityPrice($value)
      * @method _IH_Product_QB whereCreatedAt($value)
      * @method _IH_Product_QB whereUpdatedAt($value)
      * @method Product baseSole(array|string $columns = ['*'])

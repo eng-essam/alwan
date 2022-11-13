@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\Api\{AdsController,
+use App\Http\Controllers\Api\{AddressController,
+    AdsController,
     AuthController,
     EditInformationController,
+    FavoriteController,
     GuestController,
     NotificationsController,
     OfferController,
@@ -10,9 +12,13 @@ use App\Http\Controllers\Api\{AdsController,
     ProductController,
     ServiceBranchController,
     ServiceController,
-    AddressController,
 };
 use Illuminate\Support\Facades\Route;
+
+Route::get('test', function () {
+
+}); //test
+
 
 Route::middleware(['lang'])->group(function () {
 
@@ -89,6 +95,17 @@ Route::middleware(['lang'])->group(function () {
 
         //addresses
         Route::post('add/address', [AddressController::class, 'addAddress']); //add Address
+
+        Route::get('all/addresses', [AddressController::class, 'allAddresses']); //all Address
+
+        Route::post('set/default/address', [AddressController::class, 'setDefaultAddress']); //set Default Address
+
+        //Favorites
+        Route::get('all/favorites', [FavoriteController::class, 'allFavorites']); //all Favorites
+
+        Route::post('add/product/favorite', [FavoriteController::class, 'addProductFavorite']); //add Product Favorite
+
+        Route::post('delete/product/favorite', [FavoriteController::class, 'deleteProductFavorite']); //delete Product Favorite
 
     });
 

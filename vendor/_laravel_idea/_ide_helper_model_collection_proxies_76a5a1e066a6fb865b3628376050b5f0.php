@@ -1,4 +1,4 @@
-<?php //6fe6bf2bc96b0623acca84287e581630
+<?php //081ca841f03368d955f94808359b5967
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -83,6 +83,23 @@ namespace LaravelIdea\Helper\App\Models {
     class _IH_Email_code_CP {}
     
     /**
+     * @property _IH_Favorite_C|mixed $id
+     * @property _IH_Favorite_C|mixed $user_id
+     * @property _IH_Favorite_C|mixed $product_id
+     * @property _IH_Favorite_C|mixed $created_at
+     * @property _IH_Favorite_C|mixed $updated_at
+     * @method _IH_Favorite_C refresh()
+     * @method _IH_Favorite_C update(array $attributes = [], array $options = [])
+     * @method _IH_Favorite_C save(array $options = [])
+     * @method _IH_Favorite_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Favorite_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Favorite_C touch(null|string $attribute = null)
+     * @method _IH_Favorite_C fill(array $attributes)
+     * @method _IH_Favorite_C delete()
+     */
+    class _IH_Favorite_CP {}
+    
+    /**
      * @property _IH_Notification_C|mixed $id
      * @property _IH_Notification_C|mixed $user_id
      * @property _IH_Notification_C|mixed $notification_text
@@ -111,7 +128,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Product_C|mixed $product_img
      * @property _IH_Product_C|mixed $is_offer
      * @property _IH_Product_C|mixed $product_desc
-     * @property _IH_Product_C|mixed $Product_price
+     * @property _IH_Product_C|mixed $Product_quantity_price
      * @property _IH_Product_C|mixed $created_at
      * @property _IH_Product_C|mixed $updated_at
      * @property _IH_Product_C|mixed $company_branch

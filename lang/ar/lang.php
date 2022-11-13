@@ -22,6 +22,8 @@ return [
     'logout_successfully' => 'تم تسجيل الخروج بنجاح',
     'deleted_notification' => 'تم الحذف بنجاح',
     'successfully' => 'تم بنجاح',
-    'add_new_address_successfully' => 'تم اضافة عنوان جديد بنجاح'
+    'add_new_address_successfully' => 'تم اضافة عنوان جديد بنجاح',
+    'add_product_favourites_successfully' => 'تم اضافة المنتج بنجاح في المفضلة',
+    'delete_product_favourites_successfully' => 'تم حذف المنتج بنجاح في المفضلة',
 
 ];
