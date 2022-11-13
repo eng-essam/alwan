@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Traits\ReturnJson;
 use Illuminate\Http\Request;
@@ -15,11 +14,7 @@ class AuthController extends Controller
 
     public function userInfo(Request $request)
     {
-        return 'essam';
-//        $data = [
-//            'user' => new UserResource($user)
-//        ];
-//        return $this->requestSuccess($message = null, $data);
+        return $this->requestUserInformation($request->user()->id);
     }
 
     public function deleteAccount(Request $request)
