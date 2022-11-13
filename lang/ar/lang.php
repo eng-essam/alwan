@@ -15,15 +15,13 @@ return [
     'loging_successfully' => 'تم تسجيل الدخول بنجاح',
     'no_change' => 'لا يوجد تغيير',
     'name_edit_successfully' => 'تم تعديل الاسم بنجاح',
-    'email_edit_successfully'=>'تم تعديل البريد البريد الالكتروني بنجاح',
-    'Phone_already_exists'=>'رقم الهاتف موجود بالفعل',
+    'email_edit_successfully' => 'تم تعديل البريد البريد الالكتروني بنجاح',
+    'Phone_already_exists' => 'رقم الهاتف موجود بالفعل',
     'Phone_edit_successfully' => 'تم تعديل رقم الهاتف بنجاح',
-    'delete_account'=>'تم حذف الحساب بنجاح',
-    'logout_successfully'=>'تم تسجيل الخروج بنجاح',
-    'deleted_notification'=>'تم الحذف بنجاح',
-
-
-
-
+    'delete_account' => 'تم حذف الحساب بنجاح',
+    'logout_successfully' => 'تم تسجيل الخروج بنجاح',
+    'deleted_notification' => 'تم الحذف بنجاح',
+    'successfully' => 'تم بنجاح',
+    'add_new_address_successfully' => 'تم اضافة عنوان جديد بنجاح'
 
 ];

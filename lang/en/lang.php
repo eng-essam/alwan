@@ -15,11 +15,12 @@ return [
     'loging_successfully' => 'You are logged in successfully',
     'no_change' => 'No change',
     'name_edit_successfully' => 'The name has been successfully modified',
-    'email_edit_successfully'=>'Email has been modified successfully',
-    'Phone_already_exists'=>'Phone number already exists',
+    'email_edit_successfully' => 'Email has been modified successfully',
+    'Phone_already_exists' => 'Phone number already exists',
     'Phone_edit_successfully' => 'The Phone number has been successfully modified',
-    'delete_account'=>'The account has been deleted successfully',
-    'logout_successfully'=>'Logout successfully',
-    'deleted_notification'=>'Successfully deleted',
-
+    'delete_account' => 'The account has been deleted successfully',
+    'logout_successfully' => 'Logout successfully',
+    'deleted_notification' => 'Successfully deleted',
+    'successfully' => 'Successfully',
+    'add_new_address_successfully' => 'A new address has been added successfully'
 ];

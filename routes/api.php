@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\{AdsController,
     ProductController,
     ServiceBranchController,
     ServiceController,
+    AddressController,
 };
 use Illuminate\Support\Facades\Route;
 
@@ -85,6 +86,9 @@ Route::middleware(['lang'])->group(function () {
         Route::post('delete/one/notification', [NotificationsController::class, 'deleteOneNotification']); //delete One Notification
 
         Route::get('number/of/notifications', [NotificationsController::class, 'numberOfNotification']); //number Of Notification
+
+        //addresses
+        Route::post('add/address', [AddressController::class, 'addAddress']); //add Address
 
     });
 
