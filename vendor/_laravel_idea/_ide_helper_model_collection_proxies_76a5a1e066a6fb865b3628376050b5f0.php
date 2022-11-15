@@ -1,4 +1,4 @@
-<?php //081ca841f03368d955f94808359b5967
+<?php //eee1f9cd44925a5fbb5d53e9f6d51fb9
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -45,6 +45,47 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Address_C delete()
      */
     class _IH_Address_CP {}
+    
+    /**
+     * @property _IH_BuyProduct_C|mixed $id
+     * @property _IH_BuyProduct_C|mixed $user_id
+     * @property _IH_BuyProduct_C|mixed $product_id
+     * @property _IH_BuyProduct_C|mixed $product_quantity
+     * @property _IH_BuyProduct_C|mixed $product_price
+     * @property _IH_BuyProduct_C|mixed $pay_method
+     * @property _IH_BuyProduct_C|mixed $address_id
+     * @property _IH_BuyProduct_C|mixed $company_branch_id
+     * @property _IH_BuyProduct_C|mixed $order_status_id
+     * @property _IH_BuyProduct_C|mixed $created_at
+     * @property _IH_BuyProduct_C|mixed $updated_at
+     * @property _IH_BuyProduct_C|mixed $status
+     * @method _IH_BuyProduct_C refresh()
+     * @method _IH_BuyProduct_C update(array $attributes = [], array $options = [])
+     * @method _IH_BuyProduct_C save(array $options = [])
+     * @method _IH_BuyProduct_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_BuyProduct_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_BuyProduct_C touch(null|string $attribute = null)
+     * @method _IH_BuyProduct_C fill(array $attributes)
+     * @method _IH_BuyProduct_C delete()
+     */
+    class _IH_BuyProduct_CP {}
+    
+    /**
+     * @property _IH_Cart_C|mixed $id
+     * @property _IH_Cart_C|mixed $user_id
+     * @property _IH_Cart_C|mixed $product_id
+     * @property _IH_Cart_C|mixed $created_at
+     * @property _IH_Cart_C|mixed $updated_at
+     * @method _IH_Cart_C refresh()
+     * @method _IH_Cart_C update(array $attributes = [], array $options = [])
+     * @method _IH_Cart_C save(array $options = [])
+     * @method _IH_Cart_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Cart_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Cart_C touch(null|string $attribute = null)
+     * @method _IH_Cart_C fill(array $attributes)
+     * @method _IH_Cart_C delete()
+     */
+    class _IH_Cart_CP {}
     
     /**
      * @property _IH_Company_branch_C|mixed $id
@@ -121,6 +162,22 @@ namespace LaravelIdea\Helper\App\Models {
     class _IH_Notification_CP {}
     
     /**
+     * @property _IH_OrderStatus_C|mixed $id
+     * @property _IH_OrderStatus_C|mixed $created_at
+     * @property _IH_OrderStatus_C|mixed $updated_at
+     * @method _IH_OrderStatus_C status()
+     * @method _IH_OrderStatus_C refresh()
+     * @method _IH_OrderStatus_C update(array $attributes = [], array $options = [])
+     * @method _IH_OrderStatus_C save(array $options = [])
+     * @method _IH_OrderStatus_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_OrderStatus_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_OrderStatus_C touch(null|string $attribute = null)
+     * @method _IH_OrderStatus_C fill(array $attributes)
+     * @method _IH_OrderStatus_C delete()
+     */
+    class _IH_OrderStatus_CP {}
+    
+    /**
      * @property _IH_Product_C|mixed $id
      * @property _IH_Product_C|mixed $company_branch_id
      * @property _IH_Product_C|mixed $product_branch_id
@@ -128,7 +185,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Product_C|mixed $product_img
      * @property _IH_Product_C|mixed $is_offer
      * @property _IH_Product_C|mixed $product_desc
-     * @property _IH_Product_C|mixed $Product_quantity_price
+     * @property _IH_Product_C|mixed $product_quantity_price
      * @property _IH_Product_C|mixed $created_at
      * @property _IH_Product_C|mixed $updated_at
      * @property _IH_Product_C|mixed $company_branch

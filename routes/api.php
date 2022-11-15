@@ -3,6 +3,8 @@
 use App\Http\Controllers\Api\{AddressController,
     AdsController,
     AuthController,
+    BuyProductController,
+    CartController,
     EditInformationController,
     FavoriteController,
     GuestController,
@@ -101,11 +103,21 @@ Route::middleware(['lang'])->group(function () {
         Route::post('set/default/address', [AddressController::class, 'setDefaultAddress']); //set Default Address
 
         //Favorites
-        Route::get('all/favorites', [FavoriteController::class, 'allFavorites']); //all Favorites
+        Route::get('all/product/favorites', [FavoriteController::class, 'allFavorites']); //all Favorites
 
         Route::post('add/product/favorite', [FavoriteController::class, 'addProductFavorite']); //add Product Favorite
 
         Route::post('delete/product/favorite', [FavoriteController::class, 'deleteProductFavorite']); //delete Product Favorite
+
+        //Cart
+        Route::get('all/product/carts', [CartController::class, 'allCarts']); //all Favorites
+
+        Route::post('add/product/cart', [CartController::class, 'addProductCart']); //add Product Cart
+
+        Route::post('delete/product/cart', [CartController::class, 'deleteProductCart']); //delete Product Cart
+
+        //Buy Product
+        Route::post('buy/products', [BuyProductController::class, 'buyProducts']); //buy Products
 
     });
 

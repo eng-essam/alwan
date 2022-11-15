@@ -24,7 +24,7 @@ class User extends Authenticatable
 //        'password',
 //    ];
 
-    public $guarded = ['id' , 'created_at' , 'updated_at'];
+    public $guarded = ['id', 'created_at', 'updated_at'];
 
 
     /**
@@ -46,37 +46,51 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function role(){
+    public function role()
+    {
         return $this->belongsTo(Role::class);
     }
 
-    public function notifications(){
+    public function notifications()
+    {
         return $this->hasMany(Notification::class);
     }
 
-    public function ads(){
+    public function ads()
+    {
         return $this->hasMany(Ad::class);
     }
 
-    public function company(){
+    public function company()
+    {
         return $this->belongsTo(Company_branch::class);
     }
 
-    public function servics(){
-        return $this->belongsToMany(Service::class,'service_user')
-            ->withTimestamps()->withPivot(['Service_details','Service_file','status']);
+//    public function payServics()
+//    {
+//        return $this->belongsToMany(Service::class, 'service_user')
+//            ->withTimestamps()->withPivot(['Service_details', 'Service_file', 'status']);
+//    }
+
+    public function payProducts()
+    {
+        return $this->belongsToMany(Product::class, 'buy_products')
+            ->withTimestamps()->withPivot(['pay_method', 'address_id', 'company_branch_id', 'order_status_id', 'product_quantity',
+                'product_price']);
     }
 
-    public function products(){
-        return $this->belongsToMany(Product::class,'product_user')
-            ->withTimestamps()->withPivot(['status']);
-    }
-
-    public function addresses(){
+    public function addresses()
+    {
         return $this->hasMany(Address::class);
     }
 
-    public function favoriteProducts(){
-        return $this->belongsToMany(Product::class,'favorites')->withTimestamps();
+    public function favoriteProducts()
+    {
+        return $this->belongsToMany(Product::class, 'favorites')->withTimestamps();
+    }
+
+    public function cartProducts()
+    {
+        return $this->belongsToMany(Product::class, 'carts')->withTimestamps();
     }
 }

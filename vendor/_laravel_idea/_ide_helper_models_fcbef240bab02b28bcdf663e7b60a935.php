@@ -1,4 +1,4 @@
-<?php //9212c8e4a4f75d166971a11c92667f8e
+<?php //bcf1b3b1d9da7ef48d8fcd68483a5330
 /** @noinspection all */
 
 namespace App\Models {
@@ -22,6 +22,10 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_Address_QB;
     use LaravelIdea\Helper\App\Models\_IH_Ad_C;
     use LaravelIdea\Helper\App\Models\_IH_Ad_QB;
+    use LaravelIdea\Helper\App\Models\_IH_BuyProduct_C;
+    use LaravelIdea\Helper\App\Models\_IH_BuyProduct_QB;
+    use LaravelIdea\Helper\App\Models\_IH_Cart_C;
+    use LaravelIdea\Helper\App\Models\_IH_Cart_QB;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_C;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_QB;
     use LaravelIdea\Helper\App\Models\_IH_Email_code_C;
@@ -30,6 +34,8 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_Favorite_QB;
     use LaravelIdea\Helper\App\Models\_IH_Notification_C;
     use LaravelIdea\Helper\App\Models\_IH_Notification_QB;
+    use LaravelIdea\Helper\App\Models\_IH_OrderStatus_C;
+    use LaravelIdea\Helper\App\Models\_IH_OrderStatus_QB;
     use LaravelIdea\Helper\App\Models\_IH_Product_branch_C;
     use LaravelIdea\Helper\App\Models\_IH_Product_branch_QB;
     use LaravelIdea\Helper\App\Models\_IH_Product_C;
@@ -89,9 +95,58 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Address_C|Address[] all()
      * @ownLinks user_id,\App\Models\User,id
+     * @foreignLinks id,\App\Models\BuyProduct,address_id
      * @mixin _IH_Address_QB
      */
     class Address extends Model {}
+    
+    /**
+     * @property int $id
+     * @property int $user_id
+     * @property int $product_id
+     * @property int $product_quantity
+     * @property float $product_price
+     * @property string $pay_method
+     * @property int|null $address_id
+     * @property int|null $company_branch_id
+     * @property int|null $order_status_id
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @property OrderStatus $status
+     * @method BelongsTo|_IH_OrderStatus_QB status()
+     * @method static _IH_BuyProduct_QB onWriteConnection()
+     * @method _IH_BuyProduct_QB newQuery()
+     * @method static _IH_BuyProduct_QB on(null|string $connection = null)
+     * @method static _IH_BuyProduct_QB query()
+     * @method static _IH_BuyProduct_QB with(array|string $relations)
+     * @method _IH_BuyProduct_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_BuyProduct_C|BuyProduct[] all()
+     * @ownLinks user_id,\App\Models\User,id|product_id,\App\Models\Product,id|address_id,\App\Models\Address,id|company_branch_id,\App\Models\Company_branch,id|order_status_id,\App\Models\OrderStatus,id
+     * @mixin _IH_BuyProduct_QB
+     */
+    class BuyProduct extends Model {}
+    
+    /**
+     * @property int $id
+     * @property int $user_id
+     * @property int $product_id
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @method static _IH_Cart_QB onWriteConnection()
+     * @method _IH_Cart_QB newQuery()
+     * @method static _IH_Cart_QB on(null|string $connection = null)
+     * @method static _IH_Cart_QB query()
+     * @method static _IH_Cart_QB with(array|string $relations)
+     * @method _IH_Cart_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_Cart_C|Cart[] all()
+     * @ownLinks user_id,\App\Models\User,id|product_id,\App\Models\Product,id
+     * @mixin _IH_Cart_QB
+     */
+    class Cart extends Model {}
     
     /**
      * @property int $id
@@ -117,7 +172,7 @@ namespace App\Models {
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Company_branch_C|Company_branch[] all()
-     * @foreignLinks id,\App\Models\User,company_branch_id|id,\App\Models\Product,company_branch_id|id,\App\Models\Service,company_branch_id
+     * @foreignLinks id,\App\Models\User,company_branch_id|id,\App\Models\Product,company_branch_id|id,\App\Models\Service,company_branch_id|id,\App\Models\BuyProduct,company_branch_id
      * @mixin _IH_Company_branch_QB
      * @method static Company_branchFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
@@ -189,25 +244,49 @@ namespace App\Models {
     
     /**
      * @property int $id
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @property _IH_BuyProduct_C|BuyProduct[] $products
+     * @property-read int $products_count
+     * @method HasMany|_IH_BuyProduct_QB products()
+     * @method static _IH_OrderStatus_QB onWriteConnection()
+     * @method _IH_OrderStatus_QB newQuery()
+     * @method static _IH_OrderStatus_QB on(null|string $connection = null)
+     * @method static _IH_OrderStatus_QB query()
+     * @method static _IH_OrderStatus_QB with(array|string $relations)
+     * @method _IH_OrderStatus_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_OrderStatus_C|OrderStatus[] all()
+     * @foreignLinks id,\App\Models\BuyProduct,order_status_id
+     * @mixin _IH_OrderStatus_QB
+     */
+    class OrderStatus extends Model {}
+    
+    /**
+     * @property int $id
      * @property int $company_branch_id
      * @property int $product_branch_id
      * @property string $product_name
      * @property string $product_img
      * @property bool $is_offer
      * @property string $product_desc
-     * @property string|null $Product_quantity_price
+     * @property string|null $product_quantity_price
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
+     * @property _IH_User_C|User[] $cartUsers
+     * @property-read int $cart_users_count
+     * @method BelongsToMany|_IH_User_QB cartUsers()
      * @property Company_branch $company_branch
      * @method BelongsTo|_IH_Company_branch_QB company_branch()
      * @property _IH_User_C|User[] $favoriteUsers
      * @property-read int $favorite_users_count
      * @method BelongsToMany|_IH_User_QB favoriteUsers()
+     * @property _IH_User_C|User[] $payUsers
+     * @property-read int $pay_users_count
+     * @method BelongsToMany|_IH_User_QB payUsers()
      * @property Product_branch $product_branch
      * @method BelongsTo|_IH_Product_branch_QB product_branch()
-     * @property _IH_User_C|User[] $users
-     * @property-read int $users_count
-     * @method BelongsToMany|_IH_User_QB users()
      * @method static _IH_Product_QB onWriteConnection()
      * @method _IH_Product_QB newQuery()
      * @method static _IH_Product_QB on(null|string $connection = null)
@@ -218,7 +297,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Product_C|Product[] all()
      * @ownLinks company_branch_id,\App\Models\Company_branch,id|product_branch_id,\App\Models\Product_branch,id
-     * @foreignLinks id,\App\Models\Favorite,product_id
+     * @foreignLinks id,\App\Models\Favorite,product_id|id,\App\Models\Cart,product_id|id,\App\Models\BuyProduct,product_id
      * @mixin _IH_Product_QB
      * @method static ProductFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
@@ -300,7 +379,6 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Service_C|Service[] all()
      * @ownLinks company_branch_id,\App\Models\Company_branch,id|service_branch_id,\App\Models\Service_branch,id
-     * @foreignLinks 
      * @mixin _IH_Service_QB
      * @method static ServiceFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
@@ -351,6 +429,9 @@ namespace App\Models {
      * @property _IH_Ad_C|Ad[] $ads
      * @property-read int $ads_count
      * @method HasMany|_IH_Ad_QB ads()
+     * @property _IH_Product_C|Product[] $cartProducts
+     * @property-read int $cart_products_count
+     * @method BelongsToMany|_IH_Product_QB cartProducts()
      * @property Company_branch $company
      * @method BelongsTo|_IH_Company_branch_QB company()
      * @property _IH_Product_C|Product[] $favoriteProducts
@@ -359,17 +440,14 @@ namespace App\Models {
      * @property _IH_DatabaseNotification_C|DatabaseNotification[] $notifications
      * @property-read int $notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB notifications()
-     * @property _IH_Product_C|Product[] $products
-     * @property-read int $products_count
-     * @method BelongsToMany|_IH_Product_QB products()
+     * @property _IH_Product_C|Product[] $payProducts
+     * @property-read int $pay_products_count
+     * @method BelongsToMany|_IH_Product_QB payProducts()
      * @property _IH_DatabaseNotification_C|DatabaseNotification[] $readNotifications
      * @property-read int $read_notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB readNotifications()
      * @property Role $role
      * @method BelongsTo|_IH_Role_QB role()
-     * @property _IH_Service_C|Service[] $servics
-     * @property-read int $servics_count
-     * @method BelongsToMany|_IH_Service_QB servics()
      * @property _IH_DatabaseNotification_C|DatabaseNotification[] $unreadNotifications
      * @property-read int $unread_notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB unreadNotifications()
@@ -383,7 +461,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_User_C|User[] all()
      * @ownLinks role_id,\App\Models\Role,id|company_branch_id,\App\Models\Company_branch,id
-     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id|id,\App\Models\Favorite,user_id
+     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id|id,\App\Models\Favorite,user_id|id,\App\Models\Cart,user_id|id,\App\Models\BuyProduct,user_id
      * @mixin _IH_User_QB
      * @method static UserFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */

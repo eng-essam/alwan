@@ -31,7 +31,7 @@ trait ReturnJson
 
     public function requestSuccess($message = null, $data = null)
     {
-        return response()->json(['success' => true, 'status' => $message, 'errors' => null, 'data' => $data], 200);
+        return response()->json(['success' => true, 'status' => $message, 'errors' => [], 'data' => $data], 200);
     }
 
     public function requestUserInformation($userId)

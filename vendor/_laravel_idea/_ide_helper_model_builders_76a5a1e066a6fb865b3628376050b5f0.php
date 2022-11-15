@@ -1,14 +1,17 @@
-<?php //f7e7916a9a0c4911c95a08aa0d1d628e
+<?php //d2bec97dd83c480e4904505cd79c44c3
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
 
     use App\Models\Ad;
     use App\Models\Address;
+    use App\Models\BuyProduct;
+    use App\Models\Cart;
     use App\Models\Company_branch;
     use App\Models\Email_code;
     use App\Models\Favorite;
     use App\Models\Notification;
+    use App\Models\OrderStatus;
     use App\Models\Product;
     use App\Models\Product_branch;
     use App\Models\Role;
@@ -203,6 +206,190 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Address updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_Address_QB extends _BaseBuilder {}
+    
+    /**
+     * @method BuyProduct|null getOrPut($key, $value)
+     * @method BuyProduct|$this shift(int $count = 1)
+     * @method BuyProduct|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method BuyProduct|$this pop(int $count = 1)
+     * @method BuyProduct|null pull($key, $default = null)
+     * @method BuyProduct|null last(callable $callback = null, $default = null)
+     * @method BuyProduct|$this random($number = null)
+     * @method BuyProduct|null sole($key = null, $operator = null, $value = null)
+     * @method BuyProduct|null get($key, $default = null)
+     * @method BuyProduct|null first(callable $callback = null, $default = null)
+     * @method BuyProduct|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method BuyProduct|null find($key, $default = null)
+     * @method BuyProduct[] all()
+     * @property-read _IH_BuyProduct_CP $keyBy
+     * @property-read _IH_BuyProduct_CP $partition
+     * @property-read _IH_BuyProduct_CP $max
+     * @property-read _IH_BuyProduct_CP $doesntContain
+     * @property-read _IH_BuyProduct_CP $flatMap
+     * @property-read _IH_BuyProduct_CP $each
+     * @property-read _IH_BuyProduct_CP $map
+     * @property-read _IH_BuyProduct_CP $filter
+     * @property-read _IH_BuyProduct_CP $unique
+     * @property-read _IH_BuyProduct_CP $groupBy
+     * @property-read _IH_BuyProduct_CP $sortBy
+     * @property-read _IH_BuyProduct_CP $contains
+     * @property-read _IH_BuyProduct_CP $sum
+     * @property-read _IH_BuyProduct_CP $until
+     * @property-read _IH_BuyProduct_CP $every
+     * @property-read _IH_BuyProduct_CP $average
+     * @property-read _IH_BuyProduct_CP $when
+     * @property-read _IH_BuyProduct_CP $some
+     * @property-read _IH_BuyProduct_CP $skipWhile
+     * @property-read _IH_BuyProduct_CP $sortByDesc
+     * @property-read _IH_BuyProduct_CP $unless
+     * @property-read _IH_BuyProduct_CP $takeUntil
+     * @property-read _IH_BuyProduct_CP $avg
+     * @property-read _IH_BuyProduct_CP $skipUntil
+     * @property-read _IH_BuyProduct_CP $first
+     * @property-read _IH_BuyProduct_CP $takeWhile
+     * @property-read _IH_BuyProduct_CP $min
+     * @property-read _IH_BuyProduct_CP $reject
+     */
+    class _IH_BuyProduct_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return BuyProduct[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_BuyProduct_QB whereId($value)
+     * @method _IH_BuyProduct_QB whereUserId($value)
+     * @method _IH_BuyProduct_QB whereProductId($value)
+     * @method _IH_BuyProduct_QB whereProductQuantity($value)
+     * @method _IH_BuyProduct_QB whereProductPrice($value)
+     * @method _IH_BuyProduct_QB wherePayMethod($value)
+     * @method _IH_BuyProduct_QB whereAddressId($value)
+     * @method _IH_BuyProduct_QB whereCompanyBranchId($value)
+     * @method _IH_BuyProduct_QB whereOrderStatusId($value)
+     * @method _IH_BuyProduct_QB whereCreatedAt($value)
+     * @method _IH_BuyProduct_QB whereUpdatedAt($value)
+     * @method BuyProduct baseSole(array|string $columns = ['*'])
+     * @method BuyProduct create(array $attributes = [])
+     * @method _IH_BuyProduct_C|BuyProduct[] cursor()
+     * @method BuyProduct|null|_IH_BuyProduct_C|BuyProduct[] find($id, array|string $columns = ['*'])
+     * @method _IH_BuyProduct_C|BuyProduct[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method BuyProduct|_IH_BuyProduct_C|BuyProduct[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method BuyProduct|_IH_BuyProduct_C|BuyProduct[] findOrFail($id, array|string $columns = ['*'])
+     * @method BuyProduct|_IH_BuyProduct_C|BuyProduct[] findOrNew($id, array|string $columns = ['*'])
+     * @method BuyProduct first(array|string $columns = ['*'])
+     * @method BuyProduct firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method BuyProduct firstOrCreate(array $attributes = [], array $values = [])
+     * @method BuyProduct firstOrFail(array|string $columns = ['*'])
+     * @method BuyProduct firstOrNew(array $attributes = [], array $values = [])
+     * @method BuyProduct firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method BuyProduct forceCreate(array $attributes)
+     * @method _IH_BuyProduct_C|BuyProduct[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_BuyProduct_C|BuyProduct[] get(array|string $columns = ['*'])
+     * @method BuyProduct getModel()
+     * @method BuyProduct[] getModels(array|string $columns = ['*'])
+     * @method _IH_BuyProduct_C|BuyProduct[] hydrate(array $items)
+     * @method BuyProduct make(array $attributes = [])
+     * @method BuyProduct newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|BuyProduct[]|_IH_BuyProduct_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|BuyProduct[]|_IH_BuyProduct_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method BuyProduct sole(array|string $columns = ['*'])
+     * @method BuyProduct updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_BuyProduct_QB extends _BaseBuilder {}
+    
+    /**
+     * @method Cart|null getOrPut($key, $value)
+     * @method Cart|$this shift(int $count = 1)
+     * @method Cart|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Cart|$this pop(int $count = 1)
+     * @method Cart|null pull($key, $default = null)
+     * @method Cart|null last(callable $callback = null, $default = null)
+     * @method Cart|$this random($number = null)
+     * @method Cart|null sole($key = null, $operator = null, $value = null)
+     * @method Cart|null get($key, $default = null)
+     * @method Cart|null first(callable $callback = null, $default = null)
+     * @method Cart|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method Cart|null find($key, $default = null)
+     * @method Cart[] all()
+     * @property-read _IH_Cart_CP $keyBy
+     * @property-read _IH_Cart_CP $partition
+     * @property-read _IH_Cart_CP $max
+     * @property-read _IH_Cart_CP $doesntContain
+     * @property-read _IH_Cart_CP $flatMap
+     * @property-read _IH_Cart_CP $each
+     * @property-read _IH_Cart_CP $map
+     * @property-read _IH_Cart_CP $filter
+     * @property-read _IH_Cart_CP $unique
+     * @property-read _IH_Cart_CP $groupBy
+     * @property-read _IH_Cart_CP $sortBy
+     * @property-read _IH_Cart_CP $contains
+     * @property-read _IH_Cart_CP $sum
+     * @property-read _IH_Cart_CP $until
+     * @property-read _IH_Cart_CP $every
+     * @property-read _IH_Cart_CP $average
+     * @property-read _IH_Cart_CP $when
+     * @property-read _IH_Cart_CP $some
+     * @property-read _IH_Cart_CP $skipWhile
+     * @property-read _IH_Cart_CP $sortByDesc
+     * @property-read _IH_Cart_CP $unless
+     * @property-read _IH_Cart_CP $takeUntil
+     * @property-read _IH_Cart_CP $avg
+     * @property-read _IH_Cart_CP $skipUntil
+     * @property-read _IH_Cart_CP $first
+     * @property-read _IH_Cart_CP $takeWhile
+     * @property-read _IH_Cart_CP $min
+     * @property-read _IH_Cart_CP $reject
+     */
+    class _IH_Cart_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return Cart[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_Cart_QB whereId($value)
+     * @method _IH_Cart_QB whereUserId($value)
+     * @method _IH_Cart_QB whereProductId($value)
+     * @method _IH_Cart_QB whereCreatedAt($value)
+     * @method _IH_Cart_QB whereUpdatedAt($value)
+     * @method Cart baseSole(array|string $columns = ['*'])
+     * @method Cart create(array $attributes = [])
+     * @method _IH_Cart_C|Cart[] cursor()
+     * @method Cart|null|_IH_Cart_C|Cart[] find($id, array|string $columns = ['*'])
+     * @method _IH_Cart_C|Cart[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method Cart|_IH_Cart_C|Cart[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Cart|_IH_Cart_C|Cart[] findOrFail($id, array|string $columns = ['*'])
+     * @method Cart|_IH_Cart_C|Cart[] findOrNew($id, array|string $columns = ['*'])
+     * @method Cart first(array|string $columns = ['*'])
+     * @method Cart firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Cart firstOrCreate(array $attributes = [], array $values = [])
+     * @method Cart firstOrFail(array|string $columns = ['*'])
+     * @method Cart firstOrNew(array $attributes = [], array $values = [])
+     * @method Cart firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Cart forceCreate(array $attributes)
+     * @method _IH_Cart_C|Cart[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_Cart_C|Cart[] get(array|string $columns = ['*'])
+     * @method Cart getModel()
+     * @method Cart[] getModels(array|string $columns = ['*'])
+     * @method _IH_Cart_C|Cart[] hydrate(array $items)
+     * @method Cart make(array $attributes = [])
+     * @method Cart newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|Cart[]|_IH_Cart_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|Cart[]|_IH_Cart_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Cart sole(array|string $columns = ['*'])
+     * @method Cart updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_Cart_QB extends _BaseBuilder {}
     
     /**
      * @method Company_branch|null getOrPut($key, $value)
@@ -561,6 +748,93 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Notification updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_Notification_QB extends _BaseBuilder {}
+    
+    /**
+     * @method OrderStatus|null getOrPut($key, $value)
+     * @method OrderStatus|$this shift(int $count = 1)
+     * @method OrderStatus|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method OrderStatus|$this pop(int $count = 1)
+     * @method OrderStatus|null pull($key, $default = null)
+     * @method OrderStatus|null last(callable $callback = null, $default = null)
+     * @method OrderStatus|$this random($number = null)
+     * @method OrderStatus|null sole($key = null, $operator = null, $value = null)
+     * @method OrderStatus|null get($key, $default = null)
+     * @method OrderStatus|null first(callable $callback = null, $default = null)
+     * @method OrderStatus|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method OrderStatus|null find($key, $default = null)
+     * @method OrderStatus[] all()
+     * @property-read _IH_OrderStatus_CP $keyBy
+     * @property-read _IH_OrderStatus_CP $partition
+     * @property-read _IH_OrderStatus_CP $max
+     * @property-read _IH_OrderStatus_CP $doesntContain
+     * @property-read _IH_OrderStatus_CP $flatMap
+     * @property-read _IH_OrderStatus_CP $each
+     * @property-read _IH_OrderStatus_CP $map
+     * @property-read _IH_OrderStatus_CP $filter
+     * @property-read _IH_OrderStatus_CP $unique
+     * @property-read _IH_OrderStatus_CP $groupBy
+     * @property-read _IH_OrderStatus_CP $sortBy
+     * @property-read _IH_OrderStatus_CP $contains
+     * @property-read _IH_OrderStatus_CP $sum
+     * @property-read _IH_OrderStatus_CP $until
+     * @property-read _IH_OrderStatus_CP $every
+     * @property-read _IH_OrderStatus_CP $average
+     * @property-read _IH_OrderStatus_CP $when
+     * @property-read _IH_OrderStatus_CP $some
+     * @property-read _IH_OrderStatus_CP $skipWhile
+     * @property-read _IH_OrderStatus_CP $sortByDesc
+     * @property-read _IH_OrderStatus_CP $unless
+     * @property-read _IH_OrderStatus_CP $takeUntil
+     * @property-read _IH_OrderStatus_CP $avg
+     * @property-read _IH_OrderStatus_CP $skipUntil
+     * @property-read _IH_OrderStatus_CP $first
+     * @property-read _IH_OrderStatus_CP $takeWhile
+     * @property-read _IH_OrderStatus_CP $min
+     * @property-read _IH_OrderStatus_CP $reject
+     */
+    class _IH_OrderStatus_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return OrderStatus[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_OrderStatus_QB whereId($value)
+     * @method _IH_OrderStatus_QB whereCreatedAt($value)
+     * @method _IH_OrderStatus_QB whereUpdatedAt($value)
+     * @method OrderStatus baseSole(array|string $columns = ['*'])
+     * @method OrderStatus create(array $attributes = [])
+     * @method _IH_OrderStatus_C|OrderStatus[] cursor()
+     * @method OrderStatus|null|_IH_OrderStatus_C|OrderStatus[] find($id, array|string $columns = ['*'])
+     * @method _IH_OrderStatus_C|OrderStatus[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method OrderStatus|_IH_OrderStatus_C|OrderStatus[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method OrderStatus|_IH_OrderStatus_C|OrderStatus[] findOrFail($id, array|string $columns = ['*'])
+     * @method OrderStatus|_IH_OrderStatus_C|OrderStatus[] findOrNew($id, array|string $columns = ['*'])
+     * @method OrderStatus first(array|string $columns = ['*'])
+     * @method OrderStatus firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method OrderStatus firstOrCreate(array $attributes = [], array $values = [])
+     * @method OrderStatus firstOrFail(array|string $columns = ['*'])
+     * @method OrderStatus firstOrNew(array $attributes = [], array $values = [])
+     * @method OrderStatus firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method OrderStatus forceCreate(array $attributes)
+     * @method _IH_OrderStatus_C|OrderStatus[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_OrderStatus_C|OrderStatus[] get(array|string $columns = ['*'])
+     * @method OrderStatus getModel()
+     * @method OrderStatus[] getModels(array|string $columns = ['*'])
+     * @method _IH_OrderStatus_C|OrderStatus[] hydrate(array $items)
+     * @method OrderStatus make(array $attributes = [])
+     * @method OrderStatus newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|OrderStatus[]|_IH_OrderStatus_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|OrderStatus[]|_IH_OrderStatus_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method OrderStatus sole(array|string $columns = ['*'])
+     * @method OrderStatus updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_OrderStatus_QB extends _BaseBuilder {}
     
     /**
      * @method Product|null getOrPut($key, $value)

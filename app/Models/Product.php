@@ -34,14 +34,20 @@ class Product extends Model
         return $this->belongsTo(Product_branch::class);
     }
 
-    public function users()
+    public function payUsers()
     {
-        return $this->belongsToMany(User::class, 'product_user')
-            ->withTimestamps()->withPivot(['status']);
+        return $this->belongsToMany(User::class, 'buy_products')
+            ->withTimestamps()->withPivot(['pay_method', 'address_id', 'company_branch_id', 'order_status_id', 'product_quantity',
+                'product_price']);
     }
 
     public function favoriteUsers()
     {
-        return $this->belongsToMany(User::class,'favorites')->withTimestamps();
+        return $this->belongsToMany(User::class, 'favorites')->withTimestamps();
+    }
+
+    public function cartUsers()
+    {
+        return $this->belongsToMany(User::class, 'carts')->withTimestamps();
     }
 }

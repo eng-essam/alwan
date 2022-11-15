@@ -25,5 +25,13 @@ return [
     'add_new_address_successfully' => 'تم اضافة عنوان جديد بنجاح',
     'add_product_favourites_successfully' => 'تم اضافة المنتج بنجاح في المفضلة',
     'delete_product_favourites_successfully' => 'تم حذف المنتج بنجاح في المفضلة',
+    'add_product_carts_successfully' => 'تم اضافة المنتج بنجاح في العربة',
+    'delete_product_carts_successfully' => 'تم حذف المنتج بنجاح في العربة',
+    'payment_successfully'=>'عملية الدفع تمت بنجاح',
+
+
+
+
+
 
 ];
