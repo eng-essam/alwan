@@ -1,4 +1,4 @@
-<?php //b6ba499be0a2d458cb3eb4ac5ed774d2
+<?php //bc7a0ea14e8b8eb0ed196c7b8aaf1f12
 /** @noinspection all */
 
 namespace Illuminate\Database\Eloquent {
@@ -19,7 +19,7 @@ namespace Illuminate\Http {
      * @method bool hasValidSignature($absolute = true)
      * @method bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
      * @method array validate(array $rules, ...$params)
-     * @method void validateWithBag(string $errorBag, array $rules, ...$params)
+     * @method array validateWithBag(string $errorBag, array $rules, ...$params)
      */
     class Request {}
 }

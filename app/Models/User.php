@@ -76,7 +76,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Product::class, 'buy_products')
             ->withTimestamps()->withPivot(['pay_method', 'address_id', 'company_branch_id',
-                'order_status_id', 'product_quantity', 'product_price','order_id']);
+                'order_status_id', 'product_quantity', 'product_price', 'order_id']);
     }
 
     public function addresses()
@@ -91,6 +91,8 @@ class User extends Authenticatable
 
     public function cartProducts()
     {
-        return $this->belongsToMany(Product::class, 'carts')->withTimestamps();
+        return $this->belongsToMany(Product::class, 'carts')
+            ->withPivot(['file', 'message'])
+            ->withTimestamps();
     }
 }

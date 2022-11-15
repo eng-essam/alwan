@@ -1,4 +1,4 @@
-<?php //eee1f9cd44925a5fbb5d53e9f6d51fb9
+<?php //673b2bf9b6c49603a8aff79ab27f37cd
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -50,6 +50,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_BuyProduct_C|mixed $id
      * @property _IH_BuyProduct_C|mixed $user_id
      * @property _IH_BuyProduct_C|mixed $product_id
+     * @property _IH_BuyProduct_C|mixed $order_id
      * @property _IH_BuyProduct_C|mixed $product_quantity
      * @property _IH_BuyProduct_C|mixed $product_price
      * @property _IH_BuyProduct_C|mixed $pay_method
@@ -74,6 +75,8 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Cart_C|mixed $id
      * @property _IH_Cart_C|mixed $user_id
      * @property _IH_Cart_C|mixed $product_id
+     * @property _IH_Cart_C|mixed $file
+     * @property _IH_Cart_C|mixed $message
      * @property _IH_Cart_C|mixed $created_at
      * @property _IH_Cart_C|mixed $updated_at
      * @method _IH_Cart_C refresh()

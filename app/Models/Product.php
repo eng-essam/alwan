@@ -37,8 +37,8 @@ class Product extends Model
     public function payUsers()
     {
         return $this->belongsToMany(User::class, 'buy_products')
-            ->withTimestamps()->withPivot(['pay_method', 'address_id', 'company_branch_id',
-                'order_status_id', 'product_quantity', 'product_price', 'order_id']);
+            ->withPivot(['pay_method', 'address_id', 'company_branch_id', 'order_status_id', 'product_quantity', 'product_price', 'order_id'])
+            ->withTimestamps();
     }
 
     public function favoriteUsers()
@@ -48,6 +48,8 @@ class Product extends Model
 
     public function cartUsers()
     {
-        return $this->belongsToMany(User::class, 'carts')->withTimestamps();
+        return $this->belongsToMany(User::class, 'carts')
+            ->withPivot(['file', 'message'])
+            ->withTimestamps();
     }
 }

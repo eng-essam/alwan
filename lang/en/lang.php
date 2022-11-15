@@ -24,10 +24,11 @@ return [
     'successfully' => 'Successfully',
     'add_new_address_successfully' => 'A new address has been added successfully',
     'add_product_favourites_successfully'=>'The product has been successfully added to your favourites',
-    'delete_product_favourites_successfully'=>'The product has been successfully deleted to your favourites',
+    'delete_product_favourites_successfully'=>'The product has been successfully deleted from your favourites',
     'add_product_carts_successfully'=>'The product has been successfully added to your carts',
     'delete_product_carts_successfully'=>'The product has been successfully deleted to your carts',
     'payment_successfully'=>'Payment successfully',
+    'product_already_in_cart'=>'This product is already in the cart'
 
 
 ];

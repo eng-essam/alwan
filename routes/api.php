@@ -14,6 +14,7 @@ use App\Http\Controllers\Api\{AddressController,
     ProductController,
     ServiceBranchController,
     ServiceController,
+    CompanyBranchController,
 };
 use Illuminate\Support\Facades\Route;
 
@@ -118,6 +119,9 @@ Route::middleware(['lang'])->group(function () {
 
         //Buy Product
         Route::post('buy/products', [BuyProductController::class, 'buyProducts']); //buy Products
+
+        //Company branch
+        Route::get('all/company/branch', [CompanyBranchController::class, 'allCompanyBranch']); //all Company Branch
 
     });
 
