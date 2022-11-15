@@ -18,8 +18,8 @@ class ServiceResource extends JsonResource
         return [
             'id' => $this->id,
             'subServiceName' => $this->service_name(),
-            'subServiceMainImg' => asset("uploads/ads/$this->main_img"),
-            'subServiceSubImg' => asset("uploads/ads/$this->sub_img"),
+            'subServiceMainImg' => asset("uploads/$this->main_img"),
+            'subServiceSubImg' => asset("uploads/$this->sub_img"),
             'subServiceFirstDesc' => $this->service_first_desc(),
             'subServiceSecondDesc' => $this->service_second_desc(),
             'mainServiceName' => $this->service_branch->service_branch_name(),
