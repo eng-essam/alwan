@@ -17,6 +17,7 @@ class BuyProductSeeder extends Seeder
         BuyProduct::create([
             'user_id' => User::inRandomOrder()->first()->id,
             'product_id' => Product::inRandomOrder()->first()->id,
+            'order_id' => rand(10000000,99999999),
             'product_quantity' => 330,
             'product_price' => 70,
             'pay_method' => 'home',
@@ -28,6 +29,7 @@ class BuyProductSeeder extends Seeder
         BuyProduct::create([
             'user_id' => User::inRandomOrder()->first()->id,
             'product_id' => Product::inRandomOrder()->first()->id,
+            'order_id' => rand(10000000,99999999),
             'product_quantity' => 200,
             'product_price' => 50,
             'pay_method' => 'card',
@@ -39,6 +41,7 @@ class BuyProductSeeder extends Seeder
         BuyProduct::create([
             'user_id' => User::inRandomOrder()->first()->id,
             'product_id' => Product::inRandomOrder()->first()->id,
+            'order_id' => rand(10000000,99999999),
             'product_quantity' => 100,
             'product_price' => 25,
             'pay_method' => 'branch',

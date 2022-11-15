@@ -11,6 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('product_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->integer('order_id');
             $table->integer('product_quantity');
             $table->float('product_price');
             $table->enum('pay_method',['card','home','branch']);

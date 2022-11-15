@@ -25,8 +25,8 @@ class DatabaseSeeder extends Seeder
         //User::factory(10)->create();
         //Product_branch::factory(5)->create();
         //Service_branch::factory(5)->create();
-        //Service::factory(10)->create();
-        Product::factory(4)->create();
+        Service::factory(5)->create();
+        Product::factory(5)->create();
         //Notification::factory(5)->create();
         //Ad::factory(5)->create();
     }
