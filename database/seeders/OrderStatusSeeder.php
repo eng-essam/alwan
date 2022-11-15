@@ -11,25 +11,51 @@ class OrderStatusSeeder extends Seeder
     {
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'Your request has been received',
-                'ar' => 'تم استلام طلبك'
+                'en' => 'pending until payment',
+                'ar' => 'معلق لحين الدفع'
             ]),
         ]);
 
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'The request is being reviewed',
-                'ar' => 'يتم مراجعة الطلب'
+                'en' => 'The receipt of the request',
+                'ar' => 'تم استلام الطلب'
+            ]),
+        ]);
+
+        OrderStatus::create([
+            'status' => json_encode([
+                'en' => 'In the stage of sorted',
+                'ar' => 'في مرحلة الفرز'
+            ]),
+        ]);
+
+        OrderStatus::create([
+            'status' => json_encode([
+                'en' => 'In the stage of execution',
+                'ar' => 'في مرحلة التنفيذ'
             ]),
         ]);
 
         OrderStatus::create([
             'status' => json_encode([
                 'en' => 'reques has been rejected',
-                'ar' => 'تم رفض الطلب'
+                'ar' => 'في مرحلة التخزين'
             ]),
         ]);
 
+        OrderStatus::create([
+            'status' => json_encode([
+                'en' => 'Order delivered',
+                'ar' => 'تم تسليم الطلب'
+            ]),
+        ]);
 
+        OrderStatus::create([
+            'status' => json_encode([
+                'en' => 'reques has been rejected',
+                'ar' => 'تم الرفض'
+            ]),
+        ]);
     }
 }

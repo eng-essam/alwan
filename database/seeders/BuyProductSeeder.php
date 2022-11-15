@@ -20,9 +20,7 @@ class BuyProductSeeder extends Seeder
             'order_id' => rand(10000000,99999999),
             'product_quantity' => 330,
             'product_price' => 70,
-            'pay_method' => 'home',
             'address_id' => Address::inRandomOrder()->first()->id,
-            'company_branch_id' => null,
             'order_status_id' => OrderStatus::inRandomOrder()->first()->id,
         ]);
 
@@ -32,9 +30,7 @@ class BuyProductSeeder extends Seeder
             'order_id' => rand(10000000,99999999),
             'product_quantity' => 200,
             'product_price' => 50,
-            'pay_method' => 'card',
             'address_id' => Address::inRandomOrder()->first()->id,
-            'company_branch_id' => null,
             'order_status_id' => OrderStatus::inRandomOrder()->first()->id,
         ]);
 
@@ -44,9 +40,7 @@ class BuyProductSeeder extends Seeder
             'order_id' => rand(10000000,99999999),
             'product_quantity' => 100,
             'product_price' => 25,
-            'pay_method' => 'branch',
-            'address_id' => null,
-            'company_branch_id' => Company_branch::inRandomOrder()->first()->id,
+            'address_id' => Address::inRandomOrder()->first()->id,
             'order_status_id' => OrderStatus::inRandomOrder()->first()->id,
         ]);
     }
