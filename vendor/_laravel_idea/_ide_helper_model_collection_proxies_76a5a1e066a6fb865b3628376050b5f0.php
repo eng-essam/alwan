@@ -1,4 +1,4 @@
-<?php //673b2bf9b6c49603a8aff79ab27f37cd
+<?php //73ce447260ad998af76e9a7859f79a5b
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -53,13 +53,10 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_BuyProduct_C|mixed $order_id
      * @property _IH_BuyProduct_C|mixed $product_quantity
      * @property _IH_BuyProduct_C|mixed $product_price
-     * @property _IH_BuyProduct_C|mixed $pay_method
+     * @property _IH_BuyProduct_C|mixed $status
      * @property _IH_BuyProduct_C|mixed $address_id
-     * @property _IH_BuyProduct_C|mixed $company_branch_id
-     * @property _IH_BuyProduct_C|mixed $order_status_id
      * @property _IH_BuyProduct_C|mixed $created_at
      * @property _IH_BuyProduct_C|mixed $updated_at
-     * @property _IH_BuyProduct_C|mixed $status
      * @method _IH_BuyProduct_C refresh()
      * @method _IH_BuyProduct_C update(array $attributes = [], array $options = [])
      * @method _IH_BuyProduct_C save(array $options = [])

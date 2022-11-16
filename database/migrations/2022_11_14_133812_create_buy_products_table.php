@@ -14,8 +14,8 @@ return new class extends Migration {
             $table->integer('order_id');
             $table->integer('product_quantity');
             $table->float('product_price');
+            $table->string('status');
             $table->foreignId('address_id')->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreignId('order_status_id')->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }

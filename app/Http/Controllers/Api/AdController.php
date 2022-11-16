@@ -7,7 +7,7 @@ use App\Http\Resources\AdResource;
 use App\Models\Ad;
 use App\Traits\ReturnJson;
 
-class AdsController extends Controller
+class AdController extends Controller
 {
     use ReturnJson;
 

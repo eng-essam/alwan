@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\{AddressController,
-    AdsController,
+    AdController,
     AuthController,
     BuyProductController,
     CartController,
@@ -15,6 +15,7 @@ use App\Http\Controllers\Api\{AddressController,
     ServiceBranchController,
     ServiceController,
     CompanyBranchController,
+    OrderController,
 };
 use Illuminate\Support\Facades\Route;
 
@@ -44,7 +45,7 @@ Route::middleware(['lang'])->group(function () {
     Route::post('login/social', [GuestController::class, 'loginSocial']); //login Social
 
     //Ads
-    Route::get('ads', [AdsController::class, 'allAds']); //ads
+    Route::get('ads', [AdController::class, 'allAds']); //ads
 
     //Products
     Route::get('all/main/product', [ProductBranchController::class, 'allMainProduct']); //all Main Product
@@ -68,6 +69,9 @@ Route::middleware(['lang'])->group(function () {
     Route::get('all/offers', [OfferController::class, 'allOffers']); //all Offers
 
     Route::middleware(['auth:sanctum', 'verified'])->group(callback: function () {
+
+        //Company branch
+        Route::get('all/company/branch', [CompanyBranchController::class, 'allCompanyBranch']); //all Company Branch
 
         //Auth
         Route::get('user/info', [AuthController::class, 'userInfo']); //userInfo
@@ -101,8 +105,6 @@ Route::middleware(['lang'])->group(function () {
 
         Route::get('all/addresses', [AddressController::class, 'allAddresses']); //all Address
 
-        Route::post('set/default/address', [AddressController::class, 'setDefaultAddress']); //set Default Address
-
         //Favorites
         Route::get('all/product/favorites', [FavoriteController::class, 'allFavorites']); //all Favorites
 
@@ -120,8 +122,8 @@ Route::middleware(['lang'])->group(function () {
         //Buy Product
         Route::post('buy/products', [BuyProductController::class, 'buyProducts']); //buy Products
 
-        //Company branch
-        Route::get('all/company/branch', [CompanyBranchController::class, 'allCompanyBranch']); //all Company Branch
+        //User Order
+        Route::get('all/order/products', [OrderController::class, 'allOrderProducts']); //all Order Products
 
     });
 

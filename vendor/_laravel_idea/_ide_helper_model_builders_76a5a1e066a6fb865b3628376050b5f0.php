@@ -1,4 +1,4 @@
-<?php //aedf74ce8d73f94658ef0ba800d04e88
+<?php //240ae2c75414bf9536f7a83c02ccb1c2
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -268,10 +268,8 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_BuyProduct_QB whereOrderId($value)
      * @method _IH_BuyProduct_QB whereProductQuantity($value)
      * @method _IH_BuyProduct_QB whereProductPrice($value)
-     * @method _IH_BuyProduct_QB wherePayMethod($value)
+     * @method _IH_BuyProduct_QB whereStatus($value)
      * @method _IH_BuyProduct_QB whereAddressId($value)
-     * @method _IH_BuyProduct_QB whereCompanyBranchId($value)
-     * @method _IH_BuyProduct_QB whereOrderStatusId($value)
      * @method _IH_BuyProduct_QB whereCreatedAt($value)
      * @method _IH_BuyProduct_QB whereUpdatedAt($value)
      * @method BuyProduct baseSole(array|string $columns = ['*'])

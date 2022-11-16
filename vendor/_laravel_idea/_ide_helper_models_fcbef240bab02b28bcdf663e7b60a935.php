@@ -1,4 +1,4 @@
-<?php //971599c18323f91b74aa5b56f09ff0d3
+<?php //7f92d8da6eeddfc7c87e50587d4b6e4f
 /** @noinspection all */
 
 namespace App\Models {
@@ -107,13 +107,10 @@ namespace App\Models {
      * @property int $order_id
      * @property int $product_quantity
      * @property float $product_price
-     * @property string $pay_method
+     * @property string $status
      * @property int|null $address_id
-     * @property int|null $company_branch_id
-     * @property int|null $order_status_id
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
-     * @property OrderStatus $status
      * @method BelongsTo|_IH_OrderStatus_QB status()
      * @method static _IH_BuyProduct_QB onWriteConnection()
      * @method _IH_BuyProduct_QB newQuery()
@@ -124,7 +121,7 @@ namespace App\Models {
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_BuyProduct_C|BuyProduct[] all()
-     * @ownLinks user_id,\App\Models\User,id|product_id,\App\Models\Product,id|address_id,\App\Models\Address,id|company_branch_id,\App\Models\Company_branch,id|order_status_id,\App\Models\OrderStatus,id
+     * @ownLinks user_id,\App\Models\User,id|product_id,\App\Models\Product,id|address_id,\App\Models\Address,id
      * @mixin _IH_BuyProduct_QB
      */
     class BuyProduct extends Model {}
@@ -175,7 +172,7 @@ namespace App\Models {
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Company_branch_C|Company_branch[] all()
-     * @foreignLinks id,\App\Models\User,company_branch_id|id,\App\Models\Product,company_branch_id|id,\App\Models\Service,company_branch_id|id,\App\Models\BuyProduct,company_branch_id
+     * @foreignLinks id,\App\Models\User,company_branch_id|id,\App\Models\Product,company_branch_id|id,\App\Models\Service,company_branch_id
      * @mixin _IH_Company_branch_QB
      * @method static Company_branchFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
@@ -261,7 +258,6 @@ namespace App\Models {
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_OrderStatus_C|OrderStatus[] all()
-     * @foreignLinks id,\App\Models\BuyProduct,order_status_id
      * @mixin _IH_OrderStatus_QB
      */
     class OrderStatus extends Model {}

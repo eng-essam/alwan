@@ -14,7 +14,6 @@ return new class extends Migration {
             $table->string('city');
             $table->string('fullAddress');
             $table->enum('addressType',['Home','Work']);
-            $table->boolean('default')->default(false);
             $table->timestamps();
         });
     }

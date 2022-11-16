@@ -21,7 +21,10 @@ class BuyProductSeeder extends Seeder
             'product_quantity' => 330,
             'product_price' => 70,
             'address_id' => Address::inRandomOrder()->first()->id,
-            'order_status_id' => OrderStatus::inRandomOrder()->first()->id,
+            'status' => json_encode([
+                'en' => 'pending until payment',
+                'ar' => 'معلق لحين الدفع'
+            ]),
         ]);
 
         BuyProduct::create([
@@ -31,7 +34,10 @@ class BuyProductSeeder extends Seeder
             'product_quantity' => 200,
             'product_price' => 50,
             'address_id' => Address::inRandomOrder()->first()->id,
-            'order_status_id' => OrderStatus::inRandomOrder()->first()->id,
+            'status' => json_encode([
+                'en' => 'pending until payment',
+                'ar' => 'معلق لحين الدفع'
+            ]),
         ]);
 
         BuyProduct::create([
@@ -41,7 +47,10 @@ class BuyProductSeeder extends Seeder
             'product_quantity' => 100,
             'product_price' => 25,
             'address_id' => Address::inRandomOrder()->first()->id,
-            'order_status_id' => OrderStatus::inRandomOrder()->first()->id,
+            'status' => json_encode([
+                'en' => 'pending until payment',
+                'ar' => 'معلق لحين الدفع'
+            ]),
         ]);
     }
 }
