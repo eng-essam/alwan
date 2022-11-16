@@ -1,4 +1,4 @@
-<?php //240ae2c75414bf9536f7a83c02ccb1c2
+<?php //0c4c53352eac609931ba2600e4d7ff65
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -7,6 +7,7 @@ namespace LaravelIdea\Helper\App\Models {
     use App\Models\Address;
     use App\Models\BuyProduct;
     use App\Models\Cart;
+    use App\Models\Cobon;
     use App\Models\Company_branch;
     use App\Models\Email_code;
     use App\Models\Favorite;
@@ -175,7 +176,6 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Address_QB whereCity($value)
      * @method _IH_Address_QB whereFulladdress($value)
      * @method _IH_Address_QB whereAddresstype($value)
-     * @method _IH_Address_QB whereDefault($value)
      * @method _IH_Address_QB whereCreatedAt($value)
      * @method _IH_Address_QB whereUpdatedAt($value)
      * @method Address baseSole(array|string $columns = ['*'])
@@ -268,8 +268,8 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_BuyProduct_QB whereOrderId($value)
      * @method _IH_BuyProduct_QB whereProductQuantity($value)
      * @method _IH_BuyProduct_QB whereProductPrice($value)
-     * @method _IH_BuyProduct_QB whereStatus($value)
      * @method _IH_BuyProduct_QB whereAddressId($value)
+     * @method _IH_BuyProduct_QB whereOrderStatusId($value)
      * @method _IH_BuyProduct_QB whereCreatedAt($value)
      * @method _IH_BuyProduct_QB whereUpdatedAt($value)
      * @method BuyProduct baseSole(array|string $columns = ['*'])
@@ -391,6 +391,95 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Cart updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_Cart_QB extends _BaseBuilder {}
+    
+    /**
+     * @method Cobon|null getOrPut($key, $value)
+     * @method Cobon|$this shift(int $count = 1)
+     * @method Cobon|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Cobon|$this pop(int $count = 1)
+     * @method Cobon|null pull($key, $default = null)
+     * @method Cobon|null last(callable $callback = null, $default = null)
+     * @method Cobon|$this random($number = null)
+     * @method Cobon|null sole($key = null, $operator = null, $value = null)
+     * @method Cobon|null get($key, $default = null)
+     * @method Cobon|null first(callable $callback = null, $default = null)
+     * @method Cobon|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method Cobon|null find($key, $default = null)
+     * @method Cobon[] all()
+     * @property-read _IH_Cobon_CP $keyBy
+     * @property-read _IH_Cobon_CP $partition
+     * @property-read _IH_Cobon_CP $max
+     * @property-read _IH_Cobon_CP $doesntContain
+     * @property-read _IH_Cobon_CP $flatMap
+     * @property-read _IH_Cobon_CP $each
+     * @property-read _IH_Cobon_CP $map
+     * @property-read _IH_Cobon_CP $filter
+     * @property-read _IH_Cobon_CP $unique
+     * @property-read _IH_Cobon_CP $groupBy
+     * @property-read _IH_Cobon_CP $sortBy
+     * @property-read _IH_Cobon_CP $contains
+     * @property-read _IH_Cobon_CP $sum
+     * @property-read _IH_Cobon_CP $until
+     * @property-read _IH_Cobon_CP $every
+     * @property-read _IH_Cobon_CP $average
+     * @property-read _IH_Cobon_CP $when
+     * @property-read _IH_Cobon_CP $some
+     * @property-read _IH_Cobon_CP $skipWhile
+     * @property-read _IH_Cobon_CP $sortByDesc
+     * @property-read _IH_Cobon_CP $unless
+     * @property-read _IH_Cobon_CP $takeUntil
+     * @property-read _IH_Cobon_CP $avg
+     * @property-read _IH_Cobon_CP $skipUntil
+     * @property-read _IH_Cobon_CP $first
+     * @property-read _IH_Cobon_CP $takeWhile
+     * @property-read _IH_Cobon_CP $min
+     * @property-read _IH_Cobon_CP $reject
+     */
+    class _IH_Cobon_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return Cobon[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_Cobon_QB whereId($value)
+     * @method _IH_Cobon_QB whereCobon($value)
+     * @method _IH_Cobon_QB wherePercentage($value)
+     * @method _IH_Cobon_QB whereCreatedAt($value)
+     * @method _IH_Cobon_QB whereUpdatedAt($value)
+     * @method Cobon baseSole(array|string $columns = ['*'])
+     * @method Cobon create(array $attributes = [])
+     * @method _IH_Cobon_C|Cobon[] cursor()
+     * @method Cobon|null|_IH_Cobon_C|Cobon[] find($id, array|string $columns = ['*'])
+     * @method _IH_Cobon_C|Cobon[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method Cobon|_IH_Cobon_C|Cobon[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Cobon|_IH_Cobon_C|Cobon[] findOrFail($id, array|string $columns = ['*'])
+     * @method Cobon|_IH_Cobon_C|Cobon[] findOrNew($id, array|string $columns = ['*'])
+     * @method Cobon first(array|string $columns = ['*'])
+     * @method Cobon firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Cobon firstOrCreate(array $attributes = [], array $values = [])
+     * @method Cobon firstOrFail(array|string $columns = ['*'])
+     * @method Cobon firstOrNew(array $attributes = [], array $values = [])
+     * @method Cobon firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Cobon forceCreate(array $attributes)
+     * @method _IH_Cobon_C|Cobon[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_Cobon_C|Cobon[] get(array|string $columns = ['*'])
+     * @method Cobon getModel()
+     * @method Cobon[] getModels(array|string $columns = ['*'])
+     * @method _IH_Cobon_C|Cobon[] hydrate(array $items)
+     * @method Cobon make(array $attributes = [])
+     * @method Cobon newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|Cobon[]|_IH_Cobon_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|Cobon[]|_IH_Cobon_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Cobon sole(array|string $columns = ['*'])
+     * @method Cobon updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_Cobon_QB extends _BaseBuilder {}
     
     /**
      * @method Company_branch|null getOrPut($key, $value)

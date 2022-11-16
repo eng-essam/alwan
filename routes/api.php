@@ -1,21 +1,23 @@
 <?php
 
-use App\Http\Controllers\Api\{AddressController,
-    AdController,
+use App\Http\Controllers\Api\{AdController,
+    AddressController,
     AuthController,
     BuyProductController,
     CartController,
+    CompanyBranchController,
     EditInformationController,
     FavoriteController,
     GuestController,
     NotificationsController,
     OfferController,
+    OrderController,
     ProductBranchController,
     ProductController,
     ServiceBranchController,
     ServiceController,
-    CompanyBranchController,
-    OrderController,
+    CobonController,
+
 };
 use Illuminate\Support\Facades\Route;
 
@@ -52,18 +54,28 @@ Route::middleware(['lang'])->group(function () {
 
     Route::get('all/sub/product', [ProductController::class, 'allSubProduct']); //all Sub Product
 
-    Route::post('all/sub/product/belong/main/product', [ProductController::class, 'all_sub_product_belong_main_product']); //all sub product belong main product
+    Route::post('all/sub/product/belong/main/product', [ProductController::class, 'allSubProductBelongMainProduct']); //all sub product belong main product
 
     Route::post('one/sub/product', [ProductController::class, 'oneSubProduct']); //one Sub Product
+
+    Route::post('search/sub/product', [ProductController::class, 'searchSubProduct']); //search Sub Product
+
+    Route::post('search/main/product', [ProductController::class, 'searchMainProduct']); //search Main Product
+
 
     //Services
     Route::get('all/main/service', [ServiceBranchController::class, 'allMainService']); //all Main Service
 
     Route::get('all/sub/service', [ServiceController::class, 'allSubService']); //all Sub Service
 
-    Route::post('all/sub/service/belong/main/service', [ServiceController::class, 'all_sub_service_belong_main_service']); //all sub Service belong main Service
+    Route::post('all/sub/service/belong/main/service', [ServiceController::class, 'allSubServiceBelongMainService']); //all sub Service belong main Service
 
     Route::post('one/sub/service', [ServiceController::class, 'oneSubService']); //one Sub Service
+
+    Route::post('search/sub/service', [ServiceController::class, 'searchSubService']); //search Sub Service
+
+    Route::post('search/main/service', [ServiceController::class, 'searchMainService']); //search Main Service
+
 
     //offers
     Route::get('all/offers', [OfferController::class, 'allOffers']); //all Offers
@@ -91,7 +103,7 @@ Route::middleware(['lang'])->group(function () {
 
         Route::post('edit/password', [EditInformationController::class, 'editPassword']); //edit Password
 
-        //Notification
+        //Notifications
         Route::get('all/notifications', [NotificationsController::class, 'allNotification']); //all Notification
 
         Route::get('delete/all/notifications', [NotificationsController::class, 'deleteAllNotification']); //delete All Notification
@@ -119,11 +131,17 @@ Route::middleware(['lang'])->group(function () {
 
         Route::post('delete/product/cart', [CartController::class, 'deleteProductCart']); //delete Product Cart
 
+        //Cobons
+        Route::post('check/cobon', [CobonController::class, 'checkCobon']); //checkCobon
+
         //Buy Product
         Route::post('buy/products', [BuyProductController::class, 'buyProducts']); //buy Products
 
         //User Order
         Route::get('all/order/products', [OrderController::class, 'allOrderProducts']); //all Order Products
+
+        Route::get('all/order/products/done', [OrderController::class, 'allOrderProductsDone']); //all Order Products Done
+
 
     });
 

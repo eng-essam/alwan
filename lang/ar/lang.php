@@ -28,7 +28,9 @@ return [
     'add_product_carts_successfully' => 'تم اضافة المنتج بنجاح في العربة',
     'delete_product_carts_successfully' => 'تم حذف المنتج بنجاح من العربة',
     'payment_successfully'=>'عملية الدفع تمت بنجاح',
-    'product_already_in_cart'=>'هذا المنتج موجود بالفعل في العربة'
+    'product_already_in_cart'=>'هذا المنتج موجود بالفعل في العربة',
+    'discount_rate' =>'نسبة الخصم هي',
+
 
 
 

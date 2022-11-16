@@ -1,4 +1,4 @@
-<?php //73ce447260ad998af76e9a7859f79a5b
+<?php //9afd65b8387a95513b2d2ab701654c13
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -31,7 +31,6 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Address_C|mixed $city
      * @property _IH_Address_C|mixed $fullAddress
      * @property _IH_Address_C|mixed $addressType
-     * @property _IH_Address_C|mixed $default
      * @property _IH_Address_C|mixed $created_at
      * @property _IH_Address_C|mixed $updated_at
      * @property _IH_Address_C|mixed $user
@@ -53,10 +52,11 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_BuyProduct_C|mixed $order_id
      * @property _IH_BuyProduct_C|mixed $product_quantity
      * @property _IH_BuyProduct_C|mixed $product_price
-     * @property _IH_BuyProduct_C|mixed $status
      * @property _IH_BuyProduct_C|mixed $address_id
+     * @property _IH_BuyProduct_C|mixed $order_status_id
      * @property _IH_BuyProduct_C|mixed $created_at
      * @property _IH_BuyProduct_C|mixed $updated_at
+     * @property _IH_BuyProduct_C|mixed $status
      * @method _IH_BuyProduct_C refresh()
      * @method _IH_BuyProduct_C update(array $attributes = [], array $options = [])
      * @method _IH_BuyProduct_C save(array $options = [])
@@ -86,6 +86,23 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Cart_C delete()
      */
     class _IH_Cart_CP {}
+    
+    /**
+     * @property _IH_Cobon_C|mixed $id
+     * @property _IH_Cobon_C|mixed $cobon
+     * @property _IH_Cobon_C|mixed $percentage
+     * @property _IH_Cobon_C|mixed $created_at
+     * @property _IH_Cobon_C|mixed $updated_at
+     * @method _IH_Cobon_C refresh()
+     * @method _IH_Cobon_C update(array $attributes = [], array $options = [])
+     * @method _IH_Cobon_C save(array $options = [])
+     * @method _IH_Cobon_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Cobon_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Cobon_C touch(null|string $attribute = null)
+     * @method _IH_Cobon_C fill(array $attributes)
+     * @method _IH_Cobon_C delete()
+     */
+    class _IH_Cobon_CP {}
     
     /**
      * @property _IH_Company_branch_C|mixed $id

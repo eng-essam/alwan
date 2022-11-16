@@ -1,4 +1,4 @@
-<?php //7f92d8da6eeddfc7c87e50587d4b6e4f
+<?php //f0ca43fd5b5586a485e32406f7d66854
 /** @noinspection all */
 
 namespace App\Models {
@@ -26,6 +26,8 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_BuyProduct_QB;
     use LaravelIdea\Helper\App\Models\_IH_Cart_C;
     use LaravelIdea\Helper\App\Models\_IH_Cart_QB;
+    use LaravelIdea\Helper\App\Models\_IH_Cobon_C;
+    use LaravelIdea\Helper\App\Models\_IH_Cobon_QB;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_C;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_QB;
     use LaravelIdea\Helper\App\Models\_IH_Email_code_C;
@@ -80,7 +82,6 @@ namespace App\Models {
      * @property string $city
      * @property string $fullAddress
      * @property string $addressType
-     * @property bool $default
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @property User $user
@@ -107,10 +108,11 @@ namespace App\Models {
      * @property int $order_id
      * @property int $product_quantity
      * @property float $product_price
-     * @property string $status
      * @property int|null $address_id
+     * @property int|null $order_status_id
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
+     * @property OrderStatus $status
      * @method BelongsTo|_IH_OrderStatus_QB status()
      * @method static _IH_BuyProduct_QB onWriteConnection()
      * @method _IH_BuyProduct_QB newQuery()
@@ -121,7 +123,7 @@ namespace App\Models {
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_BuyProduct_C|BuyProduct[] all()
-     * @ownLinks user_id,\App\Models\User,id|product_id,\App\Models\Product,id|address_id,\App\Models\Address,id
+     * @ownLinks user_id,\App\Models\User,id|product_id,\App\Models\Product,id|address_id,\App\Models\Address,id|order_status_id,\App\Models\OrderStatus,id
      * @mixin _IH_BuyProduct_QB
      */
     class BuyProduct extends Model {}
@@ -147,6 +149,25 @@ namespace App\Models {
      * @mixin _IH_Cart_QB
      */
     class Cart extends Model {}
+    
+    /**
+     * @property int $id
+     * @property string $cobon
+     * @property int $percentage
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @method static _IH_Cobon_QB onWriteConnection()
+     * @method _IH_Cobon_QB newQuery()
+     * @method static _IH_Cobon_QB on(null|string $connection = null)
+     * @method static _IH_Cobon_QB query()
+     * @method static _IH_Cobon_QB with(array|string $relations)
+     * @method _IH_Cobon_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_Cobon_C|Cobon[] all()
+     * @mixin _IH_Cobon_QB
+     */
+    class Cobon extends Model {}
     
     /**
      * @property int $id
@@ -258,6 +279,7 @@ namespace App\Models {
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_OrderStatus_C|OrderStatus[] all()
+     * @foreignLinks id,\App\Models\BuyProduct,order_status_id
      * @mixin _IH_OrderStatus_QB
      */
     class OrderStatus extends Model {}

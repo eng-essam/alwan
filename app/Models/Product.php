@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\App;
@@ -37,7 +38,7 @@ class Product extends Model
     public function payUsers()
     {
         return $this->belongsToMany(User::class, 'buy_products')
-            ->withPivot(['address_id', 'status', 'product_quantity', 'product_price', 'order_id'])
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity', 'product_price', 'order_id'])
             ->withTimestamps();
     }
 

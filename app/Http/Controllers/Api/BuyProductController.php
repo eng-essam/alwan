@@ -18,13 +18,12 @@ class BuyProductController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'products' => ['required', 'array'],
+            'address_id' => ['required','numeric']
         ]);
 
         if ($validator->fails()) {
             return $this->requestFails($validator->errors()->all());
         }
-
-        $address_id = Address::where('user_id', $request->user()->id)->where('default', true)->first();
 
         $allProduct = $request->products;
         foreach ($allProduct as $key => $valu) {
@@ -34,7 +33,7 @@ class BuyProductController extends Controller
                 'order_id' => rand(10000000, 99999999),
                 'product_quantity' => $allProduct[$key]['quantity'],
                 'product_price' => $allProduct[$key]['price'],
-                'address_id' => $address_id,
+                'address_id' => $request->address_id,
                 'order_status_id' => 1,
             ]);
         }

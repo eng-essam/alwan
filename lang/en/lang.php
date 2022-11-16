@@ -28,7 +28,8 @@ return [
     'add_product_carts_successfully'=>'The product has been successfully added to your carts',
     'delete_product_carts_successfully'=>'The product has been successfully deleted to your carts',
     'payment_successfully'=>'Payment successfully',
-    'product_already_in_cart'=>'This product is already in the cart'
+    'product_already_in_cart'=>'This product is already in the cart',
+    'discount_rate' =>'The discount rate is',
 
 
 ];
