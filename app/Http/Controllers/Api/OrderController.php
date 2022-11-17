@@ -19,11 +19,11 @@ class OrderController extends Controller
     public function allOrderProducts(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('payProducts')->first();
-        $allOrders = json_decode($user)->pay_products;
+        $user = User::where('id', 33)->with('payProductsCurrent')->first();
+        $allOrders = json_decode($user)->pay_products_current;
         $orders = [];
 
-        foreach ($allOrders as $key => $oneOrder) if ($allOrders[$key]->pivot->order_status_id != 6) {
+        foreach ($allOrders as $key => $oneOrder) {
             $orders[$key]['product_id'] = $allOrders[$key]->id;
             $orders[$key]['product_name'] = json_decode($allOrders[$key]->product_name)->$lang;
             $orders[$key]['product_img'] = asset('uploads/' . $allOrders[$key]->product_img);
@@ -42,11 +42,11 @@ class OrderController extends Controller
     public function allOrderProductsDone(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('payProducts')->first();
-        $allOrders = json_decode($user)->pay_products;
+        $user = User::where('id', 33)->with('payProductsDone')->first();
+        $allOrders = json_decode($user)->pay_products_done;
         $orders = [];
 
-        foreach ($allOrders as $key => $oneOrder) if ($allOrders[$key]->pivot->order_status_id == 6) {
+        foreach ($allOrders as $key => $oneOrder) {
             $orders[$key]['product_id'] = $allOrders[$key]->id;
             $orders[$key]['product_name'] = json_decode($allOrders[$key]->product_name)->$lang;
             $orders[$key]['product_img'] = asset('uploads/' . $allOrders[$key]->product_img);
@@ -62,7 +62,8 @@ class OrderController extends Controller
         return $this->requestSuccess(null, $data);
     }
 
-    public function serviceRequest(Request $request){
+    public function serviceRequest(Request $request)
+    {
 
     }
 }

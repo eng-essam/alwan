@@ -1,4 +1,4 @@
-<?php //9afd65b8387a95513b2d2ab701654c13
+<?php //08f8648e793372c7fc392fc187205986
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -69,6 +69,33 @@ namespace LaravelIdea\Helper\App\Models {
     class _IH_BuyProduct_CP {}
     
     /**
+     * @property _IH_BuyService_C|mixed $id
+     * @property _IH_BuyService_C|mixed $user_id
+     * @property _IH_BuyService_C|mixed $service_id
+     * @property _IH_BuyService_C|mixed $details
+     * @property _IH_BuyService_C|mixed $user_file
+     * @property _IH_BuyService_C|mixed $order_id
+     * @property _IH_BuyService_C|mixed $order_status_id
+     * @property _IH_BuyService_C|mixed $address_id
+     * @property _IH_BuyService_C|mixed $payment_type
+     * @property _IH_BuyService_C|mixed $admin_file
+     * @property _IH_BuyService_C|mixed $service_price
+     * @property _IH_BuyService_C|mixed $created_at
+     * @property _IH_BuyService_C|mixed $updated_at
+     * @property _IH_BuyService_C|mixed $status
+     * @method _IH_BuyService_C order_status_message()
+     * @method _IH_BuyService_C refresh()
+     * @method _IH_BuyService_C update(array $attributes = [], array $options = [])
+     * @method _IH_BuyService_C save(array $options = [])
+     * @method _IH_BuyService_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_BuyService_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_BuyService_C touch(null|string $attribute = null)
+     * @method _IH_BuyService_C fill(array $attributes)
+     * @method _IH_BuyService_C delete()
+     */
+    class _IH_BuyService_CP {}
+    
+    /**
      * @property _IH_Cart_C|mixed $id
      * @property _IH_Cart_C|mixed $user_id
      * @property _IH_Cart_C|mixed $product_id
@@ -122,6 +149,24 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Company_branch_C delete()
      */
     class _IH_Company_branch_CP {}
+    
+    /**
+     * @property _IH_Contact_C|mixed $id
+     * @property _IH_Contact_C|mixed $name
+     * @property _IH_Contact_C|mixed $email
+     * @property _IH_Contact_C|mixed $message
+     * @property _IH_Contact_C|mixed $created_at
+     * @property _IH_Contact_C|mixed $updated_at
+     * @method _IH_Contact_C refresh()
+     * @method _IH_Contact_C update(array $attributes = [], array $options = [])
+     * @method _IH_Contact_C save(array $options = [])
+     * @method _IH_Contact_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Contact_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Contact_C touch(null|string $attribute = null)
+     * @method _IH_Contact_C fill(array $attributes)
+     * @method _IH_Contact_C delete()
+     */
+    class _IH_Contact_CP {}
     
     /**
      * @property _IH_Email_code_C|mixed $id

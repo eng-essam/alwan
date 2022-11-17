@@ -66,16 +66,38 @@ class User extends Authenticatable
         return $this->belongsTo(Company_branch::class);
     }
 
-//    public function payServics()
-//    {
-//        return $this->belongsToMany(Service::class, 'service_user')
-//            ->withTimestamps()->withPivot(['Service_details', 'Service_file', 'status']);
-//    }
+    public function payServics()
+    {
+        return $this->belongsToMany(Service::class, 'buy_services')
+            ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
+                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+            ->withTimestamps();
+    }
 
     public function payProducts()
     {
         return $this->belongsToMany(Product::class, 'buy_products')
-            ->withTimestamps()->withPivot([ 'address_id', 'order_status_id', 'product_quantity', 'product_price', 'order_id']);
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
+                , 'product_price', 'order_id'])
+            ->withTimestamps();
+    }
+
+    public function payProductsCurrent()
+    {
+        return $this->belongsToMany(Product::class, 'buy_products')
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
+                , 'product_price', 'order_id'])
+            ->wherePivot('order_status_id' ,'!=' ,8)
+            ->withTimestamps();
+    }
+
+    public function payProductsDone()
+    {
+        return $this->belongsToMany(Product::class, 'buy_products')
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
+                , 'product_price', 'order_id'])
+            ->wherePivot('order_status_id' , 8)
+            ->withTimestamps();
     }
 
     public function addresses()
@@ -91,7 +113,7 @@ class User extends Authenticatable
     public function cartProducts()
     {
         return $this->belongsToMany(Product::class, 'carts')
-            ->withPivot(['file', 'message'])
+            ->withPivot(['file', 'details'])
             ->withTimestamps();
     }
 }

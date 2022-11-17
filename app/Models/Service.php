@@ -39,11 +39,14 @@ class Service extends Model
     {
         return $this->belongsTo(Service_branch::class);
     }
+    
 
-    public function users()
+    public function payUsers()
     {
-        return $this->belongsToMany(User::class, 'service_user')
-            ->withTimestamps()->withPivot(['Service_details', 'Service_file', 'status']);
+        return $this->belongsToMany(User::class, 'buy_services')
+            ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
+                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+            ->withTimestamps();
     }
 
 }

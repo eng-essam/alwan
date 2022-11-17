@@ -27,7 +27,7 @@ class CartController extends Controller
         $validator = Validator::make($request->all(), [
             'product_id' => ['required', 'integer', 'exists:products,id'],
             'file' => ['required', 'file', 'max:30720'],
-            'message' => ['nullable', 'string'],
+            'details' => ['required', 'string'],
         ]);
 
         if ($validator->fails()) {
@@ -45,7 +45,7 @@ class CartController extends Controller
             'user_id' => $request->user()->id,
             'product_id' => $request->product_id,
             'file' => $pathFile,
-            'message' => $request->message,
+            'details' => $request->details,
         ]);
 
         return $this->requestSuccess(__('lang.add_product_carts_successfully'));

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductResource;
+use App\Models\Favorite;
 use App\Traits\ReturnJson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -28,6 +29,12 @@ class FavoriteController extends Controller
 
         if ($validator->fails()) {
             return $this->requestFails($validator->errors()->all());
+        }
+
+        $product = Favorite::where('user_id', $request->user()->id)
+            ->where('product_id', $request->product_id)->first();
+        if ($product) {
+            return $this->requestFails(__('lang.product_already_in_favorite'));
         }
 
         $request->user()->favoriteProducts()->attach($request->product_id, [

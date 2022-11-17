@@ -21,4 +21,9 @@ class OrderStatus extends Model
     {
         return $this->hasMany(BuyProduct::class);
     }
+
+    public function services()
+    {
+        return $this->hasMany(BuyService::class);
+    }
 }

@@ -1,4 +1,4 @@
-<?php //0c4c53352eac609931ba2600e4d7ff65
+<?php //c53e87550fef6ced851ea9670660f116
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -6,9 +6,11 @@ namespace LaravelIdea\Helper\App\Models {
     use App\Models\Ad;
     use App\Models\Address;
     use App\Models\BuyProduct;
+    use App\Models\BuyService;
     use App\Models\Cart;
     use App\Models\Cobon;
     use App\Models\Company_branch;
+    use App\Models\Contact;
     use App\Models\Email_code;
     use App\Models\Favorite;
     use App\Models\Notification;
@@ -302,6 +304,103 @@ namespace LaravelIdea\Helper\App\Models {
     class _IH_BuyProduct_QB extends _BaseBuilder {}
     
     /**
+     * @method BuyService|null getOrPut($key, $value)
+     * @method BuyService|$this shift(int $count = 1)
+     * @method BuyService|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method BuyService|$this pop(int $count = 1)
+     * @method BuyService|null pull($key, $default = null)
+     * @method BuyService|null last(callable $callback = null, $default = null)
+     * @method BuyService|$this random($number = null)
+     * @method BuyService|null sole($key = null, $operator = null, $value = null)
+     * @method BuyService|null get($key, $default = null)
+     * @method BuyService|null first(callable $callback = null, $default = null)
+     * @method BuyService|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method BuyService|null find($key, $default = null)
+     * @method BuyService[] all()
+     * @property-read _IH_BuyService_CP $keyBy
+     * @property-read _IH_BuyService_CP $partition
+     * @property-read _IH_BuyService_CP $max
+     * @property-read _IH_BuyService_CP $doesntContain
+     * @property-read _IH_BuyService_CP $flatMap
+     * @property-read _IH_BuyService_CP $each
+     * @property-read _IH_BuyService_CP $map
+     * @property-read _IH_BuyService_CP $filter
+     * @property-read _IH_BuyService_CP $unique
+     * @property-read _IH_BuyService_CP $groupBy
+     * @property-read _IH_BuyService_CP $sortBy
+     * @property-read _IH_BuyService_CP $contains
+     * @property-read _IH_BuyService_CP $sum
+     * @property-read _IH_BuyService_CP $until
+     * @property-read _IH_BuyService_CP $every
+     * @property-read _IH_BuyService_CP $average
+     * @property-read _IH_BuyService_CP $when
+     * @property-read _IH_BuyService_CP $some
+     * @property-read _IH_BuyService_CP $skipWhile
+     * @property-read _IH_BuyService_CP $sortByDesc
+     * @property-read _IH_BuyService_CP $unless
+     * @property-read _IH_BuyService_CP $takeUntil
+     * @property-read _IH_BuyService_CP $avg
+     * @property-read _IH_BuyService_CP $skipUntil
+     * @property-read _IH_BuyService_CP $first
+     * @property-read _IH_BuyService_CP $takeWhile
+     * @property-read _IH_BuyService_CP $min
+     * @property-read _IH_BuyService_CP $reject
+     */
+    class _IH_BuyService_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return BuyService[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_BuyService_QB whereId($value)
+     * @method _IH_BuyService_QB whereUserId($value)
+     * @method _IH_BuyService_QB whereServiceId($value)
+     * @method _IH_BuyService_QB whereDetails($value)
+     * @method _IH_BuyService_QB whereUserFile($value)
+     * @method _IH_BuyService_QB whereOrderId($value)
+     * @method _IH_BuyService_QB whereOrderStatusId($value)
+     * @method _IH_BuyService_QB whereAddressId($value)
+     * @method _IH_BuyService_QB wherePaymentType($value)
+     * @method _IH_BuyService_QB whereAdminFile($value)
+     * @method _IH_BuyService_QB whereServicePrice($value)
+     * @method _IH_BuyService_QB whereCreatedAt($value)
+     * @method _IH_BuyService_QB whereUpdatedAt($value)
+     * @method BuyService baseSole(array|string $columns = ['*'])
+     * @method BuyService create(array $attributes = [])
+     * @method _IH_BuyService_C|BuyService[] cursor()
+     * @method BuyService|null|_IH_BuyService_C|BuyService[] find($id, array|string $columns = ['*'])
+     * @method _IH_BuyService_C|BuyService[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method BuyService|_IH_BuyService_C|BuyService[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method BuyService|_IH_BuyService_C|BuyService[] findOrFail($id, array|string $columns = ['*'])
+     * @method BuyService|_IH_BuyService_C|BuyService[] findOrNew($id, array|string $columns = ['*'])
+     * @method BuyService first(array|string $columns = ['*'])
+     * @method BuyService firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method BuyService firstOrCreate(array $attributes = [], array $values = [])
+     * @method BuyService firstOrFail(array|string $columns = ['*'])
+     * @method BuyService firstOrNew(array $attributes = [], array $values = [])
+     * @method BuyService firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method BuyService forceCreate(array $attributes)
+     * @method _IH_BuyService_C|BuyService[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_BuyService_C|BuyService[] get(array|string $columns = ['*'])
+     * @method BuyService getModel()
+     * @method BuyService[] getModels(array|string $columns = ['*'])
+     * @method _IH_BuyService_C|BuyService[] hydrate(array $items)
+     * @method BuyService make(array $attributes = [])
+     * @method BuyService newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|BuyService[]|_IH_BuyService_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|BuyService[]|_IH_BuyService_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method BuyService sole(array|string $columns = ['*'])
+     * @method BuyService updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_BuyService_QB extends _BaseBuilder {}
+    
+    /**
      * @method Cart|null getOrPut($key, $value)
      * @method Cart|$this shift(int $count = 1)
      * @method Cart|null firstOrFail($key = null, $operator = null, $value = null)
@@ -569,6 +668,96 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Company_branch updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_Company_branch_QB extends _BaseBuilder {}
+    
+    /**
+     * @method Contact|null getOrPut($key, $value)
+     * @method Contact|$this shift(int $count = 1)
+     * @method Contact|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Contact|$this pop(int $count = 1)
+     * @method Contact|null pull($key, $default = null)
+     * @method Contact|null last(callable $callback = null, $default = null)
+     * @method Contact|$this random($number = null)
+     * @method Contact|null sole($key = null, $operator = null, $value = null)
+     * @method Contact|null get($key, $default = null)
+     * @method Contact|null first(callable $callback = null, $default = null)
+     * @method Contact|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method Contact|null find($key, $default = null)
+     * @method Contact[] all()
+     * @property-read _IH_Contact_CP $keyBy
+     * @property-read _IH_Contact_CP $partition
+     * @property-read _IH_Contact_CP $max
+     * @property-read _IH_Contact_CP $doesntContain
+     * @property-read _IH_Contact_CP $flatMap
+     * @property-read _IH_Contact_CP $each
+     * @property-read _IH_Contact_CP $map
+     * @property-read _IH_Contact_CP $filter
+     * @property-read _IH_Contact_CP $unique
+     * @property-read _IH_Contact_CP $groupBy
+     * @property-read _IH_Contact_CP $sortBy
+     * @property-read _IH_Contact_CP $contains
+     * @property-read _IH_Contact_CP $sum
+     * @property-read _IH_Contact_CP $until
+     * @property-read _IH_Contact_CP $every
+     * @property-read _IH_Contact_CP $average
+     * @property-read _IH_Contact_CP $when
+     * @property-read _IH_Contact_CP $some
+     * @property-read _IH_Contact_CP $skipWhile
+     * @property-read _IH_Contact_CP $sortByDesc
+     * @property-read _IH_Contact_CP $unless
+     * @property-read _IH_Contact_CP $takeUntil
+     * @property-read _IH_Contact_CP $avg
+     * @property-read _IH_Contact_CP $skipUntil
+     * @property-read _IH_Contact_CP $first
+     * @property-read _IH_Contact_CP $takeWhile
+     * @property-read _IH_Contact_CP $min
+     * @property-read _IH_Contact_CP $reject
+     */
+    class _IH_Contact_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return Contact[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_Contact_QB whereId($value)
+     * @method _IH_Contact_QB whereName($value)
+     * @method _IH_Contact_QB whereEmail($value)
+     * @method _IH_Contact_QB whereMessage($value)
+     * @method _IH_Contact_QB whereCreatedAt($value)
+     * @method _IH_Contact_QB whereUpdatedAt($value)
+     * @method Contact baseSole(array|string $columns = ['*'])
+     * @method Contact create(array $attributes = [])
+     * @method _IH_Contact_C|Contact[] cursor()
+     * @method Contact|null|_IH_Contact_C|Contact[] find($id, array|string $columns = ['*'])
+     * @method _IH_Contact_C|Contact[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method Contact|_IH_Contact_C|Contact[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Contact|_IH_Contact_C|Contact[] findOrFail($id, array|string $columns = ['*'])
+     * @method Contact|_IH_Contact_C|Contact[] findOrNew($id, array|string $columns = ['*'])
+     * @method Contact first(array|string $columns = ['*'])
+     * @method Contact firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Contact firstOrCreate(array $attributes = [], array $values = [])
+     * @method Contact firstOrFail(array|string $columns = ['*'])
+     * @method Contact firstOrNew(array $attributes = [], array $values = [])
+     * @method Contact firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Contact forceCreate(array $attributes)
+     * @method _IH_Contact_C|Contact[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_Contact_C|Contact[] get(array|string $columns = ['*'])
+     * @method Contact getModel()
+     * @method Contact[] getModels(array|string $columns = ['*'])
+     * @method _IH_Contact_C|Contact[] hydrate(array $items)
+     * @method Contact make(array $attributes = [])
+     * @method Contact newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|Contact[]|_IH_Contact_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|Contact[]|_IH_Contact_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Contact sole(array|string $columns = ['*'])
+     * @method Contact updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_Contact_QB extends _BaseBuilder {}
     
     /**
      * @method Email_code|null getOrPut($key, $value)

@@ -1,4 +1,4 @@
-<?php //5fbcaf19cbb0abe2175e473587428700
+<?php //83362b87bc437341eeacfa17b07445ef
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -38,8 +38,8 @@ namespace Database\Factories {
     
     /**
      * @method $this forCompany_branch($attributes = [])
+     * @method $this hasPayUsers(int $count = 1, $attributes = [])
      * @method $this forService_branch($attributes = [])
-     * @method $this hasUsers(int $count = 1, $attributes = [])
      */
     class ServiceFactory extends Factory {}
     
@@ -56,6 +56,9 @@ namespace Database\Factories {
      * @method $this hasFavoriteProducts(int $count = 1, $attributes = [])
      * @method $this hasNotifications(int $count = 1, $attributes = [])
      * @method $this hasPayProducts(int $count = 1, $attributes = [])
+     * @method $this hasPayProductsCurrent(int $count = 1, $attributes = [])
+     * @method $this hasPayProductsDone(int $count = 1, $attributes = [])
+     * @method $this hasPayServics(int $count = 1, $attributes = [])
      * @method $this hasReadNotifications(int $count = 1, $attributes = [])
      * @method $this forRole($attributes = [])
      * @method $this hasUnreadNotifications(int $count = 1, $attributes = [])

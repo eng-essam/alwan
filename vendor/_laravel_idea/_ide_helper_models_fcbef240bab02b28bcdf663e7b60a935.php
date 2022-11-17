@@ -1,9 +1,10 @@
-<?php //f0ca43fd5b5586a485e32406f7d66854
+<?php //8e89ed1bdb4bbb821ed8f2a235969a5c
 /** @noinspection all */
 
 namespace App\Models {
 
     use Database\Factories\AdFactory;
+    use Database\Factories\CobonFactory;
     use Database\Factories\Company_branchFactory;
     use Database\Factories\NotificationFactory;
     use Database\Factories\ProductFactory;
@@ -24,12 +25,16 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_Ad_QB;
     use LaravelIdea\Helper\App\Models\_IH_BuyProduct_C;
     use LaravelIdea\Helper\App\Models\_IH_BuyProduct_QB;
+    use LaravelIdea\Helper\App\Models\_IH_BuyService_C;
+    use LaravelIdea\Helper\App\Models\_IH_BuyService_QB;
     use LaravelIdea\Helper\App\Models\_IH_Cart_C;
     use LaravelIdea\Helper\App\Models\_IH_Cart_QB;
     use LaravelIdea\Helper\App\Models\_IH_Cobon_C;
     use LaravelIdea\Helper\App\Models\_IH_Cobon_QB;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_C;
     use LaravelIdea\Helper\App\Models\_IH_Company_branch_QB;
+    use LaravelIdea\Helper\App\Models\_IH_Contact_C;
+    use LaravelIdea\Helper\App\Models\_IH_Contact_QB;
     use LaravelIdea\Helper\App\Models\_IH_Email_code_C;
     use LaravelIdea\Helper\App\Models\_IH_Email_code_QB;
     use LaravelIdea\Helper\App\Models\_IH_Favorite_C;
@@ -96,7 +101,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Address_C|Address[] all()
      * @ownLinks user_id,\App\Models\User,id
-     * @foreignLinks id,\App\Models\BuyProduct,address_id
+     * @foreignLinks id,\App\Models\BuyProduct,address_id|id,\App\Models\BuyService,address_id
      * @mixin _IH_Address_QB
      */
     class Address extends Model {}
@@ -108,7 +113,7 @@ namespace App\Models {
      * @property int $order_id
      * @property int $product_quantity
      * @property float $product_price
-     * @property int|null $address_id
+     * @property int $address_id
      * @property int|null $order_status_id
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
@@ -127,6 +132,36 @@ namespace App\Models {
      * @mixin _IH_BuyProduct_QB
      */
     class BuyProduct extends Model {}
+    
+    /**
+     * @property int $id
+     * @property int $user_id
+     * @property int $service_id
+     * @property string $details
+     * @property string $user_file
+     * @property int $order_id
+     * @property int $order_status_id
+     * @property int $address_id
+     * @property string|null $payment_type
+     * @property string|null $admin_file
+     * @property float|null $service_price
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @property OrderStatus $status
+     * @method BelongsTo|_IH_OrderStatus_QB status()
+     * @method static _IH_BuyService_QB onWriteConnection()
+     * @method _IH_BuyService_QB newQuery()
+     * @method static _IH_BuyService_QB on(null|string $connection = null)
+     * @method static _IH_BuyService_QB query()
+     * @method static _IH_BuyService_QB with(array|string $relations)
+     * @method _IH_BuyService_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_BuyService_C|BuyService[] all()
+     * @ownLinks user_id,\App\Models\User,id|service_id,\App\Models\Service,id|order_status_id,\App\Models\OrderStatus,id|address_id,\App\Models\Address,id
+     * @mixin _IH_BuyService_QB
+     */
+    class BuyService extends Model {}
     
     /**
      * @property int $id
@@ -166,6 +201,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Cobon_C|Cobon[] all()
      * @mixin _IH_Cobon_QB
+     * @method static CobonFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
     class Cobon extends Model {}
     
@@ -198,6 +234,26 @@ namespace App\Models {
      * @method static Company_branchFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
     class Company_branch extends Model {}
+    
+    /**
+     * @property int $id
+     * @property string $name
+     * @property string $email
+     * @property string $message
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @method static _IH_Contact_QB onWriteConnection()
+     * @method _IH_Contact_QB newQuery()
+     * @method static _IH_Contact_QB on(null|string $connection = null)
+     * @method static _IH_Contact_QB query()
+     * @method static _IH_Contact_QB with(array|string $relations)
+     * @method _IH_Contact_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_Contact_C|Contact[] all()
+     * @mixin _IH_Contact_QB
+     */
+    class Contact extends Model {}
     
     /**
      * @property int $id
@@ -270,6 +326,9 @@ namespace App\Models {
      * @property _IH_BuyProduct_C|BuyProduct[] $products
      * @property-read int $products_count
      * @method HasMany|_IH_BuyProduct_QB products()
+     * @property _IH_BuyService_C|BuyService[] $services
+     * @property-read int $services_count
+     * @method HasMany|_IH_BuyService_QB services()
      * @method static _IH_OrderStatus_QB onWriteConnection()
      * @method _IH_OrderStatus_QB newQuery()
      * @method static _IH_OrderStatus_QB on(null|string $connection = null)
@@ -279,7 +338,7 @@ namespace App\Models {
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_OrderStatus_C|OrderStatus[] all()
-     * @foreignLinks id,\App\Models\BuyProduct,order_status_id
+     * @foreignLinks id,\App\Models\BuyProduct,order_status_id|id,\App\Models\BuyService,order_status_id
      * @mixin _IH_OrderStatus_QB
      */
     class OrderStatus extends Model {}
@@ -385,11 +444,11 @@ namespace App\Models {
      * @property Carbon|null $updated_at
      * @property Company_branch $company_branch
      * @method BelongsTo|_IH_Company_branch_QB company_branch()
+     * @property _IH_User_C|User[] $payUsers
+     * @property-read int $pay_users_count
+     * @method BelongsToMany|_IH_User_QB payUsers()
      * @property Service_branch $service_branch
      * @method BelongsTo|_IH_Service_branch_QB service_branch()
-     * @property _IH_User_C|User[] $users
-     * @property-read int $users_count
-     * @method BelongsToMany|_IH_User_QB users()
      * @method static _IH_Service_QB onWriteConnection()
      * @method _IH_Service_QB newQuery()
      * @method static _IH_Service_QB on(null|string $connection = null)
@@ -400,6 +459,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_Service_C|Service[] all()
      * @ownLinks company_branch_id,\App\Models\Company_branch,id|service_branch_id,\App\Models\Service_branch,id
+     * @foreignLinks id,\App\Models\BuyService,service_id
      * @mixin _IH_Service_QB
      * @method static ServiceFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
@@ -464,6 +524,15 @@ namespace App\Models {
      * @property _IH_Product_C|Product[] $payProducts
      * @property-read int $pay_products_count
      * @method BelongsToMany|_IH_Product_QB payProducts()
+     * @property _IH_Product_C|Product[] $payProductsCurrent
+     * @property-read int $pay_products_current_count
+     * @method BelongsToMany|_IH_Product_QB payProductsCurrent()
+     * @property _IH_Product_C|Product[] $payProductsDone
+     * @property-read int $pay_products_done_count
+     * @method BelongsToMany|_IH_Product_QB payProductsDone()
+     * @property _IH_Service_C|Service[] $payServics
+     * @property-read int $pay_servics_count
+     * @method BelongsToMany|_IH_Service_QB payServics()
      * @property _IH_DatabaseNotification_C|DatabaseNotification[] $readNotifications
      * @property-read int $read_notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB readNotifications()
@@ -482,7 +551,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_User_C|User[] all()
      * @ownLinks role_id,\App\Models\Role,id|company_branch_id,\App\Models\Company_branch,id
-     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id|id,\App\Models\Favorite,user_id|id,\App\Models\Cart,user_id|id,\App\Models\BuyProduct,user_id
+     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id|id,\App\Models\Favorite,user_id|id,\App\Models\Cart,user_id|id,\App\Models\BuyProduct,user_id|id,\App\Models\BuyService,user_id
      * @mixin _IH_User_QB
      * @method static UserFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */
