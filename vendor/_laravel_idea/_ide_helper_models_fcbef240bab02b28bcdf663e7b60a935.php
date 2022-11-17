@@ -1,4 +1,4 @@
-<?php //8e89ed1bdb4bbb821ed8f2a235969a5c
+<?php //6dc59b98394a0e441e53dcc18a743749
 /** @noinspection all */
 
 namespace App\Models {
@@ -115,6 +115,8 @@ namespace App\Models {
      * @property float $product_price
      * @property int $address_id
      * @property int|null $order_status_id
+     * @property string $details
+     * @property string $user_file
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @property OrderStatus $status
@@ -168,7 +170,7 @@ namespace App\Models {
      * @property int $user_id
      * @property int $product_id
      * @property string $file
-     * @property string $message
+     * @property string $details
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @method static _IH_Cart_QB onWriteConnection()

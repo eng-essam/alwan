@@ -1,4 +1,4 @@
-<?php //c53e87550fef6ced851ea9670660f116
+<?php //cab1eca2f9df054d153018e5c2ba3065
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -272,6 +272,8 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_BuyProduct_QB whereProductPrice($value)
      * @method _IH_BuyProduct_QB whereAddressId($value)
      * @method _IH_BuyProduct_QB whereOrderStatusId($value)
+     * @method _IH_BuyProduct_QB whereDetails($value)
+     * @method _IH_BuyProduct_QB whereUserFile($value)
      * @method _IH_BuyProduct_QB whereCreatedAt($value)
      * @method _IH_BuyProduct_QB whereUpdatedAt($value)
      * @method BuyProduct baseSole(array|string $columns = ['*'])
@@ -459,7 +461,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Cart_QB whereUserId($value)
      * @method _IH_Cart_QB whereProductId($value)
      * @method _IH_Cart_QB whereFile($value)
-     * @method _IH_Cart_QB whereMessage($value)
+     * @method _IH_Cart_QB whereDetails($value)
      * @method _IH_Cart_QB whereCreatedAt($value)
      * @method _IH_Cart_QB whereUpdatedAt($value)
      * @method Cart baseSole(array|string $columns = ['*'])

@@ -78,7 +78,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Product::class, 'buy_products')
             ->withPivot(['address_id', 'order_status_id', 'product_quantity'
-                , 'product_price', 'order_id'])
+                , 'product_price', 'order_id','details' , 'user_file'])
             ->withTimestamps();
     }
 
@@ -86,7 +86,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Product::class, 'buy_products')
             ->withPivot(['address_id', 'order_status_id', 'product_quantity'
-                , 'product_price', 'order_id'])
+                , 'product_price', 'order_id','details' , 'user_file'])
             ->wherePivot('order_status_id' ,'!=' ,8)
             ->withTimestamps();
     }
@@ -95,7 +95,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Product::class, 'buy_products')
             ->withPivot(['address_id', 'order_status_id', 'product_quantity'
-                , 'product_price', 'order_id'])
+                , 'product_price', 'order_id','details' , 'user_file'])
             ->wherePivot('order_status_id' , 8)
             ->withTimestamps();
     }

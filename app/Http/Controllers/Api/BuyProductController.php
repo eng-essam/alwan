@@ -3,23 +3,23 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Address;
 use App\Models\BuyProduct;
 use App\Models\Cart;
 use App\Traits\ReturnJson;
+use App\Traits\TransferFilesFromCart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class BuyProductController extends Controller
 {
-    use ReturnJson;
+    use ReturnJson, TransferFilesFromCart;
 
     public function buyProducts(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'products' => ['required', 'array'],
-            'address_id' => ['required','numeric'],
-            'discountPercentage' => ['nullable','numeric']
+            'address_id' => ['required', 'numeric'],
+            'discountPercentage' => ['nullable', 'numeric']
         ]);
 
         if ($validator->fails()) {
@@ -35,6 +35,8 @@ class BuyProductController extends Controller
                 'product_quantity' => $allProduct[$key]['quantity'],
                 'product_price' => $allProduct[$key]['price'],
                 'address_id' => $request->address_id,
+                'details' => $this->transferDetails($request->user()->id, $allProduct[$key]['product_id']),
+                'user_file' => $this->transferUserFile($request->user()->id, $allProduct[$key]['product_id']),
                 'order_status_id' => 1,
             ]);
         }

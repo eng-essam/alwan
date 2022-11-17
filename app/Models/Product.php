@@ -38,7 +38,7 @@ class Product extends Model
     public function payUsers()
     {
         return $this->belongsToMany(User::class, 'buy_products')
-            ->withPivot(['address_id', 'order_status_id', 'product_quantity', 'product_price', 'order_id'])
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity', 'product_price', 'order_id','details' , 'user_file'])
             ->withTimestamps();
     }
 
