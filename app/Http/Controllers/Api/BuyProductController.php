@@ -37,7 +37,7 @@ class BuyProductController extends Controller
                 'address_id' => $request->address_id,
                 'details' => $this->transferDetails($request->user()->id, $allProduct[$key]['product_id']),
                 'user_file' => $this->transferUserFile($request->user()->id, $allProduct[$key]['product_id']),
-                'order_status_id' => 1,
+                'order_status_id' => 4,
             ]);
         }
 
