@@ -32,5 +32,5 @@ return [
     'product_already_in_favorite'=>'This product is already in the favorite',
     'discount_rate' =>'The discount rate is',
     'message_received_successfully' => 'Your message has been received successfully',
-
+    'request_under_review'=>'The request has been received and is under review',
 ];

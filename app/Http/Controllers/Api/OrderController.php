@@ -5,12 +5,15 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\BuyProductResource;
 use App\Http\Resources\OrderStatusResource;
+use App\Models\BuyService;
 use App\Models\Company_branch;
 use App\Models\OrderStatus;
 use App\Models\User;
 use App\Traits\ReturnJson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller
 {
@@ -19,15 +22,14 @@ class OrderController extends Controller
     public function allOrderProducts(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('payProductsCurrent')->first();
-        $allOrders = json_decode($user)->pay_products_current;
+        $user = User::where('id', 33)->with('ProductsCurrent')->first();
+        $allOrders = json_decode($user)->products_current;
         $orders = [];
 
         foreach ($allOrders as $key => $oneOrder) {
             $orders[$key]['product_id'] = $allOrders[$key]->id;
             $orders[$key]['product_name'] = json_decode($allOrders[$key]->product_name)->$lang;
             $orders[$key]['product_img'] = asset('uploads/' . $allOrders[$key]->product_img);
-            $orders[$key]['product_desc'] = json_decode($allOrders[$key]->product_desc)->$lang;
             $orders[$key]['Company_branch'] = json_decode(Company_branch::findOrFail($allOrders[$key]->company_branch_id)
                 ->pluck('company_name')->first())->$lang;
             $orders[$key]['Order_id'] = $allOrders[$key]->pivot->order_id;
@@ -35,22 +37,21 @@ class OrderController extends Controller
             $orders[$key]['Order_price'] = $allOrders[$key]->pivot->product_price;
             $orders[$key]['Order_Status'] = new OrderStatusResource(OrderStatus::findOrFail($allOrders[$key]->pivot->order_status_id));
         }
-        $data['allOrders'] = $orders;
+        $data['allProductOrders'] = $orders;
         return $this->requestSuccess(null, $data);
     }
 
     public function allOrderProductsDone(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('payProductsDone')->first();
-        $allOrders = json_decode($user)->pay_products_done;
+        $user = User::where('id', 33)->with('ProductsDone')->first();
+        $allOrders = json_decode($user)->products_done;
         $orders = [];
 
         foreach ($allOrders as $key => $oneOrder) {
             $orders[$key]['product_id'] = $allOrders[$key]->id;
             $orders[$key]['product_name'] = json_decode($allOrders[$key]->product_name)->$lang;
             $orders[$key]['product_img'] = asset('uploads/' . $allOrders[$key]->product_img);
-            $orders[$key]['product_desc'] = json_decode($allOrders[$key]->product_desc)->$lang;
             $orders[$key]['Company_branch'] = json_decode(Company_branch::findOrFail($allOrders[$key]->company_branch_id)
                 ->pluck('company_name')->first())->$lang;
             $orders[$key]['Order_id'] = $allOrders[$key]->pivot->order_id;
@@ -58,12 +59,77 @@ class OrderController extends Controller
             $orders[$key]['Order_price'] = $allOrders[$key]->pivot->product_price;
             $orders[$key]['Order_Status'] = new OrderStatusResource(OrderStatus::findOrFail($allOrders[$key]->pivot->order_status_id));
         }
-        $data['allOrders'] = $orders;
+        $data['allProductOrders'] = $orders;
         return $this->requestSuccess(null, $data);
     }
 
     public function serviceRequest(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'service_id' => ['required', 'exists:services,id'],
+            'details' => ['required', 'string'],
+            'user_file' => ['required', 'file'],
+        ]);
 
+        if ($validator->fails()) {
+            return $this->requestFails($validator->errors()->all());
+        }
+
+        $pathFile = Storage::disk('uploads')->put('files', $request->user_file);
+        BuyService::create([
+            'user_id' => $request->user()->id,
+            'service_id' => $request->service_id,
+            'details' => $request->details,
+            'user_file' => $pathFile,
+            'order_id' => rand(10000000, 99999999),
+            'order_status_id' => 1
+        ]);
+
+        return $this->requestSuccess(__('lang.request_under_review'));
     }
+
+    public function allOrderServices(Request $request)
+    {
+        $lang = App::getLocale();
+        $user = User::where('id', 33)->with('servicsCurrent')->first();
+        $allOrders = json_decode($user)->servics_current;
+        $orders = [];
+
+        foreach ($allOrders as $key => $oneOrder) {
+            $orders[$key]['service_id'] = $allOrders[$key]->id;
+            $orders[$key]['service_name'] = json_decode($allOrders[$key]->service_name)->$lang;
+            $orders[$key]['service_img'] = asset('uploads/' . $allOrders[$key]->main_img);
+            $orders[$key]['Company_branch'] = json_decode(Company_branch::findOrFail($allOrders[$key]->company_branch_id)
+                ->pluck('company_name')->first())->$lang;
+            $orders[$key]['Order_id'] = $allOrders[$key]->pivot->order_id;
+            $orders[$key]['Order_price'] = $allOrders[$key]->pivot->service_price;
+            $orders[$key]['Order_Status'] = new OrderStatusResource(OrderStatus::findOrFail($allOrders[$key]->pivot->order_status_id));
+            $orders[$key]['order_status_message'] = $allOrders[$key]->pivot->order_status_message;
+        }
+        $data['allServiceOrders'] = $orders;
+        return $this->requestSuccess(null, $data);
+    }
+
+    public function allOrderServicesDone(Request $request)
+    {
+        $lang = App::getLocale();
+        $user = User::where('id', 33)->with('servicsDone')->first();
+        $allOrders = json_decode($user)->servics_done;
+        $orders = [];
+
+        foreach ($allOrders as $key => $oneOrder) {
+            $orders[$key]['service_id'] = $allOrders[$key]->id;
+            $orders[$key]['service_name'] = json_decode($allOrders[$key]->service_name)->$lang;
+            $orders[$key]['service_img'] = asset('uploads/' . $allOrders[$key]->main_img);
+            $orders[$key]['Company_branch'] = json_decode(Company_branch::findOrFail($allOrders[$key]->company_branch_id)
+                ->pluck('company_name')->first())->$lang;
+            $orders[$key]['Order_id'] = $allOrders[$key]->pivot->order_id;
+            $orders[$key]['Order_price'] = $allOrders[$key]->pivot->service_price;
+            $orders[$key]['Order_Status'] = new OrderStatusResource(OrderStatus::findOrFail($allOrders[$key]->pivot->order_status_id));
+            $orders[$key]['order_status_message'] = $allOrders[$key]->pivot->order_status_message;
+        }
+        $data['allServiceOrders'] = $orders;
+        return $this->requestSuccess(null, $data);
+    }
+
 }

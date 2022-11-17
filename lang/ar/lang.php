@@ -27,10 +27,11 @@ return [
     'delete_product_favourites_successfully' => 'تم حذف المنتج بنجاح في المفضلة',
     'add_product_carts_successfully' => 'تم اضافة المنتج بنجاح في العربة',
     'delete_product_carts_successfully' => 'تم حذف المنتج بنجاح من العربة',
-    'payment_successfully'=>'عملية الدفع تمت بنجاح',
-    'product_already_in_cart'=>'هذا المنتج موجود بالفعل في العربة',
-    'product_already_in_favorite'=>'هذا المنتج موجود بالفعل في المفضلة',
-    'discount_rate' =>'نسبة الخصم هي',
+    'payment_successfully' => 'عملية الدفع تمت بنجاح',
+    'product_already_in_cart' => 'هذا المنتج موجود بالفعل في العربة',
+    'product_already_in_favorite' => 'هذا المنتج موجود بالفعل في المفضلة',
+    'discount_rate' => 'نسبة الخصم هي',
     'message_received_successfully' => 'تم استلام رسالتك بنجاح',
+    'request_under_review' => 'تم استلام الطلب وجاري المراجعة',
 
 ];

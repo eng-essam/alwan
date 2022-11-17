@@ -147,7 +147,12 @@ Route::middleware(['lang'])->group(function () {
         Route::get('all/order/products/done', [OrderController::class, 'allOrderProductsDone']); //all Order Products Done
 
         //service Request
-        Route::get('service/request', [OrderController::class, 'serviceRequest']); //service Request
+        Route::post('service/request', [OrderController::class, 'serviceRequest']); //service Request
+
+        //Order Products
+        Route::get('all/order/services', [OrderController::class, 'allOrderServices']); //all Order Services
+
+        Route::get('all/order/services/done', [OrderController::class, 'allOrderServicesDone']); //all Order Services Done
     });
 
 });

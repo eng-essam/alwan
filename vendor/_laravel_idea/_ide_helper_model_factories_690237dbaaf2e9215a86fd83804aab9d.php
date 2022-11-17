@@ -1,4 +1,4 @@
-<?php //83362b87bc437341eeacfa17b07445ef
+<?php //cb57ed036fded872100b136060cb1a1c
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -49,6 +49,8 @@ namespace Database\Factories {
     class Service_branchFactory extends Factory {}
     
     /**
+     * @method $this hasProductsCurrent(int $count = 1, $attributes = [])
+     * @method $this hasProductsDone(int $count = 1, $attributes = [])
      * @method $this hasAddresses(int $count = 1, $attributes = [])
      * @method $this hasAds(int $count = 1, $attributes = [])
      * @method $this hasCartProducts(int $count = 1, $attributes = [])
@@ -56,11 +58,11 @@ namespace Database\Factories {
      * @method $this hasFavoriteProducts(int $count = 1, $attributes = [])
      * @method $this hasNotifications(int $count = 1, $attributes = [])
      * @method $this hasPayProducts(int $count = 1, $attributes = [])
-     * @method $this hasPayProductsCurrent(int $count = 1, $attributes = [])
-     * @method $this hasPayProductsDone(int $count = 1, $attributes = [])
      * @method $this hasPayServics(int $count = 1, $attributes = [])
      * @method $this hasReadNotifications(int $count = 1, $attributes = [])
      * @method $this forRole($attributes = [])
+     * @method $this hasServicsCurrent(int $count = 1, $attributes = [])
+     * @method $this hasServicsDone(int $count = 1, $attributes = [])
      * @method $this hasUnreadNotifications(int $count = 1, $attributes = [])
      */
     class UserFactory extends Factory {}

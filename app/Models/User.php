@@ -66,40 +66,6 @@ class User extends Authenticatable
         return $this->belongsTo(Company_branch::class);
     }
 
-    public function payServics()
-    {
-        return $this->belongsToMany(Service::class, 'buy_services')
-            ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
-                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
-            ->withTimestamps();
-    }
-
-    public function payProducts()
-    {
-        return $this->belongsToMany(Product::class, 'buy_products')
-            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
-                , 'product_price', 'order_id','details' , 'user_file'])
-            ->withTimestamps();
-    }
-
-    public function payProductsCurrent()
-    {
-        return $this->belongsToMany(Product::class, 'buy_products')
-            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
-                , 'product_price', 'order_id','details' , 'user_file'])
-            ->wherePivot('order_status_id' ,'!=' ,8)
-            ->withTimestamps();
-    }
-
-    public function payProductsDone()
-    {
-        return $this->belongsToMany(Product::class, 'buy_products')
-            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
-                , 'product_price', 'order_id','details' , 'user_file'])
-            ->wherePivot('order_status_id' , 8)
-            ->withTimestamps();
-    }
-
     public function addresses()
     {
         return $this->hasMany(Address::class);
@@ -114,6 +80,58 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Product::class, 'carts')
             ->withPivot(['file', 'details'])
+            ->withTimestamps();
+    }
+
+    public function payServics()
+    {
+        return $this->belongsToMany(Service::class, 'buy_services')
+            ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
+                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+            ->withTimestamps();
+    }
+
+    public function servicsCurrent()
+    {
+        return $this->belongsToMany(Service::class, 'buy_services')
+            ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
+                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+            ->wherePivot('order_status_id', '!=', 8)
+            ->withTimestamps();
+    }
+
+    public function servicsDone()
+    {
+        return $this->belongsToMany(Service::class, 'buy_services')
+            ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
+                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+            ->wherePivot('order_status_id',  8)
+            ->withTimestamps();
+    }
+
+    public function payProducts()
+    {
+        return $this->belongsToMany(Product::class, 'buy_products')
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
+                , 'product_price', 'order_id', 'details', 'user_file'])
+            ->withTimestamps();
+    }
+
+    public function ProductsCurrent()
+    {
+        return $this->belongsToMany(Product::class, 'buy_products')
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
+                , 'product_price', 'order_id', 'details', 'user_file'])
+            ->wherePivot('order_status_id', '!=', 8)
+            ->withTimestamps();
+    }
+
+    public function ProductsDone()
+    {
+        return $this->belongsToMany(Product::class, 'buy_products')
+            ->withPivot(['address_id', 'order_status_id', 'product_quantity'
+                , 'product_price', 'order_id', 'details', 'user_file'])
+            ->wherePivot('order_status_id', 8)
             ->withTimestamps();
     }
 }

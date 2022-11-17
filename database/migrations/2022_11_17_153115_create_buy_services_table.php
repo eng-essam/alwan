@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->integer('order_id');
             $table->foreignId('order_status_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->tinyText('order_status_message')->nullable();
-            $table->foreignId('address_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignId('address_id')->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->enum('payment_type',['card','branch'])->nullable();
             $table->string('admin_file')->nullable();
             $table->float('service_price')->nullable();

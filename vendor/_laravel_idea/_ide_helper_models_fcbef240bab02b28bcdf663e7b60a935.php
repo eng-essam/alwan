@@ -1,4 +1,4 @@
-<?php //6dc59b98394a0e441e53dcc18a743749
+<?php //2dc5f62a6271a62cd6295066920947bb
 /** @noinspection all */
 
 namespace App\Models {
@@ -143,7 +143,7 @@ namespace App\Models {
      * @property string $user_file
      * @property int $order_id
      * @property int $order_status_id
-     * @property int $address_id
+     * @property int|null $address_id
      * @property string|null $payment_type
      * @property string|null $admin_file
      * @property float|null $service_price
@@ -506,6 +506,12 @@ namespace App\Models {
      * @property string|null $remember_token
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
+     * @property _IH_Product_C|Product[] $ProductsCurrent
+     * @property-read int $products_current_count
+     * @method BelongsToMany|_IH_Product_QB ProductsCurrent()
+     * @property _IH_Product_C|Product[] $ProductsDone
+     * @property-read int $products_done_count
+     * @method BelongsToMany|_IH_Product_QB ProductsDone()
      * @property _IH_Address_C|Address[] $addresses
      * @property-read int $addresses_count
      * @method HasMany|_IH_Address_QB addresses()
@@ -526,12 +532,6 @@ namespace App\Models {
      * @property _IH_Product_C|Product[] $payProducts
      * @property-read int $pay_products_count
      * @method BelongsToMany|_IH_Product_QB payProducts()
-     * @property _IH_Product_C|Product[] $payProductsCurrent
-     * @property-read int $pay_products_current_count
-     * @method BelongsToMany|_IH_Product_QB payProductsCurrent()
-     * @property _IH_Product_C|Product[] $payProductsDone
-     * @property-read int $pay_products_done_count
-     * @method BelongsToMany|_IH_Product_QB payProductsDone()
      * @property _IH_Service_C|Service[] $payServics
      * @property-read int $pay_servics_count
      * @method BelongsToMany|_IH_Service_QB payServics()
@@ -540,6 +540,12 @@ namespace App\Models {
      * @method MorphToMany|_IH_DatabaseNotification_QB readNotifications()
      * @property Role $role
      * @method BelongsTo|_IH_Role_QB role()
+     * @property _IH_Service_C|Service[] $servicsCurrent
+     * @property-read int $servics_current_count
+     * @method BelongsToMany|_IH_Service_QB servicsCurrent()
+     * @property _IH_Service_C|Service[] $servicsDone
+     * @property-read int $servics_done_count
+     * @method BelongsToMany|_IH_Service_QB servicsDone()
      * @property _IH_DatabaseNotification_C|DatabaseNotification[] $unreadNotifications
      * @property-read int $unread_notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB unreadNotifications()
