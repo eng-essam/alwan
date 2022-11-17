@@ -30,6 +30,6 @@ return [
     'payment_successfully'=>'Payment successfully',
     'product_already_in_cart'=>'This product is already in the cart',
     'discount_rate' =>'The discount rate is',
-
+    'message_received_successfully' => 'Your message has been received successfully',
 
 ];

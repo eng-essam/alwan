@@ -11,6 +11,20 @@ class OrderStatusSeeder extends Seeder
     {
         OrderStatus::create([
             'status' => json_encode([
+                'en' => 'Waiting for approval',
+                'ar' => 'في انتظار الموافقة'
+            ]),
+        ]);
+
+        OrderStatus::create([
+            'status' => json_encode([
+                'en' => 'reques has been rejected',
+                'ar' => 'تم الرفض'
+            ]),
+        ]);
+
+        OrderStatus::create([
+            'status' => json_encode([
                 'en' => 'pending until payment',
                 'ar' => 'معلق لحين الدفع'
             ]),
@@ -51,11 +65,6 @@ class OrderStatusSeeder extends Seeder
             ]),
         ]);
 
-        OrderStatus::create([
-            'status' => json_encode([
-                'en' => 'reques has been rejected',
-                'ar' => 'تم الرفض'
-            ]),
-        ]);
+
     }
 }

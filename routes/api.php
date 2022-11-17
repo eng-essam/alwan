@@ -17,6 +17,7 @@ use App\Http\Controllers\Api\{AdController,
     ServiceBranchController,
     ServiceController,
     CobonController,
+    ContactController,
 
 };
 use Illuminate\Support\Facades\Route;
@@ -77,8 +78,11 @@ Route::middleware(['lang'])->group(function () {
     Route::post('search/main/service', [ServiceController::class, 'searchMainService']); //search Main Service
 
 
-    //offers
+    //Offers
     Route::get('all/offers', [OfferController::class, 'allOffers']); //all Offers
+
+    //Contact
+    Route::post('contact/us', [ContactController::class, 'contactUs']); //contact Us
 
     Route::middleware(['auth:sanctum', 'verified'])->group(callback: function () {
 
@@ -137,12 +141,13 @@ Route::middleware(['lang'])->group(function () {
         //Buy Product
         Route::post('buy/products', [BuyProductController::class, 'buyProducts']); //buy Products
 
-        //User Order
+        //Order Products
         Route::get('all/order/products', [OrderController::class, 'allOrderProducts']); //all Order Products
 
         Route::get('all/order/products/done', [OrderController::class, 'allOrderProductsDone']); //all Order Products Done
 
-
+        //service Request
+        Route::get('service/request', [OrderController::class, 'serviceRequest']); //service Request
     });
 
 });

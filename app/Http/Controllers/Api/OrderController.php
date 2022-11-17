@@ -62,4 +62,7 @@ class OrderController extends Controller
         return $this->requestSuccess(null, $data);
     }
 
+    public function serviceRequest(Request $request){
+
+    }
 }

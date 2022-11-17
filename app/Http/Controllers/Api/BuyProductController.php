@@ -18,7 +18,8 @@ class BuyProductController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'products' => ['required', 'array'],
-            'address_id' => ['required','numeric']
+            'address_id' => ['required','numeric'],
+            'discountPercentage' => ['nullable','numeric']
         ]);
 
         if ($validator->fails()) {

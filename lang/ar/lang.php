@@ -30,11 +30,6 @@ return [
     'payment_successfully'=>'عملية الدفع تمت بنجاح',
     'product_already_in_cart'=>'هذا المنتج موجود بالفعل في العربة',
     'discount_rate' =>'نسبة الخصم هي',
-
-
-
-
-
-
+    'message_received_successfully' => 'تم استلام رسالتك بنجاح',
 
 ];
