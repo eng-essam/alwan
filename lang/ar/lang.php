@@ -33,5 +33,12 @@ return [
     'discount_rate' => 'نسبة الخصم هي',
     'message_received_successfully' => 'تم استلام رسالتك بنجاح',
     'request_under_review' => 'تم استلام الطلب وجاري المراجعة',
+    'login'=>'تسجيل الدخول',
+    'email_Address'=>'البريد الالكتروني',
+    'password'=>'كلمة السر',
+    'Keep_me_logged_in'=>'تذكرني',
+    'forget_password'=>'نسيت كلمة السر',
+    'sign_in' =>'تسجيل الدخول'
+
 
 ];

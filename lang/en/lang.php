@@ -33,4 +33,11 @@ return [
     'discount_rate' =>'The discount rate is',
     'message_received_successfully' => 'Your message has been received successfully',
     'request_under_review'=>'The request has been received and is under review',
+    'login'=>'Login',
+    'email_Address'=>'Email Address',
+    'password'=>'Password',
+    'Keep_me_logged_in'=>'Keep me logged in',
+    'forget_password'=>'Forget Password',
+    'sign_in' =>'Sign in',
+
 ];

@@ -37,7 +37,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware(['guest','langWeb'])->except('logout');
     }
 
     public function login(Request $request)
@@ -47,27 +47,17 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
-        if (Auth::attempt(array('email' => $request->email, 'password' => $request->password)))
-        {
+        if (Auth::attempt(array('email' => $request->email, 'password' => $request->password))) {
 
-            if (Auth::user()->role->name == 'user') {
-                return redirect(url('home'));
-            } elseif (Auth::user()->role->name == 'admin' ) {
-                return redirect(url('admin/home'));
-            }elseif (Auth::user()->role->name == 'superAdmin' ) {
+            if (Auth::user()->role->name == 'superAdmin') {
                 return redirect(url('superAdmin/home'));
+            } elseif (Auth::user()->role->name == 'admin') {
+                return redirect(url('admin/home'));
             }
         } else {
-            return back()->with('error' , 'error password');
+            return back()->with('error', 'error password');
         }
     }
-
-
-
-
-
-
-
 
 
 }
