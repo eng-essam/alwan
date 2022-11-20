@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class EditInformationController extends Controller
@@ -130,4 +131,28 @@ class EditInformationController extends Controller
         return $this->requestSuccess(__('lang.password_changed_successfully'));
 
     }
+
+    public function editImg(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'newImage' => ['required']
+        ]);
+
+        if ($validator->fails()) {
+            return $this->requestFails($validator->errors()->all());
+        }
+
+        $path = $request->user()->img;
+        if ($request->file('newImage')) {
+            Storage::disk('uploads')->delete($request->user()->img);
+            $path = Storage::disk('uploads')->put('user_imgs', $request->newImage);
+        }
+
+        User::findOrFail($request->user()->id)->update([
+            'img' => $path,
+        ]);
+
+        return $this->requestSuccess(__('lang.img_edit_successfully'));
+    }
+
 }

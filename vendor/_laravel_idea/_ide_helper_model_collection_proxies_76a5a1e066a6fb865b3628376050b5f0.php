@@ -1,4 +1,4 @@
-<?php //e8c17e49cd0b30dcf3aa0d4bc24ca446
+<?php //dde00511b96a7358a16449e6cf08fa7f
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -79,7 +79,6 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_BuyService_C|mixed $order_id
      * @property _IH_BuyService_C|mixed $order_status_id
      * @property _IH_BuyService_C|mixed $address_id
-     * @property _IH_BuyService_C|mixed $payment_type
      * @property _IH_BuyService_C|mixed $admin_file
      * @property _IH_BuyService_C|mixed $service_price
      * @property _IH_BuyService_C|mixed $created_at

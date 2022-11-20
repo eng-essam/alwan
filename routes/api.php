@@ -18,12 +18,15 @@ use App\Http\Controllers\Api\{AdController,
     ServiceController,
     CobonController,
     ContactController,
+    BuyServiceController,
 
 };
 use Illuminate\Support\Facades\Route;
 
 Route::get('test', function () {
+    $json = '{"John":20,"Harry":30,"Dave":40,"Tony":50}';
 
+    print_r(json_decode($json,true));
 }); //test
 
 
@@ -63,7 +66,6 @@ Route::middleware(['lang'])->group(function () {
 
     Route::post('search/main/product', [ProductController::class, 'searchMainProduct']); //search Main Product
 
-
     //Services
     Route::get('all/main/service', [ServiceBranchController::class, 'allMainService']); //all Main Service
 
@@ -76,7 +78,6 @@ Route::middleware(['lang'])->group(function () {
     Route::post('search/sub/service', [ServiceController::class, 'searchSubService']); //search Sub Service
 
     Route::post('search/main/service', [ServiceController::class, 'searchMainService']); //search Main Service
-
 
     //Offers
     Route::get('all/offers', [OfferController::class, 'allOffers']); //all Offers
@@ -104,6 +105,8 @@ Route::middleware(['lang'])->group(function () {
         Route::post('check/code/to/change/email', [EditInformationController::class, 'changeEmail']); //change Email
 
         Route::post('edit/phone', [EditInformationController::class, 'editPhone']); //edit Phone
+
+        Route::post('edit/img', [EditInformationController::class, 'editImg']); //edit Img
 
         Route::post('edit/password', [EditInformationController::class, 'editPassword']); //edit Password
 
@@ -138,18 +141,22 @@ Route::middleware(['lang'])->group(function () {
         //Cobons
         Route::post('check/cobon', [CobonController::class, 'checkCobon']); //checkCobon
 
+        //service Request
+        Route::post('service/request', [OrderController::class, 'serviceRequest']); //service Request
+
+        Route::post('resend/service/request', [OrderController::class, 'resendServiceRequest']); //resend Service Request
+
         //Buy Product
         Route::post('buy/products', [BuyProductController::class, 'buyProducts']); //buy Products
+
+        Route::post('buy/service', [BuyServiceController::class, 'buyService']); //buy Service
+
 
         //Order Products
         Route::get('all/order/products', [OrderController::class, 'allOrderProducts']); //all Order Products
 
         Route::get('all/order/products/done', [OrderController::class, 'allOrderProductsDone']); //all Order Products Done
 
-        //service Request
-        Route::post('service/request', [OrderController::class, 'serviceRequest']); //service Request
-
-        //Order Products
         Route::get('all/order/services', [OrderController::class, 'allOrderServices']); //all Order Services
 
         Route::get('all/order/services/done', [OrderController::class, 'allOrderServicesDone']); //all Order Services Done

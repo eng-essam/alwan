@@ -87,7 +87,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Service::class, 'buy_services')
             ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
-                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+                , 'order_status_message', 'address_id', 'admin_file', 'service_price'])
             ->withTimestamps();
     }
 
@@ -95,7 +95,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Service::class, 'buy_services')
             ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
-                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+                , 'order_status_message', 'address_id', 'admin_file', 'service_price'])
             ->wherePivot('order_status_id', '!=', 8)
             ->withTimestamps();
     }
@@ -104,7 +104,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Service::class, 'buy_services')
             ->withPivot(['details', 'user_file', 'order_id', 'order_status_id'
-                , 'order_status_message', 'address_id', 'payment_type', 'admin_file', 'service_price'])
+                , 'order_status_message', 'address_id', 'admin_file', 'service_price'])
             ->wherePivot('order_status_id',  8)
             ->withTimestamps();
     }

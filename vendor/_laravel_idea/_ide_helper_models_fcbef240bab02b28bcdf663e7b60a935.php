@@ -1,4 +1,4 @@
-<?php //2dc5f62a6271a62cd6295066920947bb
+<?php //abacebda759e98d416d9a88296636441
 /** @noinspection all */
 
 namespace App\Models {
@@ -144,7 +144,6 @@ namespace App\Models {
      * @property int $order_id
      * @property int $order_status_id
      * @property int|null $address_id
-     * @property string|null $payment_type
      * @property string|null $admin_file
      * @property float|null $service_price
      * @property Carbon|null $created_at

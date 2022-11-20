@@ -132,4 +132,31 @@ class OrderController extends Controller
         return $this->requestSuccess(null, $data);
     }
 
+    public function resendServiceRequest(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'order_id' => ['required', 'exists:buy_services,order_id'],
+            'details' => ['required', 'string'],
+            'user_file' => ['required', 'file'],
+        ]);
+
+        if ($validator->fails()) {
+            return $this->requestFails($validator->errors()->all());
+        }
+
+        $pathFile = BuyService::where('order_id', $request->order_id)->select('user_file')->first();
+        if ($request->file('user_file')) {
+            Storage::disk('uploads')->delete($pathFile);
+            $pathFile = Storage::disk('uploads')->put('files', $request->user_file);
+        }
+
+        BuyService::where('order_id', $request->order_id)->update([
+            'details' => $request->details,
+            'user_file' => $pathFile,
+            'order_id' => 1,
+        ]);
+
+        return $this->requestSuccess(__('lang.resend_service_request'));
+    }
+
 }

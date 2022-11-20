@@ -1,4 +1,4 @@
-<?php //cab1eca2f9df054d153018e5c2ba3065
+<?php //0f77b668215c07e23930da7cb9573f54
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -368,7 +368,6 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_BuyService_QB whereOrderId($value)
      * @method _IH_BuyService_QB whereOrderStatusId($value)
      * @method _IH_BuyService_QB whereAddressId($value)
-     * @method _IH_BuyService_QB wherePaymentType($value)
      * @method _IH_BuyService_QB whereAdminFile($value)
      * @method _IH_BuyService_QB whereServicePrice($value)
      * @method _IH_BuyService_QB whereCreatedAt($value)
