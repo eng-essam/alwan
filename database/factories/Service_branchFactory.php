@@ -21,6 +21,10 @@ class Service_branchFactory extends Factory
                 'en' => $this->faker->word,
                 'ar' => $this->faker->word
             ]),
+            'service_branch_desc'=>json_encode([
+                'en' => $this->faker->text,
+                'ar' => $this->faker->text
+            ]),
             'service_branch_img' => 'service_branchs/' . $ImgID . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),

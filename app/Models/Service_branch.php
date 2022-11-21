@@ -18,6 +18,12 @@ class Service_branch extends Model
         return json_decode($this->service_branch_name)->$lang;
     }
 
+    public function service_branch_desc()
+    {
+        $lang = App::getLocale();
+        return json_decode($this->service_branch_desc)->$lang;
+    }
+
     public function services()
     {
         return $this->hasMany(Service::class);

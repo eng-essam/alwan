@@ -11,6 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->string('service_branch_img');
             $table->string('service_branch_name');
+            $table->mediumText('service_branch_desc');
             $table->timestamps();
         });
     }

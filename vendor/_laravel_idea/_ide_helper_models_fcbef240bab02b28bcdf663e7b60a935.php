@@ -1,4 +1,4 @@
-<?php //abacebda759e98d416d9a88296636441
+<?php //bd97eaedd8b218af2996e6d0321e2ab9
 /** @noinspection all */
 
 namespace App\Models {
@@ -470,6 +470,7 @@ namespace App\Models {
      * @property int $id
      * @property string $service_branch_img
      * @property string $service_branch_name
+     * @property string $service_branch_desc
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
      * @property _IH_Service_C|Service[] $services

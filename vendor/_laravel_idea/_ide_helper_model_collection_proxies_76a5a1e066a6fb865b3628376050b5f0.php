@@ -1,4 +1,4 @@
-<?php //dde00511b96a7358a16449e6cf08fa7f
+<?php //334ed5240ec5db6f67432c3e762eb452
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -334,9 +334,11 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Service_branch_C|mixed $id
      * @property _IH_Service_branch_C|mixed $service_branch_img
      * @property _IH_Service_branch_C|mixed $service_branch_name
+     * @property _IH_Service_branch_C|mixed $service_branch_desc
      * @property _IH_Service_branch_C|mixed $created_at
      * @property _IH_Service_branch_C|mixed $updated_at
      * @method _IH_Service_branch_C service_branch_name()
+     * @method _IH_Service_branch_C service_branch_desc()
      * @method _IH_Service_branch_C refresh()
      * @method _IH_Service_branch_C update(array $attributes = [], array $options = [])
      * @method _IH_Service_branch_C save(array $options = [])

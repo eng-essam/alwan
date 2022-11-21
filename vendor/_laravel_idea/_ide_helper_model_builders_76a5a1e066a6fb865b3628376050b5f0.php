@@ -1,4 +1,4 @@
-<?php //0f77b668215c07e23930da7cb9573f54
+<?php //f86ceb37f8e0507dc0afaa64d98a8f57
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -1541,6 +1541,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Service_branch_QB whereId($value)
      * @method _IH_Service_branch_QB whereServiceBranchImg($value)
      * @method _IH_Service_branch_QB whereServiceBranchName($value)
+     * @method _IH_Service_branch_QB whereServiceBranchDesc($value)
      * @method _IH_Service_branch_QB whereCreatedAt($value)
      * @method _IH_Service_branch_QB whereUpdatedAt($value)
      * @method Service_branch baseSole(array|string $columns = ['*'])
