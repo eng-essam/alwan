@@ -4,8 +4,11 @@ use App\Http\Controllers\Api\{AdController,
     AddressController,
     AuthController,
     BuyProductController,
+    BuyServiceController,
     CartController,
+    CobonController,
     CompanyBranchController,
+    ContactController,
     EditInformationController,
     FavoriteController,
     GuestController,
@@ -16,29 +19,12 @@ use App\Http\Controllers\Api\{AdController,
     ProductController,
     ServiceBranchController,
     ServiceController,
-    CobonController,
-    ContactController,
-    BuyServiceController,
-
 };
 use Illuminate\Support\Facades\Route;
 
 Route::get('test', function () {
-    $jsonobj = '
-    {"Peter":35,"Ben":37,"Joe":43}';
-
-     $obj = json_decode($jsonobj);
-    echo count($obj);
-    echo "<br>";
-    echo $obj->Peter;
-    echo "<br>";
-    echo $obj->Ben;
-    echo "<br>";
-    echo $obj->Joe;
-    echo "<br>";
 
 }); //test
-
 
 Route::middleware(['lang'])->group(function () {
 

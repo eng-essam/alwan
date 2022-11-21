@@ -39,7 +39,7 @@ return [
     'email_Address'=>'Email Address',
     'password'=>'Password',
     'Keep_me_logged_in'=>'Keep me logged in',
-    'forget_password'=>'Forget Password',
+    'forget_password'=>'Forget Password ?',
     'sign_in' =>'Sign in',
 
 ];

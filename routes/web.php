@@ -9,6 +9,8 @@ Route::get('test', function () {
 
 });
 
+Auth::routes(['register' => false]);
+
 Route::get('lang/set/{lang}', [LangController::class, 'setLang']);
 
 Route::get('/', function () {
@@ -16,11 +18,11 @@ Route::get('/', function () {
     return Redirect(url('login'));
 });
 
-Auth::routes(['register' => false]);
-
 
 Route::prefix('superAdmin')->middleware(['auth', 'userAccess:superAdmin', 'langWeb'])->group(function () {
     Route::get('/home', [HomeController::class, 'superAdminHome']);
+
+
 });
 
 

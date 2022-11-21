@@ -39,7 +39,7 @@ return [
     'email_Address'=>'البريد الالكتروني',
     'password'=>'كلمة السر',
     'Keep_me_logged_in'=>'تذكرني',
-    'forget_password'=>'نسيت كلمة السر',
+    'forget_password'=>'? نسيت كلمة السر',
     'sign_in' =>'تسجيل الدخول'
 
 

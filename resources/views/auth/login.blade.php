@@ -6,7 +6,7 @@
 
 
 @section('main')
-    <div class="signUP-admin container mt-20">
+    <div class="signUP-admin">
         <div class="container-fluid">
             @if(\Illuminate\Support\Facades\App::getLocale() == 'en')
                 <a style="float: right ;margin-top: 10px;width: 10px" class="btn btn-primary "
@@ -22,23 +22,23 @@
 
             <div class="row justify-content-center">
                 <div class="col-xl-4 col-lg-5 col-md-5 p-0">
-                    <div class="signUP-admin-left signIn-admin-left position-relative">
+                    <div class="signUP-admin-left position-relative h-100vh">
                         <div class="signUP-overlay">
-                            <img class="svg signupTop" src="{{asset('admin/img/svg/signupTop.svg')}}" alt="img"/>
-                            <img class="svg signupBottom" src="{{asset('admin/img/svg/signupBottom.svg')}}" alt="img"/>
-                        </div><!-- End: .signUP-overlay  -->
+                            <img class="svg signupTop" src="{{asset('admin/img/svg/signupTop.svg')}}" alt="svg">
+                            <img class="svg signupBottom" src="{{asset('admin/img/svg/signupBottom.svg')}}" alt="svg">
+                        </div>
                         <div class="signUP-admin-left__content">
-                            <button
-                                class="btn btn-primary btn-default btn-squared mr-15 text-capitalize lh-normal  signIn-createBtn ">
-                                <h1 style="color: white">Alwaan</h1>
-                            </button>
-                        </div><!-- End: .signUP-admin-left__content  -->
+                            <div class="text-capitalize mb-md-30 mb-15 d-flex align-items-center justify-content-md-start justify-content-center">
+                                <a class="wh-36 bg-primary text-white radius-md mr-10 content-center" href="#">a</a>
+                                <span class="text-dark">admin</span>
+                            </div>
+                            <h1>Bootstrap 4 React Web Application</h1>
+                        </div>
                         <div class="signUP-admin-left__img">
-                            <img class="img-fluid svg" src="{{asset('admin/img/svg/signupIllustration.svg')}}"
-                                 alt="img"/>
-                        </div><!-- End: .signUP-admin-left__img  -->
-                    </div><!-- End: .signUP-admin-left  -->
-                </div><!-- End: .col-xl-4  -->
+                            <img class="img-fluid svg" src="{{asset('admin/img/svg/signupIllustration.svg')}}" alt="svg">
+                        </div>
+                    </div><!-- End: .signUP-admin-left -->
+                </div><!-- End: .col -->
                 <div class="col-xl-8 col-lg-7 col-md-7 col-sm-8">
                     <div class="signUp-admin-right signIn-admin-right  p-md-40 p-10">
                         <div class="row justify-content-center">
@@ -87,8 +87,7 @@
                                                                     class="checkbox-text">{{__('lang.Keep_me_logged_in')}}</span>
                                                             </label>
                                                         </div>
-                                                        <a href="{{ route('password.request') }}">{{__('lang.forget_password')}}
-                                                            ?</a>
+                                                        <a href="{{ route('password.request') }}">{{__('lang.forget_password')}}</a>
                                                     </div>
                                                     <div
                                                         class="button-group d-flex pt-1 justify-content-md-start justify-content-center">

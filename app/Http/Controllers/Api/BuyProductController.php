@@ -17,7 +17,7 @@ class BuyProductController extends Controller
     public function buyProducts(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'products' => ['required', 'array'],
+            'products' => ['required', 'json'],
             'address_id' => ['required', 'numeric'],
             'discountPercentage' => ['nullable', 'numeric']
         ]);
@@ -26,14 +26,18 @@ class BuyProductController extends Controller
             return $this->requestFails($validator->errors()->all());
         }
 
-        $allProduct = $request->products;
+        $discount = 1;
+        if ($request->discountPercentage != null) {
+            $discount = 1 - ($request->discountPercentage / 100);
+        }
+        $allProduct = json_decode($request->products, true);
         foreach ($allProduct as $key => $valu) {
             BuyProduct::create([
                 'user_id' => $request->user()->id,
                 'product_id' => $allProduct[$key]['product_id'],
                 'order_id' => rand(10000000, 99999999),
                 'product_quantity' => $allProduct[$key]['quantity'],
-                'product_price' => $allProduct[$key]['price'],
+                'product_price' => $allProduct[$key]['price'] * $discount,
                 'address_id' => $request->address_id,
                 'details' => $this->transferDetails($request->user()->id, $allProduct[$key]['product_id']),
                 'user_file' => $this->transferUserFile($request->user()->id, $allProduct[$key]['product_id']),

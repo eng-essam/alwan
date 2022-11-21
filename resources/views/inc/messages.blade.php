@@ -4,12 +4,6 @@
     </div>
 @endif
 
-@if (session('error'))
-    <div style="display: flex;justify-content: center" class="alert alert-danger">
-        <div>{{ session('error') }}</div>
-    </div>
-@endif
-
 @if ($errors->any())
     <div style="display: flex;justify-content: center" class="alert alert-danger">
         @foreach ($errors->all() as $error)
