@@ -1,4 +1,4 @@
-<?php //bd97eaedd8b218af2996e6d0321e2ab9
+<?php //b7df86a37e81e7c4b4ec89cf6f19c66a
 /** @noinspection all */
 
 namespace App\Models {
@@ -18,7 +18,9 @@ namespace App\Models {
     use Illuminate\Database\Eloquent\Relations\HasMany;
     use Illuminate\Database\Eloquent\Relations\MorphToMany;
     use Illuminate\Notifications\DatabaseNotification;
+    use Illuminate\Notifications\DatabaseNotificationCollection;
     use Illuminate\Support\Carbon;
+    use Laravel\Sanctum\PersonalAccessToken;
     use LaravelIdea\Helper\App\Models\_IH_Address_C;
     use LaravelIdea\Helper\App\Models\_IH_Address_QB;
     use LaravelIdea\Helper\App\Models\_IH_Ad_C;
@@ -55,8 +57,9 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_Service_QB;
     use LaravelIdea\Helper\App\Models\_IH_User_C;
     use LaravelIdea\Helper\App\Models\_IH_User_QB;
-    use LaravelIdea\Helper\Illuminate\Notifications\_IH_DatabaseNotification_C;
     use LaravelIdea\Helper\Illuminate\Notifications\_IH_DatabaseNotification_QB;
+    use LaravelIdea\Helper\Laravel\Sanctum\_IH_PersonalAccessToken_C;
+    use LaravelIdea\Helper\Laravel\Sanctum\_IH_PersonalAccessToken_QB;
     
     /**
      * @property int $id
@@ -526,7 +529,7 @@ namespace App\Models {
      * @property _IH_Product_C|Product[] $favoriteProducts
      * @property-read int $favorite_products_count
      * @method BelongsToMany|_IH_Product_QB favoriteProducts()
-     * @property _IH_DatabaseNotification_C|DatabaseNotification[] $notifications
+     * @property DatabaseNotificationCollection|DatabaseNotification[] $notifications
      * @property-read int $notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB notifications()
      * @property _IH_Product_C|Product[] $payProducts
@@ -535,7 +538,7 @@ namespace App\Models {
      * @property _IH_Service_C|Service[] $payServics
      * @property-read int $pay_servics_count
      * @method BelongsToMany|_IH_Service_QB payServics()
-     * @property _IH_DatabaseNotification_C|DatabaseNotification[] $readNotifications
+     * @property DatabaseNotificationCollection|DatabaseNotification[] $readNotifications
      * @property-read int $read_notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB readNotifications()
      * @property Role $role
@@ -546,7 +549,10 @@ namespace App\Models {
      * @property _IH_Service_C|Service[] $servicsDone
      * @property-read int $servics_done_count
      * @method BelongsToMany|_IH_Service_QB servicsDone()
-     * @property _IH_DatabaseNotification_C|DatabaseNotification[] $unreadNotifications
+     * @property _IH_PersonalAccessToken_C|PersonalAccessToken[] $tokens
+     * @property-read int $tokens_count
+     * @method MorphToMany|_IH_PersonalAccessToken_QB tokens()
+     * @property DatabaseNotificationCollection|DatabaseNotification[] $unreadNotifications
      * @property-read int $unread_notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB unreadNotifications()
      * @method static _IH_User_QB onWriteConnection()

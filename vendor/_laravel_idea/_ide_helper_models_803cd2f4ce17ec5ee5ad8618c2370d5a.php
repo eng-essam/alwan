@@ -1,4 +1,4 @@
-<?php //be9352bbf8bc55a01b5ab39195538519
+<?php //43d0232fd65d949e5ee5f512dbd0e99d
 /** @noinspection all */
 
 namespace Illuminate\Notifications {
@@ -6,7 +6,6 @@ namespace Illuminate\Notifications {
     use Illuminate\Database\Eloquent\Model;
     use Illuminate\Database\Eloquent\Relations\MorphTo;
     use Illuminate\Support\Carbon;
-    use LaravelIdea\Helper\Illuminate\Notifications\_IH_DatabaseNotification_C;
     use LaravelIdea\Helper\Illuminate\Notifications\_IH_DatabaseNotification_QB;
     
     /**
@@ -27,7 +26,7 @@ namespace Illuminate\Notifications {
      * @method _IH_DatabaseNotification_QB newModelQuery()
      * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
-     * @method static _IH_DatabaseNotification_C|DatabaseNotification[] all()
+     * @method static DatabaseNotificationCollection|DatabaseNotification[] all()
      * @ownLinks user_id,\App\Models\User,id
      * @mixin _IH_DatabaseNotification_QB
      */

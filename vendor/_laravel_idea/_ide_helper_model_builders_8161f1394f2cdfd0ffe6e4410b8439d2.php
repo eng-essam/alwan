@@ -1,4 +1,4 @@
-<?php //43280c4a57123ac6ea1bbf2dfbd3beb2
+<?php //fc7a53c1473d44193368f479b543274b
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\Laravel\Sanctum {
@@ -14,45 +14,45 @@ namespace LaravelIdea\Helper\Laravel\Sanctum {
     /**
      * @method PersonalAccessToken|null getOrPut($key, $value)
      * @method PersonalAccessToken|$this shift(int $count = 1)
-     * @method PersonalAccessToken|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method PersonalAccessToken|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method PersonalAccessToken|$this pop(int $count = 1)
-     * @method PersonalAccessToken|null pull($key, $default = null)
-     * @method PersonalAccessToken|null last(callable $callback = null, $default = null)
-     * @method PersonalAccessToken|$this random($number = null)
-     * @method PersonalAccessToken|null sole($key = null, $operator = null, $value = null)
-     * @method PersonalAccessToken|null get($key, $default = null)
-     * @method PersonalAccessToken|null first(callable $callback = null, $default = null)
+     * @method PersonalAccessToken|null pull($key, \Closure $default = null)
+     * @method PersonalAccessToken|null last(callable $callback = null, \Closure $default = null)
+     * @method PersonalAccessToken|$this random(callable|int|null $number = null)
+     * @method PersonalAccessToken|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method PersonalAccessToken|null get($key, \Closure $default = null)
+     * @method PersonalAccessToken|null first(callable $callback = null, \Closure $default = null)
      * @method PersonalAccessToken|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method PersonalAccessToken|null find($key, $default = null)
      * @method PersonalAccessToken[] all()
-     * @property-read _IH_PersonalAccessToken_CP $keyBy
-     * @property-read _IH_PersonalAccessToken_CP $partition
-     * @property-read _IH_PersonalAccessToken_CP $max
-     * @property-read _IH_PersonalAccessToken_CP $doesntContain
-     * @property-read _IH_PersonalAccessToken_CP $flatMap
-     * @property-read _IH_PersonalAccessToken_CP $each
-     * @property-read _IH_PersonalAccessToken_CP $map
-     * @property-read _IH_PersonalAccessToken_CP $filter
-     * @property-read _IH_PersonalAccessToken_CP $unique
-     * @property-read _IH_PersonalAccessToken_CP $groupBy
-     * @property-read _IH_PersonalAccessToken_CP $sortBy
-     * @property-read _IH_PersonalAccessToken_CP $contains
-     * @property-read _IH_PersonalAccessToken_CP $sum
-     * @property-read _IH_PersonalAccessToken_CP $until
-     * @property-read _IH_PersonalAccessToken_CP $every
-     * @property-read _IH_PersonalAccessToken_CP $average
      * @property-read _IH_PersonalAccessToken_CP $when
-     * @property-read _IH_PersonalAccessToken_CP $some
-     * @property-read _IH_PersonalAccessToken_CP $skipWhile
-     * @property-read _IH_PersonalAccessToken_CP $sortByDesc
-     * @property-read _IH_PersonalAccessToken_CP $unless
-     * @property-read _IH_PersonalAccessToken_CP $takeUntil
-     * @property-read _IH_PersonalAccessToken_CP $avg
+     * @property-read _IH_PersonalAccessToken_CP $average
      * @property-read _IH_PersonalAccessToken_CP $skipUntil
+     * @property-read _IH_PersonalAccessToken_CP $sum
+     * @property-read _IH_PersonalAccessToken_CP $max
+     * @property-read _IH_PersonalAccessToken_CP $contains
+     * @property-read _IH_PersonalAccessToken_CP $takeUntil
+     * @property-read _IH_PersonalAccessToken_CP $unless
      * @property-read _IH_PersonalAccessToken_CP $first
      * @property-read _IH_PersonalAccessToken_CP $takeWhile
-     * @property-read _IH_PersonalAccessToken_CP $min
+     * @property-read _IH_PersonalAccessToken_CP $doesntContain
      * @property-read _IH_PersonalAccessToken_CP $reject
+     * @property-read _IH_PersonalAccessToken_CP $sortByDesc
+     * @property-read _IH_PersonalAccessToken_CP $flatMap
+     * @property-read _IH_PersonalAccessToken_CP $keyBy
+     * @property-read _IH_PersonalAccessToken_CP $each
+     * @property-read _IH_PersonalAccessToken_CP $avg
+     * @property-read _IH_PersonalAccessToken_CP $until
+     * @property-read _IH_PersonalAccessToken_CP $unique
+     * @property-read _IH_PersonalAccessToken_CP $min
+     * @property-read _IH_PersonalAccessToken_CP $sortBy
+     * @property-read _IH_PersonalAccessToken_CP $skipWhile
+     * @property-read _IH_PersonalAccessToken_CP $every
+     * @property-read _IH_PersonalAccessToken_CP $partition
+     * @property-read _IH_PersonalAccessToken_CP $map
+     * @property-read _IH_PersonalAccessToken_CP $groupBy
+     * @property-read _IH_PersonalAccessToken_CP $some
+     * @property-read _IH_PersonalAccessToken_CP $filter
      */
     class _IH_PersonalAccessToken_C extends _BaseCollection {
         /**

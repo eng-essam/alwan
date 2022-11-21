@@ -1,4 +1,4 @@
-<?php //cb57ed036fded872100b136060cb1a1c
+<?php //c8118d15986b6ebcb3bec4d26201f5e6
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -63,6 +63,7 @@ namespace Database\Factories {
      * @method $this forRole($attributes = [])
      * @method $this hasServicsCurrent(int $count = 1, $attributes = [])
      * @method $this hasServicsDone(int $count = 1, $attributes = [])
+     * @method $this hasTokens(int $count = 1, $attributes = [])
      * @method $this hasUnreadNotifications(int $count = 1, $attributes = [])
      */
     class UserFactory extends Factory {}

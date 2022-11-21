@@ -1,4 +1,4 @@
-<?php //334ed5240ec5db6f67432c3e762eb452
+<?php //cc9a2feb069b404c887b83647d488750
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -367,14 +367,19 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_User_C|mixed $updated_at
      * @property _IH_User_C|mixed $company
      * @property _IH_User_C|mixed $role
-     * @method _IH_User_C notifyNow($instance, array $channels = null)
-     * @method _IH_User_C notify($instance)
-     * @method _IH_User_C routeNotificationFor(string $driver, Notification|null $notification = null)
-     * @method _IH_User_C tokens()
      * @method _IH_User_C createToken(string $name, array $abilities = ['*'])
      * @method _IH_User_C tokenCan(string $ability)
      * @method _IH_User_C currentAccessToken()
      * @method _IH_User_C withAccessToken(HasAbilities $accessToken)
+     * @method _IH_User_C notifyNow($instance, array $channels = null)
+     * @method _IH_User_C notify($instance)
+     * @method _IH_User_C routeNotificationFor(string $driver, Notification|null $notification = null)
+     * @method _IH_User_C can(iterable|string $abilities, array|mixed $arguments = [])
+     * @method _IH_User_C canAny(iterable|string $abilities, array|mixed $arguments = [])
+     * @method _IH_User_C cant(iterable|string $abilities, array|mixed $arguments = [])
+     * @method _IH_User_C cannot(iterable|string $abilities, array|mixed $arguments = [])
+     * @method _IH_User_C sendPasswordResetNotification(string $token)
+     * @method _IH_User_C getEmailForPasswordReset()
      * @method _IH_User_C sendEmailVerificationNotification()
      * @method _IH_User_C getEmailForVerification()
      * @method _IH_User_C markEmailAsVerified()
@@ -386,12 +391,6 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_User_C getRememberToken()
      * @method _IH_User_C setRememberToken(string $value)
      * @method _IH_User_C getAuthIdentifierName()
-     * @method _IH_User_C can(iterable|string $abilities, array|mixed $arguments = [])
-     * @method _IH_User_C canAny(iterable|string $abilities, array|mixed $arguments = [])
-     * @method _IH_User_C cant(iterable|string $abilities, array|mixed $arguments = [])
-     * @method _IH_User_C cannot(iterable|string $abilities, array|mixed $arguments = [])
-     * @method _IH_User_C sendPasswordResetNotification(string $token)
-     * @method _IH_User_C getEmailForPasswordReset()
      * @method _IH_User_C refresh()
      * @method _IH_User_C update(array $attributes = [], array $options = [])
      * @method _IH_User_C save(array $options = [])

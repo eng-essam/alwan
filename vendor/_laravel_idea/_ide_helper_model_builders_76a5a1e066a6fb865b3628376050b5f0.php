@@ -1,4 +1,4 @@
-<?php //f86ceb37f8e0507dc0afaa64d98a8f57
+<?php //ec356fb894cad9736dace1efc82d647f
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -31,45 +31,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Ad|null getOrPut($key, $value)
      * @method Ad|$this shift(int $count = 1)
-     * @method Ad|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Ad|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Ad|$this pop(int $count = 1)
-     * @method Ad|null pull($key, $default = null)
-     * @method Ad|null last(callable $callback = null, $default = null)
-     * @method Ad|$this random($number = null)
-     * @method Ad|null sole($key = null, $operator = null, $value = null)
-     * @method Ad|null get($key, $default = null)
-     * @method Ad|null first(callable $callback = null, $default = null)
+     * @method Ad|null pull($key, \Closure $default = null)
+     * @method Ad|null last(callable $callback = null, \Closure $default = null)
+     * @method Ad|$this random(callable|int|null $number = null)
+     * @method Ad|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Ad|null get($key, \Closure $default = null)
+     * @method Ad|null first(callable $callback = null, \Closure $default = null)
      * @method Ad|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Ad|null find($key, $default = null)
      * @method Ad[] all()
-     * @property-read _IH_Ad_CP $keyBy
-     * @property-read _IH_Ad_CP $partition
-     * @property-read _IH_Ad_CP $max
-     * @property-read _IH_Ad_CP $doesntContain
-     * @property-read _IH_Ad_CP $flatMap
-     * @property-read _IH_Ad_CP $each
-     * @property-read _IH_Ad_CP $map
-     * @property-read _IH_Ad_CP $filter
-     * @property-read _IH_Ad_CP $unique
-     * @property-read _IH_Ad_CP $groupBy
-     * @property-read _IH_Ad_CP $sortBy
-     * @property-read _IH_Ad_CP $contains
-     * @property-read _IH_Ad_CP $sum
-     * @property-read _IH_Ad_CP $until
-     * @property-read _IH_Ad_CP $every
-     * @property-read _IH_Ad_CP $average
      * @property-read _IH_Ad_CP $when
-     * @property-read _IH_Ad_CP $some
-     * @property-read _IH_Ad_CP $skipWhile
-     * @property-read _IH_Ad_CP $sortByDesc
-     * @property-read _IH_Ad_CP $unless
-     * @property-read _IH_Ad_CP $takeUntil
-     * @property-read _IH_Ad_CP $avg
+     * @property-read _IH_Ad_CP $average
      * @property-read _IH_Ad_CP $skipUntil
+     * @property-read _IH_Ad_CP $sum
+     * @property-read _IH_Ad_CP $max
+     * @property-read _IH_Ad_CP $contains
+     * @property-read _IH_Ad_CP $takeUntil
+     * @property-read _IH_Ad_CP $unless
      * @property-read _IH_Ad_CP $first
      * @property-read _IH_Ad_CP $takeWhile
-     * @property-read _IH_Ad_CP $min
+     * @property-read _IH_Ad_CP $doesntContain
      * @property-read _IH_Ad_CP $reject
+     * @property-read _IH_Ad_CP $sortByDesc
+     * @property-read _IH_Ad_CP $flatMap
+     * @property-read _IH_Ad_CP $keyBy
+     * @property-read _IH_Ad_CP $each
+     * @property-read _IH_Ad_CP $avg
+     * @property-read _IH_Ad_CP $until
+     * @property-read _IH_Ad_CP $unique
+     * @property-read _IH_Ad_CP $min
+     * @property-read _IH_Ad_CP $sortBy
+     * @property-read _IH_Ad_CP $skipWhile
+     * @property-read _IH_Ad_CP $every
+     * @property-read _IH_Ad_CP $partition
+     * @property-read _IH_Ad_CP $map
+     * @property-read _IH_Ad_CP $groupBy
+     * @property-read _IH_Ad_CP $some
+     * @property-read _IH_Ad_CP $filter
      */
     class _IH_Ad_C extends _BaseCollection {
         /**
@@ -120,45 +120,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Address|null getOrPut($key, $value)
      * @method Address|$this shift(int $count = 1)
-     * @method Address|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Address|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Address|$this pop(int $count = 1)
-     * @method Address|null pull($key, $default = null)
-     * @method Address|null last(callable $callback = null, $default = null)
-     * @method Address|$this random($number = null)
-     * @method Address|null sole($key = null, $operator = null, $value = null)
-     * @method Address|null get($key, $default = null)
-     * @method Address|null first(callable $callback = null, $default = null)
+     * @method Address|null pull($key, \Closure $default = null)
+     * @method Address|null last(callable $callback = null, \Closure $default = null)
+     * @method Address|$this random(callable|int|null $number = null)
+     * @method Address|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Address|null get($key, \Closure $default = null)
+     * @method Address|null first(callable $callback = null, \Closure $default = null)
      * @method Address|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Address|null find($key, $default = null)
      * @method Address[] all()
-     * @property-read _IH_Address_CP $keyBy
-     * @property-read _IH_Address_CP $partition
-     * @property-read _IH_Address_CP $max
-     * @property-read _IH_Address_CP $doesntContain
-     * @property-read _IH_Address_CP $flatMap
-     * @property-read _IH_Address_CP $each
-     * @property-read _IH_Address_CP $map
-     * @property-read _IH_Address_CP $filter
-     * @property-read _IH_Address_CP $unique
-     * @property-read _IH_Address_CP $groupBy
-     * @property-read _IH_Address_CP $sortBy
-     * @property-read _IH_Address_CP $contains
-     * @property-read _IH_Address_CP $sum
-     * @property-read _IH_Address_CP $until
-     * @property-read _IH_Address_CP $every
-     * @property-read _IH_Address_CP $average
      * @property-read _IH_Address_CP $when
-     * @property-read _IH_Address_CP $some
-     * @property-read _IH_Address_CP $skipWhile
-     * @property-read _IH_Address_CP $sortByDesc
-     * @property-read _IH_Address_CP $unless
-     * @property-read _IH_Address_CP $takeUntil
-     * @property-read _IH_Address_CP $avg
+     * @property-read _IH_Address_CP $average
      * @property-read _IH_Address_CP $skipUntil
+     * @property-read _IH_Address_CP $sum
+     * @property-read _IH_Address_CP $max
+     * @property-read _IH_Address_CP $contains
+     * @property-read _IH_Address_CP $takeUntil
+     * @property-read _IH_Address_CP $unless
      * @property-read _IH_Address_CP $first
      * @property-read _IH_Address_CP $takeWhile
-     * @property-read _IH_Address_CP $min
+     * @property-read _IH_Address_CP $doesntContain
      * @property-read _IH_Address_CP $reject
+     * @property-read _IH_Address_CP $sortByDesc
+     * @property-read _IH_Address_CP $flatMap
+     * @property-read _IH_Address_CP $keyBy
+     * @property-read _IH_Address_CP $each
+     * @property-read _IH_Address_CP $avg
+     * @property-read _IH_Address_CP $until
+     * @property-read _IH_Address_CP $unique
+     * @property-read _IH_Address_CP $min
+     * @property-read _IH_Address_CP $sortBy
+     * @property-read _IH_Address_CP $skipWhile
+     * @property-read _IH_Address_CP $every
+     * @property-read _IH_Address_CP $partition
+     * @property-read _IH_Address_CP $map
+     * @property-read _IH_Address_CP $groupBy
+     * @property-read _IH_Address_CP $some
+     * @property-read _IH_Address_CP $filter
      */
     class _IH_Address_C extends _BaseCollection {
         /**
@@ -212,45 +212,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method BuyProduct|null getOrPut($key, $value)
      * @method BuyProduct|$this shift(int $count = 1)
-     * @method BuyProduct|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method BuyProduct|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method BuyProduct|$this pop(int $count = 1)
-     * @method BuyProduct|null pull($key, $default = null)
-     * @method BuyProduct|null last(callable $callback = null, $default = null)
-     * @method BuyProduct|$this random($number = null)
-     * @method BuyProduct|null sole($key = null, $operator = null, $value = null)
-     * @method BuyProduct|null get($key, $default = null)
-     * @method BuyProduct|null first(callable $callback = null, $default = null)
+     * @method BuyProduct|null pull($key, \Closure $default = null)
+     * @method BuyProduct|null last(callable $callback = null, \Closure $default = null)
+     * @method BuyProduct|$this random(callable|int|null $number = null)
+     * @method BuyProduct|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method BuyProduct|null get($key, \Closure $default = null)
+     * @method BuyProduct|null first(callable $callback = null, \Closure $default = null)
      * @method BuyProduct|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method BuyProduct|null find($key, $default = null)
      * @method BuyProduct[] all()
-     * @property-read _IH_BuyProduct_CP $keyBy
-     * @property-read _IH_BuyProduct_CP $partition
-     * @property-read _IH_BuyProduct_CP $max
-     * @property-read _IH_BuyProduct_CP $doesntContain
-     * @property-read _IH_BuyProduct_CP $flatMap
-     * @property-read _IH_BuyProduct_CP $each
-     * @property-read _IH_BuyProduct_CP $map
-     * @property-read _IH_BuyProduct_CP $filter
-     * @property-read _IH_BuyProduct_CP $unique
-     * @property-read _IH_BuyProduct_CP $groupBy
-     * @property-read _IH_BuyProduct_CP $sortBy
-     * @property-read _IH_BuyProduct_CP $contains
-     * @property-read _IH_BuyProduct_CP $sum
-     * @property-read _IH_BuyProduct_CP $until
-     * @property-read _IH_BuyProduct_CP $every
-     * @property-read _IH_BuyProduct_CP $average
      * @property-read _IH_BuyProduct_CP $when
-     * @property-read _IH_BuyProduct_CP $some
-     * @property-read _IH_BuyProduct_CP $skipWhile
-     * @property-read _IH_BuyProduct_CP $sortByDesc
-     * @property-read _IH_BuyProduct_CP $unless
-     * @property-read _IH_BuyProduct_CP $takeUntil
-     * @property-read _IH_BuyProduct_CP $avg
+     * @property-read _IH_BuyProduct_CP $average
      * @property-read _IH_BuyProduct_CP $skipUntil
+     * @property-read _IH_BuyProduct_CP $sum
+     * @property-read _IH_BuyProduct_CP $max
+     * @property-read _IH_BuyProduct_CP $contains
+     * @property-read _IH_BuyProduct_CP $takeUntil
+     * @property-read _IH_BuyProduct_CP $unless
      * @property-read _IH_BuyProduct_CP $first
      * @property-read _IH_BuyProduct_CP $takeWhile
-     * @property-read _IH_BuyProduct_CP $min
+     * @property-read _IH_BuyProduct_CP $doesntContain
      * @property-read _IH_BuyProduct_CP $reject
+     * @property-read _IH_BuyProduct_CP $sortByDesc
+     * @property-read _IH_BuyProduct_CP $flatMap
+     * @property-read _IH_BuyProduct_CP $keyBy
+     * @property-read _IH_BuyProduct_CP $each
+     * @property-read _IH_BuyProduct_CP $avg
+     * @property-read _IH_BuyProduct_CP $until
+     * @property-read _IH_BuyProduct_CP $unique
+     * @property-read _IH_BuyProduct_CP $min
+     * @property-read _IH_BuyProduct_CP $sortBy
+     * @property-read _IH_BuyProduct_CP $skipWhile
+     * @property-read _IH_BuyProduct_CP $every
+     * @property-read _IH_BuyProduct_CP $partition
+     * @property-read _IH_BuyProduct_CP $map
+     * @property-read _IH_BuyProduct_CP $groupBy
+     * @property-read _IH_BuyProduct_CP $some
+     * @property-read _IH_BuyProduct_CP $filter
      */
     class _IH_BuyProduct_C extends _BaseCollection {
         /**
@@ -308,45 +308,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method BuyService|null getOrPut($key, $value)
      * @method BuyService|$this shift(int $count = 1)
-     * @method BuyService|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method BuyService|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method BuyService|$this pop(int $count = 1)
-     * @method BuyService|null pull($key, $default = null)
-     * @method BuyService|null last(callable $callback = null, $default = null)
-     * @method BuyService|$this random($number = null)
-     * @method BuyService|null sole($key = null, $operator = null, $value = null)
-     * @method BuyService|null get($key, $default = null)
-     * @method BuyService|null first(callable $callback = null, $default = null)
+     * @method BuyService|null pull($key, \Closure $default = null)
+     * @method BuyService|null last(callable $callback = null, \Closure $default = null)
+     * @method BuyService|$this random(callable|int|null $number = null)
+     * @method BuyService|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method BuyService|null get($key, \Closure $default = null)
+     * @method BuyService|null first(callable $callback = null, \Closure $default = null)
      * @method BuyService|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method BuyService|null find($key, $default = null)
      * @method BuyService[] all()
-     * @property-read _IH_BuyService_CP $keyBy
-     * @property-read _IH_BuyService_CP $partition
-     * @property-read _IH_BuyService_CP $max
-     * @property-read _IH_BuyService_CP $doesntContain
-     * @property-read _IH_BuyService_CP $flatMap
-     * @property-read _IH_BuyService_CP $each
-     * @property-read _IH_BuyService_CP $map
-     * @property-read _IH_BuyService_CP $filter
-     * @property-read _IH_BuyService_CP $unique
-     * @property-read _IH_BuyService_CP $groupBy
-     * @property-read _IH_BuyService_CP $sortBy
-     * @property-read _IH_BuyService_CP $contains
-     * @property-read _IH_BuyService_CP $sum
-     * @property-read _IH_BuyService_CP $until
-     * @property-read _IH_BuyService_CP $every
-     * @property-read _IH_BuyService_CP $average
      * @property-read _IH_BuyService_CP $when
-     * @property-read _IH_BuyService_CP $some
-     * @property-read _IH_BuyService_CP $skipWhile
-     * @property-read _IH_BuyService_CP $sortByDesc
-     * @property-read _IH_BuyService_CP $unless
-     * @property-read _IH_BuyService_CP $takeUntil
-     * @property-read _IH_BuyService_CP $avg
+     * @property-read _IH_BuyService_CP $average
      * @property-read _IH_BuyService_CP $skipUntil
+     * @property-read _IH_BuyService_CP $sum
+     * @property-read _IH_BuyService_CP $max
+     * @property-read _IH_BuyService_CP $contains
+     * @property-read _IH_BuyService_CP $takeUntil
+     * @property-read _IH_BuyService_CP $unless
      * @property-read _IH_BuyService_CP $first
      * @property-read _IH_BuyService_CP $takeWhile
-     * @property-read _IH_BuyService_CP $min
+     * @property-read _IH_BuyService_CP $doesntContain
      * @property-read _IH_BuyService_CP $reject
+     * @property-read _IH_BuyService_CP $sortByDesc
+     * @property-read _IH_BuyService_CP $flatMap
+     * @property-read _IH_BuyService_CP $keyBy
+     * @property-read _IH_BuyService_CP $each
+     * @property-read _IH_BuyService_CP $avg
+     * @property-read _IH_BuyService_CP $until
+     * @property-read _IH_BuyService_CP $unique
+     * @property-read _IH_BuyService_CP $min
+     * @property-read _IH_BuyService_CP $sortBy
+     * @property-read _IH_BuyService_CP $skipWhile
+     * @property-read _IH_BuyService_CP $every
+     * @property-read _IH_BuyService_CP $partition
+     * @property-read _IH_BuyService_CP $map
+     * @property-read _IH_BuyService_CP $groupBy
+     * @property-read _IH_BuyService_CP $some
+     * @property-read _IH_BuyService_CP $filter
      */
     class _IH_BuyService_C extends _BaseCollection {
         /**
@@ -404,45 +404,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Cart|null getOrPut($key, $value)
      * @method Cart|$this shift(int $count = 1)
-     * @method Cart|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Cart|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Cart|$this pop(int $count = 1)
-     * @method Cart|null pull($key, $default = null)
-     * @method Cart|null last(callable $callback = null, $default = null)
-     * @method Cart|$this random($number = null)
-     * @method Cart|null sole($key = null, $operator = null, $value = null)
-     * @method Cart|null get($key, $default = null)
-     * @method Cart|null first(callable $callback = null, $default = null)
+     * @method Cart|null pull($key, \Closure $default = null)
+     * @method Cart|null last(callable $callback = null, \Closure $default = null)
+     * @method Cart|$this random(callable|int|null $number = null)
+     * @method Cart|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Cart|null get($key, \Closure $default = null)
+     * @method Cart|null first(callable $callback = null, \Closure $default = null)
      * @method Cart|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Cart|null find($key, $default = null)
      * @method Cart[] all()
-     * @property-read _IH_Cart_CP $keyBy
-     * @property-read _IH_Cart_CP $partition
-     * @property-read _IH_Cart_CP $max
-     * @property-read _IH_Cart_CP $doesntContain
-     * @property-read _IH_Cart_CP $flatMap
-     * @property-read _IH_Cart_CP $each
-     * @property-read _IH_Cart_CP $map
-     * @property-read _IH_Cart_CP $filter
-     * @property-read _IH_Cart_CP $unique
-     * @property-read _IH_Cart_CP $groupBy
-     * @property-read _IH_Cart_CP $sortBy
-     * @property-read _IH_Cart_CP $contains
-     * @property-read _IH_Cart_CP $sum
-     * @property-read _IH_Cart_CP $until
-     * @property-read _IH_Cart_CP $every
-     * @property-read _IH_Cart_CP $average
      * @property-read _IH_Cart_CP $when
-     * @property-read _IH_Cart_CP $some
-     * @property-read _IH_Cart_CP $skipWhile
-     * @property-read _IH_Cart_CP $sortByDesc
-     * @property-read _IH_Cart_CP $unless
-     * @property-read _IH_Cart_CP $takeUntil
-     * @property-read _IH_Cart_CP $avg
+     * @property-read _IH_Cart_CP $average
      * @property-read _IH_Cart_CP $skipUntil
+     * @property-read _IH_Cart_CP $sum
+     * @property-read _IH_Cart_CP $max
+     * @property-read _IH_Cart_CP $contains
+     * @property-read _IH_Cart_CP $takeUntil
+     * @property-read _IH_Cart_CP $unless
      * @property-read _IH_Cart_CP $first
      * @property-read _IH_Cart_CP $takeWhile
-     * @property-read _IH_Cart_CP $min
+     * @property-read _IH_Cart_CP $doesntContain
      * @property-read _IH_Cart_CP $reject
+     * @property-read _IH_Cart_CP $sortByDesc
+     * @property-read _IH_Cart_CP $flatMap
+     * @property-read _IH_Cart_CP $keyBy
+     * @property-read _IH_Cart_CP $each
+     * @property-read _IH_Cart_CP $avg
+     * @property-read _IH_Cart_CP $until
+     * @property-read _IH_Cart_CP $unique
+     * @property-read _IH_Cart_CP $min
+     * @property-read _IH_Cart_CP $sortBy
+     * @property-read _IH_Cart_CP $skipWhile
+     * @property-read _IH_Cart_CP $every
+     * @property-read _IH_Cart_CP $partition
+     * @property-read _IH_Cart_CP $map
+     * @property-read _IH_Cart_CP $groupBy
+     * @property-read _IH_Cart_CP $some
+     * @property-read _IH_Cart_CP $filter
      */
     class _IH_Cart_C extends _BaseCollection {
         /**
@@ -495,45 +495,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Cobon|null getOrPut($key, $value)
      * @method Cobon|$this shift(int $count = 1)
-     * @method Cobon|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Cobon|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Cobon|$this pop(int $count = 1)
-     * @method Cobon|null pull($key, $default = null)
-     * @method Cobon|null last(callable $callback = null, $default = null)
-     * @method Cobon|$this random($number = null)
-     * @method Cobon|null sole($key = null, $operator = null, $value = null)
-     * @method Cobon|null get($key, $default = null)
-     * @method Cobon|null first(callable $callback = null, $default = null)
+     * @method Cobon|null pull($key, \Closure $default = null)
+     * @method Cobon|null last(callable $callback = null, \Closure $default = null)
+     * @method Cobon|$this random(callable|int|null $number = null)
+     * @method Cobon|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Cobon|null get($key, \Closure $default = null)
+     * @method Cobon|null first(callable $callback = null, \Closure $default = null)
      * @method Cobon|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Cobon|null find($key, $default = null)
      * @method Cobon[] all()
-     * @property-read _IH_Cobon_CP $keyBy
-     * @property-read _IH_Cobon_CP $partition
-     * @property-read _IH_Cobon_CP $max
-     * @property-read _IH_Cobon_CP $doesntContain
-     * @property-read _IH_Cobon_CP $flatMap
-     * @property-read _IH_Cobon_CP $each
-     * @property-read _IH_Cobon_CP $map
-     * @property-read _IH_Cobon_CP $filter
-     * @property-read _IH_Cobon_CP $unique
-     * @property-read _IH_Cobon_CP $groupBy
-     * @property-read _IH_Cobon_CP $sortBy
-     * @property-read _IH_Cobon_CP $contains
-     * @property-read _IH_Cobon_CP $sum
-     * @property-read _IH_Cobon_CP $until
-     * @property-read _IH_Cobon_CP $every
-     * @property-read _IH_Cobon_CP $average
      * @property-read _IH_Cobon_CP $when
-     * @property-read _IH_Cobon_CP $some
-     * @property-read _IH_Cobon_CP $skipWhile
-     * @property-read _IH_Cobon_CP $sortByDesc
-     * @property-read _IH_Cobon_CP $unless
-     * @property-read _IH_Cobon_CP $takeUntil
-     * @property-read _IH_Cobon_CP $avg
+     * @property-read _IH_Cobon_CP $average
      * @property-read _IH_Cobon_CP $skipUntil
+     * @property-read _IH_Cobon_CP $sum
+     * @property-read _IH_Cobon_CP $max
+     * @property-read _IH_Cobon_CP $contains
+     * @property-read _IH_Cobon_CP $takeUntil
+     * @property-read _IH_Cobon_CP $unless
      * @property-read _IH_Cobon_CP $first
      * @property-read _IH_Cobon_CP $takeWhile
-     * @property-read _IH_Cobon_CP $min
+     * @property-read _IH_Cobon_CP $doesntContain
      * @property-read _IH_Cobon_CP $reject
+     * @property-read _IH_Cobon_CP $sortByDesc
+     * @property-read _IH_Cobon_CP $flatMap
+     * @property-read _IH_Cobon_CP $keyBy
+     * @property-read _IH_Cobon_CP $each
+     * @property-read _IH_Cobon_CP $avg
+     * @property-read _IH_Cobon_CP $until
+     * @property-read _IH_Cobon_CP $unique
+     * @property-read _IH_Cobon_CP $min
+     * @property-read _IH_Cobon_CP $sortBy
+     * @property-read _IH_Cobon_CP $skipWhile
+     * @property-read _IH_Cobon_CP $every
+     * @property-read _IH_Cobon_CP $partition
+     * @property-read _IH_Cobon_CP $map
+     * @property-read _IH_Cobon_CP $groupBy
+     * @property-read _IH_Cobon_CP $some
+     * @property-read _IH_Cobon_CP $filter
      */
     class _IH_Cobon_C extends _BaseCollection {
         /**
@@ -584,45 +584,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Company_branch|null getOrPut($key, $value)
      * @method Company_branch|$this shift(int $count = 1)
-     * @method Company_branch|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Company_branch|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Company_branch|$this pop(int $count = 1)
-     * @method Company_branch|null pull($key, $default = null)
-     * @method Company_branch|null last(callable $callback = null, $default = null)
-     * @method Company_branch|$this random($number = null)
-     * @method Company_branch|null sole($key = null, $operator = null, $value = null)
-     * @method Company_branch|null get($key, $default = null)
-     * @method Company_branch|null first(callable $callback = null, $default = null)
+     * @method Company_branch|null pull($key, \Closure $default = null)
+     * @method Company_branch|null last(callable $callback = null, \Closure $default = null)
+     * @method Company_branch|$this random(callable|int|null $number = null)
+     * @method Company_branch|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Company_branch|null get($key, \Closure $default = null)
+     * @method Company_branch|null first(callable $callback = null, \Closure $default = null)
      * @method Company_branch|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Company_branch|null find($key, $default = null)
      * @method Company_branch[] all()
-     * @property-read _IH_Company_branch_CP $keyBy
-     * @property-read _IH_Company_branch_CP $partition
-     * @property-read _IH_Company_branch_CP $max
-     * @property-read _IH_Company_branch_CP $doesntContain
-     * @property-read _IH_Company_branch_CP $flatMap
-     * @property-read _IH_Company_branch_CP $each
-     * @property-read _IH_Company_branch_CP $map
-     * @property-read _IH_Company_branch_CP $filter
-     * @property-read _IH_Company_branch_CP $unique
-     * @property-read _IH_Company_branch_CP $groupBy
-     * @property-read _IH_Company_branch_CP $sortBy
-     * @property-read _IH_Company_branch_CP $contains
-     * @property-read _IH_Company_branch_CP $sum
-     * @property-read _IH_Company_branch_CP $until
-     * @property-read _IH_Company_branch_CP $every
-     * @property-read _IH_Company_branch_CP $average
      * @property-read _IH_Company_branch_CP $when
-     * @property-read _IH_Company_branch_CP $some
-     * @property-read _IH_Company_branch_CP $skipWhile
-     * @property-read _IH_Company_branch_CP $sortByDesc
-     * @property-read _IH_Company_branch_CP $unless
-     * @property-read _IH_Company_branch_CP $takeUntil
-     * @property-read _IH_Company_branch_CP $avg
+     * @property-read _IH_Company_branch_CP $average
      * @property-read _IH_Company_branch_CP $skipUntil
+     * @property-read _IH_Company_branch_CP $sum
+     * @property-read _IH_Company_branch_CP $max
+     * @property-read _IH_Company_branch_CP $contains
+     * @property-read _IH_Company_branch_CP $takeUntil
+     * @property-read _IH_Company_branch_CP $unless
      * @property-read _IH_Company_branch_CP $first
      * @property-read _IH_Company_branch_CP $takeWhile
-     * @property-read _IH_Company_branch_CP $min
+     * @property-read _IH_Company_branch_CP $doesntContain
      * @property-read _IH_Company_branch_CP $reject
+     * @property-read _IH_Company_branch_CP $sortByDesc
+     * @property-read _IH_Company_branch_CP $flatMap
+     * @property-read _IH_Company_branch_CP $keyBy
+     * @property-read _IH_Company_branch_CP $each
+     * @property-read _IH_Company_branch_CP $avg
+     * @property-read _IH_Company_branch_CP $until
+     * @property-read _IH_Company_branch_CP $unique
+     * @property-read _IH_Company_branch_CP $min
+     * @property-read _IH_Company_branch_CP $sortBy
+     * @property-read _IH_Company_branch_CP $skipWhile
+     * @property-read _IH_Company_branch_CP $every
+     * @property-read _IH_Company_branch_CP $partition
+     * @property-read _IH_Company_branch_CP $map
+     * @property-read _IH_Company_branch_CP $groupBy
+     * @property-read _IH_Company_branch_CP $some
+     * @property-read _IH_Company_branch_CP $filter
      */
     class _IH_Company_branch_C extends _BaseCollection {
         /**
@@ -673,45 +673,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Contact|null getOrPut($key, $value)
      * @method Contact|$this shift(int $count = 1)
-     * @method Contact|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Contact|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Contact|$this pop(int $count = 1)
-     * @method Contact|null pull($key, $default = null)
-     * @method Contact|null last(callable $callback = null, $default = null)
-     * @method Contact|$this random($number = null)
-     * @method Contact|null sole($key = null, $operator = null, $value = null)
-     * @method Contact|null get($key, $default = null)
-     * @method Contact|null first(callable $callback = null, $default = null)
+     * @method Contact|null pull($key, \Closure $default = null)
+     * @method Contact|null last(callable $callback = null, \Closure $default = null)
+     * @method Contact|$this random(callable|int|null $number = null)
+     * @method Contact|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Contact|null get($key, \Closure $default = null)
+     * @method Contact|null first(callable $callback = null, \Closure $default = null)
      * @method Contact|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Contact|null find($key, $default = null)
      * @method Contact[] all()
-     * @property-read _IH_Contact_CP $keyBy
-     * @property-read _IH_Contact_CP $partition
-     * @property-read _IH_Contact_CP $max
-     * @property-read _IH_Contact_CP $doesntContain
-     * @property-read _IH_Contact_CP $flatMap
-     * @property-read _IH_Contact_CP $each
-     * @property-read _IH_Contact_CP $map
-     * @property-read _IH_Contact_CP $filter
-     * @property-read _IH_Contact_CP $unique
-     * @property-read _IH_Contact_CP $groupBy
-     * @property-read _IH_Contact_CP $sortBy
-     * @property-read _IH_Contact_CP $contains
-     * @property-read _IH_Contact_CP $sum
-     * @property-read _IH_Contact_CP $until
-     * @property-read _IH_Contact_CP $every
-     * @property-read _IH_Contact_CP $average
      * @property-read _IH_Contact_CP $when
-     * @property-read _IH_Contact_CP $some
-     * @property-read _IH_Contact_CP $skipWhile
-     * @property-read _IH_Contact_CP $sortByDesc
-     * @property-read _IH_Contact_CP $unless
-     * @property-read _IH_Contact_CP $takeUntil
-     * @property-read _IH_Contact_CP $avg
+     * @property-read _IH_Contact_CP $average
      * @property-read _IH_Contact_CP $skipUntil
+     * @property-read _IH_Contact_CP $sum
+     * @property-read _IH_Contact_CP $max
+     * @property-read _IH_Contact_CP $contains
+     * @property-read _IH_Contact_CP $takeUntil
+     * @property-read _IH_Contact_CP $unless
      * @property-read _IH_Contact_CP $first
      * @property-read _IH_Contact_CP $takeWhile
-     * @property-read _IH_Contact_CP $min
+     * @property-read _IH_Contact_CP $doesntContain
      * @property-read _IH_Contact_CP $reject
+     * @property-read _IH_Contact_CP $sortByDesc
+     * @property-read _IH_Contact_CP $flatMap
+     * @property-read _IH_Contact_CP $keyBy
+     * @property-read _IH_Contact_CP $each
+     * @property-read _IH_Contact_CP $avg
+     * @property-read _IH_Contact_CP $until
+     * @property-read _IH_Contact_CP $unique
+     * @property-read _IH_Contact_CP $min
+     * @property-read _IH_Contact_CP $sortBy
+     * @property-read _IH_Contact_CP $skipWhile
+     * @property-read _IH_Contact_CP $every
+     * @property-read _IH_Contact_CP $partition
+     * @property-read _IH_Contact_CP $map
+     * @property-read _IH_Contact_CP $groupBy
+     * @property-read _IH_Contact_CP $some
+     * @property-read _IH_Contact_CP $filter
      */
     class _IH_Contact_C extends _BaseCollection {
         /**
@@ -763,45 +763,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Email_code|null getOrPut($key, $value)
      * @method Email_code|$this shift(int $count = 1)
-     * @method Email_code|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Email_code|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Email_code|$this pop(int $count = 1)
-     * @method Email_code|null pull($key, $default = null)
-     * @method Email_code|null last(callable $callback = null, $default = null)
-     * @method Email_code|$this random($number = null)
-     * @method Email_code|null sole($key = null, $operator = null, $value = null)
-     * @method Email_code|null get($key, $default = null)
-     * @method Email_code|null first(callable $callback = null, $default = null)
+     * @method Email_code|null pull($key, \Closure $default = null)
+     * @method Email_code|null last(callable $callback = null, \Closure $default = null)
+     * @method Email_code|$this random(callable|int|null $number = null)
+     * @method Email_code|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Email_code|null get($key, \Closure $default = null)
+     * @method Email_code|null first(callable $callback = null, \Closure $default = null)
      * @method Email_code|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Email_code|null find($key, $default = null)
      * @method Email_code[] all()
-     * @property-read _IH_Email_code_CP $keyBy
-     * @property-read _IH_Email_code_CP $partition
-     * @property-read _IH_Email_code_CP $max
-     * @property-read _IH_Email_code_CP $doesntContain
-     * @property-read _IH_Email_code_CP $flatMap
-     * @property-read _IH_Email_code_CP $each
-     * @property-read _IH_Email_code_CP $map
-     * @property-read _IH_Email_code_CP $filter
-     * @property-read _IH_Email_code_CP $unique
-     * @property-read _IH_Email_code_CP $groupBy
-     * @property-read _IH_Email_code_CP $sortBy
-     * @property-read _IH_Email_code_CP $contains
-     * @property-read _IH_Email_code_CP $sum
-     * @property-read _IH_Email_code_CP $until
-     * @property-read _IH_Email_code_CP $every
-     * @property-read _IH_Email_code_CP $average
      * @property-read _IH_Email_code_CP $when
-     * @property-read _IH_Email_code_CP $some
-     * @property-read _IH_Email_code_CP $skipWhile
-     * @property-read _IH_Email_code_CP $sortByDesc
-     * @property-read _IH_Email_code_CP $unless
-     * @property-read _IH_Email_code_CP $takeUntil
-     * @property-read _IH_Email_code_CP $avg
+     * @property-read _IH_Email_code_CP $average
      * @property-read _IH_Email_code_CP $skipUntil
+     * @property-read _IH_Email_code_CP $sum
+     * @property-read _IH_Email_code_CP $max
+     * @property-read _IH_Email_code_CP $contains
+     * @property-read _IH_Email_code_CP $takeUntil
+     * @property-read _IH_Email_code_CP $unless
      * @property-read _IH_Email_code_CP $first
      * @property-read _IH_Email_code_CP $takeWhile
-     * @property-read _IH_Email_code_CP $min
+     * @property-read _IH_Email_code_CP $doesntContain
      * @property-read _IH_Email_code_CP $reject
+     * @property-read _IH_Email_code_CP $sortByDesc
+     * @property-read _IH_Email_code_CP $flatMap
+     * @property-read _IH_Email_code_CP $keyBy
+     * @property-read _IH_Email_code_CP $each
+     * @property-read _IH_Email_code_CP $avg
+     * @property-read _IH_Email_code_CP $until
+     * @property-read _IH_Email_code_CP $unique
+     * @property-read _IH_Email_code_CP $min
+     * @property-read _IH_Email_code_CP $sortBy
+     * @property-read _IH_Email_code_CP $skipWhile
+     * @property-read _IH_Email_code_CP $every
+     * @property-read _IH_Email_code_CP $partition
+     * @property-read _IH_Email_code_CP $map
+     * @property-read _IH_Email_code_CP $groupBy
+     * @property-read _IH_Email_code_CP $some
+     * @property-read _IH_Email_code_CP $filter
      */
     class _IH_Email_code_C extends _BaseCollection {
         /**
@@ -852,45 +852,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Favorite|null getOrPut($key, $value)
      * @method Favorite|$this shift(int $count = 1)
-     * @method Favorite|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Favorite|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Favorite|$this pop(int $count = 1)
-     * @method Favorite|null pull($key, $default = null)
-     * @method Favorite|null last(callable $callback = null, $default = null)
-     * @method Favorite|$this random($number = null)
-     * @method Favorite|null sole($key = null, $operator = null, $value = null)
-     * @method Favorite|null get($key, $default = null)
-     * @method Favorite|null first(callable $callback = null, $default = null)
+     * @method Favorite|null pull($key, \Closure $default = null)
+     * @method Favorite|null last(callable $callback = null, \Closure $default = null)
+     * @method Favorite|$this random(callable|int|null $number = null)
+     * @method Favorite|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Favorite|null get($key, \Closure $default = null)
+     * @method Favorite|null first(callable $callback = null, \Closure $default = null)
      * @method Favorite|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Favorite|null find($key, $default = null)
      * @method Favorite[] all()
-     * @property-read _IH_Favorite_CP $keyBy
-     * @property-read _IH_Favorite_CP $partition
-     * @property-read _IH_Favorite_CP $max
-     * @property-read _IH_Favorite_CP $doesntContain
-     * @property-read _IH_Favorite_CP $flatMap
-     * @property-read _IH_Favorite_CP $each
-     * @property-read _IH_Favorite_CP $map
-     * @property-read _IH_Favorite_CP $filter
-     * @property-read _IH_Favorite_CP $unique
-     * @property-read _IH_Favorite_CP $groupBy
-     * @property-read _IH_Favorite_CP $sortBy
-     * @property-read _IH_Favorite_CP $contains
-     * @property-read _IH_Favorite_CP $sum
-     * @property-read _IH_Favorite_CP $until
-     * @property-read _IH_Favorite_CP $every
-     * @property-read _IH_Favorite_CP $average
      * @property-read _IH_Favorite_CP $when
-     * @property-read _IH_Favorite_CP $some
-     * @property-read _IH_Favorite_CP $skipWhile
-     * @property-read _IH_Favorite_CP $sortByDesc
-     * @property-read _IH_Favorite_CP $unless
-     * @property-read _IH_Favorite_CP $takeUntil
-     * @property-read _IH_Favorite_CP $avg
+     * @property-read _IH_Favorite_CP $average
      * @property-read _IH_Favorite_CP $skipUntil
+     * @property-read _IH_Favorite_CP $sum
+     * @property-read _IH_Favorite_CP $max
+     * @property-read _IH_Favorite_CP $contains
+     * @property-read _IH_Favorite_CP $takeUntil
+     * @property-read _IH_Favorite_CP $unless
      * @property-read _IH_Favorite_CP $first
      * @property-read _IH_Favorite_CP $takeWhile
-     * @property-read _IH_Favorite_CP $min
+     * @property-read _IH_Favorite_CP $doesntContain
      * @property-read _IH_Favorite_CP $reject
+     * @property-read _IH_Favorite_CP $sortByDesc
+     * @property-read _IH_Favorite_CP $flatMap
+     * @property-read _IH_Favorite_CP $keyBy
+     * @property-read _IH_Favorite_CP $each
+     * @property-read _IH_Favorite_CP $avg
+     * @property-read _IH_Favorite_CP $until
+     * @property-read _IH_Favorite_CP $unique
+     * @property-read _IH_Favorite_CP $min
+     * @property-read _IH_Favorite_CP $sortBy
+     * @property-read _IH_Favorite_CP $skipWhile
+     * @property-read _IH_Favorite_CP $every
+     * @property-read _IH_Favorite_CP $partition
+     * @property-read _IH_Favorite_CP $map
+     * @property-read _IH_Favorite_CP $groupBy
+     * @property-read _IH_Favorite_CP $some
+     * @property-read _IH_Favorite_CP $filter
      */
     class _IH_Favorite_C extends _BaseCollection {
         /**
@@ -941,45 +941,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Notification|null getOrPut($key, $value)
      * @method Notification|$this shift(int $count = 1)
-     * @method Notification|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Notification|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Notification|$this pop(int $count = 1)
-     * @method Notification|null pull($key, $default = null)
-     * @method Notification|null last(callable $callback = null, $default = null)
-     * @method Notification|$this random($number = null)
-     * @method Notification|null sole($key = null, $operator = null, $value = null)
-     * @method Notification|null get($key, $default = null)
-     * @method Notification|null first(callable $callback = null, $default = null)
+     * @method Notification|null pull($key, \Closure $default = null)
+     * @method Notification|null last(callable $callback = null, \Closure $default = null)
+     * @method Notification|$this random(callable|int|null $number = null)
+     * @method Notification|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Notification|null get($key, \Closure $default = null)
+     * @method Notification|null first(callable $callback = null, \Closure $default = null)
      * @method Notification|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Notification|null find($key, $default = null)
      * @method Notification[] all()
-     * @property-read _IH_Notification_CP $keyBy
-     * @property-read _IH_Notification_CP $partition
-     * @property-read _IH_Notification_CP $max
-     * @property-read _IH_Notification_CP $doesntContain
-     * @property-read _IH_Notification_CP $flatMap
-     * @property-read _IH_Notification_CP $each
-     * @property-read _IH_Notification_CP $map
-     * @property-read _IH_Notification_CP $filter
-     * @property-read _IH_Notification_CP $unique
-     * @property-read _IH_Notification_CP $groupBy
-     * @property-read _IH_Notification_CP $sortBy
-     * @property-read _IH_Notification_CP $contains
-     * @property-read _IH_Notification_CP $sum
-     * @property-read _IH_Notification_CP $until
-     * @property-read _IH_Notification_CP $every
-     * @property-read _IH_Notification_CP $average
      * @property-read _IH_Notification_CP $when
-     * @property-read _IH_Notification_CP $some
-     * @property-read _IH_Notification_CP $skipWhile
-     * @property-read _IH_Notification_CP $sortByDesc
-     * @property-read _IH_Notification_CP $unless
-     * @property-read _IH_Notification_CP $takeUntil
-     * @property-read _IH_Notification_CP $avg
+     * @property-read _IH_Notification_CP $average
      * @property-read _IH_Notification_CP $skipUntil
+     * @property-read _IH_Notification_CP $sum
+     * @property-read _IH_Notification_CP $max
+     * @property-read _IH_Notification_CP $contains
+     * @property-read _IH_Notification_CP $takeUntil
+     * @property-read _IH_Notification_CP $unless
      * @property-read _IH_Notification_CP $first
      * @property-read _IH_Notification_CP $takeWhile
-     * @property-read _IH_Notification_CP $min
+     * @property-read _IH_Notification_CP $doesntContain
      * @property-read _IH_Notification_CP $reject
+     * @property-read _IH_Notification_CP $sortByDesc
+     * @property-read _IH_Notification_CP $flatMap
+     * @property-read _IH_Notification_CP $keyBy
+     * @property-read _IH_Notification_CP $each
+     * @property-read _IH_Notification_CP $avg
+     * @property-read _IH_Notification_CP $until
+     * @property-read _IH_Notification_CP $unique
+     * @property-read _IH_Notification_CP $min
+     * @property-read _IH_Notification_CP $sortBy
+     * @property-read _IH_Notification_CP $skipWhile
+     * @property-read _IH_Notification_CP $every
+     * @property-read _IH_Notification_CP $partition
+     * @property-read _IH_Notification_CP $map
+     * @property-read _IH_Notification_CP $groupBy
+     * @property-read _IH_Notification_CP $some
+     * @property-read _IH_Notification_CP $filter
      */
     class _IH_Notification_C extends _BaseCollection {
         /**
@@ -1032,45 +1032,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method OrderStatus|null getOrPut($key, $value)
      * @method OrderStatus|$this shift(int $count = 1)
-     * @method OrderStatus|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method OrderStatus|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method OrderStatus|$this pop(int $count = 1)
-     * @method OrderStatus|null pull($key, $default = null)
-     * @method OrderStatus|null last(callable $callback = null, $default = null)
-     * @method OrderStatus|$this random($number = null)
-     * @method OrderStatus|null sole($key = null, $operator = null, $value = null)
-     * @method OrderStatus|null get($key, $default = null)
-     * @method OrderStatus|null first(callable $callback = null, $default = null)
+     * @method OrderStatus|null pull($key, \Closure $default = null)
+     * @method OrderStatus|null last(callable $callback = null, \Closure $default = null)
+     * @method OrderStatus|$this random(callable|int|null $number = null)
+     * @method OrderStatus|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method OrderStatus|null get($key, \Closure $default = null)
+     * @method OrderStatus|null first(callable $callback = null, \Closure $default = null)
      * @method OrderStatus|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method OrderStatus|null find($key, $default = null)
      * @method OrderStatus[] all()
-     * @property-read _IH_OrderStatus_CP $keyBy
-     * @property-read _IH_OrderStatus_CP $partition
-     * @property-read _IH_OrderStatus_CP $max
-     * @property-read _IH_OrderStatus_CP $doesntContain
-     * @property-read _IH_OrderStatus_CP $flatMap
-     * @property-read _IH_OrderStatus_CP $each
-     * @property-read _IH_OrderStatus_CP $map
-     * @property-read _IH_OrderStatus_CP $filter
-     * @property-read _IH_OrderStatus_CP $unique
-     * @property-read _IH_OrderStatus_CP $groupBy
-     * @property-read _IH_OrderStatus_CP $sortBy
-     * @property-read _IH_OrderStatus_CP $contains
-     * @property-read _IH_OrderStatus_CP $sum
-     * @property-read _IH_OrderStatus_CP $until
-     * @property-read _IH_OrderStatus_CP $every
-     * @property-read _IH_OrderStatus_CP $average
      * @property-read _IH_OrderStatus_CP $when
-     * @property-read _IH_OrderStatus_CP $some
-     * @property-read _IH_OrderStatus_CP $skipWhile
-     * @property-read _IH_OrderStatus_CP $sortByDesc
-     * @property-read _IH_OrderStatus_CP $unless
-     * @property-read _IH_OrderStatus_CP $takeUntil
-     * @property-read _IH_OrderStatus_CP $avg
+     * @property-read _IH_OrderStatus_CP $average
      * @property-read _IH_OrderStatus_CP $skipUntil
+     * @property-read _IH_OrderStatus_CP $sum
+     * @property-read _IH_OrderStatus_CP $max
+     * @property-read _IH_OrderStatus_CP $contains
+     * @property-read _IH_OrderStatus_CP $takeUntil
+     * @property-read _IH_OrderStatus_CP $unless
      * @property-read _IH_OrderStatus_CP $first
      * @property-read _IH_OrderStatus_CP $takeWhile
-     * @property-read _IH_OrderStatus_CP $min
+     * @property-read _IH_OrderStatus_CP $doesntContain
      * @property-read _IH_OrderStatus_CP $reject
+     * @property-read _IH_OrderStatus_CP $sortByDesc
+     * @property-read _IH_OrderStatus_CP $flatMap
+     * @property-read _IH_OrderStatus_CP $keyBy
+     * @property-read _IH_OrderStatus_CP $each
+     * @property-read _IH_OrderStatus_CP $avg
+     * @property-read _IH_OrderStatus_CP $until
+     * @property-read _IH_OrderStatus_CP $unique
+     * @property-read _IH_OrderStatus_CP $min
+     * @property-read _IH_OrderStatus_CP $sortBy
+     * @property-read _IH_OrderStatus_CP $skipWhile
+     * @property-read _IH_OrderStatus_CP $every
+     * @property-read _IH_OrderStatus_CP $partition
+     * @property-read _IH_OrderStatus_CP $map
+     * @property-read _IH_OrderStatus_CP $groupBy
+     * @property-read _IH_OrderStatus_CP $some
+     * @property-read _IH_OrderStatus_CP $filter
      */
     class _IH_OrderStatus_C extends _BaseCollection {
         /**
@@ -1119,45 +1119,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Product|null getOrPut($key, $value)
      * @method Product|$this shift(int $count = 1)
-     * @method Product|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Product|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Product|$this pop(int $count = 1)
-     * @method Product|null pull($key, $default = null)
-     * @method Product|null last(callable $callback = null, $default = null)
-     * @method Product|$this random($number = null)
-     * @method Product|null sole($key = null, $operator = null, $value = null)
-     * @method Product|null get($key, $default = null)
-     * @method Product|null first(callable $callback = null, $default = null)
+     * @method Product|null pull($key, \Closure $default = null)
+     * @method Product|null last(callable $callback = null, \Closure $default = null)
+     * @method Product|$this random(callable|int|null $number = null)
+     * @method Product|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Product|null get($key, \Closure $default = null)
+     * @method Product|null first(callable $callback = null, \Closure $default = null)
      * @method Product|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Product|null find($key, $default = null)
      * @method Product[] all()
-     * @property-read _IH_Product_CP $keyBy
-     * @property-read _IH_Product_CP $partition
-     * @property-read _IH_Product_CP $max
-     * @property-read _IH_Product_CP $doesntContain
-     * @property-read _IH_Product_CP $flatMap
-     * @property-read _IH_Product_CP $each
-     * @property-read _IH_Product_CP $map
-     * @property-read _IH_Product_CP $filter
-     * @property-read _IH_Product_CP $unique
-     * @property-read _IH_Product_CP $groupBy
-     * @property-read _IH_Product_CP $sortBy
-     * @property-read _IH_Product_CP $contains
-     * @property-read _IH_Product_CP $sum
-     * @property-read _IH_Product_CP $until
-     * @property-read _IH_Product_CP $every
-     * @property-read _IH_Product_CP $average
      * @property-read _IH_Product_CP $when
-     * @property-read _IH_Product_CP $some
-     * @property-read _IH_Product_CP $skipWhile
-     * @property-read _IH_Product_CP $sortByDesc
-     * @property-read _IH_Product_CP $unless
-     * @property-read _IH_Product_CP $takeUntil
-     * @property-read _IH_Product_CP $avg
+     * @property-read _IH_Product_CP $average
      * @property-read _IH_Product_CP $skipUntil
+     * @property-read _IH_Product_CP $sum
+     * @property-read _IH_Product_CP $max
+     * @property-read _IH_Product_CP $contains
+     * @property-read _IH_Product_CP $takeUntil
+     * @property-read _IH_Product_CP $unless
      * @property-read _IH_Product_CP $first
      * @property-read _IH_Product_CP $takeWhile
-     * @property-read _IH_Product_CP $min
+     * @property-read _IH_Product_CP $doesntContain
      * @property-read _IH_Product_CP $reject
+     * @property-read _IH_Product_CP $sortByDesc
+     * @property-read _IH_Product_CP $flatMap
+     * @property-read _IH_Product_CP $keyBy
+     * @property-read _IH_Product_CP $each
+     * @property-read _IH_Product_CP $avg
+     * @property-read _IH_Product_CP $until
+     * @property-read _IH_Product_CP $unique
+     * @property-read _IH_Product_CP $min
+     * @property-read _IH_Product_CP $sortBy
+     * @property-read _IH_Product_CP $skipWhile
+     * @property-read _IH_Product_CP $every
+     * @property-read _IH_Product_CP $partition
+     * @property-read _IH_Product_CP $map
+     * @property-read _IH_Product_CP $groupBy
+     * @property-read _IH_Product_CP $some
+     * @property-read _IH_Product_CP $filter
      */
     class _IH_Product_C extends _BaseCollection {
         /**
@@ -1213,45 +1213,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Product_branch|null getOrPut($key, $value)
      * @method Product_branch|$this shift(int $count = 1)
-     * @method Product_branch|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Product_branch|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Product_branch|$this pop(int $count = 1)
-     * @method Product_branch|null pull($key, $default = null)
-     * @method Product_branch|null last(callable $callback = null, $default = null)
-     * @method Product_branch|$this random($number = null)
-     * @method Product_branch|null sole($key = null, $operator = null, $value = null)
-     * @method Product_branch|null get($key, $default = null)
-     * @method Product_branch|null first(callable $callback = null, $default = null)
+     * @method Product_branch|null pull($key, \Closure $default = null)
+     * @method Product_branch|null last(callable $callback = null, \Closure $default = null)
+     * @method Product_branch|$this random(callable|int|null $number = null)
+     * @method Product_branch|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Product_branch|null get($key, \Closure $default = null)
+     * @method Product_branch|null first(callable $callback = null, \Closure $default = null)
      * @method Product_branch|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Product_branch|null find($key, $default = null)
      * @method Product_branch[] all()
-     * @property-read _IH_Product_branch_CP $keyBy
-     * @property-read _IH_Product_branch_CP $partition
-     * @property-read _IH_Product_branch_CP $max
-     * @property-read _IH_Product_branch_CP $doesntContain
-     * @property-read _IH_Product_branch_CP $flatMap
-     * @property-read _IH_Product_branch_CP $each
-     * @property-read _IH_Product_branch_CP $map
-     * @property-read _IH_Product_branch_CP $filter
-     * @property-read _IH_Product_branch_CP $unique
-     * @property-read _IH_Product_branch_CP $groupBy
-     * @property-read _IH_Product_branch_CP $sortBy
-     * @property-read _IH_Product_branch_CP $contains
-     * @property-read _IH_Product_branch_CP $sum
-     * @property-read _IH_Product_branch_CP $until
-     * @property-read _IH_Product_branch_CP $every
-     * @property-read _IH_Product_branch_CP $average
      * @property-read _IH_Product_branch_CP $when
-     * @property-read _IH_Product_branch_CP $some
-     * @property-read _IH_Product_branch_CP $skipWhile
-     * @property-read _IH_Product_branch_CP $sortByDesc
-     * @property-read _IH_Product_branch_CP $unless
-     * @property-read _IH_Product_branch_CP $takeUntil
-     * @property-read _IH_Product_branch_CP $avg
+     * @property-read _IH_Product_branch_CP $average
      * @property-read _IH_Product_branch_CP $skipUntil
+     * @property-read _IH_Product_branch_CP $sum
+     * @property-read _IH_Product_branch_CP $max
+     * @property-read _IH_Product_branch_CP $contains
+     * @property-read _IH_Product_branch_CP $takeUntil
+     * @property-read _IH_Product_branch_CP $unless
      * @property-read _IH_Product_branch_CP $first
      * @property-read _IH_Product_branch_CP $takeWhile
-     * @property-read _IH_Product_branch_CP $min
+     * @property-read _IH_Product_branch_CP $doesntContain
      * @property-read _IH_Product_branch_CP $reject
+     * @property-read _IH_Product_branch_CP $sortByDesc
+     * @property-read _IH_Product_branch_CP $flatMap
+     * @property-read _IH_Product_branch_CP $keyBy
+     * @property-read _IH_Product_branch_CP $each
+     * @property-read _IH_Product_branch_CP $avg
+     * @property-read _IH_Product_branch_CP $until
+     * @property-read _IH_Product_branch_CP $unique
+     * @property-read _IH_Product_branch_CP $min
+     * @property-read _IH_Product_branch_CP $sortBy
+     * @property-read _IH_Product_branch_CP $skipWhile
+     * @property-read _IH_Product_branch_CP $every
+     * @property-read _IH_Product_branch_CP $partition
+     * @property-read _IH_Product_branch_CP $map
+     * @property-read _IH_Product_branch_CP $groupBy
+     * @property-read _IH_Product_branch_CP $some
+     * @property-read _IH_Product_branch_CP $filter
      */
     class _IH_Product_branch_C extends _BaseCollection {
         /**
@@ -1303,45 +1303,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Role|null getOrPut($key, $value)
      * @method Role|$this shift(int $count = 1)
-     * @method Role|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Role|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Role|$this pop(int $count = 1)
-     * @method Role|null pull($key, $default = null)
-     * @method Role|null last(callable $callback = null, $default = null)
-     * @method Role|$this random($number = null)
-     * @method Role|null sole($key = null, $operator = null, $value = null)
-     * @method Role|null get($key, $default = null)
-     * @method Role|null first(callable $callback = null, $default = null)
+     * @method Role|null pull($key, \Closure $default = null)
+     * @method Role|null last(callable $callback = null, \Closure $default = null)
+     * @method Role|$this random(callable|int|null $number = null)
+     * @method Role|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Role|null get($key, \Closure $default = null)
+     * @method Role|null first(callable $callback = null, \Closure $default = null)
      * @method Role|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Role|null find($key, $default = null)
      * @method Role[] all()
-     * @property-read _IH_Role_CP $keyBy
-     * @property-read _IH_Role_CP $partition
-     * @property-read _IH_Role_CP $max
-     * @property-read _IH_Role_CP $doesntContain
-     * @property-read _IH_Role_CP $flatMap
-     * @property-read _IH_Role_CP $each
-     * @property-read _IH_Role_CP $map
-     * @property-read _IH_Role_CP $filter
-     * @property-read _IH_Role_CP $unique
-     * @property-read _IH_Role_CP $groupBy
-     * @property-read _IH_Role_CP $sortBy
-     * @property-read _IH_Role_CP $contains
-     * @property-read _IH_Role_CP $sum
-     * @property-read _IH_Role_CP $until
-     * @property-read _IH_Role_CP $every
-     * @property-read _IH_Role_CP $average
      * @property-read _IH_Role_CP $when
-     * @property-read _IH_Role_CP $some
-     * @property-read _IH_Role_CP $skipWhile
-     * @property-read _IH_Role_CP $sortByDesc
-     * @property-read _IH_Role_CP $unless
-     * @property-read _IH_Role_CP $takeUntil
-     * @property-read _IH_Role_CP $avg
+     * @property-read _IH_Role_CP $average
      * @property-read _IH_Role_CP $skipUntil
+     * @property-read _IH_Role_CP $sum
+     * @property-read _IH_Role_CP $max
+     * @property-read _IH_Role_CP $contains
+     * @property-read _IH_Role_CP $takeUntil
+     * @property-read _IH_Role_CP $unless
      * @property-read _IH_Role_CP $first
      * @property-read _IH_Role_CP $takeWhile
-     * @property-read _IH_Role_CP $min
+     * @property-read _IH_Role_CP $doesntContain
      * @property-read _IH_Role_CP $reject
+     * @property-read _IH_Role_CP $sortByDesc
+     * @property-read _IH_Role_CP $flatMap
+     * @property-read _IH_Role_CP $keyBy
+     * @property-read _IH_Role_CP $each
+     * @property-read _IH_Role_CP $avg
+     * @property-read _IH_Role_CP $until
+     * @property-read _IH_Role_CP $unique
+     * @property-read _IH_Role_CP $min
+     * @property-read _IH_Role_CP $sortBy
+     * @property-read _IH_Role_CP $skipWhile
+     * @property-read _IH_Role_CP $every
+     * @property-read _IH_Role_CP $partition
+     * @property-read _IH_Role_CP $map
+     * @property-read _IH_Role_CP $groupBy
+     * @property-read _IH_Role_CP $some
+     * @property-read _IH_Role_CP $filter
      */
     class _IH_Role_C extends _BaseCollection {
         /**
@@ -1391,45 +1391,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Service|null getOrPut($key, $value)
      * @method Service|$this shift(int $count = 1)
-     * @method Service|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Service|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Service|$this pop(int $count = 1)
-     * @method Service|null pull($key, $default = null)
-     * @method Service|null last(callable $callback = null, $default = null)
-     * @method Service|$this random($number = null)
-     * @method Service|null sole($key = null, $operator = null, $value = null)
-     * @method Service|null get($key, $default = null)
-     * @method Service|null first(callable $callback = null, $default = null)
+     * @method Service|null pull($key, \Closure $default = null)
+     * @method Service|null last(callable $callback = null, \Closure $default = null)
+     * @method Service|$this random(callable|int|null $number = null)
+     * @method Service|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Service|null get($key, \Closure $default = null)
+     * @method Service|null first(callable $callback = null, \Closure $default = null)
      * @method Service|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Service|null find($key, $default = null)
      * @method Service[] all()
-     * @property-read _IH_Service_CP $keyBy
-     * @property-read _IH_Service_CP $partition
-     * @property-read _IH_Service_CP $max
-     * @property-read _IH_Service_CP $doesntContain
-     * @property-read _IH_Service_CP $flatMap
-     * @property-read _IH_Service_CP $each
-     * @property-read _IH_Service_CP $map
-     * @property-read _IH_Service_CP $filter
-     * @property-read _IH_Service_CP $unique
-     * @property-read _IH_Service_CP $groupBy
-     * @property-read _IH_Service_CP $sortBy
-     * @property-read _IH_Service_CP $contains
-     * @property-read _IH_Service_CP $sum
-     * @property-read _IH_Service_CP $until
-     * @property-read _IH_Service_CP $every
-     * @property-read _IH_Service_CP $average
      * @property-read _IH_Service_CP $when
-     * @property-read _IH_Service_CP $some
-     * @property-read _IH_Service_CP $skipWhile
-     * @property-read _IH_Service_CP $sortByDesc
-     * @property-read _IH_Service_CP $unless
-     * @property-read _IH_Service_CP $takeUntil
-     * @property-read _IH_Service_CP $avg
+     * @property-read _IH_Service_CP $average
      * @property-read _IH_Service_CP $skipUntil
+     * @property-read _IH_Service_CP $sum
+     * @property-read _IH_Service_CP $max
+     * @property-read _IH_Service_CP $contains
+     * @property-read _IH_Service_CP $takeUntil
+     * @property-read _IH_Service_CP $unless
      * @property-read _IH_Service_CP $first
      * @property-read _IH_Service_CP $takeWhile
-     * @property-read _IH_Service_CP $min
+     * @property-read _IH_Service_CP $doesntContain
      * @property-read _IH_Service_CP $reject
+     * @property-read _IH_Service_CP $sortByDesc
+     * @property-read _IH_Service_CP $flatMap
+     * @property-read _IH_Service_CP $keyBy
+     * @property-read _IH_Service_CP $each
+     * @property-read _IH_Service_CP $avg
+     * @property-read _IH_Service_CP $until
+     * @property-read _IH_Service_CP $unique
+     * @property-read _IH_Service_CP $min
+     * @property-read _IH_Service_CP $sortBy
+     * @property-read _IH_Service_CP $skipWhile
+     * @property-read _IH_Service_CP $every
+     * @property-read _IH_Service_CP $partition
+     * @property-read _IH_Service_CP $map
+     * @property-read _IH_Service_CP $groupBy
+     * @property-read _IH_Service_CP $some
+     * @property-read _IH_Service_CP $filter
      */
     class _IH_Service_C extends _BaseCollection {
         /**
@@ -1486,45 +1486,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method Service_branch|null getOrPut($key, $value)
      * @method Service_branch|$this shift(int $count = 1)
-     * @method Service_branch|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method Service_branch|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method Service_branch|$this pop(int $count = 1)
-     * @method Service_branch|null pull($key, $default = null)
-     * @method Service_branch|null last(callable $callback = null, $default = null)
-     * @method Service_branch|$this random($number = null)
-     * @method Service_branch|null sole($key = null, $operator = null, $value = null)
-     * @method Service_branch|null get($key, $default = null)
-     * @method Service_branch|null first(callable $callback = null, $default = null)
+     * @method Service_branch|null pull($key, \Closure $default = null)
+     * @method Service_branch|null last(callable $callback = null, \Closure $default = null)
+     * @method Service_branch|$this random(callable|int|null $number = null)
+     * @method Service_branch|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Service_branch|null get($key, \Closure $default = null)
+     * @method Service_branch|null first(callable $callback = null, \Closure $default = null)
      * @method Service_branch|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method Service_branch|null find($key, $default = null)
      * @method Service_branch[] all()
-     * @property-read _IH_Service_branch_CP $keyBy
-     * @property-read _IH_Service_branch_CP $partition
-     * @property-read _IH_Service_branch_CP $max
-     * @property-read _IH_Service_branch_CP $doesntContain
-     * @property-read _IH_Service_branch_CP $flatMap
-     * @property-read _IH_Service_branch_CP $each
-     * @property-read _IH_Service_branch_CP $map
-     * @property-read _IH_Service_branch_CP $filter
-     * @property-read _IH_Service_branch_CP $unique
-     * @property-read _IH_Service_branch_CP $groupBy
-     * @property-read _IH_Service_branch_CP $sortBy
-     * @property-read _IH_Service_branch_CP $contains
-     * @property-read _IH_Service_branch_CP $sum
-     * @property-read _IH_Service_branch_CP $until
-     * @property-read _IH_Service_branch_CP $every
-     * @property-read _IH_Service_branch_CP $average
      * @property-read _IH_Service_branch_CP $when
-     * @property-read _IH_Service_branch_CP $some
-     * @property-read _IH_Service_branch_CP $skipWhile
-     * @property-read _IH_Service_branch_CP $sortByDesc
-     * @property-read _IH_Service_branch_CP $unless
-     * @property-read _IH_Service_branch_CP $takeUntil
-     * @property-read _IH_Service_branch_CP $avg
+     * @property-read _IH_Service_branch_CP $average
      * @property-read _IH_Service_branch_CP $skipUntil
+     * @property-read _IH_Service_branch_CP $sum
+     * @property-read _IH_Service_branch_CP $max
+     * @property-read _IH_Service_branch_CP $contains
+     * @property-read _IH_Service_branch_CP $takeUntil
+     * @property-read _IH_Service_branch_CP $unless
      * @property-read _IH_Service_branch_CP $first
      * @property-read _IH_Service_branch_CP $takeWhile
-     * @property-read _IH_Service_branch_CP $min
+     * @property-read _IH_Service_branch_CP $doesntContain
      * @property-read _IH_Service_branch_CP $reject
+     * @property-read _IH_Service_branch_CP $sortByDesc
+     * @property-read _IH_Service_branch_CP $flatMap
+     * @property-read _IH_Service_branch_CP $keyBy
+     * @property-read _IH_Service_branch_CP $each
+     * @property-read _IH_Service_branch_CP $avg
+     * @property-read _IH_Service_branch_CP $until
+     * @property-read _IH_Service_branch_CP $unique
+     * @property-read _IH_Service_branch_CP $min
+     * @property-read _IH_Service_branch_CP $sortBy
+     * @property-read _IH_Service_branch_CP $skipWhile
+     * @property-read _IH_Service_branch_CP $every
+     * @property-read _IH_Service_branch_CP $partition
+     * @property-read _IH_Service_branch_CP $map
+     * @property-read _IH_Service_branch_CP $groupBy
+     * @property-read _IH_Service_branch_CP $some
+     * @property-read _IH_Service_branch_CP $filter
      */
     class _IH_Service_branch_C extends _BaseCollection {
         /**
@@ -1576,45 +1576,45 @@ namespace LaravelIdea\Helper\App\Models {
     /**
      * @method User|null getOrPut($key, $value)
      * @method User|$this shift(int $count = 1)
-     * @method User|null firstOrFail($key = null, $operator = null, $value = null)
+     * @method User|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
      * @method User|$this pop(int $count = 1)
-     * @method User|null pull($key, $default = null)
-     * @method User|null last(callable $callback = null, $default = null)
-     * @method User|$this random($number = null)
-     * @method User|null sole($key = null, $operator = null, $value = null)
-     * @method User|null get($key, $default = null)
-     * @method User|null first(callable $callback = null, $default = null)
+     * @method User|null pull($key, \Closure $default = null)
+     * @method User|null last(callable $callback = null, \Closure $default = null)
+     * @method User|$this random(callable|int|null $number = null)
+     * @method User|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method User|null get($key, \Closure $default = null)
+     * @method User|null first(callable $callback = null, \Closure $default = null)
      * @method User|null firstWhere(callable|string $key, $operator = null, $value = null)
      * @method User|null find($key, $default = null)
      * @method User[] all()
-     * @property-read _IH_User_CP $keyBy
-     * @property-read _IH_User_CP $partition
-     * @property-read _IH_User_CP $max
-     * @property-read _IH_User_CP $doesntContain
-     * @property-read _IH_User_CP $flatMap
-     * @property-read _IH_User_CP $each
-     * @property-read _IH_User_CP $map
-     * @property-read _IH_User_CP $filter
-     * @property-read _IH_User_CP $unique
-     * @property-read _IH_User_CP $groupBy
-     * @property-read _IH_User_CP $sortBy
-     * @property-read _IH_User_CP $contains
-     * @property-read _IH_User_CP $sum
-     * @property-read _IH_User_CP $until
-     * @property-read _IH_User_CP $every
-     * @property-read _IH_User_CP $average
      * @property-read _IH_User_CP $when
-     * @property-read _IH_User_CP $some
-     * @property-read _IH_User_CP $skipWhile
-     * @property-read _IH_User_CP $sortByDesc
-     * @property-read _IH_User_CP $unless
-     * @property-read _IH_User_CP $takeUntil
-     * @property-read _IH_User_CP $avg
+     * @property-read _IH_User_CP $average
      * @property-read _IH_User_CP $skipUntil
+     * @property-read _IH_User_CP $sum
+     * @property-read _IH_User_CP $max
+     * @property-read _IH_User_CP $contains
+     * @property-read _IH_User_CP $takeUntil
+     * @property-read _IH_User_CP $unless
      * @property-read _IH_User_CP $first
      * @property-read _IH_User_CP $takeWhile
-     * @property-read _IH_User_CP $min
+     * @property-read _IH_User_CP $doesntContain
      * @property-read _IH_User_CP $reject
+     * @property-read _IH_User_CP $sortByDesc
+     * @property-read _IH_User_CP $flatMap
+     * @property-read _IH_User_CP $keyBy
+     * @property-read _IH_User_CP $each
+     * @property-read _IH_User_CP $avg
+     * @property-read _IH_User_CP $until
+     * @property-read _IH_User_CP $unique
+     * @property-read _IH_User_CP $min
+     * @property-read _IH_User_CP $sortBy
+     * @property-read _IH_User_CP $skipWhile
+     * @property-read _IH_User_CP $every
+     * @property-read _IH_User_CP $partition
+     * @property-read _IH_User_CP $map
+     * @property-read _IH_User_CP $groupBy
+     * @property-read _IH_User_CP $some
+     * @property-read _IH_User_CP $filter
      */
     class _IH_User_C extends _BaseCollection {
         /**

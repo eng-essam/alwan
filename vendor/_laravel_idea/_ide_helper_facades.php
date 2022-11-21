@@ -1,4 +1,4 @@
-<?php //8cbc4535c052f274cf99171f46cd3b41
+<?php //02d427b611c7e5e2280ba9d5c1686682
 /** @noinspection all */
 
 namespace Illuminate\Support\Facades {
@@ -323,7 +323,7 @@ namespace Illuminate\Support\Facades {
      * @see \Psr\SimpleCache\CacheInterface::has
      * @method static bool has(string $key)
      * @see \Psr\SimpleCache\CacheInterface::getMultiple
-     * @method static iterable|mixed[]|string getMultiple(iterable $keys, $default = null)
+     * @method static iterable|string getMultiple(iterable $keys, $default = null)
      * @see \Illuminate\Contracts\Cache\Repository::add
      * @method static bool add(string $key, $value, \DateInterval|\DateTimeInterface|int|null $ttl = null)
      * @see \Illuminate\Contracts\Cache\Repository::getStore
@@ -489,7 +489,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Database\Connection::prepareBindings
      * @method static array prepareBindings(array $bindings)
      * @see \Illuminate\Database\DatabaseManager::getConnections
-     * @method static \Illuminate\Database\Connection[]|string getConnections()
+     * @method static array|string getConnections()
      * @see \Illuminate\Database\Concerns\ManagesTransactions::commit
      * @method static void commit()
      * @see \Illuminate\Database\Connection::recordsHaveBeenModified
@@ -1177,9 +1177,9 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Support\Testing\Fakes\MailFake::sent
      * @method static \Illuminate\Support\Collection sent(\Closure|string $mailable, callable|null $callback = null)
      * @see \Illuminate\Support\Testing\Fakes\MailFake::assertQueued
-     * @method static void assertQueued(\Closure|string $mailable, callable|int|null $callback = null)
+     * @method static null|void assertQueued(\Closure|string $mailable, callable|int|null $callback = null)
      * @see \Illuminate\Support\Testing\Fakes\MailFake::assertSent
-     * @method static void assertSent(\Closure|string $mailable, callable|int|null $callback = null)
+     * @method static null|void assertSent(\Closure|string $mailable, callable|int|null $callback = null)
      * @see \Illuminate\Support\Testing\Fakes\MailFake::hasQueued
      * @method static bool hasQueued(string $mailable)
      * @see \Illuminate\Support\Testing\Fakes\MailFake::assertNothingSent
@@ -1307,7 +1307,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Queue\QueueManager::connected
      * @method static bool connected(null|string $name = null)
      * @see \Illuminate\Queue\QueueManager::extend
-     * @method static void extend(string $driver, \Closure $resolver)
+     * @method static null|void extend(string $driver, \Closure $resolver)
      * @see \Illuminate\Queue\QueueManager::getName
      * @method static string getName(null|string $connection = null)
      * @see \Illuminate\Contracts\Queue\Queue::size
@@ -1415,7 +1415,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Redis\RedisManager::purge
      * @method static void purge(null|string $name = null)
      * @see \Illuminate\Redis\Connections\Connection::psubscribe
-     * @method static void psubscribe(array|string $channels, \Closure $callback)
+     * @method static null|void psubscribe(array|string $channels, \Closure $callback)
      * @see \Illuminate\Redis\Connections\Connection::setEventDispatcher
      * @method static void setEventDispatcher(\Illuminate\Contracts\Events\Dispatcher $events)
      * @see \Illuminate\Redis\RedisManager::setDriver
@@ -1439,7 +1439,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Support\Traits\Macroable::macro
      * @method static void macro(string $name, callable|object $macro)
      * @see \Illuminate\Redis\Connections\Connection::subscribe
-     * @method static void subscribe(array|string $channels, \Closure $callback)
+     * @method static null|void subscribe(array|string $channels, \Closure $callback)
      * @see \Illuminate\Redis\RedisManager::disableEvents
      * @method static void disableEvents()
      * @see \Illuminate\Redis\Connections\Connection::command
@@ -2035,7 +2035,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Database\Schema\Builder::whenTableDoesntHaveColumn
      * @method static void whenTableDoesntHaveColumn(string $table, string $column, \Closure $callback)
      * @see \Illuminate\Database\Schema\Builder::morphUsingUuids
-     * @method static void morphUsingUuids()
+     * @method static null|void morphUsingUuids()
      * @see \Illuminate\Database\Schema\Builder::whenTableHasColumn
      * @method static void whenTableHasColumn(string $table, string $column, \Closure $callback)
      * @see \Illuminate\Database\Schema\Builder::enableForeignKeyConstraints
@@ -2394,10 +2394,10 @@ namespace Illuminate\Support\Facades {
      * @method static \Illuminate\View\Engines\EngineResolver getEngineResolver()
      * @see \Illuminate\View\Factory::prependNamespace
      * @method static \Illuminate\View\Factory prependNamespace(string $namespace, array|string $hints)
-     * @see \Illuminate\View\Concerns\ManagesEvents::callComposer
-     * @method static void callComposer(\Illuminate\Contracts\View\View $view)
      * @see \Illuminate\View\Concerns\ManagesLayouts::yieldContent
      * @method static string yieldContent(string $section, string $default = '')
+     * @see \Illuminate\View\Concerns\ManagesEvents::callComposer
+     * @method static void callComposer(\Illuminate\Contracts\View\View $view)
      * @see \Illuminate\View\Factory::setContainer
      * @method static void setContainer(\Illuminate\Contracts\Container\Container $container)
      * @see \Illuminate\View\Concerns\ManagesTranslations::startTranslation
@@ -2446,10 +2446,10 @@ namespace Illuminate\Support\Facades {
      * @method static void flushMacros()
      * @see \Illuminate\View\Factory::shared
      * @method static mixed shared(string $key, $default = null)
-     * @see \Illuminate\View\Concerns\ManagesEvents::composers
-     * @method static array composers(array $composers)
      * @see \Illuminate\View\Concerns\ManagesComponents::renderComponent
      * @method static string renderComponent()
+     * @see \Illuminate\View\Concerns\ManagesEvents::composers
+     * @method static array composers(array $composers)
      * @see \Illuminate\View\Factory::setDispatcher
      * @method static void setDispatcher(\Illuminate\Contracts\Events\Dispatcher $events)
      * @see \Illuminate\View\Factory::hasRenderedOnce
@@ -2462,10 +2462,10 @@ namespace Illuminate\Support\Facades {
      * @method static mixed|null getConsumableComponentData(string $key, $default = null)
      * @see \Illuminate\View\Concerns\ManagesLayouts::parentPlaceholder
      * @method static string parentPlaceholder(string $section = '')
-     * @see \Illuminate\View\Concerns\ManagesLayouts::getSection
-     * @method static mixed|null|string getSection(string $name, null|string $default = null)
      * @see \Illuminate\View\Concerns\ManagesComponents::slot
      * @method static void slot(string $name, null|string $content = null, array $attributes = [])
+     * @see \Illuminate\View\Concerns\ManagesLayouts::getSection
+     * @method static mixed|null|string getSection(string $name, null|string $default = null)
      * @see \Illuminate\View\Factory::doneRendering
      * @method static bool doneRendering()
      * @see \Illuminate\View\Concerns\ManagesLoops::addLoop
@@ -2508,10 +2508,10 @@ namespace Illuminate\Support\Facades {
      * @method static void addExtension(string $extension, string $engine, \Closure|null $resolver = null)
      * @see \Illuminate\View\Factory::getShared
      * @method static array getShared()
-     * @see \Illuminate\View\Concerns\ManagesLoops::incrementLoopIndices
-     * @method static void incrementLoopIndices()
      * @see \Illuminate\View\Concerns\ManagesLayouts::startSection
      * @method static void startSection(string $section, null|string $content = null)
+     * @see \Illuminate\View\Concerns\ManagesLoops::incrementLoopIndices
+     * @method static void incrementLoopIndices()
      * @see \Illuminate\View\Concerns\ManagesStacks::stopPrepend
      * @method static string stopPrepend()
      * @see \Illuminate\View\Concerns\ManagesLoops::popLoop
@@ -2558,17 +2558,17 @@ namespace Spatie\LaravelIgnition\Facades {
      * @see \Spatie\FlareClient\Flare::reportMessage
      * @method static void reportMessage(string $message, string $logLevel, callable $callback = null)
      * @see \Spatie\FlareClient\Flare::registerMiddleware
-     * @method static \Spatie\FlareClient\Flare registerMiddleware(\Spatie\FlareClient\FlareMiddleware\FlareMiddleware|\Spatie\FlareClient\FlareMiddleware\FlareMiddleware[] $middleware)
+     * @method static \Spatie\FlareClient\Flare registerMiddleware(array|\Spatie\FlareClient\class-string|\Spatie\FlareClient\FlareMiddleware\FlareMiddleware $middleware)
      * @see \Spatie\FlareClient\Flare::getMiddleware
-     * @method static int|\Spatie\FlareClient\FlareMiddleware\FlareMiddleware[]|string[] getMiddleware()
+     * @method static array|int getMiddleware()
      * @see \Spatie\FlareClient\Concerns\HasContext::messageLevel
-     * @method static \Spatie\FlareClient\Concerns\HasContext messageLevel(null|string $messageLevel)
+     * @method static \Spatie\FlareClient\Concerns\HasContext|\Spatie\FlareClient\Flare|\Spatie\FlareClient\Report messageLevel(null|string $messageLevel)
      * @see \Spatie\FlareClient\Flare::reportErrorLevels
      * @method static \Spatie\FlareClient\Flare reportErrorLevels(int $reportErrorLevels)
      * @see \Spatie\FlareClient\Concerns\HasContext::context
      * @method static \Spatie\FlareClient\Concerns\HasContext|\Spatie\FlareClient\Flare|\Spatie\FlareClient\Report context(string $key, $value)
      * @see \Spatie\FlareClient\Flare::getMiddlewares
-     * @method static int|\Spatie\FlareClient\FlareMiddleware\FlareMiddleware[]|string[] getMiddlewares()
+     * @method static array|int getMiddlewares()
      * @see \Spatie\FlareClient\Flare::make
      * @method static \Spatie\FlareClient\Flare make(string $apiKey = null, \Spatie\FlareClient\Context\ContextProviderDetector $contextDetector = null)
      * @see \Spatie\FlareClient\Concerns\HasContext::group
@@ -2580,7 +2580,7 @@ namespace Spatie\LaravelIgnition\Facades {
      * @see \Spatie\FlareClient\Flare::setStage
      * @method static \Spatie\FlareClient\Flare setStage(null|string $stage)
      * @see \Spatie\FlareClient\Concerns\HasContext::getGroup
-     * @method static int|mixed[] getGroup(string $groupName = 'context', $default = [])
+     * @method static array|int getGroup(string $groupName = 'context', $default = [])
      * @see \Spatie\FlareClient\Flare::createReport
      * @method static \Spatie\FlareClient\Report createReport(\Throwable $throwable)
      * @see \Spatie\FlareClient\Flare::version
@@ -2594,7 +2594,7 @@ namespace Spatie\LaravelIgnition\Facades {
      * @see \Spatie\FlareClient\Flare::censorRequestBodyFields
      * @method static \Spatie\FlareClient\Flare censorRequestBodyFields(array $fieldNames)
      * @see \Spatie\FlareClient\Concerns\HasContext::stage
-     * @method static \Spatie\FlareClient\Concerns\HasContext stage(null|string $stage)
+     * @method static \Spatie\FlareClient\Concerns\HasContext|\Spatie\FlareClient\Flare|\Spatie\FlareClient\Report stage(null|string $stage)
      * @see \Spatie\FlareClient\Flare::registerErrorHandler
      * @method static \Spatie\FlareClient\Flare registerErrorHandler()
      * @see \Spatie\FlareClient\Flare::handleError
