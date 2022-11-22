@@ -8,7 +8,6 @@ use App\Http\Resources\OrderStatusResource;
 use App\Models\BuyService;
 use App\Models\Company_branch;
 use App\Models\OrderStatus;
-use App\Models\User;
 use App\Traits\ReturnJson;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -22,7 +21,7 @@ class OrderController extends Controller
     public function allOrderProducts(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('ProductsCurrent')->first();
+        $user = $request->user()->with('ProductsCurrent')->first();
         $allOrders = json_decode($user)->products_current;
         $orders = [];
 
@@ -44,7 +43,7 @@ class OrderController extends Controller
     public function allOrderProductsDone(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('ProductsDone')->first();
+        $user = $request->user()->with('ProductsDone')->first();
         $allOrders = json_decode($user)->products_done;
         $orders = [];
 
@@ -91,7 +90,7 @@ class OrderController extends Controller
     public function allOrderServices(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('servicsCurrent')->first();
+        $user = $request->user()->with('servicsCurrent')->first();
         $allOrders = json_decode($user)->servics_current;
         $orders = [];
 
@@ -113,7 +112,7 @@ class OrderController extends Controller
     public function allOrderServicesDone(Request $request)
     {
         $lang = App::getLocale();
-        $user = User::where('id', 33)->with('servicsDone')->first();
+        $user = $request->user()->with('servicsDone')->first();
         $allOrders = json_decode($user)->servics_done;
         $orders = [];
 
