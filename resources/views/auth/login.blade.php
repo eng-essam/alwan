@@ -29,10 +29,8 @@
                         </div>
                         <div class="signUP-admin-left__content">
                             <div class="text-capitalize mb-md-30 mb-15 d-flex align-items-center justify-content-md-start justify-content-center">
-                                <a class="wh-36 bg-primary text-white radius-md mr-10 content-center" href="#">a</a>
-                                <span class="text-dark">admin</span>
+                                <a class=" bg-primary text-white radius-md mr-10 content-center" href="#">Alwaan</a>
                             </div>
-                            <h1>Bootstrap 4 React Web Application</h1>
                         </div>
                         <div class="signUP-admin-left__img">
                             <img class="img-fluid svg" src="{{asset('admin/img/svg/signupIllustration.svg')}}" alt="svg">

@@ -1,8 +1,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- inject:css-->
-
-<link rel="stylesheet" href="{{asset('admin/assets/vendor_assets/css/bootstrap/bootstrap.css')}}">
+@if(\Illuminate\Support\Facades\App::getLocale() == 'ar')
+    <link rel="stylesheet" href="{{asset('admin/assets/vendor_assets/css/bootstrap/bootstrap-rtl.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/style-rtl.css')}}">
+@else
+    <link rel="stylesheet" href="{{asset('admin/assets/vendor_assets/css/bootstrap/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('admin/style.css')}}">ss
+@endif
 
 <link rel="stylesheet" href="{{asset('admin/assets/vendor_assets/css/daterangepicker.css')}}">
 
@@ -34,7 +39,6 @@
 
 <link rel="stylesheet" href="{{asset('admin/assets/vendor_assets/css/wickedpicker.min.css')}}">
 
-<link rel="stylesheet" href="{{asset('admin/style.css')}}">
 
 <link rel="icon" type="image/png" sizes="16x16" href="{{asset('alwaan/alwaan_logo.png')}}">
 

@@ -104,7 +104,7 @@ class OrderController extends Controller
             $orders[$key]['Order_id'] = $allOrders[$key]->pivot->order_id;
             $orders[$key]['Order_price'] = $allOrders[$key]->pivot->service_price;
             $orders[$key]['Order_Status'] = new OrderStatusResource(OrderStatus::findOrFail($allOrders[$key]->pivot->order_status_id));
-            $orders[$key]['order_status_message'] = $allOrders[$key]->pivot->order_status_message;
+            $orders[$key]['order_status_message'] = json_decode($allOrders[$key]->pivot->order_status_message)->$lang ;
         }
         $data['allServiceOrders'] = $orders;
         return $this->requestSuccess(null, $data);
@@ -126,7 +126,7 @@ class OrderController extends Controller
             $orders[$key]['Order_id'] = $allOrders[$key]->pivot->order_id;
             $orders[$key]['Order_price'] = $allOrders[$key]->pivot->service_price;
             $orders[$key]['Order_Status'] = new OrderStatusResource(OrderStatus::findOrFail($allOrders[$key]->pivot->order_status_id));
-            $orders[$key]['order_status_message'] = $allOrders[$key]->pivot->order_status_message;
+            $orders[$key]['order_status_message'] = json_decode($allOrders[$key]->pivot->order_status_message)->$lang ;
         }
         $data['allServiceOrders'] = $orders;
         return $this->requestSuccess(null, $data);
