@@ -10,11 +10,9 @@
 </head>
 
 <body class="layout-light side-menu overlayScroll">
-
+    @yield('nanbar')
     <main class="main-content">
-
         @yield('main')
-
     </main>
 
     <div class="overlay-dark-sidebar"></div>

@@ -34,13 +34,19 @@ return [
     'discount_rate' => 'نسبة الخصم هي',
     'message_received_successfully' => 'تم استلام رسالتك بنجاح',
     'request_under_review' => 'تم استلام الطلب وجاري المراجعة',
-    'resend_service_request'=>'تم اعاده ارسال الطلب بنجاح',
-    'login'=>'تسجيل الدخول',
-    'email_Address'=>'البريد الالكتروني',
-    'password'=>'كلمة السر',
-    'Keep_me_logged_in'=>'تذكرني',
-    'forget_password'=>'? نسيت كلمة السر',
-    'sign_in' =>'تسجيل الدخول'
+    'resend_service_request' => 'تم اعاده ارسال الطلب بنجاح',
+    'login' => 'تسجيل الدخول',
+    'email_Address' => 'البريد الالكتروني',
+    'password' => 'كلمة السر',
+    'Keep_me_logged_in' => 'تذكرني',
+    'forgot_password' => ' نسيت كلمة السر ؟',
+    'sign_in' => 'تسجيل دخول',
+    'email_address_instructions' => 'أدخل عنوان البريد الإلكتروني الذي استخدمته عند الانضمام وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.',
+    'send'=>'ارسال',
+    'invalid_email' => 'البريد الالكتروني غير صحيح (غير مسجل)',
+    'password_change_link_sent_successfully' =>'تم ارسال رابط تغير كلمة السر بنجاح',
+    'reset_password'=>'تغيير كلمة السر',
+    'password_confirmation'=>'تأكيد كلمة السر',
 
 
 ];
