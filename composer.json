@@ -11,9 +11,13 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
-        "laravolt/avatar": "^4.1"
+        "laravolt/avatar": "^4.1",
+        "livewire/livewire": "^2.10",
+        "rinvex/countries": "^8.1",
+        "yoeunes/toastr": "^2.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",

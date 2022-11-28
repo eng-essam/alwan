@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Company_branch;
-use App\Models\User;
 use App\Traits\CreateImg;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -29,6 +28,7 @@ class UserFactory extends Factory
             'password' => Hash::make(12345678),
             'phone' => $this->faker->phoneNumber(),
             'phoneKey' => '+20',
+            'fullPhone' => $this->faker->phoneNumber(),
             'role_id' => 3,
             'company_branch_id' => Company_branch::inRandomOrder()->first()->id,
             'email_verified_at' => now(),

@@ -42,11 +42,38 @@ return [
     'forgot_password' => ' نسيت كلمة السر ؟',
     'sign_in' => 'تسجيل دخول',
     'email_address_instructions' => 'أدخل عنوان البريد الإلكتروني الذي استخدمته عند الانضمام وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك.',
-    'send'=>'ارسال',
+    'send' => 'ارسال',
     'invalid_email' => 'البريد الالكتروني غير صحيح (غير مسجل)',
-    'password_change_link_sent_successfully' =>'تم ارسال رابط تغير كلمة السر بنجاح',
-    'reset_password'=>'تغيير كلمة السر',
-    'password_confirmation'=>'تأكيد كلمة السر',
+    'password_change_link_sent_successfully' => 'تم ارسال رابط تغير كلمة السر بنجاح',
+    'reset_password' => 'تغيير كلمة السر',
+    'password_confirmation' => 'تأكيد كلمة السر',
+    'home' => 'الرئيسية',
+    'users' => 'المستخدمين',
+    'admins' => 'المشرفين',
+    'main_products'=>'المنتجات الرئيسية',
+    'sub_products'=>'المنتجات الفرعية',
+    'main_services'=>'الخدمات الرئيسية',
+    'sub_services'=>'الخدمات الفرعية',
+    'user_name' =>'اسم المستخدم',
+    'admin_name' =>'اسم المستخدم',
+    'image'=>'الصوره',
+    'name'=>'الاسم',
+    'phone'=>'الهاتف',
+    'search'=>'البحث',
+    'company_branch'=>'الفرع',
+    'action'=>'عمليات',
+    'deleted_successfully'=>'تم الحذف بنجاح',
+    'delete'=>'حذف',
+    'edit'=>'تعديل',
+
+
+
+
+
+
+
+
+
 
 
 ];

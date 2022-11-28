@@ -1,4 +1,4 @@
-<?php //02d427b611c7e5e2280ba9d5c1686682
+<?php //c92e4c3ddbe16ef5ec50f7da2af7e0dc
 /** @noinspection all */
 
 namespace Illuminate\Support\Facades {
@@ -1462,16 +1462,6 @@ namespace Illuminate\Support\Facades {
     class Redis {}
     
     /**
-     * @see \Illuminate\Http\Request::hasValidSignature
-     * @method static bool hasValidSignature($absolute = true)
-     * @see \Illuminate\Http\Request::hasValidSignatureWhileIgnoring
-     * @method static bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
-     * @see \Illuminate\Http\Request::validateWithBag
-     * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
-     * @see \Illuminate\Http\Request::hasValidRelativeSignature
-     * @method static bool hasValidRelativeSignature()
-     * @see \Illuminate\Http\Request::validate
-     * @method static array validate(array $rules, ...$params)
      * @see \Symfony\Component\HttpFoundation\Request::hasPreviousSession
      * @method static bool hasPreviousSession()
      * @see \Symfony\Component\HttpFoundation\Request::isMethod
@@ -1554,6 +1544,8 @@ namespace Illuminate\Support\Facades {
      * @method static bool preferSafeContent()
      * @see \Illuminate\Http\Concerns\InteractsWithContentTypes::matchesType
      * @method static bool matchesType(string $actual, string $type)
+     * @see \Illuminate\Http\Request::validate
+     * @method static array validate(array $rules, ...$params)
      * @see \Symfony\Component\HttpFoundation\Request::getTrustedProxies
      * @method static string[] getTrustedProxies()
      * @see \Symfony\Component\HttpFoundation\Request::getDefaultLocale
@@ -1718,6 +1710,8 @@ namespace Illuminate\Support\Facades {
      * @method static void setDefaultRequestLocale(string $locale)
      * @see \Symfony\Component\HttpFoundation\Request::setMethod
      * @method static void setMethod(string $method)
+     * @see \Illuminate\Http\Request::hasValidSignature
+     * @method static bool hasValidSignature(bool $absolute = true)
      * @see \Symfony\Component\HttpFoundation\Request::getPassword
      * @method static null|string getPassword()
      * @see \Symfony\Component\HttpFoundation\Request::getLocale
@@ -1768,6 +1762,8 @@ namespace Illuminate\Support\Facades {
      * @method static \Illuminate\Http\Request capture()
      * @see \Symfony\Component\HttpFoundation\Request::getClientIp
      * @method static null|string getClientIp()
+     * @see \Illuminate\Http\Request::validateWithBag
+     * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
      * @see \Illuminate\Http\Concerns\InteractsWithInput::hasCookie
      * @method static bool hasCookie(string $key)
      * @see \Symfony\Component\HttpFoundation\Request::getUser
@@ -1814,6 +1810,10 @@ namespace Illuminate\Support\Facades {
      * @method static mixed user(null|string $guard = null)
      * @see \Symfony\Component\HttpFoundation\Request::getLanguages
      * @method static array getLanguages()
+     * @see \Illuminate\Http\Request::hasValidSignatureWhileIgnoring
+     * @method static bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
+     * @see \Illuminate\Http\Request::hasValidRelativeSignature
+     * @method static bool hasValidRelativeSignature()
      */
     class Request {}
     
@@ -2534,6 +2534,77 @@ namespace Illuminate\Support\Facades {
     class View {}
 }
 
+namespace Livewire {
+    
+    /**
+     * @see LivewireManager::dispatch
+     * @method static void dispatch($event, ...$params)
+     * @see LivewireManager::actingAs
+     * @method static LivewireManager actingAs(\Illuminate\Contracts\Auth\Authenticatable $user, $driver = null)
+     * @see LivewireManager::originalUrl
+     * @method static string originalUrl()
+     * @see LivewireManager::originalPath
+     * @method static array|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\Request|\Illuminate\Support\Stringable|mixed|null|string|__anonymous@199 originalPath()
+     * @see LivewireManager::setBackButtonCache
+     * @method static void setBackButtonCache()
+     * @see LivewireManager::withQueryParams
+     * @method static LivewireManager withQueryParams($queryParams)
+     * @see LivewireManager::listen
+     * @method static void listen($event, $callback)
+     * @see LivewireManager::getAlias
+     * @method static int|mixed|null|string getAlias($class, $default = null)
+     * @see LivewireManager::isLivewireRequest
+     * @method static bool isLivewireRequest()
+     * @see LivewireManager::originalMethod
+     * @method static array|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\Request|mixed|null|string originalMethod()
+     * @see LivewireManager::getPersistentMiddleware
+     * @method static mixed|string[] getPersistentMiddleware()
+     * @see LivewireManager::scripts
+     * @method static string scripts($options = [])
+     * @see LivewireManager::getRootElementTagName
+     * @method static mixed getRootElementTagName($dom)
+     * @see LivewireManager::enableBackButtonCache
+     * @method static void enableBackButtonCache()
+     * @see LivewireManager::getComponentAliases
+     * @method static array|mixed getComponentAliases()
+     * @see LivewireManager::test
+     * @method static \Livewire\Testing\TestableLivewire test($name, $params = [])
+     * @see LivewireManager::getClass
+     * @method static false|mixed|null getClass($alias)
+     * @see LivewireManager::addPersistentMiddleware
+     * @method static void addPersistentMiddleware($middleware)
+     * @see LivewireManager::isRunningServerless
+     * @method static bool isRunningServerless()
+     * @see LivewireManager::isProbablyLivewireRequest
+     * @method static bool isProbablyLivewireRequest()
+     * @see LivewireManager::mount
+     * @method static void mount($name, $params = [])
+     * @see LivewireManager::disableBackButtonCache
+     * @method static void disableBackButtonCache()
+     * @see LivewireManager::shouldDisableBackButtonCache
+     * @method static bool|mixed shouldDisableBackButtonCache()
+     * @see LivewireManager::isOnVapor
+     * @method static bool isOnVapor()
+     * @see LivewireManager::component
+     * @method static void component($alias, $viewClass = null)
+     * @see LivewireManager::isDefinitelyLivewireRequest
+     * @method static bool isDefinitelyLivewireRequest()
+     * @see LivewireManager::setPersistentMiddleware
+     * @method static void setPersistentMiddleware($middleware)
+     * @see LivewireManager::flushState
+     * @method static void flushState()
+     * @see LivewireManager::styles
+     * @method static string styles($options = [])
+     * @see LivewireManager::visit
+     * @method static mixed visit($browser, $class, $queryString = '')
+     * @see LivewireManager::getInstance
+     * @method static mixed getInstance($component, $id)
+     * @see LivewireManager::dummyMount
+     * @method static string dummyMount($id, $tagName)
+     */
+    class Livewire {}
+}
+
 namespace Spatie\LaravelIgnition\Facades {
     
     /**
@@ -2636,6 +2707,7 @@ namespace {
     class Image extends Intervention\Image\Facades\Image {}
     class Js extends Illuminate\Support\Js {}
     class Lang extends Illuminate\Support\Facades\Lang {}
+    class Livewire extends Livewire\Livewire {}
     class Log extends Illuminate\Support\Facades\Log {}
     class Mail extends Illuminate\Support\Facades\Mail {}
     class Notification extends Illuminate\Support\Facades\Notification {}

@@ -4428,7 +4428,7 @@ ul {
 .tooltip-title {
     font-size: 12px;
     font-weight: 500 !important;
-    font-family: "Inter", sans-serif;
+    font-family: "Cairo", sans-serif;
     text-transform: capitalize;
     margin-bottom: 4px;
 }
@@ -4437,7 +4437,7 @@ ul {
     color: #63b963;
     font-size: 22px;
     font-weight: 600 !important;
-    font-family: "Inter", sans-serif;
+    font-family: "Cairo", sans-serif;
 }
 
 .tooltip-value sup {
@@ -4457,7 +4457,7 @@ ul {
 }
 
 .laIcon-list-box .la {
-    font-family: "Line Awesome Free", "Line Awesome Brands";
+    font-family: "Cairo", "Line Awesome Brands";
 }
 
 .user-group .media-body {
@@ -4660,7 +4660,7 @@ ul {
 }
 
 .daterangepicker .ranges ul li {
-    font-family: "Inter", sans-serif;
+    font-family: "Cairo", sans-serif;
     font-size: 13px;
     font-weight: 600;
     width: 100%;
@@ -4884,7 +4884,7 @@ ul {
 .daterangepicker.show-calendar .drp-buttons .drp-selected {
     font-size: 13px;
     color: #666d92;
-    font-family: "Inter", sans-serif;
+    font-family: "Cairo", sans-serif;
 }
 
 .daterangepicker.show-calendar .drp-buttons .cancelBtn {
@@ -5762,7 +5762,7 @@ ul {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-weight: 600;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     content: "\f107";
     line-height: 1;
 }
@@ -5780,7 +5780,7 @@ ul {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-weight: 600;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     content: "\f105";
     line-height: 1;
 }
@@ -6320,6 +6320,9 @@ ul {
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px
 }
 
 .sidebar .menuItem {
@@ -6480,7 +6483,7 @@ ul {
 
 .sidebar__menu-group ul.sidebar_nav li > a .toggle-icon {
     font-size: 12px;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     font-weight: 900;
     margin-right: auto;
     -webkit-transition: all 0.3s ease;
@@ -7485,7 +7488,7 @@ ul {
 
 .atbd-breadcrumb__item .dropdown > a:after {
     font-size: 10px;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     font-weight: 700;
     content: "\f107";
 }
@@ -8753,7 +8756,7 @@ table.table-rounded tbody tr td.card .card-body,
     right: 3px;
     top: 2px;
     font-weight: 900;
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Cairo';
     content: "\f00c";
     display: block;
     opacity: 0;
@@ -8771,7 +8774,7 @@ table.table-rounded tbody tr td.card .card-body,
 .custom-checkbox input:indeterminate ~ label::after {
     background: #5f63f2;
     font-weight: 900;
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Cairo';
     content: "\f068";
     color: #ffffff;
     font-size: 10px;
@@ -9174,7 +9177,7 @@ table.table-rounded tbody tr td.card .card-body,
 }
 
 .social-overview li {
-    width: 33.33%;
+    width: max-content;
     text-align: center;
     padding: 22px 0;
 }
@@ -9189,7 +9192,7 @@ table.table-rounded tbody tr td.card .card-body,
     background: -webkit-gradient(linear, right top, right bottom, from(#9c27b0), color-stop(35%, #9c27b0), color-stop(67%, #f44336), to(#ffc107));
     background: -o-linear-gradient(top, #9c27b0 0%, #9c27b0 35%, #f44336 67%, #ffc107 100%);
     background: linear-gradient(to bottom, #9c27b0 0%, #9c27b0 35%, #f44336 67%, #ffc107 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c27b0', endColorstr='#ffc107',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9c27b0', endColorstr='#ffc107', GradientType=0);
 }
 
 .social-overview li h1,
@@ -11080,14 +11083,14 @@ table.table-rounded tbody tr td.card .card-body,
 
 .select2-container--default .select2-selection--single .select2-selection__arrow:after {
     content: "\f107";
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     font-weight: 900;
     font-size: 12px;
 }
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow:after {
     content: "\f106";
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     font-weight: 900;
     font-size: 12px;
 }
@@ -11701,7 +11704,7 @@ table.table-rounded tbody tr td.card .card-body,
 
 .atbd-pagination__item .paging-option:after {
     content: "\f107";
-    font-family: 'Line Awesome Free';
+    font-family: 'Cairo';
     font-weight: 900;
     position: absolute;
     top: 50%;
@@ -13197,7 +13200,7 @@ input.is-invalid ~ label::after {
 }
 
 .atbd-menu.menu-horizontal .atbd-menu__item.has-submenu > .atbd-menu__link:before {
-    font-family: 'Line Awesome Free';
+    font-family: 'Cairo';
     font-weight: 700;
     content: "\f107";
     margin-right: 5px;
@@ -13331,7 +13334,7 @@ input.is-invalid ~ label::after {
 }
 
 .atbd-menu.menu-vertical .atbd-menu__item.has-submenu > .atbd-menu__link:before {
-    font-family: 'Line Awesome Free';
+    font-family: 'Cairo';
     font-weight: 700;
     content: "\f105";
     margin-right: 5px;
@@ -13410,7 +13413,7 @@ input.is-invalid ~ label::after {
 }
 
 .mobile-nav-wrapper .atbd-menu__item.has-submenu > .atbd-menu__link:before {
-    margin: 0 0  0 10px;
+    margin: 0 0 0 10px;
 }
 
 .mobile-nav-wrapper .atbd-submenu {
@@ -13689,7 +13692,7 @@ input.is-invalid ~ label::after {
 }
 
 .ui-datepicker-header a.ui-datepicker-prev::after {
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     font-weight: 900;
     content: "\f104";
     font-size: 18px;
@@ -13701,7 +13704,7 @@ input.is-invalid ~ label::after {
 }
 
 .ui-datepicker-header a.ui-datepicker-next::after {
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     font-weight: 900;
     content: "\f105";
     font-size: 18px;
@@ -14481,8 +14484,8 @@ input.is-invalid ~ label::after {
     -webkit-transform: translate(50%, -50%);
     -ms-transform: translate(50%, -50%);
     transform: translate(50%, -50%);
-    width: calc( 100% - 4px);
-    height: calc( 100% - 4px);
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
     content: "";
     border-width: 2px;
     -webkit-border-radius: 50%;
@@ -14964,7 +14967,7 @@ input.is-invalid ~ label::after {
 
 .atbd-select:after {
     font-size: 10px;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     position: absolute;
     left: 15px;
     top: 50%;
@@ -19627,7 +19630,7 @@ table.table-rounded tbody tr td:last-child {
 
 .application-faqs .panel-title > a:before {
     float: left !important;
-    font-family: 'Line Awesome Free';
+    font-family: 'Cairo';
     font-weight: 900;
     content: "\f068";
     padding-left: 5px;
@@ -19642,7 +19645,7 @@ table.table-rounded tbody tr td:last-child {
 .application-faqs .panel-title > a.collapsed:before {
     float: left !important;
     content: "\f067";
-    font-family: 'Line Awesome Free';
+    font-family: 'Cairo';
     font-weight: 900;
 }
 
@@ -22391,7 +22394,7 @@ table.table-rounded tbody tr td:last-child {
 
 .knowledgebase-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     content: "\f105";
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     font-weight: 900;
 }
 
@@ -23745,7 +23748,7 @@ table.table-rounded tbody tr td:last-child {
 
 #filter-form-container .footable-filtering-search .input-group:after {
     font-size: 18px;
-    font-family: "Line Awesome Free";
+    font-family: "Cairo";
     position: absolute;
     right: 20px;
     top: 8px;

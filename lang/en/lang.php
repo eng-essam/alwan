@@ -44,7 +44,48 @@ return [
     'email_address_instructions' => 'Enter The Email Address You Used When You Joined And We’ll Send You Instructions To Reset Your Password.',
     'send' => 'Send',
     'invalid_email' => 'Invalid email (not registered)',
-    'password_change_link_sent_successfully' =>'The password change link has been sent successfully',
-    'reset_password'=>'Reset Password',
-    'password_confirmation'=>'Password Confirmation',
+    'password_change_link_sent_successfully' => 'The password change link has been sent successfully',
+    'reset_password' => 'Reset Password',
+    'password_confirmation' => 'Password Confirmation',
+    'home' => 'Dashboard',
+    'users' => 'Users',
+    'admins' => 'Admins',
+    'main_products'=>'Main Products',
+    'sub_products'=>'Sub Products',
+    'main_services'=>'Main Services',
+    'sub_services'=>'Sub Services',
+    'user_name' =>'User Name',
+    'admin_name' =>'Admin Name',
+    'image'=>'Image',
+    'name'=>'Name',
+    'phone'=>'Phone',
+    'search'=>'Search',
+    'company_branch'=>'Branch',
+    'action'=>'Action',
+    'deleted_successfully'=>'Deleted successfully',
+    'delete'=>'Delete',
+    'edit'=>'Edit',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ];

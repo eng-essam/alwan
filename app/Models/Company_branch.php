@@ -12,6 +12,8 @@ class Company_branch extends Model
 
     public $guarded = ['id', 'created_at', 'updated_at'];
 
+    public $table = 'company_branches';
+
     public function company_name()
     {
         $lang = App::getLocale();

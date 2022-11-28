@@ -1,5 +1,17 @@
-<?php //b6ba499be0a2d458cb3eb4ac5ed774d2
+<?php //c926eedd7edf9e680396edf60010f966
 /** @noinspection all */
+
+namespace Illuminate\Contracts\View {
+    
+    /**
+     * @method $this extends($view, $params = [])
+     * @method $this layout($view, $params = [])
+     * @method $this layoutData($data = [])
+     * @method $this section($section)
+     * @method $this slot($slot)
+     */
+    class View {}
+}
 
 namespace Illuminate\Database\Eloquent {
     
@@ -33,4 +45,38 @@ namespace Illuminate\Support\Facades {
      * @method void resetPassword()
      */
     class Route {}
+}
+
+namespace Illuminate\Testing {
+    
+    /**
+     * @method $this assertDontSeeLivewire($component)
+     * @method $this assertSeeLivewire($component)
+     */
+    class TestResponse {}
+    
+    /**
+     * @method $this assertDontSeeLivewire($component)
+     * @method $this assertSeeLivewire($component)
+     */
+    class TestView {}
+}
+
+namespace Illuminate\View {
+
+    use Livewire\WireDirective;
+    
+    /**
+     * @method WireDirective wire($name)
+     */
+    class ComponentAttributeBag {}
+    
+    /**
+     * @method $this extends($view, $params = [])
+     * @method $this layout($view, $params = [])
+     * @method $this layoutData($data = [])
+     * @method $this section($section)
+     * @method $this slot($slot)
+     */
+    class View {}
 }
