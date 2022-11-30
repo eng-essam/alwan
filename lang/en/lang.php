@@ -60,11 +60,18 @@ return [
     'name'=>'Name',
     'phone'=>'Phone',
     'search'=>'Search',
-    'company_branch'=>'Branch',
+    'all_branch'=>'All Branch',
+    'select_branch'=>'Select Branch',
     'action'=>'Action',
     'deleted_successfully'=>'Deleted successfully',
     'delete'=>'Delete',
     'edit'=>'Edit',
+    'addAdmin'=>'Add Admin',
+    'permissions'=>'Permissions',
+    'save'=>'Save',
+    'add_admin_successfully' => 'Admin added successfully',
+    'edit_admin_information' => 'Edit admin information',
+    'edit_admin_information_successfully' => 'Admin information has been modified successfully',
 
 
 

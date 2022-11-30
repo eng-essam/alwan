@@ -1,4 +1,4 @@
-<?php //ec356fb894cad9736dace1efc82d647f
+<?php //a1404c0acf54454f4f477e4f20a26572
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -15,6 +15,7 @@ namespace LaravelIdea\Helper\App\Models {
     use App\Models\Favorite;
     use App\Models\Notification;
     use App\Models\OrderStatus;
+    use App\Models\Permission;
     use App\Models\Product;
     use App\Models\Product_branch;
     use App\Models\Role;
@@ -1115,6 +1116,95 @@ namespace LaravelIdea\Helper\App\Models {
      * @method OrderStatus updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_OrderStatus_QB extends _BaseBuilder {}
+    
+    /**
+     * @method Permission|null getOrPut($key, $value)
+     * @method Permission|$this shift(int $count = 1)
+     * @method Permission|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
+     * @method Permission|$this pop(int $count = 1)
+     * @method Permission|null pull($key, \Closure $default = null)
+     * @method Permission|null last(callable $callback = null, \Closure $default = null)
+     * @method Permission|$this random(callable|int|null $number = null)
+     * @method Permission|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method Permission|null get($key, \Closure $default = null)
+     * @method Permission|null first(callable $callback = null, \Closure $default = null)
+     * @method Permission|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method Permission|null find($key, $default = null)
+     * @method Permission[] all()
+     * @property-read _IH_Permission_CP $when
+     * @property-read _IH_Permission_CP $average
+     * @property-read _IH_Permission_CP $skipUntil
+     * @property-read _IH_Permission_CP $sum
+     * @property-read _IH_Permission_CP $max
+     * @property-read _IH_Permission_CP $contains
+     * @property-read _IH_Permission_CP $takeUntil
+     * @property-read _IH_Permission_CP $unless
+     * @property-read _IH_Permission_CP $first
+     * @property-read _IH_Permission_CP $takeWhile
+     * @property-read _IH_Permission_CP $doesntContain
+     * @property-read _IH_Permission_CP $reject
+     * @property-read _IH_Permission_CP $sortByDesc
+     * @property-read _IH_Permission_CP $flatMap
+     * @property-read _IH_Permission_CP $keyBy
+     * @property-read _IH_Permission_CP $each
+     * @property-read _IH_Permission_CP $avg
+     * @property-read _IH_Permission_CP $until
+     * @property-read _IH_Permission_CP $unique
+     * @property-read _IH_Permission_CP $min
+     * @property-read _IH_Permission_CP $sortBy
+     * @property-read _IH_Permission_CP $skipWhile
+     * @property-read _IH_Permission_CP $every
+     * @property-read _IH_Permission_CP $partition
+     * @property-read _IH_Permission_CP $map
+     * @property-read _IH_Permission_CP $groupBy
+     * @property-read _IH_Permission_CP $some
+     * @property-read _IH_Permission_CP $filter
+     */
+    class _IH_Permission_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return Permission[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_Permission_QB whereId($value)
+     * @method _IH_Permission_QB whereName($value)
+     * @method _IH_Permission_QB whereDesc($value)
+     * @method _IH_Permission_QB whereCreatedAt($value)
+     * @method _IH_Permission_QB whereUpdatedAt($value)
+     * @method Permission baseSole(array|string $columns = ['*'])
+     * @method Permission create(array $attributes = [])
+     * @method _IH_Permission_C|Permission[] cursor()
+     * @method Permission|null|_IH_Permission_C|Permission[] find($id, array|string $columns = ['*'])
+     * @method _IH_Permission_C|Permission[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method Permission|_IH_Permission_C|Permission[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Permission|_IH_Permission_C|Permission[] findOrFail($id, array|string $columns = ['*'])
+     * @method Permission|_IH_Permission_C|Permission[] findOrNew($id, array|string $columns = ['*'])
+     * @method Permission first(array|string $columns = ['*'])
+     * @method Permission firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method Permission firstOrCreate(array $attributes = [], array $values = [])
+     * @method Permission firstOrFail(array|string $columns = ['*'])
+     * @method Permission firstOrNew(array $attributes = [], array $values = [])
+     * @method Permission firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method Permission forceCreate(array $attributes)
+     * @method _IH_Permission_C|Permission[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_Permission_C|Permission[] get(array|string $columns = ['*'])
+     * @method Permission getModel()
+     * @method Permission[] getModels(array|string $columns = ['*'])
+     * @method _IH_Permission_C|Permission[] hydrate(array $items)
+     * @method Permission make(array $attributes = [])
+     * @method Permission newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|Permission[]|_IH_Permission_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|Permission[]|_IH_Permission_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Permission sole(array|string $columns = ['*'])
+     * @method Permission updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_Permission_QB extends _BaseBuilder {}
     
     /**
      * @method Product|null getOrPut($key, $value)

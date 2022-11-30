@@ -28,7 +28,7 @@ class GuestController extends Controller
             'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'min:8', 'confirmed'],
             'password_confirmation' => ['same:password', 'min:8'],
-            'phone' => ['required', 'unique:users,phone', 'unique:users,fullPhone'],
+            'phone' => ['required', 'unique:users,phone'],
             'phoneKey' => ['required'],
         ]);
 

@@ -1,4 +1,4 @@
-<?php //c8118d15986b6ebcb3bec4d26201f5e6
+<?php //50cfa7c74b1fa6fe9c9f70b9c45d4454
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -59,6 +59,7 @@ namespace Database\Factories {
      * @method $this hasNotifications(int $count = 1, $attributes = [])
      * @method $this hasPayProducts(int $count = 1, $attributes = [])
      * @method $this hasPayServics(int $count = 1, $attributes = [])
+     * @method $this hasPermissions(int $count = 1, $attributes = [])
      * @method $this hasReadNotifications(int $count = 1, $attributes = [])
      * @method $this forRole($attributes = [])
      * @method $this hasServicsCurrent(int $count = 1, $attributes = [])

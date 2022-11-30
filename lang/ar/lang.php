@@ -50,30 +50,27 @@ return [
     'home' => 'الرئيسية',
     'users' => 'المستخدمين',
     'admins' => 'المشرفين',
-    'main_products'=>'المنتجات الرئيسية',
-    'sub_products'=>'المنتجات الفرعية',
-    'main_services'=>'الخدمات الرئيسية',
-    'sub_services'=>'الخدمات الفرعية',
-    'user_name' =>'اسم المستخدم',
-    'admin_name' =>'اسم المستخدم',
-    'image'=>'الصوره',
-    'name'=>'الاسم',
-    'phone'=>'الهاتف',
-    'search'=>'البحث',
-    'company_branch'=>'الفرع',
-    'action'=>'عمليات',
-    'deleted_successfully'=>'تم الحذف بنجاح',
-    'delete'=>'حذف',
-    'edit'=>'تعديل',
-
-
-
-
-
-
-
-
-
-
+    'main_products' => 'المنتجات الرئيسية',
+    'sub_products' => 'المنتجات الفرعية',
+    'main_services' => 'الخدمات الرئيسية',
+    'sub_services' => 'الخدمات الفرعية',
+    'user_name' => 'اسم المستخدم',
+    'admin_name' => 'اسم المستخدم',
+    'image' => 'الصوره',
+    'name' => 'الاسم',
+    'phone' => 'الهاتف',
+    'search' => 'البحث',
+    'all_branch' => 'جميع الفروع',
+    'select_branch' => 'اختر الفرع',
+    'action' => 'عمليات',
+    'deleted_successfully' => 'تم الحذف بنجاح',
+    'delete' => 'حذف',
+    'edit' => 'تعديل',
+    'addAdmin' => 'اضافة ادمن',
+    'permissions' => 'الصلاحيات',
+    'save' => 'حفظ',
+    'add_admin_successfully' => 'تم اضافة ادمن بنجاح',
+    'edit_admin_information' => 'تعديل معلومات الادمن',
+    'edit_admin_information_successfully' => 'تم تعديل معلومات الادمن بنجاح',
 
 ];

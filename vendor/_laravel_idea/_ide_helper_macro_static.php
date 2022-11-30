@@ -1,4 +1,4 @@
-<?php //c1aa478ca74654d779955ddf1b0e44cc
+<?php //f1e17081154efe8b71d49e029c9740de
 /** @noinspection all */
 
 namespace Illuminate\Contracts\View {
@@ -34,6 +34,14 @@ namespace Illuminate\Http {
      * @method static void validateWithBag(string $errorBag, array $rules, ...$params)
      */
     class Request {}
+}
+
+namespace Illuminate\Support {
+    
+    /**
+     * @method static $this debug()
+     */
+    class Collection {}
 }
 
 namespace Illuminate\Support\Facades {

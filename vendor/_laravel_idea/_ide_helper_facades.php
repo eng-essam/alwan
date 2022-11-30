@@ -1,5 +1,255 @@
-<?php //c92e4c3ddbe16ef5ec50f7da2af7e0dc
+<?php //2474396dc093e0b084d8b5b724dbcd3a
 /** @noinspection all */
+
+namespace Barryvdh\Debugbar {
+    
+    /**
+     * @see \Illuminate\Support\Facades\Facade::clearResolvedInstances
+     * @method static void clearResolvedInstances()
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::critical
+     * @method static void critical($message)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::log
+     * @method static void log($message)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::getCollector
+     * @method static \Barryvdh\Debugbar\Facades\LaravelDebugbar getCollector(string $name)
+     * @see \Illuminate\Support\Facades\Facade::shouldReceive
+     * @method static \Mockery\Expectation shouldReceive()
+     * @see \Illuminate\Support\Facades\Facade::getFacadeRoot
+     * @method static mixed getFacadeRoot()
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::emergency
+     * @method static void emergency($message)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::error
+     * @method static void error($message)
+     * @see \Illuminate\Support\Facades\Facade::expects
+     * @method static \Mockery\Expectation expects()
+     * @see \Illuminate\Support\Facades\Facade::getFacadeApplication
+     * @method static \Illuminate\Contracts\Foundation\Application getFacadeApplication()
+     * @see \Illuminate\Support\Facades\Facade::setFacadeApplication
+     * @method static void setFacadeApplication(\Illuminate\Contracts\Foundation\Application $app)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::addCollector
+     * @method static \Barryvdh\Debugbar\Facades\LaravelDebugbar addCollector(\DebugBar\DataCollector\DataCollectorInterface $collector)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::alert
+     * @method static void alert($message)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::warning
+     * @method static void warning($message)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::info
+     * @method static void info($message)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::notice
+     * @method static void notice($message)
+     * @see \Illuminate\Support\Facades\Facade::resolved
+     * @method static void resolved(\Closure $callback)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::debug
+     * @method static void debug($message)
+     * @see \Illuminate\Support\Facades\Facade::defaultAliases
+     * @method static \Illuminate\Support\Collection defaultAliases()
+     * @see \Illuminate\Support\Facades\Facade::swap
+     * @method static void swap($instance)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::hasCollector
+     * @method static bool hasCollector(string $name)
+     * @see \Barryvdh\Debugbar\Facades\Debugbar::addMessage
+     * @method static void addMessage($message, string $label = 'info')
+     * @see \Illuminate\Support\Facades\Facade::clearResolvedInstance
+     * @method static void clearResolvedInstance(string $name)
+     * @see \Illuminate\Support\Facades\Facade::partialMock
+     * @method static \Mockery\MockInterface partialMock()
+     * @see \Illuminate\Support\Facades\Facade::spy
+     * @method static \Mockery\MockInterface spy()
+     * @see \DebugBar\DebugBar::isDataPersisted
+     * @method static bool isDataPersisted()
+     * @see \DebugBar\DebugBar::getCurrentRequestId
+     * @method static string getCurrentRequestId()
+     * @see \DebugBar\DebugBar::getData
+     * @method static array getData()
+     * @see LaravelDebugbar::startMeasure
+     * @method static void startMeasure(string $name, string $label = null)
+     * @see \DebugBar\DebugBar::getStackedData
+     * @method static array getStackedData(bool $delete = true)
+     * @see LaravelDebugbar::enable
+     * @method static void enable()
+     * @see LaravelDebugbar::getJavascriptRenderer
+     * @method static JavascriptRenderer getJavascriptRenderer(string $baseUrl = null, $basePath = null)
+     * @see LaravelDebugbar::isEnabled
+     * @method static bool isEnabled()
+     * @see \DebugBar\DebugBar::hasStackedData
+     * @method static bool hasStackedData()
+     * @see \DebugBar\DebugBar::getStorage
+     * @method static \DebugBar\Storage\StorageInterface getStorage()
+     * @see \DebugBar\DebugBar::getHttpDriver
+     * @method static \DebugBar\HttpDriverInterface|\DebugBar\PhpHttpDriver getHttpDriver()
+     * @see \DebugBar\DebugBar::getDataAsHeaders
+     * @method static array getDataAsHeaders(string $headerName = 'phpdebugbar', int $maxHeaderLength = 4096, $maxTotalHeaderLength = 250000)
+     * @see \DebugBar\DebugBar::setStackDataSessionNamespace
+     * @method static \DebugBar\DebugBar setStackDataSessionNamespace(string $ns)
+     * @see \DebugBar\DebugBar::setStackAlwaysUseSessionStorage
+     * @method static \DebugBar\DebugBar setStackAlwaysUseSessionStorage(bool $enabled = true)
+     * @see LaravelDebugbar::measure
+     * @method static mixed measure(string $label, \Closure $closure)
+     * @see \DebugBar\DebugBar::offsetUnset
+     * @method static void offsetUnset($key)
+     * @see \DebugBar\DebugBar::stackData
+     * @method static \DebugBar\DebugBar stackData()
+     * @see LaravelDebugbar::modifyResponse
+     * @method static \Symfony\Component\HttpFoundation\Response modifyResponse(\Symfony\Component\HttpFoundation\Request $request, \Symfony\Component\HttpFoundation\Response $response)
+     * @see LaravelDebugbar::handleError
+     * @method static void handleError($level, $message, string $file = '', int $line = 0, array $context = [])
+     * @see LaravelDebugbar::shouldCollect
+     * @method static void shouldCollect($name, $default = false)
+     * @see LaravelDebugbar::stopMeasure
+     * @method static void stopMeasure(string $name)
+     * @see LaravelDebugbar::collect
+     * @method static array|array[] collect()
+     * @see \DebugBar\DebugBar::sendDataInHeaders
+     * @method static \DebugBar\DebugBar sendDataInHeaders(bool $useOpenHandler = null, string $headerName = 'phpdebugbar', int $maxHeaderLength = 4096)
+     * @see \DebugBar\DebugBar::offsetGet
+     * @method static \DebugBar\DataCollector\DataCollectorInterface|mixed offsetGet($key)
+     * @see LaravelDebugbar::addThrowable
+     * @method static void addThrowable(\Exception $e)
+     * @see \DebugBar\DebugBar::offsetSet
+     * @method static void offsetSet($key, $value)
+     * @see \DebugBar\DebugBar::getRequestIdGenerator
+     * @method static \DebugBar\RequestIdGenerator|\DebugBar\RequestIdGeneratorInterface getRequestIdGenerator()
+     * @see \DebugBar\DebugBar::getStackDataSessionNamespace
+     * @method static string getStackDataSessionNamespace()
+     * @see \DebugBar\DebugBar::isStackAlwaysUseSessionStorage
+     * @method static bool isStackAlwaysUseSessionStorage()
+     * @see \DebugBar\DebugBar::setRequestIdGenerator
+     * @method static \DebugBar\DebugBar setRequestIdGenerator(\DebugBar\RequestIdGeneratorInterface $generator)
+     * @see \DebugBar\DebugBar::setHttpDriver
+     * @method static \DebugBar\DebugBar setHttpDriver(\DebugBar\HttpDriverInterface $driver)
+     * @see \DebugBar\DebugBar::offsetExists
+     * @method static bool offsetExists($key)
+     * @see LaravelDebugbar::boot
+     * @method static void boot()
+     * @see LaravelDebugbar::collectConsole
+     * @method static array|array[] collectConsole()
+     * @see LaravelDebugbar::addException
+     * @method static null addException(\Exception $e)
+     * @see LaravelDebugbar::injectDebugbar
+     * @method static void injectDebugbar(\Symfony\Component\HttpFoundation\Response $response)
+     * @see LaravelDebugbar::addMeasure
+     * @method static void addMeasure(string $label, float $start, float $end)
+     * @see \DebugBar\DebugBar::setStorage
+     * @method static \DebugBar\DebugBar setStorage(\DebugBar\Storage\StorageInterface $storage = null)
+     * @see LaravelDebugbar::disable
+     * @method static void disable()
+     * @see \DebugBar\DebugBar::getCollectors
+     * @method static array getCollectors()
+     */
+    class Facade {}
+}
+
+namespace Barryvdh\Debugbar\Facades {
+    
+    /**
+     * @see \DebugBar\DebugBar::isDataPersisted
+     * @method static bool isDataPersisted()
+     * @see \DebugBar\DebugBar::getCurrentRequestId
+     * @method static string getCurrentRequestId()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::emergency
+     * @method static void emergency(...$message)
+     * @see \DebugBar\DebugBar::getData
+     * @method static array getData()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::startMeasure
+     * @method static void startMeasure(string $name, string $label = null)
+     * @see \DebugBar\DebugBar::getStackedData
+     * @method static array getStackedData(bool $delete = true)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::addCollector
+     * @method static \Barryvdh\Debugbar\LaravelDebugbar addCollector(\DebugBar\DataCollector\DataCollectorInterface $collector)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::enable
+     * @method static void enable()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::warning
+     * @method static void warning(...$message)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::getJavascriptRenderer
+     * @method static \Barryvdh\Debugbar\JavascriptRenderer getJavascriptRenderer(string $baseUrl = null, $basePath = null)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::isEnabled
+     * @method static bool isEnabled()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::info
+     * @method static void info(...$message)
+     * @see \DebugBar\DebugBar::hasStackedData
+     * @method static bool hasStackedData()
+     * @see \DebugBar\DebugBar::getStorage
+     * @method static \DebugBar\Storage\StorageInterface getStorage()
+     * @see \DebugBar\DebugBar::getHttpDriver
+     * @method static \DebugBar\HttpDriverInterface|\DebugBar\PhpHttpDriver getHttpDriver()
+     * @see \DebugBar\DebugBar::getDataAsHeaders
+     * @method static array getDataAsHeaders(string $headerName = 'phpdebugbar', int $maxHeaderLength = 4096, $maxTotalHeaderLength = 250000)
+     * @see \DebugBar\DebugBar::hasCollector
+     * @method static bool hasCollector(string $name)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::addMessage
+     * @method static void addMessage($message, string $label = 'info')
+     * @see \DebugBar\DebugBar::setStackDataSessionNamespace
+     * @method static \DebugBar\DebugBar setStackDataSessionNamespace(string $ns)
+     * @see \DebugBar\DebugBar::setStackAlwaysUseSessionStorage
+     * @method static \DebugBar\DebugBar setStackAlwaysUseSessionStorage(bool $enabled = true)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::measure
+     * @method static mixed measure(string $label, \Closure $closure)
+     * @see \DebugBar\DebugBar::offsetUnset
+     * @method static void offsetUnset($key)
+     * @see \DebugBar\DebugBar::stackData
+     * @method static \DebugBar\DebugBar stackData()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::modifyResponse
+     * @method static \Symfony\Component\HttpFoundation\Response modifyResponse(\Symfony\Component\HttpFoundation\Request $request, \Symfony\Component\HttpFoundation\Response $response)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::handleError
+     * @method static void handleError($level, $message, string $file = '', int $line = 0, array $context = [])
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::shouldCollect
+     * @method static void shouldCollect($name, $default = false)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::stopMeasure
+     * @method static void stopMeasure(string $name)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::collect
+     * @method static array|array[] collect()
+     * @see \DebugBar\DebugBar::sendDataInHeaders
+     * @method static \DebugBar\DebugBar sendDataInHeaders(bool $useOpenHandler = null, string $headerName = 'phpdebugbar', int $maxHeaderLength = 4096)
+     * @see \DebugBar\DebugBar::offsetGet
+     * @method static \DebugBar\DataCollector\DataCollectorInterface|mixed offsetGet($key)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::addThrowable
+     * @method static void addThrowable(\Exception $e)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::critical
+     * @method static void critical(...$message)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::log
+     * @method static void log(...$message)
+     * @see \DebugBar\DebugBar::getCollector
+     * @method static \DebugBar\DataCollector\DataCollectorInterface getCollector(string $name)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::error
+     * @method static void error(...$message)
+     * @see \DebugBar\DebugBar::offsetSet
+     * @method static void offsetSet($key, $value)
+     * @see \DebugBar\DebugBar::getRequestIdGenerator
+     * @method static \DebugBar\RequestIdGenerator|\DebugBar\RequestIdGeneratorInterface getRequestIdGenerator()
+     * @see \DebugBar\DebugBar::getStackDataSessionNamespace
+     * @method static string getStackDataSessionNamespace()
+     * @see \DebugBar\DebugBar::isStackAlwaysUseSessionStorage
+     * @method static bool isStackAlwaysUseSessionStorage()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::alert
+     * @method static void alert(...$message)
+     * @see \DebugBar\DebugBar::setRequestIdGenerator
+     * @method static \DebugBar\DebugBar setRequestIdGenerator(\DebugBar\RequestIdGeneratorInterface $generator)
+     * @see \DebugBar\DebugBar::setHttpDriver
+     * @method static \DebugBar\DebugBar setHttpDriver(\DebugBar\HttpDriverInterface $driver)
+     * @see \DebugBar\DebugBar::offsetExists
+     * @method static bool offsetExists($key)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::boot
+     * @method static void boot()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::collectConsole
+     * @method static array|array[] collectConsole()
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::notice
+     * @method static void notice(...$message)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::debug
+     * @method static void debug(...$message)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::addException
+     * @method static null addException(\Exception $e)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::injectDebugbar
+     * @method static void injectDebugbar(\Symfony\Component\HttpFoundation\Response $response)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::addMeasure
+     * @method static void addMeasure(string $label, float $start, float $end)
+     * @see \DebugBar\DebugBar::setStorage
+     * @method static \DebugBar\DebugBar setStorage(\DebugBar\Storage\StorageInterface $storage = null)
+     * @see \Barryvdh\Debugbar\LaravelDebugbar::disable
+     * @method static void disable()
+     * @see \DebugBar\DebugBar::getCollectors
+     * @method static array getCollectors()
+     */
+    class Debugbar {}
+}
 
 namespace Illuminate\Support\Facades {
     
@@ -1462,6 +1712,16 @@ namespace Illuminate\Support\Facades {
     class Redis {}
     
     /**
+     * @see \Illuminate\Http\Request::hasValidSignature
+     * @method static bool hasValidSignature($absolute = true)
+     * @see \Illuminate\Http\Request::hasValidSignatureWhileIgnoring
+     * @method static bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
+     * @see \Illuminate\Http\Request::validateWithBag
+     * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
+     * @see \Illuminate\Http\Request::hasValidRelativeSignature
+     * @method static bool hasValidRelativeSignature()
+     * @see \Illuminate\Http\Request::validate
+     * @method static array validate(array $rules, ...$params)
      * @see \Symfony\Component\HttpFoundation\Request::hasPreviousSession
      * @method static bool hasPreviousSession()
      * @see \Symfony\Component\HttpFoundation\Request::isMethod
@@ -1544,8 +1804,6 @@ namespace Illuminate\Support\Facades {
      * @method static bool preferSafeContent()
      * @see \Illuminate\Http\Concerns\InteractsWithContentTypes::matchesType
      * @method static bool matchesType(string $actual, string $type)
-     * @see \Illuminate\Http\Request::validate
-     * @method static array validate(array $rules, ...$params)
      * @see \Symfony\Component\HttpFoundation\Request::getTrustedProxies
      * @method static string[] getTrustedProxies()
      * @see \Symfony\Component\HttpFoundation\Request::getDefaultLocale
@@ -1710,8 +1968,6 @@ namespace Illuminate\Support\Facades {
      * @method static void setDefaultRequestLocale(string $locale)
      * @see \Symfony\Component\HttpFoundation\Request::setMethod
      * @method static void setMethod(string $method)
-     * @see \Illuminate\Http\Request::hasValidSignature
-     * @method static bool hasValidSignature(bool $absolute = true)
      * @see \Symfony\Component\HttpFoundation\Request::getPassword
      * @method static null|string getPassword()
      * @see \Symfony\Component\HttpFoundation\Request::getLocale
@@ -1762,8 +2018,6 @@ namespace Illuminate\Support\Facades {
      * @method static \Illuminate\Http\Request capture()
      * @see \Symfony\Component\HttpFoundation\Request::getClientIp
      * @method static null|string getClientIp()
-     * @see \Illuminate\Http\Request::validateWithBag
-     * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
      * @see \Illuminate\Http\Concerns\InteractsWithInput::hasCookie
      * @method static bool hasCookie(string $key)
      * @see \Symfony\Component\HttpFoundation\Request::getUser
@@ -1810,10 +2064,6 @@ namespace Illuminate\Support\Facades {
      * @method static mixed user(null|string $guard = null)
      * @see \Symfony\Component\HttpFoundation\Request::getLanguages
      * @method static array getLanguages()
-     * @see \Illuminate\Http\Request::hasValidSignatureWhileIgnoring
-     * @method static bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
-     * @see \Illuminate\Http\Request::hasValidRelativeSignature
-     * @method static bool hasValidRelativeSignature()
      */
     class Request {}
     
@@ -2697,10 +2947,12 @@ namespace {
     class Crypt extends Illuminate\Support\Facades\Crypt {}
     class DB extends Illuminate\Support\Facades\DB {}
     class Date extends Illuminate\Support\Facades\Date {}
+    class Debugbar extends Barryvdh\Debugbar\Facades\Debugbar {}
     class Eloquent extends Illuminate\Database\Eloquent\Model {}
     class Event extends Illuminate\Support\Facades\Event {}
     class File extends Illuminate\Support\Facades\File {}
     class Flare extends Spatie\LaravelIgnition\Facades\Flare {}
+    class Flasher extends Flasher\Laravel\Facade\Flasher {}
     class Gate extends Illuminate\Support\Facades\Gate {}
     class Hash extends Illuminate\Support\Facades\Hash {}
     class Http extends Illuminate\Support\Facades\Http {}
@@ -2722,6 +2974,7 @@ namespace {
     class Session extends Illuminate\Support\Facades\Session {}
     class Storage extends Illuminate\Support\Facades\Storage {}
     class Str extends Illuminate\Support\Str {}
+    class Toastr extends Yoeunes\Toastr\Facades\Toastr {}
     class URL extends Illuminate\Support\Facades\URL {}
     class Validator extends Illuminate\Support\Facades\Validator {}
     class View extends Illuminate\Support\Facades\View {}

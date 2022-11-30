@@ -1,4 +1,4 @@
-<?php //cc9a2feb069b404c887b83647d488750
+<?php //9e5dfc9310b0a8d5c2094244372ac5dd
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -239,6 +239,25 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_OrderStatus_C delete()
      */
     class _IH_OrderStatus_CP {}
+    
+    /**
+     * @property _IH_Permission_C|mixed $id
+     * @property _IH_Permission_C|mixed $name
+     * @property _IH_Permission_C|mixed $desc
+     * @property _IH_Permission_C|mixed $created_at
+     * @property _IH_Permission_C|mixed $updated_at
+     * @method _IH_Permission_C name()
+     * @method _IH_Permission_C desc()
+     * @method _IH_Permission_C refresh()
+     * @method _IH_Permission_C update(array $attributes = [], array $options = [])
+     * @method _IH_Permission_C save(array $options = [])
+     * @method _IH_Permission_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Permission_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_Permission_C touch(null|string $attribute = null)
+     * @method _IH_Permission_C fill(array $attributes)
+     * @method _IH_Permission_C delete()
+     */
+    class _IH_Permission_CP {}
     
     /**
      * @property _IH_Product_C|mixed $id

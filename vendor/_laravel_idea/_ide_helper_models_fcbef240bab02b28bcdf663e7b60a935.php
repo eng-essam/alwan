@@ -1,4 +1,4 @@
-<?php //b7df86a37e81e7c4b4ec89cf6f19c66a
+<?php //fa69c13636bbe9dd587744d52ab7d91e
 /** @noinspection all */
 
 namespace App\Models {
@@ -45,6 +45,8 @@ namespace App\Models {
     use LaravelIdea\Helper\App\Models\_IH_Notification_QB;
     use LaravelIdea\Helper\App\Models\_IH_OrderStatus_C;
     use LaravelIdea\Helper\App\Models\_IH_OrderStatus_QB;
+    use LaravelIdea\Helper\App\Models\_IH_Permission_C;
+    use LaravelIdea\Helper\App\Models\_IH_Permission_QB;
     use LaravelIdea\Helper\App\Models\_IH_Product_branch_C;
     use LaravelIdea\Helper\App\Models\_IH_Product_branch_QB;
     use LaravelIdea\Helper\App\Models\_IH_Product_C;
@@ -349,6 +351,29 @@ namespace App\Models {
     
     /**
      * @property int $id
+     * @property string $name
+     * @property string $desc
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @property _IH_User_C|User[] $users
+     * @property-read int $users_count
+     * @method BelongsToMany|_IH_User_QB users()
+     * @method static _IH_Permission_QB onWriteConnection()
+     * @method _IH_Permission_QB newQuery()
+     * @method static _IH_Permission_QB on(null|string $connection = null)
+     * @method static _IH_Permission_QB query()
+     * @method static _IH_Permission_QB with(array|string $relations)
+     * @method _IH_Permission_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_Permission_C|Permission[] all()
+     * @foreignLinks 
+     * @mixin _IH_Permission_QB
+     */
+    class Permission extends Model {}
+    
+    /**
+     * @property int $id
      * @property int $company_branch_id
      * @property int $product_branch_id
      * @property string $product_name
@@ -524,7 +549,7 @@ namespace App\Models {
      * @property _IH_Product_C|Product[] $cartProducts
      * @property-read int $cart_products_count
      * @method BelongsToMany|_IH_Product_QB cartProducts()
-     * @property Company_branch $company
+     * @property Company_branch|null $company
      * @method BelongsTo|_IH_Company_branch_QB company()
      * @property _IH_Product_C|Product[] $favoriteProducts
      * @property-read int $favorite_products_count
@@ -538,6 +563,9 @@ namespace App\Models {
      * @property _IH_Service_C|Service[] $payServics
      * @property-read int $pay_servics_count
      * @method BelongsToMany|_IH_Service_QB payServics()
+     * @property _IH_Permission_C|Permission[] $permissions
+     * @property-read int $permissions_count
+     * @method BelongsToMany|_IH_Permission_QB permissions()
      * @property DatabaseNotificationCollection|DatabaseNotification[] $readNotifications
      * @property-read int $read_notifications_count
      * @method MorphToMany|_IH_DatabaseNotification_QB readNotifications()

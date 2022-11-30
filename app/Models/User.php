@@ -134,4 +134,9 @@ class User extends Authenticatable
             ->wherePivot('order_status_id', 8)
             ->withTimestamps();
     }
+
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class, 'user_permission')->withTimestamps();
+    }
 }

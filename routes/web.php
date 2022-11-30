@@ -28,7 +28,20 @@ Route::prefix('admin')->middleware(['auth', 'adminAndSuperAdmin', 'langWeb'])->g
 
     Route::get('/all-users', [UsersController::class, 'allUsers']);//all users
 
-    Route::get('/all-admins', [AdminController::class, 'allAdmin']);//all Admin
+    Route::middleware('superAdmin')->group(function () {
+        //Admin
+        Route::get('/all-admins', [AdminController::class, 'allAdmin']);//all Admin
+
+        Route::get('/add-admin', [AdminController::class, 'addAdmin']);//add Admin
+
+        Route::post('/add-admin', [AdminController::class, 'saveAddAdmin']);//save Admin
+
+        Route::get('/edit-admin/{adminId}', [AdminController::class, 'editAdmin']);//edit Admin
+
+        Route::post('/edit-admin/{adminId}', [AdminController::class, 'saveEditAdmin']);//save Edit Admin
+
+
+    });
 
 });
 

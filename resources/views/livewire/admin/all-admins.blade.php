@@ -2,8 +2,12 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div style="font-size: 19px;font-weight: bold;" class="card-header color-dark fw-500">
+                <div style="font-size: 20px;font-weight: bold;" class="card-header color-dark fw-500">
                     {{__('lang.admins')}}
+                    <div>
+                        <a style="font-size: 15px;font-weight: bold;" href="{{url('admin/add-admin')}}"
+                           class="btn btn-primary btn-xs btn-rounded ml-1">{{__('lang.addAdmin')}}</a>
+                    </div>
                 </div>
 
                 <div style="width: 50%;margin: auto;margin-top: 15px" class="input-group ">
@@ -15,39 +19,53 @@
                 </div>
 
                 <div class="card-body p-0">
-                    <div class="table4  p-25 bg-white mb-30">
+                    <div style="padding: 10px" class="table bg-white mb-30">
                         <div class="table-responsive">
                             <table class="table mb-0">
                                 <thead>
                                 <tr style="text-align: center" class="userDatatable-header">
                                     <th>
-                                            <span style="font-weight: bold;font-size: 17px;"
-                                                  class="userDatatable-title">ID</span>
+                                        <span style="font-weight: bold;font-size: 15px;"
+                                              class="userDatatable-title">ID</span>
                                     </th>
                                     <th>
-                                            <span style="font-weight: bold;font-size: 17px;"
-                                                  class="userDatatable-title">{{__('lang.image')}}</span>
+                                        <span style="font-weight: bold;font-size: 15px;"
+                                              class="userDatatable-title">{{__('lang.image')}}</span>
                                     </th>
                                     <th>
-                                            <span style="font-weight: bold;font-size: 17px;"
-                                                  class="userDatatable-title">{{__('lang.name')}}</span>
+                                        <span style="font-weight: bold;font-size: 15px;"
+                                              class="userDatatable-title">{{__('lang.name')}}</span>
                                     </th>
                                     <th>
-                                            <span style="font-weight: bold;font-size: 17px;"
-                                                  class="userDatatable-title">{{__('lang.email_Address')}}</span>
+                                        <span style="font-weight: bold;font-size: 15px;"
+                                              class="userDatatable-title">{{__('lang.email_Address')}}</span>
                                     </th>
                                     <th>
-                                            <span style="font-weight: bold;font-size: 17px;"
-                                                  class="userDatatable-title">{{__('lang.phone')}}</span>
+                                        <span style="font-weight: bold;font-size: 15px;"
+                                              class="userDatatable-title">{{__('lang.phone')}}</span>
                                     </th>
                                     <th>
-                                            <span style="font-weight: bold;font-size: 17px;"
-                                                  class="userDatatable-title">{{__('lang.company_branch')}}</span>
+                                            <span style="font-weight: bold;font-size: 15px;"
+                                                  class="userDatatable-title">
+                                                <select wire:model="branchType" class="form-control ml-sm-10 ml-0">
+                                                    <option style="font-size: 15px;"
+                                                            value="{{null}}">{{__('lang.all_branch')}}</option>
+                                                    @foreach($allBranch as $branch)
+                                                        <option style="font-size: 15px;text-align: center"
+                                                                value="{{$branch->id}}">{{$branch->company_name()}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </span>
                                     </th>
                                     <th>
-                                            <span style="font-weight: bold;font-size: 17px;"
-                                                  class="userDatatable-title">{{__('lang.action')}}</span>
+                                        <span style="font-weight: bold;font-size: 15px;"
+                                              class="userDatatable-title">{{__('lang.permissions')}}</span>
                                     </th>
+                                    <th>
+                                        <span style="font-weight: bold;font-size: 15px;"
+                                              class="userDatatable-title">{{__('lang.action')}}</span>
+                                    </th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -83,14 +101,28 @@
                                             </div>
                                         </td>
                                         <td>
+                                            <div style="font-size: 15px" class="userDatatable-content">
+                                                @foreach($admin->permissions as $permission)
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" disabled checked
+                                                               id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            {{$permission->name()}}
+                                                        </label>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </td>
+                                        <td>
                                             <div style="font-size: 15px;direction: ltr" class="userDatatable-content">
-                                                <button wire:click="deleteAdmin({{$admin->id}})"
-                                                        class="btn btn-danger btn-xs btn-rounded float-left ml-1">
+                                                <button style="margin: 3px" wire:click="deleteAdmin({{$admin->id}})"
+                                                        class="btn btn-danger btn-xs btn-rounded">
                                                     {{__('lang.delete')}}
                                                 </button>
-                                                <button class="btn btn-success btn-xs btn-rounded float-left ml-1">
+                                                <a href="{{url("admin/edit-admin/$admin->id")}}" style="margin: 3px"
+                                                   class="btn btn-success btn-xs btn-rounded">
                                                     {{__('lang.edit')}}
-                                                </button>
+                                                </a>
 
                                             </div>
                                         </td>
