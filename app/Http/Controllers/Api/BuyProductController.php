@@ -17,7 +17,7 @@ class BuyProductController extends Controller
     public function buyProducts(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'products' => ['required', 'json'],
+            'subProducts' => ['required', 'json'],
             'address_id' => ['required', 'numeric'],
             'discountPercentage' => ['nullable', 'numeric']
         ]);

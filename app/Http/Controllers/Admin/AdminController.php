@@ -16,14 +16,14 @@ class AdminController extends Controller
 
     public function allAdmin()
     {
-        return view('admin.admin');
+        return view('dashboard.admin.admin');
     }
 
     public function addAdmin()
     {
         $data['allBranch'] = Company_branch::get();
         $data['permissions'] = Permission::get();
-        return view('admin.addAdmin')->with($data);
+        return view('dashboard.admin.addAdmin')->with($data);
     }
 
     public function saveAddAdmin(Request $request)
@@ -66,7 +66,7 @@ class AdminController extends Controller
         $data['admin'] = User::findOrFail($adminId);
         $data['allBranch'] = Company_branch::where('id', '!=', $data['admin']->company_branch_id)->get();
         $data['permissions'] = Permission::get();
-        return view('admin.editAdmin')->with($data);
+        return view('dashboard.admin.editAdmin')->with($data);
     }
 
     public function saveEditAdmin(Request $request, $adminId)

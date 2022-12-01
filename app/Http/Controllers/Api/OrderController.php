@@ -66,7 +66,7 @@ class OrderController extends Controller
     public function serviceRequest(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'service_id' => ['required', 'exists:services,id'],
+            'service_id' => ['required', 'exists:subServices,id'],
             'details' => ['required', 'string'],
             'user_file' => ['required', 'file'],
         ]);

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -13,15 +14,15 @@ class Product extends Model
 
     public $guarded = ['id', 'created_at', 'updated_at'];
 
-    public function product_name()
+    public function product_name($lang = null)
     {
-        $lang = App::getLocale();
+        $lang =$lang ?? App::getLocale();
         return json_decode($this->product_name)->$lang;
     }
 
-    public function product_desc()
+    public function product_desc($lang = null)
     {
-        $lang = App::getLocale();
+        $lang =$lang ?? App::getLocale();
         return json_decode($this->product_desc)->$lang;
     }
 

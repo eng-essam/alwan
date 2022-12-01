@@ -13,6 +13,6 @@ class ServiceBranchController extends Controller
 
     public function allMainService()
     {
-        return $this->requestSuccess(null, Service_branchResource::collection(Service_branch::get()));
+        return $this->requestSuccess(null, Service_branchResource::collection(Service_branch::where('active',1)->get()));
     }
 }

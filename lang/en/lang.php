@@ -50,49 +50,47 @@ return [
     'home' => 'Dashboard',
     'users' => 'Users',
     'admins' => 'Admins',
-    'main_products'=>'Main Products',
-    'sub_products'=>'Sub Products',
-    'main_services'=>'Main Services',
-    'sub_services'=>'Sub Services',
-    'user_name' =>'User Name',
-    'admin_name' =>'Admin Name',
-    'image'=>'Image',
-    'name'=>'Name',
-    'phone'=>'Phone',
-    'search'=>'Search',
-    'all_branch'=>'All Branch',
-    'select_branch'=>'Select Branch',
-    'action'=>'Action',
-    'deleted_successfully'=>'Deleted successfully',
-    'delete'=>'Delete',
-    'edit'=>'Edit',
-    'addAdmin'=>'Add Admin',
-    'permissions'=>'Permissions',
-    'save'=>'Save',
+    'main_products' => 'Main Products',
+    'sub_products' => 'Sub Products',
+    'main_services' => 'Main Services',
+    'sub_services' => 'Sub Services',
+    'user_name' => 'User Name',
+    'admin_name' => 'Admin Name',
+    'image' => 'Image',
+    'name' => 'Name',
+    'phone' => 'Phone',
+    'search' => 'Search',
+    'all_branch' => 'All Branch',
+    'select_branch' => 'Select Branch',
+    'action' => 'Action',
+    'deleted_successfully' => 'Deleted successfully',
+    'delete' => 'Delete',
+    'edit' => 'Edit',
+    'addAdmin' => 'Add Admin',
+    'permissions' => 'Permissions',
+    'save' => 'Save',
+    'cancel' => 'Cancel',
     'add_admin_successfully' => 'Admin added successfully',
     'edit_admin_information' => 'Edit admin information',
     'edit_admin_information_successfully' => 'Admin information has been modified successfully',
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    'service_name' => 'Service name',
+    'number_of_sub_service' => 'Number of sub service',
+    'add_main_service' => 'Add main service ',
+    'is_active' => 'Active',
+    'active' => 'Active',
+    'deactive' => 'Deactive',
+    'edit_successfully' => 'Edit successfully',
+    'active_successfully' => 'Active successfully',
+    'deactive_successfully' => 'Deactive successfully',
+    'sure_delete_main_service' => 'Are you sure to delete this main service',
+    'desc_sure_delete_main_service' => 'When a main service is deleted, all sub-subServices that belong to it are automatically deleted.',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'name_ar' => 'Name (ar)',
+    'name_en' => 'Name (en)',
+    'desc_ar' => 'Description (ar)',
+    'desc_en' => 'Description (en)',
+    'edit_service' => 'Edit service',
+    'add_successfully' => 'Added successfully',
 
 ];

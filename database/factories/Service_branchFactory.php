@@ -15,7 +15,7 @@ class Service_branchFactory extends Factory
     public function definition(): array
     {
         $ImgID =Str::random(30);
-        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/service_branchs/' . $ImgID . '.png'));
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/mainServices/' . $ImgID . '.png'));
         return [
             'service_branch_name' => json_encode([
                 'en' => $this->faker->word,
@@ -25,7 +25,7 @@ class Service_branchFactory extends Factory
                 'en' => $this->faker->text,
                 'ar' => $this->faker->text
             ]),
-            'service_branch_img' => 'service_branchs/' . $ImgID . '.png',
+            'service_branch_img' => 'mainServices/' . $ImgID . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

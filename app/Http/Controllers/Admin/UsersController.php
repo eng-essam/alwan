@@ -9,7 +9,7 @@ class UsersController extends Controller
 {
     public function allUsers()
     {
-        return view('users.users');
+        return view('dashboard.users.users');
     }
 
 }

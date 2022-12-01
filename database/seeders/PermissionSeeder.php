@@ -55,11 +55,11 @@ class PermissionSeeder extends Seeder
 
         Permission::create([
             'name' => json_encode([
-                'en' => 'Responsible for ensuring that products are in stock',
+                'en' => 'Responsible for ensuring that subProducts are in stock',
                 'ar' => 'المسؤول عن التأكد ان المنتجات في المخزن ',
             ]),
             'desc' => json_encode([
-                'en' => 'Responsible for ensuring that products are in stock and then transferred to the delivery stage',
+                'en' => 'Responsible for ensuring that subProducts are in stock and then transferred to the delivery stage',
                 'ar' => 'المسؤول عن التأكد ان المنتجات في المخزن ثم تحويله لمرحلة التسليم'
             ])
         ]);

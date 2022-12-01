@@ -16,7 +16,7 @@ class Product_branchFactory extends Factory
     {
 
         $ImgID = Str::random(30);
-        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/product_branchs/' . $ImgID . '.png'));
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/mainProducts/' . $ImgID . '.png'));
 
         return [
             'product_branch_name' => json_encode([
@@ -27,7 +27,7 @@ class Product_branchFactory extends Factory
                 'en' => $this->faker->word,
                 'ar' => $this->faker->word
             ]),
-            'product_branch_img' => 'product_branchs/' . $ImgID . '.png',
+            'product_branch_img' => 'mainProducts/' . $ImgID . '.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

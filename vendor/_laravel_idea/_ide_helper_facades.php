@@ -1,4 +1,4 @@
-<?php //2474396dc093e0b084d8b5b724dbcd3a
+<?php //73bc0088ca3fbe86ce8822b344560262
 /** @noinspection all */
 
 namespace Barryvdh\Debugbar {
@@ -1717,7 +1717,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Http\Request::hasValidSignatureWhileIgnoring
      * @method static bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
      * @see \Illuminate\Http\Request::validateWithBag
-     * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
+     * @method static void validateWithBag(string $errorBag, array $rules, ...$params)
      * @see \Illuminate\Http\Request::hasValidRelativeSignature
      * @method static bool hasValidRelativeSignature()
      * @see \Illuminate\Http\Request::validate

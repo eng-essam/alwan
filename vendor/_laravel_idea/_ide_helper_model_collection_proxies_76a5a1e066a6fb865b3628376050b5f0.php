@@ -1,4 +1,4 @@
-<?php //9e5dfc9310b0a8d5c2094244372ac5dd
+<?php //ccf0c93a0a170a4761b17ef9ad4a143d
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -260,20 +260,10 @@ namespace LaravelIdea\Helper\App\Models {
     class _IH_Permission_CP {}
     
     /**
-     * @property _IH_Product_C|mixed $id
-     * @property _IH_Product_C|mixed $company_branch_id
-     * @property _IH_Product_C|mixed $product_branch_id
-     * @property _IH_Product_C|mixed $product_name
-     * @property _IH_Product_C|mixed $product_img
-     * @property _IH_Product_C|mixed $is_offer
-     * @property _IH_Product_C|mixed $product_desc
-     * @property _IH_Product_C|mixed $product_quantity_price
-     * @property _IH_Product_C|mixed $created_at
-     * @property _IH_Product_C|mixed $updated_at
      * @property _IH_Product_C|mixed $company_branch
      * @property _IH_Product_C|mixed $product_branch
-     * @method _IH_Product_C product_name()
-     * @method _IH_Product_C product_desc()
+     * @method _IH_Product_C product_name($lang = null)
+     * @method _IH_Product_C product_desc($lang = null)
      * @method _IH_Product_C refresh()
      * @method _IH_Product_C update(array $attributes = [], array $options = [])
      * @method _IH_Product_C save(array $options = [])
@@ -292,8 +282,9 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Product_branch_C|mixed $product_branch_img
      * @property _IH_Product_branch_C|mixed $created_at
      * @property _IH_Product_branch_C|mixed $updated_at
-     * @method _IH_Product_branch_C product_branch_name()
-     * @method _IH_Product_branch_C product_branch_desc()
+     * @property _IH_Product_branch_C|mixed $active
+     * @method _IH_Product_branch_C product_branch_name($lang = null)
+     * @method _IH_Product_branch_C product_branch_desc($lang = null)
      * @method _IH_Product_branch_C refresh()
      * @method _IH_Product_branch_C update(array $attributes = [], array $options = [])
      * @method _IH_Product_branch_C save(array $options = [])
@@ -322,22 +313,11 @@ namespace LaravelIdea\Helper\App\Models {
     class _IH_Role_CP {}
     
     /**
-     * @property _IH_Service_C|mixed $id
-     * @property _IH_Service_C|mixed $company_branch_id
-     * @property _IH_Service_C|mixed $service_branch_id
-     * @property _IH_Service_C|mixed $service_name
-     * @property _IH_Service_C|mixed $is_offer
-     * @property _IH_Service_C|mixed $main_img
-     * @property _IH_Service_C|mixed $service_first_desc
-     * @property _IH_Service_C|mixed $service_second_desc
-     * @property _IH_Service_C|mixed $sub_img
-     * @property _IH_Service_C|mixed $created_at
-     * @property _IH_Service_C|mixed $updated_at
      * @property _IH_Service_C|mixed $company_branch
      * @property _IH_Service_C|mixed $service_branch
-     * @method _IH_Service_C service_first_desc()
-     * @method _IH_Service_C service_second_desc()
-     * @method _IH_Service_C service_name()
+     * @method _IH_Service_C service_first_desc($lang = null)
+     * @method _IH_Service_C service_second_desc($lang = null)
+     * @method _IH_Service_C service_name($lang = null)
      * @method _IH_Service_C refresh()
      * @method _IH_Service_C update(array $attributes = [], array $options = [])
      * @method _IH_Service_C save(array $options = [])
@@ -356,8 +336,9 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Service_branch_C|mixed $service_branch_desc
      * @property _IH_Service_branch_C|mixed $created_at
      * @property _IH_Service_branch_C|mixed $updated_at
-     * @method _IH_Service_branch_C service_branch_name()
-     * @method _IH_Service_branch_C service_branch_desc()
+     * @property _IH_Service_branch_C|mixed $active
+     * @method _IH_Service_branch_C service_branch_name($lang = null)
+     * @method _IH_Service_branch_C service_branch_desc($lang = null)
      * @method _IH_Service_branch_C refresh()
      * @method _IH_Service_branch_C update(array $attributes = [], array $options = [])
      * @method _IH_Service_branch_C save(array $options = [])

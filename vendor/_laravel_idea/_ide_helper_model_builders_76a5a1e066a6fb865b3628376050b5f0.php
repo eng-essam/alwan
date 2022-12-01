@@ -1,4 +1,4 @@
-<?php //a1404c0acf54454f4f477e4f20a26572
+<?php //4a91708da2898a4d982e8175fea2930b
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -1261,16 +1261,6 @@ namespace LaravelIdea\Helper\App\Models {
     }
     
     /**
-     * @method _IH_Product_QB whereId($value)
-     * @method _IH_Product_QB whereCompanyBranchId($value)
-     * @method _IH_Product_QB whereProductBranchId($value)
-     * @method _IH_Product_QB whereProductName($value)
-     * @method _IH_Product_QB whereProductImg($value)
-     * @method _IH_Product_QB whereIsOffer($value)
-     * @method _IH_Product_QB whereProductDesc($value)
-     * @method _IH_Product_QB whereProductQuantityPrice($value)
-     * @method _IH_Product_QB whereCreatedAt($value)
-     * @method _IH_Product_QB whereUpdatedAt($value)
      * @method Product baseSole(array|string $columns = ['*'])
      * @method Product create(array $attributes = [])
      * @method _IH_Product_C|Product[] cursor()
@@ -1361,6 +1351,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Product_branch_QB whereProductBranchImg($value)
      * @method _IH_Product_branch_QB whereCreatedAt($value)
      * @method _IH_Product_branch_QB whereUpdatedAt($value)
+     * @method _IH_Product_branch_QB whereActive($value)
      * @method Product_branch baseSole(array|string $columns = ['*'])
      * @method Product_branch create(array $attributes = [])
      * @method _IH_Product_branch_C|Product_branch[] cursor()
@@ -1533,17 +1524,6 @@ namespace LaravelIdea\Helper\App\Models {
     }
     
     /**
-     * @method _IH_Service_QB whereId($value)
-     * @method _IH_Service_QB whereCompanyBranchId($value)
-     * @method _IH_Service_QB whereServiceBranchId($value)
-     * @method _IH_Service_QB whereServiceName($value)
-     * @method _IH_Service_QB whereIsOffer($value)
-     * @method _IH_Service_QB whereMainImg($value)
-     * @method _IH_Service_QB whereServiceFirstDesc($value)
-     * @method _IH_Service_QB whereServiceSecondDesc($value)
-     * @method _IH_Service_QB whereSubImg($value)
-     * @method _IH_Service_QB whereCreatedAt($value)
-     * @method _IH_Service_QB whereUpdatedAt($value)
      * @method Service baseSole(array|string $columns = ['*'])
      * @method Service create(array $attributes = [])
      * @method _IH_Service_C|Service[] cursor()
@@ -1634,6 +1614,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Service_branch_QB whereServiceBranchDesc($value)
      * @method _IH_Service_branch_QB whereCreatedAt($value)
      * @method _IH_Service_branch_QB whereUpdatedAt($value)
+     * @method _IH_Service_branch_QB whereActive($value)
      * @method Service_branch baseSole(array|string $columns = ['*'])
      * @method Service_branch create(array $attributes = [])
      * @method _IH_Service_branch_C|Service_branch[] cursor()

@@ -13,6 +13,6 @@ class ProductBranchController extends Controller
 
     public function allMainProduct()
     {
-        return $this->requestSuccess(null, Product_branchResource::collection(Product_branch::get()));
+        return $this->requestSuccess(null, Product_branchResource::collection(Product_branch::where('active',1)->get()));
     }
 }

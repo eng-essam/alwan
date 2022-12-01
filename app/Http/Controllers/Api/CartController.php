@@ -25,7 +25,7 @@ class CartController extends Controller
     public function addProductCart(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'product_id' => ['required', 'integer', 'exists:products,id'],
+            'product_id' => ['required', 'integer', 'exists:subProducts,id'],
             'file' => ['required', 'file', 'max:30720'],
             'details' => ['required', 'string'],
         ]);
@@ -55,7 +55,7 @@ class CartController extends Controller
     public function deleteProductCart(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'product_id' => ['required', 'integer', 'exists:products,id']
+            'product_id' => ['required', 'integer', 'exists:subProducts,id']
         ]);
 
         if ($validator->fails()) {

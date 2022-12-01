@@ -33,6 +33,20 @@
                                       class="menu-text">{{__('lang.admins')}}</span>
                             </a>
                         </li>
+                        <li style="margin-bottom: 3px">
+                            <a href="{{url('admin/all-main/subServices')}}">
+                                <i style="margin: 0 5px 0 5px" class="fas fa-business-time fa-lg"></i>
+                                <span style="font-size: 18px;font-weight: bold;padding-top: 5px"
+                                      class="menu-text">{{__('lang.main_services')}}</span>
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 3px">
+                            <a href="{{url('admin/all-main/subProducts')}}">
+                                <i style="margin: 0 5px 0 5px" class="fas fa-business-time fa-lg"></i>
+                                <span style="font-size: 18px;font-weight: bold;padding-top: 5px"
+                                      class="menu-text">{{__('lang.main_products')}}</span>
+                            </a>
+                        </li>
                     @endif
 
 

@@ -114,7 +114,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <div style="font-size: 15px;direction: ltr" class="userDatatable-content">
+                                            <div style="width: max-content;margin: auto;" class=" d-flex">
                                                 <button style="margin: 3px" wire:click="deleteAdmin({{$admin->id}})"
                                                         class="btn btn-danger btn-xs btn-rounded">
                                                     {{__('lang.delete')}}

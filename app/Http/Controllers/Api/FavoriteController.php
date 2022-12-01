@@ -24,7 +24,7 @@ class FavoriteController extends Controller
     public function addProductFavorite(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'product_id' => ['required', 'integer', 'exists:products,id']
+            'product_id' => ['required', 'integer', 'exists:subProducts,id']
         ]);
 
         if ($validator->fails()) {
@@ -49,7 +49,7 @@ class FavoriteController extends Controller
     public function deleteProductFavorite(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'product_id' => ['required', 'integer', 'exists:products,id']
+            'product_id' => ['required', 'integer', 'exists:subProducts,id']
         ]);
 
         if ($validator->fails()) {

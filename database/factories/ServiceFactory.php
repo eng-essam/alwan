@@ -18,8 +18,8 @@ class ServiceFactory extends Factory
     {
         $ImgID1 =Str::random(30);
         $ImgID2 =Str::random(30);
-        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/services/' . $ImgID1 . '.png'));
-        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/services/' . $ImgID2 . '.png'));
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/subServices/' . $ImgID1 . '.png'));
+        Avatar::create($this->faker->name())->setShape('square')->save(public_path('uploads/subServices/' . $ImgID2 . '.png'));
 
         return [
             'company_branch_id' => Company_branch::inRandomOrder()->first()->id,
@@ -28,7 +28,7 @@ class ServiceFactory extends Factory
                 'en' => $this->faker->word,
                 'ar' => $this->faker->word
             ]),
-            'main_img' => 'services/' . $ImgID1 . '.png',
+            'main_img' => 'subServices/' . $ImgID1 . '.png',
             'service_first_desc' => json_encode([
                 'en' => $this->faker->text,
                 'ar' => $this->faker->text
@@ -37,7 +37,7 @@ class ServiceFactory extends Factory
                 'en' => $this->faker->text,
                 'ar' => $this->faker->text
             ]),
-            'sub_img' => 'services/' . $ImgID2 . '.png',
+            'sub_img' => 'subServices/' . $ImgID2 . '.png',
             'is_offer' => 0,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),

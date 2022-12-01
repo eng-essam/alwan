@@ -107,7 +107,22 @@
 <script src="{{asset('admin/assets/theme_assets/js/jvectormap-init.js')}}"></script>
 <script src="{{asset('admin/assets/theme_assets/js/leaflet-init.js')}}"></script>
 <script src="{{asset('admin/assets/theme_assets/js/main.js')}}"></script>
+@yield('script')
 @livewireScripts
+<script>
+        window.addEventListener('closeEditMainServiceModal', event => {
+          $('#editMainServiceModal').modal('hide');
+        });
+        window.addEventListener('closeAddMainServiceModal', event => {
+          $('#addMainServiceModal').modal('hide');
+        });
+        window.addEventListener('showAddMainServiceModal', event => {
+          $('#addMainServiceModal').modal('show');
+        });
+        window.addEventListener('showEditMainServiceModal', event => {
+          $('#editMainServiceModal').modal('show');
+        });
+</script>
 </body>
 
 </html>
