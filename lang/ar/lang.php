@@ -104,7 +104,8 @@ return [
     'add_successfully' => 'تم الاضافة بنجاح',
     'add_sub_service' => 'اضافة خدمة',
     'add_sub_product' => 'اضافة منتح',
-    'product_price' => 'سعر المنتج',
+    'quantity_price' => 'السعر والكمية',
     'branch' => 'الفرع',
-
+    'price'=>'السعر',
+    'quantity'=>'الكمية',
 ];

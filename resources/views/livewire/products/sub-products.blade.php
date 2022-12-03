@@ -44,7 +44,7 @@
                                     </th>
                                     <th>
                                         <span style="font-weight: bold;font-size: 15px;"
-                                              class="userDatatable-title">{{__('lang.product_price')}}</span>
+                                              class="userDatatable-title">{{__('lang.quantity_price')}}</span>
                                     </th>
                                     <th>
                                         <span style="font-weight: bold;font-size: 15px;"
@@ -75,7 +75,7 @@
                                         </td>
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
-                                                <img class="profile-user-img img-square wh-80"
+                                                <img class="profile-user-img img-square wh-50"
                                                      src="{{asset("uploads/$product->product_img") }}"
                                                      alt="author">
                                             </div>
@@ -91,10 +91,19 @@
                                             </div>
                                         </td>
 
+                                        @php
+                                            $allQuantityPrices=json_decode($product->product_quantity_price,true);
+                                        @endphp
 
-                                        <td>
+                                        <td style="width: 210px">
                                             <div style="font-size: 15px" class="userDatatable-content">
-
+                                                <ul>
+                                                    @foreach($allQuantityPrices as $key => $oneQuantityPrice)
+                                                        <li>{{__('lang.quantity') . ': ' . $allQuantityPrices[$key]['quantity'] . ' | ' .
+                                                          __('lang.price') . ': ' . $allQuantityPrices[$key]['price']}}
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
                                             </div>
                                         </td>
                                         <td>

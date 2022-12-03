@@ -104,9 +104,10 @@ return [
     'add_successfully' => 'Added successfully',
     'add_sub_service' => 'Add service',
     'add_sub_product' => 'Add product',
-    'product_price' => 'Product price',
+    'quantity_price' => 'Quantity and Price',
     'branch' => 'Branch',
-
+    'price'=>'Price',
+    'quantity'=>'Quantity',
 
 
 ];
