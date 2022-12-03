@@ -104,10 +104,14 @@ return [
     'add_successfully' => 'Added successfully',
     'add_sub_service' => 'Add service',
     'add_sub_product' => 'Add product',
-    'quantity_price' => 'Quantity and Price',
+    'quantity_price' => 'Quantity / Price',
     'branch' => 'Branch',
     'price'=>'Price',
     'quantity'=>'Quantity',
-
+    'add_to_offers' =>'Add to offers',
+    'add_to_offers_successfully' => 'Successfully added to offers',
+    'remove_from_offers' =>'remove from offers',
+    'remove_from_offers_successfully' => 'Successfully removed from offers',
+    'offer' => 'Offer',
 
 ];

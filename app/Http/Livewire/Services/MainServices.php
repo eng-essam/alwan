@@ -15,8 +15,8 @@ class MainServices extends Component
     use WithPagination;
     use WithFileUploads;
 
-    public $serviceName, $deleteMainServiceId, $editeMainServiceId;
-    public $name_en, $name_ar, $desc_ar, $desc_en, $serviceImage;
+    public $serviceName, $editeMainServiceId;
+    public $name_en, $name_ar, $desc_ar, $desc_en, $Image;
 
     protected $paginationTheme = 'bootstrap';
 

@@ -48,7 +48,7 @@
                                             <span style="font-weight: bold;font-size: 15px;"
                                                   class="userDatatable-title">
                                                 <select wire:model="branchType" class="form-control ml-sm-10 ml-0">
-                                                    <option style="font-size: 15px;"
+                                                    <option style="font-size: 15px;text-align: center"
                                                             value="{{null}}">{{__('lang.all_branch')}}</option>
                                                     @foreach($allBranch as $branch)
                                                         <option style="font-size: 15px;text-align: center"

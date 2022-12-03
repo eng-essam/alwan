@@ -123,17 +123,11 @@
           $('#editMainServiceModal').modal('show');
         });
 
-        window.addEventListener('closeEditMainProductModal', event => {
-          $('#editMainProductModal').modal('hide');
+        window.addEventListener('closeAddProductModal', event => {
+          $('#addProductModal').modal('hide');
         });
-        window.addEventListener('closeAddMainProductModal', event => {
-          $('#addMainProductModal').modal('hide');
-        });
-        window.addEventListener('showAddMainProductModal', event => {
-          $('#addMainProductModal').modal('show');
-        });
-        window.addEventListener('showEditMainProductModal', event => {
-          $('#editMainProductModal').modal('show');
+        window.addEventListener('closeEditProductModal', event => {
+          $('#EditProductModal').modal('hide');
         });
 </script>
 </body>

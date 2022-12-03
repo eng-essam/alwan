@@ -104,8 +104,14 @@ return [
     'add_successfully' => 'تم الاضافة بنجاح',
     'add_sub_service' => 'اضافة خدمة',
     'add_sub_product' => 'اضافة منتح',
-    'quantity_price' => 'السعر والكمية',
+    'quantity_price' => 'الكمية / السعر',
     'branch' => 'الفرع',
-    'price'=>'السعر',
-    'quantity'=>'الكمية',
+    'price' => 'السعر',
+    'quantity' => 'الكمية',
+    'add_to_offers' => 'اضافة للعروض',
+    'add_to_offers_successfully' => 'تم الاضافة الي العروض بنجاح',
+    'remove_from_offers' => 'حذف من العروض',
+    'remove_from_offers_successfully' => 'تم الحذف من العروض بنجاح',
+    'offer' => 'عرض',
+
 ];
