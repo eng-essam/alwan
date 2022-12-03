@@ -17,7 +17,7 @@ class ServiceController extends Controller
 
     public function allSubService()
     {
-        return $this->requestSuccess(null, ServiceResource::collection(Service::where('active', 1)->get()));
+        return $this->requestSuccess(null, ServiceResource::collection(Service::get()));
     }
 
     public function allSubServiceBelongMainService(Request $request)
@@ -30,13 +30,14 @@ class ServiceController extends Controller
             return $this->requestFails($validator->errors()->all());
         }
         return $this->requestSuccess(null,
-            ServiceResource::collection(Service::where('service_branch_id', $request->mainServiceId)->where('active', 1)->get()));
+            ServiceResource::collection(Service::where('service_branch_id', $request->mainServiceId)->get()
+            ));
     }
 
     public function oneSubService(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'subServiceId' => ['required', 'numeric', 'exists:subServices,id'],
+            'subServiceId' => ['required', 'numeric', 'exists:services,id'],
         ]);
 
         if ($validator->fails()) {

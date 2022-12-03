@@ -14,14 +14,14 @@
                     <li style="margin-bottom: 3px">
                         <a href="{{url('admin/home')}}" class="active">
                             <i style="margin: 0 5px 0 5px" class="fas fa-home fa-lg"></i>
-                            <span style="font-size: 18px;font-weight: bold;padding-top: 5px"
+                            <span style="font-size: 16px;font-weight: bold;padding-top: 5px"
                                   class="menu-text">{{__('lang.home')}}</span>
                         </a>
                     </li>
                     <li style="margin-bottom: 3px">
                         <a href="{{url('admin/all-users')}}">
                             <i style="margin: 0 5px 0 5px" class="fas fa-users fa-lg"></i>
-                            <span style="font-size: 18px;font-weight: bold;padding-top: 5px"
+                            <span style="font-size: 16px;font-weight: bold;padding-top: 5px"
                                   class="menu-text">{{__('lang.users')}}</span>
                         </a>
                     </li>
@@ -29,25 +29,39 @@
                         <li style="margin-bottom: 3px">
                             <a href="{{url('admin/all-admins')}}">
                                 <i style="margin: 0 5px 0 5px" class="fas fa-user-shield fa-lg"></i>
-                                <span style="font-size: 18px;font-weight: bold;padding-top: 5px"
+                                <span style="font-size: 16px;font-weight: bold;padding-top: 5px"
                                       class="menu-text">{{__('lang.admins')}}</span>
                             </a>
                         </li>
                         <li style="margin-bottom: 3px">
-                            <a href="{{url('admin/all-main/subServices')}}">
+                            <a href="{{url('admin/all-main/services')}}">
                                 <i style="margin: 0 5px 0 5px" class="fas fa-business-time fa-lg"></i>
-                                <span style="font-size: 18px;font-weight: bold;padding-top: 5px"
+                                <span style="font-size: 16px;font-weight: bold;padding-top: 5px"
                                       class="menu-text">{{__('lang.main_services')}}</span>
                             </a>
                         </li>
                         <li style="margin-bottom: 3px">
-                            <a href="{{url('admin/all-main/subProducts')}}">
+                            <a href="{{url('admin/all-main/products')}}">
                                 <i style="margin: 0 5px 0 5px" class="fas fa-business-time fa-lg"></i>
-                                <span style="font-size: 18px;font-weight: bold;padding-top: 5px"
+                                <span style="font-size: 16px;font-weight: bold;padding-top: 5px"
                                       class="menu-text">{{__('lang.main_products')}}</span>
                             </a>
                         </li>
                     @endif
+                    <li style="margin-bottom: 3px">
+                        <a href="{{url('admin/all-sub/Products')}}">
+                            <i style="margin: 0 5px 0 5px" class="fas fa-shopping-bag fa-lg"></i>
+                            <span style="font-size: 16px;font-weight: bold;padding-top: 5px"
+                                  class="menu-text">{{__('lang.sub_products')}}</span>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 3px">
+                        <a href="{{url('admin/all-sub/Services')}}">
+                            <i style="margin: 0 5px 0 5px" class="fas fa-shopping-bag fa-lg"></i>
+                            <span style="font-size: 16px;font-weight: bold;padding-top: 5px"
+                                  class="menu-text">{{__('lang.sub_services')}}</span>
+                        </a>
+                    </li>
 
 
                     {{--                    <li class="has-child open">--}}

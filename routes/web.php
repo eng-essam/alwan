@@ -4,17 +4,16 @@ use App\Http\Controllers\Admin\{AdminController,
     HomeController,
     MainProductsController,
     MainServicesController,
-    UsersController
+    SubProductsController,
+    SubServicesController,
+    UsersController,
 };
 use App\Http\Controllers\Admin\LangController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('test', function () {
-    toastr()->error('Oops! Something went wrong!');
-    toastr()->warning('Are you sure you want to proceed ?');
-
-
+    
 });
 
 Auth::routes(['register' => false]);
@@ -45,12 +44,17 @@ Route::prefix('admin')->middleware(['auth', 'adminAndSuperAdmin', 'langWeb'])->g
 
         Route::post('/edit-admin/{adminId}', [AdminController::class, 'saveEditAdmin']);//save Edit Admin
 
-        Route::get('/all-main/subServices', [MainServicesController::class, 'allMainServices']);//all Main Services
+        //Services
+        Route::get('/all-main/services', [MainServicesController::class, 'allMainServices']);//all Main Services
 
-        Route::get('/all-main/subProducts', [MainProductsController::class, 'allMainProducts']);//all Main Products
-
-
+        //Products
+        Route::get('/all-main/products', [MainProductsController::class, 'allMainProducts']);//all Main Products
     });
+
+    Route::get('/all-sub/Products', [SubProductsController::class, 'allSubProducts']);//all Sub Products
+
+    Route::get('/all-sub/Services', [SubServicesController::class, 'allSubServices']);//all Sub Services
+
 
 });
 

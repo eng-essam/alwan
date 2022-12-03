@@ -35,7 +35,7 @@ class MainServices extends Component
     {
         Service_branch::findOrFail($mainServiceId)->update(['active' => 1]);
 
-        Service::where('company_branch_id', $mainServiceId)->update(['active' => 1]);
+        Service::where('service_branch_id ', $mainServiceId)->update(['active' => 1]);
 
         toastr()->success(__('lang.active_successfully'));
 
@@ -46,7 +46,7 @@ class MainServices extends Component
     {
         Service_branch::findOrFail($mainServiceId)->update(['active' => 0]);
 
-        Service::where('company_branch_id', $mainServiceId)->update(['active' => 0]);
+        Service::where('service_branch_id', $mainServiceId)->update(['active' => 0]);
 
         toastr()->success(__('lang.deactive_successfully'));
 
@@ -62,7 +62,7 @@ class MainServices extends Component
         $MainService = Service_branch::findOrFail($this->deleteMainServiceId);
         Storage::disk('uploads')->delete($MainService->service_branch_img);
 
-        $allSubServices = Service::where('company_branch_id', $this->deleteMainServiceId)->get();
+        $allSubServices = Service::where('service_branch_id', $this->deleteMainServiceId)->get();
         foreach ($allSubServices as $subService) {
             Storage::disk('uploads')->delete($subService->main_img);
             Storage::disk('uploads')->delete($subService->sub_img);
@@ -105,7 +105,7 @@ class MainServices extends Component
         $imgPath = $MainService->service_branch_img;
         if ($this->serviceImage != null) {
             Storage::disk('uploads')->delete($imgPath);
-            $imgPath = Storage::disk('uploads')->put('mainServices', $this->serviceImage);
+            $imgPath = Storage::disk('uploads')->put('services', $this->serviceImage);
         }
 
         $MainService->update([
@@ -119,6 +119,7 @@ class MainServices extends Component
             ]),
             'service_branch_img' => $imgPath
         ]);
+        sleep(1);
 
         $this->dispatchBrowserEvent('closeEditMainServiceModal');
         toastr()->success(__('lang.edit_successfully'));
@@ -135,7 +136,7 @@ class MainServices extends Component
             'serviceImage' => 'required|image'
         ]);
 
-        $imgPath = Storage::disk('uploads')->put('mainServices', $this->serviceImage);
+        $imgPath = Storage::disk('uploads')->put('services', $this->serviceImage);
         Service_branch::create([
             'service_branch_name' => json_encode([
                 'ar' => $this->name_ar,
@@ -148,6 +149,7 @@ class MainServices extends Component
             'service_branch_img' => $imgPath
         ]);
 
+        sleep(1);
         $this->dispatchBrowserEvent('closeAddMainServiceModal');
         toastr()->success(__('lang.add_successfully'));
         $this->cacheClear();

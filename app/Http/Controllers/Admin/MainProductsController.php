@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 
 class MainProductsController extends Controller
 {
-    public function index()
+    public function allMainProducts()
     {
-
+        return view('dashboard.products.allMainProducts');
     }
 }

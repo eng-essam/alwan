@@ -143,19 +143,19 @@ Route::middleware(['lang'])->group(function () {
         Route::post('resend/service/request', [OrderController::class, 'resendServiceRequest']); //resend Service Request
 
         //Buy Product
-        Route::post('buy/subProducts', [BuyProductController::class, 'buyProducts']); //buy Products
+        Route::post('buy/products', [BuyProductController::class, 'buyProducts']); //buy Products
 
         Route::post('buy/service', [BuyServiceController::class, 'buyService']); //buy Service
 
 
         //Order Products
-        Route::get('all/order/subProducts', [OrderController::class, 'allOrderProducts']); //all Order Products
+        Route::get('all/order/products', [OrderController::class, 'allOrderProducts']); //all Order Products
 
-        Route::get('all/order/subProducts/done', [OrderController::class, 'allOrderProductsDone']); //all Order Products Done
+        Route::get('all/order/products/done', [OrderController::class, 'allOrderProductsDone']); //all Order Products Done
 
-        Route::get('all/order/subServices', [OrderController::class, 'allOrderServices']); //all Order Services
+        Route::get('all/order/services', [OrderController::class, 'allOrderServices']); //all Order Services
 
-        Route::get('all/order/subServices/done', [OrderController::class, 'allOrderServicesDone']); //all Order Services Done
+        Route::get('all/order/services/done', [OrderController::class, 'allOrderServicesDone']); //all Order Services Done
     });
 
 });

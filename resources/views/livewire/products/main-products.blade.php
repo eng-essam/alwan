@@ -3,11 +3,11 @@
         <div class="col-12">
             <div class="card">
                 <div style="font-size: 20px;font-weight: bold;" class="card-header color-dark fw-500">
-                    {{__('lang.main_services')}}
+                    {{__('lang.main_products')}}
                     <div>
-                        <button style="font-size: 15px" data-toggle="modal" data-target="#addMainServiceModal"
-                               wire:click.prevent="cacheClear" class="btn btn-primary btn-xs btn-rounded ml-1">
-                            {{__('lang.add_main_service')}}
+                        <button style="font-size: 15px" data-toggle="modal" data-target="#addMainProductModal"
+                                wire:click.prevent="cacheClear" class="btn btn-primary btn-xs btn-rounded ml-1">
+                            {{__('lang.add_main_product')}}
                         </button>
                     </div>
                 </div>
@@ -16,8 +16,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-default">{{__('lang.search')}}</span>
                     </div>
-                    <input wire:model="serviceName" type="text" class="form-control"
-                           placeholder="{{__('lang.service_name')}}">
+                    <input wire:model="productName" type="text" class="form-control"
+                           placeholder="{{__('lang.product_name')}}">
                 </div>
 
                 <div class="card-body p-0">
@@ -36,15 +36,15 @@
                                     </th>
                                     <th>
                                         <span style="font-weight: bold;font-size: 15px;"
-                                              class="userDatatable-title">{{__('lang.service_name')}}</span>
+                                              class="userDatatable-title">{{__('lang.product_name')}}</span>
                                     </th>
                                     <th>
                                         <span style="font-weight: bold;font-size: 15px;"
-                                              class="userDatatable-title">{{__('lang.service_desc')}}</span>
+                                              class="userDatatable-title">{{__('lang.product_desc')}}</span>
                                     </th>
                                     <th>
                                         <span style="font-weight: bold;font-size: 15px;"
-                                              class="userDatatable-title">{{__('lang.number_of_sub_service')}}</span>
+                                              class="userDatatable-title">{{__('lang.number_of_sub_product')}}</span>
                                     </th>
                                     <th>
                                         <span style="font-weight: bold;font-size: 15px;"
@@ -58,67 +58,69 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($mainServices as $mainService)
+                                @foreach($mainProducts as $mainProduct)
                                     <tr style="text-align: center;">
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
-                                                {{$mainServices->firstItem()+$loop->index}}
+                                                {{$mainProducts->firstItem()+$loop->index}}
                                             </div>
                                         </td>
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
                                                 <img class="profile-user-img img-square wh-80"
-                                                     src="{{asset("uploads/$mainService->service_branch_img") }}"
+                                                     src="{{asset("uploads/$mainProduct->product_branch_img") }}"
                                                      alt="author">
                                             </div>
                                         </td>
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
-                                                {{$mainService->service_branch_name()}}
+                                                {{$mainProduct->product_branch_name()}}
                                             </div>
                                         </td>
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
-                                                {{$mainService->service_branch_desc()}}
+                                                {{$mainProduct->product_branch_desc()}}
                                             </div>
                                         </td>
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
-                                                {{$mainService->services->count()}}
+                                                {{$mainProduct->products->count()}}
                                             </div>
                                         </td>
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
-                                                @if($mainService->active == 0)
-                                                    <span style="font-size: 15px;" class="atbd-tag tag-danger tag-transparented">{{__('lang.no')}}</span>
-                                                @elseif($mainService->active == 1)
-                                                    <span style="font-size: 15px;" class="atbd-tag tag-success tag-transparented">{{__('lang.yes')}}</span>
+                                                @if($mainProduct->active == 0)
+                                                    <span style="font-size: 15px;"
+                                                          class="atbd-tag tag-danger tag-transparented">{{__('lang.no')}}</span>
+                                                @elseif($mainProduct->active == 1)
+                                                    <span style="font-size: 15px;"
+                                                          class="atbd-tag tag-success tag-transparented">{{__('lang.yes')}}</span>
                                                 @endif
                                             </div>
                                         </td>
                                         <td>
                                             <div style="width: max-content;margin: auto;" class=" d-flex">
                                                 <button style="margin: 3px"
-                                                        wire:click.prevent="editeMainService({{$mainService->id}})"
-                                                        data-toggle="modal" data-target="#editMainServiceModal"
+                                                        wire:click.prevent="editeMainProduct({{$mainProduct->id}})"
+                                                        data-toggle="modal" data-target="#editMainProductModal"
                                                         class="btn btn-success  btn-xs btn-rounded">
                                                     {{__('lang.edit')}}
                                                 </button>
                                                 <button style="margin: 3px"
-                                                        wire:click="deleteMainService({{$mainService->id}})"
-                                                        data-toggle="modal" data-target="#deleteMainService"
+                                                        wire:click="deleteMainProduct({{$mainProduct->id}})"
+                                                        data-toggle="modal" data-target="#deleteMainProduct"
                                                         class="btn btn-danger btn-xs btn-rounded">
                                                     {{__('lang.delete')}}
                                                 </button>
-                                                @if($mainService->active == 0)
+                                                @if($mainProduct->active == 0)
                                                     <button style="margin: 3px"
-                                                            wire:click="activeMainService({{$mainService->id}})"
+                                                            wire:click="activeMainProduct({{$mainProduct->id}})"
                                                             class="btn btn-info btn-xs btn-rounded">
                                                         {{__('lang.active')}}
                                                     </button>
-                                                @elseif($mainService->active == 1)
+                                                @elseif($mainProduct->active == 1)
                                                     <button style="margin: 3px"
-                                                            wire:click="deactiveMainService({{$mainService->id}})"
+                                                            wire:click="deactiveMainProduct({{$mainProduct->id}})"
                                                             class="btn btn-info btn-xs btn-rounded">
                                                         {{__('lang.deactive')}}
                                                     </button>
@@ -132,7 +134,7 @@
                             </table>
                         </div>
                         <div style="margin-top: 10px">
-                            {{$mainServices->render()}}
+                            {{$mainProducts->render()}}
                         </div>
                     </div>
                 </div>
@@ -140,16 +142,17 @@
         </div>
     </div>
 
-    <!-- start: add_main_service -->
-    <div wire:ignore.self class="modal-info-delete modal fade show" id="addMainServiceModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- start: add_main_Product -->
+    <div wire:ignore.self class="modal-info-delete modal fade show" id="addMainProductModal" tabindex="-1" role="dialog"
+         aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content modal-bg-white ">
                 <div class="modal-header">
-                    <h6 class="modal-title">{{__('lang.add_main_service')}}</h6>
+                    <h6 class="modal-title">{{__('lang.add_main_product')}}</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span data-feather="x"></span></button>
                 </div>
-                <form wire:submit.prevent="submitAddMainService">
+                <form wire:submit.prevent="submitAddMainProduct">
                     <div class="modal-body">
                         <div class="row">
 
@@ -201,11 +204,11 @@
                                             <line x1="12" y1="3" x2="12" y2="15"></line>
                                         </svg>
                                         Upload</a>
-                                    <input style="display: none" type="file" wire:model="serviceImage"
+                                    <input style="display: none" type="file" wire:model="productImage"
                                            class="upload-one"
                                            id="upload-3">
                                 </div>
-                                @error('serviceImage')
+                                @error('productImage')
                                 <small style="color: red">{{ $message }}.</small>
                                 @enderror
                             </div>
@@ -226,16 +229,17 @@
     </div>
     <!-- ends: .modal-Basic -->
 
-    <!-- start: edit_service -->
-    <div wire:ignore.self class="modal-info-delete modal fade show" id="editMainServiceModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- start: edit_Product -->
+    <div wire:ignore.self class="modal-info-delete modal fade show" id="editMainProductModal" tabindex="-1"
+         role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content modal-bg-white ">
                 <div class="modal-header">
-                    <h6 class="modal-title">{{__('lang.edit_service')}}</h6>
+                    <h6 class="modal-title">{{__('lang.edit_product')}}</h6>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span data-feather="x"></span></button>
                 </div>
-                <form wire:submit.prevent="submitEditeMainService">
+                <form wire:submit.prevent="submitEditeMainProduct">
                     <div class="modal-body">
                         <div class="row">
 
@@ -287,10 +291,10 @@
                                             <line x1="12" y1="3" x2="12" y2="15"></line>
                                         </svg>
                                         Upload</a>
-                                    <input style="display: none" type="file" wire:model="serviceImage"
+                                    <input style="display: none" type="file" wire:model="productImage"
                                            class="upload-one"
                                            id="upload-3">
-                                </div> @error('serviceImage')
+                                </div> @error('productImage')
                                 <small style="color: red">{{ $message }}.</small>
                                 @enderror
                             </div>
@@ -311,8 +315,9 @@
     </div>
     <!-- ends: .modal-Basic -->
 
-    <!-- ends: .modal-info-confirmed -->
-    <div wire:ignore.self class="modal-info-delete modal fade show" id="deleteMainService" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- ends: .delete_Product -->
+    <div wire:ignore.self class="modal-info-delete modal fade show" id="deleteMainProduct" tabindex="-1" role="dialog"
+         aria-hidden="true">
         <div class="modal-dialog modal-sm modal-info" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -321,15 +326,15 @@
                             <span data-feather="info"></span>
                         </div>
                         <div class="modal-info-text">
-                            <h6>{{__('lang.sure_delete_main_service')}}</h6>
-                            <p>{{__('lang.desc_sure_delete_main_service')}}</p>
+                            <h6>{{__('lang.sure_delete_main_product')}}</h6>
+                            <p>{{__('lang.desc_sure_delete_main_product')}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger btn-outlined btn-sm"
                             data-dismiss="modal">{{__('lang.no')}}</button>
-                    <button type="button" wire:click="submitDeleteMainService"
+                    <button type="button" wire:click="submitDeleteMainProduct"
                             class="btn btn-success btn-outlined btn-sm"
                             data-dismiss="modal">{{__('lang.yes')}}
                     </button>

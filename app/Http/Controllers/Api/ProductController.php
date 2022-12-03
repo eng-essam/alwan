@@ -17,7 +17,7 @@ class ProductController extends Controller
 
     public function allSubProduct()
     {
-        return $this->requestSuccess(null, ProductResource::collection(Product::where('active',1)->get()));
+        return $this->requestSuccess(null, ProductResource::collection(Product::get()));
     }
 
     public function allSubProductBelongMainProduct(Request $request)
@@ -30,14 +30,14 @@ class ProductController extends Controller
             return $this->requestFails($validator->errors()->all());
         }
         return $this->requestSuccess(null,
-            ProductResource::collection(Product::where('product_branch_id', $request->mainProductId)->where('active',1)->get()
+            ProductResource::collection(Product::where('product_branch_id', $request->mainProductId)->get()
             ));
     }
 
     public function oneSubProduct(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'subProductId' => ['required', 'numeric', 'exists:subProducts,id'],
+            'subProductId' => ['required', 'numeric', 'exists:products,id'],
         ]);
 
         if ($validator->fails()) {

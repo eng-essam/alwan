@@ -9,6 +9,6 @@ class MainServicesController extends Controller
 {
     public function allMainServices()
     {
-        return view('dashboard.mainServices.allMainServices');
+        return view('dashboard.services.allMainServices');
     }
 }

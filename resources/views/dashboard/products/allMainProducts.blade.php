@@ -1,9 +1,9 @@
 @extends('layouts.adminLayout')
 
 @section('title')
-    {{__('lang.main_services')}}
+    {{__('lang.main_products')}}
 @endsection
 
 @section('content')
-    @livewire('subServices.main-subServices')
+    @livewire('products.main-products')
 @endsection
