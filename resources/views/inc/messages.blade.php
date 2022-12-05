@@ -17,3 +17,9 @@
         <div>{{ session('status') }}</div>
     </div>
 @endif
+
+@if (session('error'))
+    <div style="display: flex;justify-content: center" class="alert alert-danger">
+        <div>{{ session('status') }}</div>
+    </div>
+@endif

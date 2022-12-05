@@ -18,43 +18,43 @@ class OrderStatusSeeder extends Seeder
 
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'reques has been rejected',
+                'en' => 'Order has been rejected',
                 'ar' => 'تم الرفض'
             ]),
         ]);
 
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'pending until payment',
+                'en' => 'Pending until payment',
                 'ar' => 'معلق لحين الدفع'
             ]),
         ]);
 
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'The receipt of the request',
+                'en' => 'Order received',
                 'ar' => 'تم استلام الطلب'
             ]),
         ]);
 
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'In the stage of sorted',
-                'ar' => 'في مرحلة الفرز'
+                'en' => 'Stage of sorted',
+                'ar' => ' مرحلة الفرز'
             ]),
         ]);
 
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'In the stage of execution',
-                'ar' => 'في مرحلة التنفيذ'
+                'en' => 'Stage of execution',
+                'ar' => ' مرحلة التنفيذ'
             ]),
         ]);
 
         OrderStatus::create([
             'status' => json_encode([
-                'en' => 'reques has been rejected',
-                'ar' => 'في مرحلة التخزين'
+                'en' => 'Storage stage',
+                'ar' => ' مرحلة التخزين'
             ]),
         ]);
 

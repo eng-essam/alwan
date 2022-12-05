@@ -126,8 +126,19 @@
         window.addEventListener('closeAddProductModal', event => {
           $('#addProductModal').modal('hide');
         });
-        window.addEventListener('closeEditProductModal', event => {
-          $('#EditProductModal').modal('hide');
+        window.addEventListener('closeAddServiceModal', event => {
+          $('#addServiceModal').modal('hide');
+        });
+        window.addEventListener('closeEditServiceModal', event => {
+          $('#editServiceModal').modal('hide');
+        });
+
+
+        window.addEventListener('closeOrderModal', event => {
+          $('#acceptOrderModal').modal('hide');
+        });
+        window.addEventListener('closeOrderModal', event => {
+          $('#refusalOrderModal').modal('hide');
         });
 </script>
 </body>

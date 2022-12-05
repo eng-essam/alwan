@@ -36,7 +36,10 @@ class MainProducts extends Component
     {
         Product_branch::findOrFail($mainProductId)->update(['active' => 1]);
 
-        Product::where('product_branch_id', $mainProductId)->update(['active' => 1]);
+        $allProduct = Product::where('product_branch_id', $mainProductId)->get();
+        if ($allProduct) {
+            Product::where('product_branch_id', $mainProductId)->update(['active' => 1]);
+        }
 
         toastr()->success(__('lang.active_successfully'));
 
@@ -47,8 +50,10 @@ class MainProducts extends Component
     {
         Product_branch::findOrFail($mainProductId)->update(['active' => 0]);
 
-        Product::where('product_branch_id', $mainProductId)->update(['active' => 0]);
-
+        $allProduct = Product::where('product_branch_id', $mainProductId)->get();
+        if ($allProduct) {
+            Product::where('product_branch_id', $mainProductId)->update(['active' => 0]);
+        }
         toastr()->success(__('lang.deactive_successfully'));
 
     }

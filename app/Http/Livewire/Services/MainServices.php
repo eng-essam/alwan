@@ -35,7 +35,10 @@ class MainServices extends Component
     {
         Service_branch::findOrFail($mainServiceId)->update(['active' => 1]);
 
-        Service::where('service_branch_id ', $mainServiceId)->update(['active' => 1]);
+        $allService = Service::where('service_branch_id', $mainServiceId)->get();
+        if ($allService){
+            Service::where('service_branch_id', $mainServiceId)->update(['active' => 1]);
+        }
 
         toastr()->success(__('lang.active_successfully'));
 
@@ -46,8 +49,10 @@ class MainServices extends Component
     {
         Service_branch::findOrFail($mainServiceId)->update(['active' => 0]);
 
-        Service::where('service_branch_id', $mainServiceId)->update(['active' => 0]);
-
+        $allService = Service::where('service_branch_id', $mainServiceId)->get();
+        if ($allService){
+            Service::where('service_branch_id', $mainServiceId)->update(['active' => 0]);
+        }
         toastr()->success(__('lang.deactive_successfully'));
 
     }

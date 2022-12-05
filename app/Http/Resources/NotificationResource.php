@@ -19,7 +19,7 @@ class NotificationResource extends JsonResource
         return [
             'id' => $this->id,
             'notification_text' => $this->notification_text(),
-            'notification_img' => asset("uploads/$this->notification_img"),
+            'notification_img' => asset("alwaan/alwaan_logo.png"),
             'created_at' => Carbon::parse($this->created_at)->format('Y-m-d H:i:s'),
         ];
     }

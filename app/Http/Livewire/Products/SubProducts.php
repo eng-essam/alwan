@@ -16,7 +16,7 @@ class SubProducts extends Component
     use WithPagination;
     use WithFileUploads;
 
-    public $search, $branchType = null, $numberOfQuantityPrice = 1;
+    public $search, $branchType = null, $numberOfQuantityPrice = 1, $productInfo;
     public $name_en, $name_ar, $desc_ar, $desc_en, $image, $quantity = array(), $price = array(), $branch, $mainProduct;
 
     protected $paginationTheme = 'bootstrap';
@@ -99,8 +99,8 @@ class SubProducts extends Component
         'image' => 'required|image',
         'quantity' => 'required|array',
         'price' => 'required|array',
-        'quantity.*' => 'required',
-        'price.*' => 'required',
+        'quantity.*' => 'required|numeric',
+        'price.*' => 'required|numeric',
         'branch' => 'required|numeric|exists:company_branches,id',
         'mainProduct' => 'required|numeric|exists:product_branches,id',
     ];
@@ -109,7 +109,6 @@ class SubProducts extends Component
     {
         $this->validateOnly($propertyName);
     }
-
 
     public function submitAddProduct()
     {
@@ -142,7 +141,11 @@ class SubProducts extends Component
         $this->dispatchBrowserEvent('closeAddProductModal');
         toastr()->success(__('lang.add_successfully'));
         $this->cacheClear();
-
     }
 
+    public function showProductModal($productId)
+    {
+        $this->productInfo = Product::findOrFail($productId);
+
+    }
 }

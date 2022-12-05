@@ -90,38 +90,6 @@
                                                 {{$product->product_name()}}
                                             </div>
                                         </td>
-                                        {{--                                        <td>--}}
-                                        {{--                                            <div style="font-size: 15px" class="userDatatable-content">--}}
-                                        {{--                                                {{$product->product_desc()}}--}}
-                                        {{--                                            </div>--}}
-                                        {{--                                        </td>--}}
-
-                                        {{--                                        @php--}}
-                                        {{--                                            $allQuantityPrices=json_decode($product->product_quantity_price,true);--}}
-                                        {{--                                        @endphp--}}
-
-                                        {{--                                        <td>--}}
-                                        {{--                                            <div style="font-size: 15px" class="userDatatable-content">--}}
-                                        {{--                                                <table class="table table-hover">--}}
-                                        {{--                                                    <thead>--}}
-                                        {{--                                                    <tr>--}}
-                                        {{--                                                        <th scope="col">{{__('lang.quantity')}}</th>--}}
-                                        {{--                                                        <th scope="col">{{__('lang.price')}}</th>--}}
-                                        {{--                                                    </tr>--}}
-                                        {{--                                                    </thead>--}}
-                                        {{--                                                    <tbody>--}}
-                                        {{--                                                    @foreach($allQuantityPrices as $key => $oneQuantityPrice)--}}
-                                        {{--                                                        <tr>--}}
-
-                                        {{--                                                            <td>{{$allQuantityPrices[$key]['quantity']}}</td>--}}
-                                        {{--                                                            <td>{{$allQuantityPrices[$key]['price']}}</td>--}}
-                                        {{--                                                        </tr>--}}
-                                        {{--                                                    @endforeach--}}
-                                        {{--                                                    </tbody>--}}
-                                        {{--                                                </table>--}}
-
-                                        {{--                                            </div>--}}
-                                        {{--                                        </td>--}}
                                         <td>
                                             <div style="font-size: 15px" class="userDatatable-content">
                                                 {{$product->product_branch->product_branch_name()}}
@@ -156,12 +124,11 @@
                                         </td>
                                         <td>
                                             <div style="width: max-content;margin: auto;" class=" d-flex">
-                                                <button style="margin: 3px"
-                                                        wire:click.prevent="editeProduct({{$product->id}})"
-                                                        data-toggle="modal" data-target="#editProductModal"
-                                                        class="btn btn-primary  btn-xs btn-rounded">
+                                                <a style="margin: 3px"
+                                                   href="{{url("admin/edit-sub/product/$product->id")}}"
+                                                   class="btn btn-primary  btn-xs btn-rounded">
                                                     {{__('lang.edit')}}
-                                                </button>
+                                                </a>
                                                 <button style="margin: 3px"
                                                         wire:click="deleteProduct({{$product->id}})"
                                                         class="btn btn-danger btn-xs btn-rounded">
@@ -194,7 +161,12 @@
                                                         {{__('lang.remove_from_offers')}}
                                                     </button>
                                                 @endif
-
+                                                <button style="margin: 3px" data-toggle="modal"
+                                                        data-target="#showProductModal"
+                                                        wire:click="showProductModal({{$product->id}})"
+                                                        class="btn btn-dark  btn-xs btn-rounded">
+                                                    {{__('lang.information')}}
+                                                </button>
                                             </div>
                                         </td>
                                     </tr>
@@ -291,7 +263,7 @@
                                 <div class="col-md-4 mb-25">
                                     <label style="font-weight: bold">{{$i .'- ' . __('lang.quantity')}}</label>
                                     <input wire:model="quantity.{{ $i }}" class="form-control form-control-lg"
-                                           type="text">
+                                           type="number">
                                     @error('quantity')
                                     <small style="color: red">{{ $message }}.</small>
                                     @enderror
@@ -300,7 +272,7 @@
                                 <div class="col-md-4 mb-25">
                                     <label style="font-weight: bold">{{$i .'- ' . __('lang.price')}}</label>
                                     <input wire:model="price.{{ $i }}" class="form-control form-control-lg"
-                                           type="text">
+                                           type="number">
                                     @error('price')
                                     <small style="color: red">{{ $message }}.</small>
                                     @enderror
@@ -349,76 +321,80 @@
             </div>
         </div>
     </div>
-    <!-- ends: .modal-Basic -->
+    <!-- ends: add Product -->
 
-    <!-- start: edit_Product -->
-    <div wire:ignore.self class="modal-info-delete modal fade show" id="editProductModal" tabindex="-1"
-         role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-md" role="document">
-            <div class="modal-content modal-bg-white ">
-                <div class="modal-header">
-                    <h6 class="modal-title">{{__('lang.edit_product')}}</h6>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span data-feather="x"></span></button>
-                </div>
-                <form wire:submit.prevent="submitEditeMainProduct">
+    @if($productInfo != null)
+        <!-- start: Show Product -->
+        <div wire:ignore.self class="modal-info-delete modal fade show" id="showProductModal" tabindex="-1" role="dialog"
+             aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content modal-bg-white ">
+                    <div class="modal-header">
+                        <h6 class="modal-title">{{__('lang.information')}}</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span data-feather="x"></span></button>
+                    </div>
                     <div class="modal-body">
                         <div class="row">
 
                             <div class="col-md-6 mb-25">
-                                <label>{{__('lang.name_ar')}}</label>
-                                <input wire:model="name_ar" class="form-control form-control-lg" type="text">
-                                @error('name_ar')
-                                <small style="color: red">{{ $message }}.</small>
-                                @enderror
+                                <label style="font-weight: bold">{{__('lang.name_ar')}}</label>
+                                <input disabled value="{{$productInfo->product_name('ar')}}" class="form-control form-control-lg" type="text">
                             </div>
 
                             <div class="col-md-6 mb-25">
-                                <label>{{__('lang.name_en')}}</label>
-                                <input wire:model="name_en" class="form-control form-control-lg" type="text">
-                                @error('name_en')
-                                <small style="color: red">{{ $message }}.</small>
-                                @enderror
+                                <label style="font-weight: bold">{{__('lang.name_en')}}</label>
+                                <input disabled value="{{$productInfo->product_name('en')}}" class="form-control form-control-lg" type="text">
                             </div>
 
                             <div class="col-md-6 mb-25">
-                                <label>{{__('lang.desc_ar')}}</label>
-                                <textarea wire:model="desc_ar" class="form-control" id="exampleFormControlTextarea1"
-                                          rows="5"></textarea>
-                                @error('desc_ar')
-                                <small style="color: red">{{ $message }}.</small>
-                                @enderror
+                                <label style="font-weight: bold">{{__('lang.desc_ar')}}</label>
+                                <textarea disabled class="form-control" id="exampleFormControlTextarea1"
+                                          rows="5">{{$productInfo->product_desc('ar')}}</textarea>
                             </div>
 
                             <div class="col-md-6 mb-25">
-                                <label>{{__('lang.desc_en')}}</label>
-                                <textarea wire:model="desc_en" class="form-control" id="exampleFormControlTextarea1"
-                                          rows="5"></textarea>
-                                @error('desc_en')
-                                <small style="color: red">{{ $message }}.</small>
-                                @enderror
+                                <label style="font-weight: bold">{{__('lang.desc_en')}}</label>
+                                <textarea disabled class="form-control" id="exampleFormControlTextarea1"
+                                          rows="5">{{$productInfo->product_name('en')}}</textarea>
                             </div>
 
                             <div class="col-md-6 mb-25">
-                                <label>{{__('lang.image')}}</label>
-                                <div class="atbd-upload__button">
-                                    <a href="javascript:void(0)" class="btn btn-lg btn-outline-lighten btn-upload"
-                                       onclick="$('#upload-3').click()">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                             viewBox="0 0 24 24"
-                                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                             stroke-linejoin="round" class="feather feather-upload">
-                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                            <polyline points="17 8 12 3 7 8"></polyline>
-                                            <line x1="12" y1="3" x2="12" y2="15"></line>
-                                        </svg>
-                                        Upload</a>
-                                    <input style="display: none" type="file" wire:model="productImage"
-                                           class="upload-one"
-                                           id="upload-3">
-                                </div> @error('productImage')
-                                <small style="color: red">{{ $message }}.</small>
-                                @enderror
+                                <label style="font-weight: bold">{{__('lang.branch')}}</label>
+                                <input disabled value="{{$productInfo->company_branch->company_name()}}" class="form-control form-control-lg" type="text">
+
+                            </div>
+
+                            <div class="col-md-6 mb-25">
+                                <label style="font-weight: bold">{{__('lang.main_product')}}</label>
+                                <input disabled value="{{$productInfo->product_branch->product_branch_name()}}" class="form-control form-control-lg" type="text">
+                            </div>
+
+                            @php
+                                $allQuantityPrices=json_decode($productInfo->product_quantity_price,true);
+                            @endphp
+                            @foreach($allQuantityPrices as $key => $oneQuantityPrice)
+                                <div class="col-md-6 mb-25">
+                                    <label style="font-weight: bold">{{$key +1 . '- '. __('lang.quantity')}}</label>
+                                    <input name="quantity[]"
+                                           value="{{$allQuantityPrices[$key]['quantity']}}"
+                                           class="form-control form-control-lg"
+                                           disabled
+                                           type="number">
+                                </div>
+
+                                <div class="col-md-6 mb-25">
+                                    <label style="font-weight: bold">{{$key +1 . '- '. __('lang.price')}}</label>
+                                    <input name="price[]" value="{{$allQuantityPrices[$key]['price']}}"
+                                           class="form-control form-control-lg"
+                                           disabled
+                                           type="number">
+                                </div>
+                            @endforeach
+
+                            <div class="col-md-6 mb-25">
+                                <label style="font-weight: bold">{{__('lang.image')}}</label>
+                                <img class="profile-user-img img-square wh-150" src="{{asset("uploads/$productInfo->product_img")}}" alt="author">
                             </div>
                         </div>
 
@@ -427,15 +403,12 @@
                         <button type="button" class="btn btn-danger btn-outlined btn-sm"
                                 data-dismiss="modal">{{__('lang.cancel')}}
                         </button>
-                        <button type="submit" class="btn btn-success btn-outlined btn-sm">{{__('lang.save')}}
-                        </button>
                     </div>
-                </form>
-
+                </div>
             </div>
         </div>
-    </div>
-    <!-- ends: .modal-Basic -->
+        <!-- ends: .Show-Basic -->
+    @endif
 
 </div>
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\{AdminController,
+    AllServiceOrderController,
     HomeController,
     MainProductsController,
     MainServicesController,
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('test', function () {
-    
+
 });
 
 Auth::routes(['register' => false]);
@@ -51,9 +52,17 @@ Route::prefix('admin')->middleware(['auth', 'adminAndSuperAdmin', 'langWeb'])->g
         Route::get('/all-main/products', [MainProductsController::class, 'allMainProducts']);//all Main Products
     });
 
-    Route::get('/all-sub/Products', [SubProductsController::class, 'allSubProducts']);//all Sub Products
+    //Sub Products and Sub Services
+    Route::get('/all-sub/products', [SubProductsController::class, 'allSubProducts']);//all Sub Products
 
-    Route::get('/all-sub/Services', [SubServicesController::class, 'allSubServices']);//all Sub Services
+    Route::get('/all-sub/services', [SubServicesController::class, 'allSubServices']);//all Sub Services
+
+    Route::get('/edit-sub/product/{product}', [SubProductsController::class, 'editSubProduct']);//edit Sub Product
+
+    Route::post('/edit-sub/product/{product}', [SubProductsController::class, 'saveEditSubProduct']);//edit Sub Product
+
+    //Service Order and Product Order
+    Route::get('/all-service-order', [AllServiceOrderController::class, 'allServiceOrder']);//all Service Order
 
 
 });

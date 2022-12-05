@@ -220,13 +220,12 @@
                         </button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
-    <!-- ends: .modal-Basic -->
+    <!-- ends: .add_main_service -->
 
-    <!-- start: edit_service -->
+    <!-- start: edit_main_service -->
     <div wire:ignore.self class="modal-info-delete modal fade show" id="editMainServiceModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content modal-bg-white ">
@@ -309,9 +308,9 @@
             </div>
         </div>
     </div>
-    <!-- ends: .modal-Basic -->
+    <!-- ends: .edit_main_service -->
 
-    <!-- ends: .modal-info-confirmed -->
+    <!-- ends: .delete_main_service -->
     <div wire:ignore.self class="modal-info-delete modal fade show" id="deleteMainService" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-info" role="document">
             <div class="modal-content">
@@ -337,7 +336,7 @@
             </div>
         </div>
     </div>
-    <!-- ends: .modal-info-Delete -->
+    <!-- ends: .delete_main_service-->
 </div>
 
 
