@@ -10,6 +10,7 @@ use App\Models\Company_branch;
 use App\Models\OrderStatus;
 use App\Models\User;
 use App\Traits\ReturnJson;
+use App\Traits\SendNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Storage;
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller
 {
-    use ReturnJson;
+    use ReturnJson, SendNotification;
 
     public function allOrderProducts(Request $request)
     {
@@ -76,7 +77,7 @@ class OrderController extends Controller
         }
 
         $pathFile = Storage::disk('uploads')->put('files', $request->user_file);
-        BuyService::create([
+        $order = BuyService::create([
             'user_id' => $request->user()->id,
             'service_id' => $request->service_id,
             'details' => $request->details,
@@ -88,6 +89,9 @@ class OrderController extends Controller
                 'ar' => null,
             ]),
         ]);
+
+        $this->sendUserNotification($order->user_id, 4, $order->order_id);
+        $this->sendUserNotification($order->user_id, 1, $order->order_id);
 
         return $this->requestSuccess(__('lang.request_under_review'));
     }

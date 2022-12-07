@@ -4428,7 +4428,7 @@ ul {
 .tooltip-title {
     font-size: 12px;
     font-weight: 500 !important;
-    font-family: "Cairo", sans-serif;
+    font-family: "Inter", sans-serif;
     text-transform: capitalize;
     margin-bottom: 4px;
 }
@@ -4437,7 +4437,7 @@ ul {
     color: #63b963;
     font-size: 22px;
     font-weight: 600 !important;
-    font-family: "Cairo", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .tooltip-value sup {
@@ -4457,7 +4457,7 @@ ul {
 }
 
 .laIcon-list-box .la {
-    font-family: "Cairo", "Line Awesome Brands";
+    font-family: "Line Awesome Free", "Line Awesome Brands";
 }
 
 .user-group .media-body {
@@ -4660,7 +4660,7 @@ ul {
 }
 
 .daterangepicker .ranges ul li {
-    font-family: "Cairo", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 13px;
     font-weight: 600;
     width: 100%;
@@ -4884,7 +4884,7 @@ ul {
 .daterangepicker.show-calendar .drp-buttons .drp-selected {
     font-size: 13px;
     color: #666d92;
-    font-family: "Cairo", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .daterangepicker.show-calendar .drp-buttons .cancelBtn {
@@ -5762,7 +5762,7 @@ ul {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-weight: 600;
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     content: "\f107";
     line-height: 1;
 }
@@ -5780,7 +5780,7 @@ ul {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     font-weight: 600;
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     content: "\f105";
     line-height: 1;
 }
@@ -6320,9 +6320,6 @@ ul {
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     transition: 0.2s;
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 5px
 }
 
 .sidebar .menuItem {
@@ -6483,7 +6480,7 @@ ul {
 
 .sidebar__menu-group ul.sidebar_nav li > a .toggle-icon {
     font-size: 12px;
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     font-weight: 900;
     margin-right: auto;
     -webkit-transition: all 0.3s ease;
@@ -7488,7 +7485,7 @@ ul {
 
 .atbd-breadcrumb__item .dropdown > a:after {
     font-size: 10px;
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     font-weight: 700;
     content: "\f107";
 }
@@ -8756,7 +8753,7 @@ table.table-rounded tbody tr td.card .card-body,
     right: 3px;
     top: 2px;
     font-weight: 900;
-    font-family: 'Cairo';
+    font-family: 'Font Awesome 5 Free';
     content: "\f00c";
     display: block;
     opacity: 0;
@@ -8774,7 +8771,7 @@ table.table-rounded tbody tr td.card .card-body,
 .custom-checkbox input:indeterminate ~ label::after {
     background: #5f63f2;
     font-weight: 900;
-    font-family: 'Cairo';
+    font-family: 'Font Awesome 5 Free';
     content: "\f068";
     color: #ffffff;
     font-size: 10px;
@@ -9177,7 +9174,7 @@ table.table-rounded tbody tr td.card .card-body,
 }
 
 .social-overview li {
-    width: max-content;
+    width: 33.33%;
     text-align: center;
     padding: 22px 0;
 }
@@ -11083,14 +11080,14 @@ table.table-rounded tbody tr td.card .card-body,
 
 .select2-container--default .select2-selection--single .select2-selection__arrow:after {
     content: "\f107";
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     font-weight: 900;
     font-size: 12px;
 }
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow:after {
     content: "\f106";
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     font-weight: 900;
     font-size: 12px;
 }
@@ -11704,7 +11701,7 @@ table.table-rounded tbody tr td.card .card-body,
 
 .atbd-pagination__item .paging-option:after {
     content: "\f107";
-    font-family: 'Cairo';
+    font-family: 'Line Awesome Free';
     font-weight: 900;
     position: absolute;
     top: 50%;
@@ -13200,7 +13197,7 @@ input.is-invalid ~ label::after {
 }
 
 .atbd-menu.menu-horizontal .atbd-menu__item.has-submenu > .atbd-menu__link:before {
-    font-family: 'Cairo';
+    font-family: 'Line Awesome Free';
     font-weight: 700;
     content: "\f107";
     margin-right: 5px;
@@ -13334,7 +13331,7 @@ input.is-invalid ~ label::after {
 }
 
 .atbd-menu.menu-vertical .atbd-menu__item.has-submenu > .atbd-menu__link:before {
-    font-family: 'Cairo';
+    font-family: 'Line Awesome Free';
     font-weight: 700;
     content: "\f105";
     margin-right: 5px;
@@ -13692,7 +13689,7 @@ input.is-invalid ~ label::after {
 }
 
 .ui-datepicker-header a.ui-datepicker-prev::after {
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     font-weight: 900;
     content: "\f104";
     font-size: 18px;
@@ -13704,7 +13701,7 @@ input.is-invalid ~ label::after {
 }
 
 .ui-datepicker-header a.ui-datepicker-next::after {
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     font-weight: 900;
     content: "\f105";
     font-size: 18px;
@@ -14967,7 +14964,7 @@ input.is-invalid ~ label::after {
 
 .atbd-select:after {
     font-size: 10px;
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     position: absolute;
     left: 15px;
     top: 50%;
@@ -19630,7 +19627,7 @@ table.table-rounded tbody tr td:last-child {
 
 .application-faqs .panel-title > a:before {
     float: left !important;
-    font-family: 'Cairo';
+    font-family: 'Line Awesome Free';
     font-weight: 900;
     content: "\f068";
     padding-left: 5px;
@@ -19645,7 +19642,7 @@ table.table-rounded tbody tr td:last-child {
 .application-faqs .panel-title > a.collapsed:before {
     float: left !important;
     content: "\f067";
-    font-family: 'Cairo';
+    font-family: 'Line Awesome Free';
     font-weight: 900;
 }
 
@@ -22394,7 +22391,7 @@ table.table-rounded tbody tr td:last-child {
 
 .knowledgebase-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     content: "\f105";
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     font-weight: 900;
 }
 
@@ -23748,7 +23745,7 @@ table.table-rounded tbody tr td:last-child {
 
 #filter-form-container .footable-filtering-search .input-group:after {
     font-size: 18px;
-    font-family: "Cairo";
+    font-family: "Line Awesome Free";
     position: absolute;
     right: 20px;
     top: 8px;

@@ -6,13 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\BuyProduct;
 use App\Models\Cart;
 use App\Traits\ReturnJson;
+use App\Traits\SendNotification;
 use App\Traits\TransferFilesFromCart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class BuyProductController extends Controller
 {
-    use ReturnJson, TransferFilesFromCart;
+    use ReturnJson, TransferFilesFromCart, SendNotification;
 
     public function buyProducts(Request $request)
     {
@@ -32,7 +33,7 @@ class BuyProductController extends Controller
         }
         $allProduct = json_decode($request->products, true);
         foreach ($allProduct as $key => $valu) {
-            BuyProduct::create([
+            $order = BuyProduct::create([
                 'user_id' => $request->user()->id,
                 'product_id' => $allProduct[$key]['product_id'],
                 'order_id' => rand(10000000, 99999999),
@@ -41,8 +42,10 @@ class BuyProductController extends Controller
                 'address_id' => $request->address_id,
                 'details' => $this->transferDetails($request->user()->id, $allProduct[$key]['product_id']),
                 'user_file' => $this->transferUserFile($request->user()->id, $allProduct[$key]['product_id']),
-                'order_status_id' => 4,
+                'order_status_id' => 5,
             ]);
+            $this->sendUserNotification($order->user_id, 4, $order->order_id);
+            $this->sendUserNotification($order->user_id, 5, $order->order_id);
         }
 
         Cart::where('user_id', $request->user()->id)->delete();

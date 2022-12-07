@@ -14,15 +14,15 @@ class Company_branch extends Model
 
     public $table = 'company_branches';
 
-    public function company_name()
+    public function company_name($lang = null)
     {
-        $lang = App::getLocale();
+        $lang = $lang ?? App::getLocale();
         return json_decode($this->company_name)->$lang;
     }
 
-    public function company_address()
+    public function company_address($lang = null)
     {
-        $lang = App::getLocale();
+        $lang = $lang ?? App::getLocale();
         return json_decode($this->company_address)->$lang;
     }
 

@@ -140,6 +140,33 @@
         window.addEventListener('closeOrderModal', event => {
           $('#refusalOrderModal').modal('hide');
         });
+
+        window.addEventListener('closeOrderModal', event => {
+          $('#paymentConfirmationModal').modal('hide');
+        });
+        window.addEventListener('closeOrderModal', event => {
+          $('#deleteOrderModal').modal('hide');
+        });
+
+        window.addEventListener('closeOrderModal', event => {
+          $('#submitSendExecutionModal').modal('hide');
+        });
+
+        window.addEventListener('closeOrderModal', event => {
+          $('#sendStoreModal').modal('hide');
+        });
+
+        window.addEventListener('closeAddCompany', event => {
+          $('#addCompanyModal').modal('hide');
+        });
+        window.addEventListener('closeEditCompany', event => {
+          $('#editCompanyModal').modal('hide');
+        });
+        window.addEventListener('closeDeleteCompany', event => {
+          $('#deleteCompanyModal').modal('hide');
+        });
+
+
 </script>
 </body>
 

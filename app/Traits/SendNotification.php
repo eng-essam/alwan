@@ -8,7 +8,12 @@ trait SendNotification
 {
     public function sendUserNotification($userId, $statusId, $orderId)
     {
-        if ($statusId == 2) {
+        if ($statusId == 1) {
+            $notification_text = json_encode([
+                'ar' => ' في انتظار الموافقة علي طلبك' . " ($orderId)",
+                'en' => "Awaiting approval of your order ($orderId)",
+            ]);
+        } elseif ($statusId == 2) {
             $notification_text = json_encode([
                 'ar' => ' تم رفض طلبك' . " ($orderId)",
                 'en' => "Your order was rejected ($orderId)",
@@ -28,17 +33,17 @@ trait SendNotification
                 'ar' => 'طلبك في مرحلة الفرز ' . " ($orderId)",
                 'en' => "Your order is in the stage of sorted ($orderId)",
             ]);
-        }elseif ($statusId == 6) {
+        } elseif ($statusId == 6) {
             $notification_text = json_encode([
                 'ar' => 'طلبك في مرحلة التنفيذ ' . " ($orderId)",
                 'en' => "Your order is in the Stage of execution ($orderId)",
             ]);
-        }elseif ($statusId == 7) {
+        } elseif ($statusId == 7) {
             $notification_text = json_encode([
                 'ar' => 'طلبك في مرحلة التخزين ' . " ($orderId)",
                 'en' => "Your order is in the Storage stage ($orderId)",
             ]);
-        }elseif ($statusId == 8) {
+        } elseif ($statusId == 8) {
             $notification_text = json_encode([
                 'ar' => 'تم تسليم طلبك ' . " ($orderId)",
                 'en' => "Order delivered ($orderId)",

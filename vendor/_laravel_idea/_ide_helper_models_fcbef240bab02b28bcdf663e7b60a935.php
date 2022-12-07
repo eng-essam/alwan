@@ -1,4 +1,4 @@
-<?php //765ecdc45d646db621126afb12bc3063
+<?php //0f536719be19790a8a63fccfed465d10
 /** @noinspection all */
 
 namespace App\Models {
@@ -153,8 +153,14 @@ namespace App\Models {
      * @property float|null $service_price
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
+     * @property Address|null $address
+     * @method BelongsTo|_IH_Address_QB address()
+     * @property Service $service
+     * @method BelongsTo|_IH_Service_QB service()
      * @property OrderStatus $status
      * @method BelongsTo|_IH_OrderStatus_QB status()
+     * @property User $user
+     * @method BelongsTo|_IH_User_QB user()
      * @method static _IH_BuyService_QB onWriteConnection()
      * @method _IH_BuyService_QB newQuery()
      * @method static _IH_BuyService_QB on(null|string $connection = null)
@@ -304,7 +310,7 @@ namespace App\Models {
      * @property int $id
      * @property int $user_id
      * @property string $notification_text
-     * @property string $notification_img
+     * @property string|null $notification_img
      * @property bool $read_notification
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at

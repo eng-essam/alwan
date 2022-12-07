@@ -13,11 +13,11 @@ return new class extends Migration {
             $table->foreignId('service_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->text('details');
             $table->string('user_file');
+            $table->string('admin_file')->nullable();
             $table->integer('order_id');
             $table->foreignId('order_status_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->tinyText('order_status_message')->nullable();
             $table->foreignId('address_id')->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
-            $table->string('admin_file')->nullable();
             $table->float('service_price')->nullable();
             $table->timestamps();
         });

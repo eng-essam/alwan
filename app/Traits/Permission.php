@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use App\Models\User;
+use phpDocumentor\Reflection\Types\Boolean;
 
 trait Permission
 {
@@ -25,6 +26,7 @@ trait Permission
                 $user->permissions()->attach($value);
             }
         }
-
     }
+
+
 }

@@ -3,9 +3,13 @@
         <div class="navbar-left">
             <a href="" class="sidebar-toggle">
                 <img class="svg" src="{{asset('admin/img/svg/bars.svg')}}" alt="img"></a>
-            <a class="navbar-brand" href="#"><img class="svg dark" src="{{asset('admin/img/svg/logo_dark.svg')}}"
-                                                  alt="svg"><img
-                        class="light" src="{{asset('admin/img/logo_white.png')}}" alt="img"></a>
+            <a style="height: 40px;" class="navbar-brand" href="#">
+
+                <div style="display: flex;height: 40px;">
+                    <img style="height: 65px" src="{{asset('alwaan/alwaan_logo.png')}}" class="rounded-circle svg dark">
+                    <p style="padding-top: 7px;font-weight: bold">{{__('lang.alwan')}}</p>
+                </div>
+            </a>
             <div class="top-menu">
 
                 <div class="strikingDash-top-menu position-relative">
@@ -988,11 +992,13 @@
                                             Help</a>
                                     </li>
                                 </ul>
-                                <form style="display: none" id="logout-form" action="{{ route('logout') }}" method="POST">
+                                <form style="display: none" id="logout-form" action="{{ route('logout') }}"
+                                      method="POST">
                                     @csrf
                                 </form>
-                                <a  href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-author__signout">
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                                   class="nav-author__signout">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                          stroke-linejoin="round" class="feather feather-log-out">

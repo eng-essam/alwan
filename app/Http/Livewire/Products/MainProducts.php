@@ -60,6 +60,7 @@ class MainProducts extends Component
 
     public function deleteMainProduct($MainProductId)
     {
+        $this->cacheClear();
         $this->deleteMainProductId = $MainProductId;
     }
 

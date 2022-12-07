@@ -1,4 +1,4 @@
-<?php //43d0232fd65d949e5ee5f512dbd0e99d
+<?php //b269310498bed5ee61065212f1e677ad
 /** @noinspection all */
 
 namespace Illuminate\Notifications {
@@ -12,7 +12,7 @@ namespace Illuminate\Notifications {
      * @property int $id
      * @property int $user_id
      * @property string $notification_text
-     * @property string $notification_img
+     * @property string|null $notification_img
      * @property bool $read_notification
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at

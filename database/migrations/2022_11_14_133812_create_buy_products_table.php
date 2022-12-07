@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->foreignId('order_status_id')->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->text('details');
             $table->string('user_file');
+            $table->string('admin_file')->nullable();
             $table->timestamps();
         });
     }
