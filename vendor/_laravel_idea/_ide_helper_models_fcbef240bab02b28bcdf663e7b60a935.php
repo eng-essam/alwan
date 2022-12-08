@@ -1,4 +1,4 @@
-<?php //0f536719be19790a8a63fccfed465d10
+<?php //3f289910b0a36e0005ec46be90f3a2d1
 /** @noinspection all */
 
 namespace App\Models {
@@ -122,10 +122,17 @@ namespace App\Models {
      * @property int|null $order_status_id
      * @property string $details
      * @property string $user_file
+     * @property string|null $admin_file
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
-     * @property OrderStatus $status
+     * @property Address $address
+     * @method BelongsTo|_IH_Address_QB address()
+     * @property Product $product
+     * @method BelongsTo|_IH_Product_QB product()
+     * @property OrderStatus|null $status
      * @method BelongsTo|_IH_OrderStatus_QB status()
+     * @property User $user
+     * @method BelongsTo|_IH_User_QB user()
      * @method static _IH_BuyProduct_QB onWriteConnection()
      * @method _IH_BuyProduct_QB newQuery()
      * @method static _IH_BuyProduct_QB on(null|string $connection = null)
@@ -146,10 +153,10 @@ namespace App\Models {
      * @property int $service_id
      * @property string $details
      * @property string $user_file
+     * @property string|null $admin_file
      * @property int $order_id
      * @property int $order_status_id
      * @property int|null $address_id
-     * @property string|null $admin_file
      * @property float|null $service_price
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at

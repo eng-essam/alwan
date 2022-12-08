@@ -1,4 +1,4 @@
-<?php //66b20c8096d7d39f993e5427d77f12d4
+<?php //52e56ebf0d8b04e24d8bce3fb3c36543
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -56,9 +56,13 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_BuyProduct_C|mixed $order_status_id
      * @property _IH_BuyProduct_C|mixed $details
      * @property _IH_BuyProduct_C|mixed $user_file
+     * @property _IH_BuyProduct_C|mixed $admin_file
      * @property _IH_BuyProduct_C|mixed $created_at
      * @property _IH_BuyProduct_C|mixed $updated_at
+     * @property _IH_BuyProduct_C|mixed $address
+     * @property _IH_BuyProduct_C|mixed $product
      * @property _IH_BuyProduct_C|mixed $status
+     * @property _IH_BuyProduct_C|mixed $user
      * @method _IH_BuyProduct_C refresh()
      * @method _IH_BuyProduct_C update(array $attributes = [], array $options = [])
      * @method _IH_BuyProduct_C save(array $options = [])
@@ -76,10 +80,10 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_BuyService_C|mixed $service_id
      * @property _IH_BuyService_C|mixed $details
      * @property _IH_BuyService_C|mixed $user_file
+     * @property _IH_BuyService_C|mixed $admin_file
      * @property _IH_BuyService_C|mixed $order_id
      * @property _IH_BuyService_C|mixed $order_status_id
      * @property _IH_BuyService_C|mixed $address_id
-     * @property _IH_BuyService_C|mixed $admin_file
      * @property _IH_BuyService_C|mixed $service_price
      * @property _IH_BuyService_C|mixed $created_at
      * @property _IH_BuyService_C|mixed $updated_at
@@ -141,8 +145,8 @@ namespace LaravelIdea\Helper\App\Models {
      * @property _IH_Company_branch_C|mixed $company_address
      * @property _IH_Company_branch_C|mixed $created_at
      * @property _IH_Company_branch_C|mixed $updated_at
-     * @method _IH_Company_branch_C company_name()
-     * @method _IH_Company_branch_C company_address()
+     * @method _IH_Company_branch_C company_name($lang = null)
+     * @method _IH_Company_branch_C company_address($lang = null)
      * @method _IH_Company_branch_C refresh()
      * @method _IH_Company_branch_C update(array $attributes = [], array $options = [])
      * @method _IH_Company_branch_C save(array $options = [])

@@ -132,6 +132,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-flasher/flasher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-flasher/flasher-laravel" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-flasher/flasher-toastr" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/debugbar" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

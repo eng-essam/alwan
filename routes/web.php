@@ -3,13 +3,15 @@
 use App\Http\Controllers\Admin\{AdminController,
     AllProductOrderController,
     AllServiceOrderController,
+    CompanyBranchesController,
+    couponsController,
     HomeController,
     MainProductsController,
     MainServicesController,
     SubProductsController,
     SubServicesController,
     UsersController,
-    CompanyBranchesController,
+    AuthController,
 };
 use App\Http\Controllers\Admin\LangController;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +40,9 @@ Route::prefix('admin')->middleware(['auth', 'adminAndSuperAdmin', 'langWeb'])->g
 
     Route::get('/all-users', [UsersController::class, 'allUsers']);//all users
 
+    //Profile
+    Route::get('/profile', [AuthController::class, 'profile']);//profile
+
     Route::middleware('superAdmin')->group(function () {
         //Admin
         Route::get('/all-admins', [AdminController::class, 'allAdmin']);//all Admin
@@ -52,6 +57,9 @@ Route::prefix('admin')->middleware(['auth', 'adminAndSuperAdmin', 'langWeb'])->g
 
         //Company Branches
         Route::get('/all/company-branches', [CompanyBranchesController::class, 'allCompanyBranches']);//all Company Branches
+
+        //Coupons
+        Route::get('/all/coupons', [couponsController::class, 'allCoupons']);//all Coupons
 
         //Services
         Route::get('/all-main/services', [MainServicesController::class, 'allMainServices']);//all Main Services

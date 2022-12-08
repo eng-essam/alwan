@@ -1,4 +1,4 @@
-<?php //4a91708da2898a4d982e8175fea2930b
+<?php //9c578598ab96db0dd32af57d07dc9527
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -275,6 +275,7 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_BuyProduct_QB whereOrderStatusId($value)
      * @method _IH_BuyProduct_QB whereDetails($value)
      * @method _IH_BuyProduct_QB whereUserFile($value)
+     * @method _IH_BuyProduct_QB whereAdminFile($value)
      * @method _IH_BuyProduct_QB whereCreatedAt($value)
      * @method _IH_BuyProduct_QB whereUpdatedAt($value)
      * @method BuyProduct baseSole(array|string $columns = ['*'])
@@ -366,10 +367,10 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_BuyService_QB whereServiceId($value)
      * @method _IH_BuyService_QB whereDetails($value)
      * @method _IH_BuyService_QB whereUserFile($value)
+     * @method _IH_BuyService_QB whereAdminFile($value)
      * @method _IH_BuyService_QB whereOrderId($value)
      * @method _IH_BuyService_QB whereOrderStatusId($value)
      * @method _IH_BuyService_QB whereAddressId($value)
-     * @method _IH_BuyService_QB whereAdminFile($value)
      * @method _IH_BuyService_QB whereServicePrice($value)
      * @method _IH_BuyService_QB whereCreatedAt($value)
      * @method _IH_BuyService_QB whereUpdatedAt($value)

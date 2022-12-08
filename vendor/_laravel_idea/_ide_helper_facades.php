@@ -1,4 +1,4 @@
-<?php //73bc0088ca3fbe86ce8822b344560262
+<?php //f9c7c9d5af2136cee38509bc959aca0f
 /** @noinspection all */
 
 namespace Barryvdh\Debugbar {
@@ -101,7 +101,7 @@ namespace Barryvdh\Debugbar {
      * @see \DebugBar\DebugBar::sendDataInHeaders
      * @method static \DebugBar\DebugBar sendDataInHeaders(bool $useOpenHandler = null, string $headerName = 'phpdebugbar', int $maxHeaderLength = 4096)
      * @see \DebugBar\DebugBar::offsetGet
-     * @method static \DebugBar\DataCollector\DataCollectorInterface|mixed offsetGet($key)
+     * @method static \DebugBar\DataCollector\DataCollectorInterface offsetGet($key)
      * @see LaravelDebugbar::addThrowable
      * @method static void addThrowable(\Exception $e)
      * @see \DebugBar\DebugBar::offsetSet
@@ -200,7 +200,7 @@ namespace Barryvdh\Debugbar\Facades {
      * @see \DebugBar\DebugBar::sendDataInHeaders
      * @method static \DebugBar\DebugBar sendDataInHeaders(bool $useOpenHandler = null, string $headerName = 'phpdebugbar', int $maxHeaderLength = 4096)
      * @see \DebugBar\DebugBar::offsetGet
-     * @method static \DebugBar\DataCollector\DataCollectorInterface|mixed offsetGet($key)
+     * @method static \DebugBar\DataCollector\DataCollectorInterface offsetGet($key)
      * @see \Barryvdh\Debugbar\LaravelDebugbar::addThrowable
      * @method static void addThrowable(\Exception $e)
      * @see \Barryvdh\Debugbar\LaravelDebugbar::critical
@@ -1717,7 +1717,7 @@ namespace Illuminate\Support\Facades {
      * @see \Illuminate\Http\Request::hasValidSignatureWhileIgnoring
      * @method static bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
      * @see \Illuminate\Http\Request::validateWithBag
-     * @method static void validateWithBag(string $errorBag, array $rules, ...$params)
+     * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
      * @see \Illuminate\Http\Request::hasValidRelativeSignature
      * @method static bool hasValidRelativeSignature()
      * @see \Illuminate\Http\Request::validate
@@ -2812,7 +2812,7 @@ namespace Livewire {
      * @see LivewireManager::scripts
      * @method static string scripts($options = [])
      * @see LivewireManager::getRootElementTagName
-     * @method static mixed getRootElementTagName($dom)
+     * @method static string getRootElementTagName($dom)
      * @see LivewireManager::enableBackButtonCache
      * @method static void enableBackButtonCache()
      * @see LivewireManager::getComponentAliases

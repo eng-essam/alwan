@@ -166,6 +166,31 @@
           $('#deleteCompanyModal').modal('hide');
         });
 
+        window.addEventListener('closeAddCoupon', event => {
+          $('#addCouponModal').modal('hide');
+        });
+        window.addEventListener('closeEditCoupon', event => {
+          $('#editCouponModal').modal('hide');
+        });
+        window.addEventListener('closeDeleteCoupon', event => {
+          $('#deleteCouponModal').modal('hide');
+        });
+
+        window.addEventListener('closeProfile', event => {
+          $('#editName').modal('hide');
+        });
+        window.addEventListener('closeProfile', event => {
+          $('#editEmail').modal('hide');
+        });
+        window.addEventListener('closeProfile', event => {
+          $('#editPhone').modal('hide');
+        });
+        window.addEventListener('closeProfile', event => {
+          $('#editImg').modal('hide');
+        });
+        window.addEventListener('closeProfile', event => {
+          $('#editPassword').modal('hide');
+        });
 
 </script>
 </body>
