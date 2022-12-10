@@ -11,7 +11,7 @@ class Notification extends Component
     public function render()
     {
         $data['notifications'] = AdminNotification::where('user_id', Auth::id())
-            ->where('is_read', 0)->get();
+            ->where('is_read', 0)->latest('id')->get();
         return view('livewire.notification.notification')->with($data);
     }
 

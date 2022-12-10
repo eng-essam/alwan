@@ -16,10 +16,10 @@ class AllUsers extends Component
     public function render()
     {
         if ($this->userName == null) {
-            $data['users'] = User::where('role_id', '3')->paginate(30);
+            $data['users'] = User::where('role_id', '3')->latest('id')->paginate(30);
         } else {
             $data['users'] = User::where('role_id', '3')
-                ->where('name', 'like', '%' . $this->userName . '%')->paginate(5);
+                ->where('name', 'like', '%' . $this->userName . '%')->latest('id')->paginate(5);
         }
 
         return view('livewire.users.all-users')->with($data);

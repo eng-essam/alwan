@@ -29,7 +29,7 @@ class SubServices extends Component
                 if ($this->branchType != null) {
                     $q->where('company_branch_id', $this->branchType);
                 }
-            })->paginate(30);
+            })->latest('id')->paginate(30);
         } else {
             $data['services'] = Service::where(function ($q) {
                 $q->where('service_name->ar', 'like', '%' . $this->search . '%')
@@ -38,7 +38,7 @@ class SubServices extends Component
                 if ($this->branchType != null) {
                     $q->where('company_branch_id', $this->branchType);
                 }
-            })->paginate(10);
+            })->latest('id')->paginate(10);
 
         }
         return view('livewire.services.sub-services')->with($data);

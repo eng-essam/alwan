@@ -186,7 +186,6 @@ return [
          * Package Service Providers...
          */
         Laravolt\Avatar\ServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -213,8 +212,6 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Avatar' => Laravolt\Avatar\Facade::class,
-        'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
-
     ])->toArray(),
 
 ];

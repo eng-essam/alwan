@@ -23,10 +23,10 @@ class AllExecuteOrder extends Component
         $data['allBranch'] = Company_branch::get();
         $data['allService'] = Service::get();
         if ($this->searchOrder == null) {
-            $data['allServiceOrders'] = BuyService::where('order_status_id', 6)->paginate(30);
+            $data['allServiceOrders'] = BuyService::where('order_status_id', 6)->latest('id')->paginate(30);
         } else {
             $data['allServiceOrders'] = BuyService::where('order_status_id', 6)->
-            where('order_id', 'like', '%' . $this->searchOrder . '%')->paginate(5);
+            where('order_id', 'like', '%' . $this->searchOrder . '%')->latest('id')->paginate(5);
         }
         return view('livewire.service-order.all-execute-order')->with($data);
     }

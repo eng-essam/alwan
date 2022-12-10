@@ -192,5 +192,8 @@ return [
     'new_password' => 'كلمة السر الجديدة',
     'notifications' => 'الاشعارات',
     'read_all' => 'قراءة الكل',
-
+    'services_pending_approval' => 'خدمات في انتظار الموافقة عليها',
+    'services_pending_customer_payment' => 'خدمات في انتظار دفع العميل',
+    'Services_products_sorting_stage' => 'خدمات و منتاجات في مرحلة الفرز',
+    'Services_products_storeing_stage' => 'خدمات و منتاجات في مرحلة التخزين',
 ];

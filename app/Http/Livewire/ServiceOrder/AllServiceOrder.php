@@ -25,10 +25,10 @@ class AllServiceOrder extends Component
         $data['allService'] = Service::get();
 
         if ($this->searchOrder == null) {
-            $data['allServiceOrders'] = BuyService::where('order_status_id', 1)->paginate(30);
+            $data['allServiceOrders'] = BuyService::where('order_status_id', 1)->latest('id')->paginate(30);
         } else {
             $data['allServiceOrders'] = BuyService::where('order_status_id', 1)->
-            where('order_id', 'like', '%' . $this->searchOrder . '%')->paginate(5);
+            where('order_id', 'like', '%' . $this->searchOrder . '%')->latest('id')->paginate(5);
         }
         return view('livewire.service-order.all-service-order')->with($data);
     }

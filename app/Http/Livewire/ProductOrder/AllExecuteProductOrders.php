@@ -22,10 +22,10 @@ class AllExecuteProductOrders extends Component
         $data['allBranch'] = Company_branch::get();
 
         if ($this->searchOrder == null) {
-            $data['allProductOrders'] = BuyProduct::where('order_status_id', 6)->paginate(30);
+            $data['allProductOrders'] = BuyProduct::where('order_status_id', 6)->latest('id')->paginate(30);
         } else {
             $data['allProductOrders'] = BuyProduct::where('order_status_id', 6)->
-            where('order_id', 'like', '%' . $this->searchOrder . '%')->paginate(5);
+            where('order_id', 'like', '%' . $this->searchOrder . '%')->latest('id')->paginate(5);
         }
         return view('livewire.product-order.all-execute-product-orders')->with($data);
     }

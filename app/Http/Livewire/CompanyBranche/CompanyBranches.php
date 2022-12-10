@@ -22,7 +22,7 @@ class CompanyBranches extends Component
             $data['allCompanyBranch'] = Company_branch::latest()->paginate(30);
         } else {
             $data['allCompanyBranch'] = Company_branch::where('company_name->ar', 'like', '%' . $this->searchCompany . '%')
-                ->orWhere('company_name->en', 'like', '%' . $this->searchCompany . '%')->paginate(10);
+                ->orWhere('company_name->en', 'like', '%' . $this->searchCompany . '%')->latest('id')->paginate(10);
         }
         return view('livewire.company-branche.company-branches')->with($data);
     }

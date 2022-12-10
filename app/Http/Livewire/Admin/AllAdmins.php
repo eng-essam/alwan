@@ -24,7 +24,7 @@ class AllAdmins extends Component
                 if ($this->branchType != null) {
                     $q->where('company_branch_id', $this->branchType);
                 }
-            })->paginate(30);
+            })->latest('id')->paginate(30);
         } else {
             $data['admins'] = User::where('role_id', '2')
                 ->where('name', 'like', '%' . $this->adminName . '%')
@@ -32,7 +32,7 @@ class AllAdmins extends Component
                     if ($this->branchType != null) {
                         $q->where('company_branch_id', $this->branchType);
                     }
-                })->paginate(5);
+                })->latest('id')->paginate(5);
         }
         return view('livewire.admin.all-admins')->with($data);
     }

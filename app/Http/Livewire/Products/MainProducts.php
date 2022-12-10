@@ -27,7 +27,7 @@ class MainProducts extends Component
             $data['mainProducts'] = Product_branch::latest()->paginate(30);
         } else {
             $data['mainProducts'] = Product_branch::where('product_branch_name->ar', 'like', '%' . $this->productName . '%')
-                ->orWhere('product_branch_name->en', 'like', '%' . $this->productName . '%')->paginate(10);
+                ->orWhere('product_branch_name->en', 'like', '%' . $this->productName . '%')->latest('id')->paginate(10);
         }
         return view('livewire.products.main-products')->with($data);
     }

@@ -31,7 +31,7 @@ class SubProducts extends Component
                 if ($this->branchType != null) {
                     $q->where('company_branch_id', $this->branchType);
                 }
-            })->paginate(30);
+            })->latest('id')->paginate(30);
         } else {
             $data['products'] = Product::where(function ($q) {
                 $q->where('product_name->ar', 'like', '%' . $this->search . '%')
@@ -40,7 +40,7 @@ class SubProducts extends Component
                 if ($this->branchType != null) {
                     $q->where('company_branch_id', $this->branchType);
                 }
-            })->paginate(10);
+            })->latest('id')->paginate(10);
 
         }
         return view('livewire.products.sub-products')->with($data);

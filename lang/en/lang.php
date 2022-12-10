@@ -194,4 +194,9 @@ return [
     'new_password' => 'New password',
     'notifications' => 'Notifications',
     'read_all' => 'Read all',
+    'services_pending_approval' => 'Services pending approval',
+    'services_pending_customer_payment' => 'Services pending customer payment',
+    'Services_products_sorting_stage' => 'Services and products in the sorting stage',
+    'Services_products_storeing_stage' => 'Services and products in the storeing stage',
+
 ];

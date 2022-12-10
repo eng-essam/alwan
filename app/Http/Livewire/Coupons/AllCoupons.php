@@ -22,7 +22,7 @@ class AllCoupons extends Component
             $data['allCoupons'] = Cobon::latest()->paginate(30);
         } else {
             $data['allCoupons'] = Cobon::where('cobon', 'like', '%' . $this->searchCoupon . '%')
-                ->paginate(10);
+                ->latest('id')->paginate(10);
         }
         return view('livewire.coupons.all-coupons')->with($data);
     }

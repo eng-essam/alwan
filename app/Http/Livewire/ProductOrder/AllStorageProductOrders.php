@@ -21,10 +21,10 @@ class AllStorageProductOrders extends Component
         $data['allBranch'] = Company_branch::get();
 
         if ($this->searchOrder == null) {
-            $data['allProductOrders'] = BuyProduct::where('order_status_id', 7)->paginate(30);
+            $data['allProductOrders'] = BuyProduct::where('order_status_id', 7)->latest('id')->paginate(30);
         } else {
             $data['allProductOrders'] = BuyProduct::where('order_status_id', 7)->
-            where('order_id', 'like', '%' . $this->searchOrder . '%')->paginate(5);
+            where('order_id', 'like', '%' . $this->searchOrder . '%')->latest('id')->paginate(5);
         }
         return view('livewire.product-order.all-storage-product-orders')->with($data);
     }
