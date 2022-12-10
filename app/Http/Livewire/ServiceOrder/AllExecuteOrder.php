@@ -63,6 +63,7 @@ class AllExecuteOrder extends Component
             'order_status_id' => 7,
         ]);
         $this->sendUserNotification($order->user_id, 7, $order->order_id);
+        $this->sendAdminNotification(5, $order->order_id, 'service');
         $this->dispatchBrowserEvent('closeOrderModal');
         toastr()->success(__('lang.done_successfully'));
         $this->cacheClear();

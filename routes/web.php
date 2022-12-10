@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\{AdminController,
     AllProductOrderController,
     AllServiceOrderController,
+    AuthController,
     CompanyBranchesController,
     couponsController,
     HomeController,
@@ -11,7 +12,6 @@ use App\Http\Controllers\Admin\{AdminController,
     SubProductsController,
     SubServicesController,
     UsersController,
-    AuthController,
 };
 use App\Http\Controllers\Admin\LangController;
 use Illuminate\Support\Facades\Route;

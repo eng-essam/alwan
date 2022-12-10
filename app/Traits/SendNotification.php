@@ -2,7 +2,10 @@
 
 namespace App\Traits;
 
+use App\Models\AdminNotification;
+use App\Models\AdminNotificationPivot;
 use App\Models\Notification;
+use App\Models\Permission;
 
 trait SendNotification
 {
@@ -56,4 +59,52 @@ trait SendNotification
             'notification_img' => null,
         ]);
     }
+
+    public function sendAdminNotification($permissionId, $orderId, $orderType = 'product')
+    {
+        if ($permissionId == 1) {
+            $desc = json_encode([
+                'ar' => 'طلب خدمة جديد رقم الطلب هو ' . " ($orderId)",
+                'en' => "New service order The order number is ($orderId)",
+            ]);
+            $url = 'admin/all-service-orders';
+        } elseif ($permissionId == 3) {
+            $desc = json_encode([
+                'ar' => 'طلب فرز خدمة جديد رقم الطلب هو ' . " ($orderId)",
+                'en' => "New service sorting order The order number is ($orderId)",
+            ]);
+            if ($orderType == 'service') {
+                $url = 'admin/all-sorting-service-orders';
+            }
+            $url = 'admin/all-sorting-product-orders';
+        } elseif ($permissionId == 4) {
+            $desc = json_encode([
+                'ar' => 'طلب تنفيذ خدمة جديد رقم الطلب هو ' . " ($orderId)",
+                'en' => "New service execution order The order number is ($orderId)",
+            ]);
+            if ($orderType == 'service') {
+                $url = 'admin/all-execute-service-orders';
+            }
+            $url = 'admin/all-execute-product-orders';
+        } elseif ($permissionId == 5) {
+            $desc = json_encode([
+                'ar' => 'طلب جديد في مرحلة التخزين رقم الطلب هو ' . " ($orderId)",
+                'en' => "New order in stocking stage The order number is ($orderId)",
+            ]);
+            if ($orderType == 'service') {
+                $url = 'admin/all-storage-service-orders';
+            }
+            $url = 'admin/all-delivered-product-orders';
+        }
+
+        $permissions = Permission::with('admins')->find($permissionId);
+        foreach ($permissions->admins as $permission) {
+            AdminNotification::create([
+                'user_id' => $permission->id,
+                'desc' => $desc,
+                'url' => $url,
+            ]);
+        }
+    }
+
 }

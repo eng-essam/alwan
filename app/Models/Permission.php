@@ -20,8 +20,11 @@ class Permission extends Model
         $lang = App::getLocale();
         return json_decode($this->desc)->$lang;
     }
-    public function users()
+
+
+    public function admins()
     {
-        return $this->belongsToMany(User::class, 'user_permission')->withTimestamps();
+        return $this->belongsToMany(User::class, 'user_permission','permission_id')->withTimestamps();
     }
+
 }

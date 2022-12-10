@@ -1,4 +1,4 @@
-<?php //399a2f95487054624cfa3e04388a6df1
+<?php //7143b8fbe12a127223df920ca4f49925
 /** @noinspection all */
 
 namespace Illuminate\Contracts\View {
@@ -31,7 +31,7 @@ namespace Illuminate\Http {
      * @method bool hasValidSignature($absolute = true)
      * @method bool hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
      * @method array validate(array $rules, ...$params)
-     * @method array validateWithBag(string $errorBag, array $rules, ...$params)
+     * @method void validateWithBag(string $errorBag, array $rules, ...$params)
      */
     class Request {}
 }

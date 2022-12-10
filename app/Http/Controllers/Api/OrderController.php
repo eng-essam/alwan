@@ -92,7 +92,7 @@ class OrderController extends Controller
 
         $this->sendUserNotification($order->user_id, 4, $order->order_id);
         $this->sendUserNotification($order->user_id, 1, $order->order_id);
-
+        $this->sendAdminNotification(1, $order->order_id, 'service');
         return $this->requestSuccess(__('lang.request_under_review'));
     }
 

@@ -1,10 +1,11 @@
-<?php //9c578598ab96db0dd32af57d07dc9527
+<?php //d6cdfc412065dbe27270dcf474ba5e61
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
 
     use App\Models\Ad;
     use App\Models\Address;
+    use App\Models\AdminNotification;
     use App\Models\BuyProduct;
     use App\Models\BuyService;
     use App\Models\Cart;
@@ -209,6 +210,97 @@ namespace LaravelIdea\Helper\App\Models {
      * @method Address updateOrCreate(array $attributes, array $values = [])
      */
     class _IH_Address_QB extends _BaseBuilder {}
+    
+    /**
+     * @method AdminNotification|null getOrPut($key, $value)
+     * @method AdminNotification|$this shift(int $count = 1)
+     * @method AdminNotification|null firstOrFail(callable|string $key = null, $operator = null, $value = null)
+     * @method AdminNotification|$this pop(int $count = 1)
+     * @method AdminNotification|null pull($key, \Closure $default = null)
+     * @method AdminNotification|null last(callable $callback = null, \Closure $default = null)
+     * @method AdminNotification|$this random(callable|int|null $number = null)
+     * @method AdminNotification|null sole(callable|string $key = null, $operator = null, $value = null)
+     * @method AdminNotification|null get($key, \Closure $default = null)
+     * @method AdminNotification|null first(callable $callback = null, \Closure $default = null)
+     * @method AdminNotification|null firstWhere(callable|string $key, $operator = null, $value = null)
+     * @method AdminNotification|null find($key, $default = null)
+     * @method AdminNotification[] all()
+     * @property-read _IH_AdminNotification_CP $when
+     * @property-read _IH_AdminNotification_CP $average
+     * @property-read _IH_AdminNotification_CP $skipUntil
+     * @property-read _IH_AdminNotification_CP $sum
+     * @property-read _IH_AdminNotification_CP $max
+     * @property-read _IH_AdminNotification_CP $contains
+     * @property-read _IH_AdminNotification_CP $takeUntil
+     * @property-read _IH_AdminNotification_CP $unless
+     * @property-read _IH_AdminNotification_CP $first
+     * @property-read _IH_AdminNotification_CP $takeWhile
+     * @property-read _IH_AdminNotification_CP $doesntContain
+     * @property-read _IH_AdminNotification_CP $reject
+     * @property-read _IH_AdminNotification_CP $sortByDesc
+     * @property-read _IH_AdminNotification_CP $flatMap
+     * @property-read _IH_AdminNotification_CP $keyBy
+     * @property-read _IH_AdminNotification_CP $each
+     * @property-read _IH_AdminNotification_CP $avg
+     * @property-read _IH_AdminNotification_CP $until
+     * @property-read _IH_AdminNotification_CP $unique
+     * @property-read _IH_AdminNotification_CP $min
+     * @property-read _IH_AdminNotification_CP $sortBy
+     * @property-read _IH_AdminNotification_CP $skipWhile
+     * @property-read _IH_AdminNotification_CP $every
+     * @property-read _IH_AdminNotification_CP $partition
+     * @property-read _IH_AdminNotification_CP $map
+     * @property-read _IH_AdminNotification_CP $groupBy
+     * @property-read _IH_AdminNotification_CP $some
+     * @property-read _IH_AdminNotification_CP $filter
+     */
+    class _IH_AdminNotification_C extends _BaseCollection {
+        /**
+         * @param int $size
+         * @return AdminNotification[][]
+         */
+        public function chunk($size)
+        {
+            return [];
+        }
+    }
+    
+    /**
+     * @method _IH_AdminNotification_QB whereId($value)
+     * @method _IH_AdminNotification_QB whereUserId($value)
+     * @method _IH_AdminNotification_QB whereDesc($value)
+     * @method _IH_AdminNotification_QB whereUrl($value)
+     * @method _IH_AdminNotification_QB whereIsRead($value)
+     * @method _IH_AdminNotification_QB whereCreatedAt($value)
+     * @method _IH_AdminNotification_QB whereUpdatedAt($value)
+     * @method AdminNotification baseSole(array|string $columns = ['*'])
+     * @method AdminNotification create(array $attributes = [])
+     * @method _IH_AdminNotification_C|AdminNotification[] cursor()
+     * @method AdminNotification|null|_IH_AdminNotification_C|AdminNotification[] find($id, array|string $columns = ['*'])
+     * @method _IH_AdminNotification_C|AdminNotification[] findMany(array|Arrayable $ids, array|string $columns = ['*'])
+     * @method AdminNotification|_IH_AdminNotification_C|AdminNotification[] findOr($id, array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method AdminNotification|_IH_AdminNotification_C|AdminNotification[] findOrFail($id, array|string $columns = ['*'])
+     * @method AdminNotification|_IH_AdminNotification_C|AdminNotification[] findOrNew($id, array|string $columns = ['*'])
+     * @method AdminNotification first(array|string $columns = ['*'])
+     * @method AdminNotification firstOr(array|\Closure|string $columns = ['*'], \Closure $callback = null)
+     * @method AdminNotification firstOrCreate(array $attributes = [], array $values = [])
+     * @method AdminNotification firstOrFail(array|string $columns = ['*'])
+     * @method AdminNotification firstOrNew(array $attributes = [], array $values = [])
+     * @method AdminNotification firstWhere(array|\Closure|Expression|string $column, $operator = null, $value = null, string $boolean = 'and')
+     * @method AdminNotification forceCreate(array $attributes)
+     * @method _IH_AdminNotification_C|AdminNotification[] fromQuery(string $query, array $bindings = [])
+     * @method _IH_AdminNotification_C|AdminNotification[] get(array|string $columns = ['*'])
+     * @method AdminNotification getModel()
+     * @method AdminNotification[] getModels(array|string $columns = ['*'])
+     * @method _IH_AdminNotification_C|AdminNotification[] hydrate(array $items)
+     * @method AdminNotification make(array $attributes = [])
+     * @method AdminNotification newModelInstance(array $attributes = [])
+     * @method LengthAwarePaginator|AdminNotification[]|_IH_AdminNotification_C paginate(\Closure|int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method Paginator|AdminNotification[]|_IH_AdminNotification_C simplePaginate(int|null $perPage = null, array|string $columns = ['*'], string $pageName = 'page', int|null $page = null)
+     * @method AdminNotification sole(array|string $columns = ['*'])
+     * @method AdminNotification updateOrCreate(array $attributes, array $values = [])
+     */
+    class _IH_AdminNotification_QB extends _BaseBuilder {}
     
     /**
      * @method BuyProduct|null getOrPut($key, $value)

@@ -192,5 +192,6 @@ return [
     'change_image' => 'Change image',
     'old_password' => 'Current password',
     'new_password' => 'New password',
-
+    'notifications' => 'Notifications',
+    'read_all' => 'Read all',
 ];

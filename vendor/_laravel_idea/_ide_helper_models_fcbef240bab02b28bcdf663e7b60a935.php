@@ -1,4 +1,4 @@
-<?php //3f289910b0a36e0005ec46be90f3a2d1
+<?php //5d19e2231dc3e745c3f29be598774169
 /** @noinspection all */
 
 namespace App\Models {
@@ -23,6 +23,8 @@ namespace App\Models {
     use Laravel\Sanctum\PersonalAccessToken;
     use LaravelIdea\Helper\App\Models\_IH_Address_C;
     use LaravelIdea\Helper\App\Models\_IH_Address_QB;
+    use LaravelIdea\Helper\App\Models\_IH_AdminNotification_C;
+    use LaravelIdea\Helper\App\Models\_IH_AdminNotification_QB;
     use LaravelIdea\Helper\App\Models\_IH_Ad_C;
     use LaravelIdea\Helper\App\Models\_IH_Ad_QB;
     use LaravelIdea\Helper\App\Models\_IH_BuyProduct_C;
@@ -110,6 +112,30 @@ namespace App\Models {
      * @mixin _IH_Address_QB
      */
     class Address extends Model {}
+    
+    /**
+     * @property int $id
+     * @property int $user_id
+     * @property string $desc
+     * @property string $url
+     * @property bool $is_read
+     * @property Carbon|null $created_at
+     * @property Carbon|null $updated_at
+     * @property User $admin
+     * @method BelongsTo|_IH_User_QB admin()
+     * @method static _IH_AdminNotification_QB onWriteConnection()
+     * @method _IH_AdminNotification_QB newQuery()
+     * @method static _IH_AdminNotification_QB on(null|string $connection = null)
+     * @method static _IH_AdminNotification_QB query()
+     * @method static _IH_AdminNotification_QB with(array|string $relations)
+     * @method _IH_AdminNotification_QB newModelQuery()
+     * @method false|int increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method static _IH_AdminNotification_C|AdminNotification[] all()
+     * @ownLinks user_id,\App\Models\User,id
+     * @mixin _IH_AdminNotification_QB
+     */
+    class AdminNotification extends Model {}
     
     /**
      * @property int $id
@@ -368,9 +394,9 @@ namespace App\Models {
      * @property string $desc
      * @property Carbon|null $created_at
      * @property Carbon|null $updated_at
-     * @property _IH_User_C|User[] $users
-     * @property-read int $users_count
-     * @method BelongsToMany|_IH_User_QB users()
+     * @property _IH_User_C|User[] $admins
+     * @property-read int $admins_count
+     * @method BelongsToMany|_IH_User_QB admins()
      * @method static _IH_Permission_QB onWriteConnection()
      * @method _IH_Permission_QB newQuery()
      * @method static _IH_Permission_QB on(null|string $connection = null)
@@ -533,6 +559,9 @@ namespace App\Models {
      * @property _IH_Address_C|Address[] $addresses
      * @property-read int $addresses_count
      * @method HasMany|_IH_Address_QB addresses()
+     * @property _IH_AdminNotification_C|AdminNotification[] $adminNotifications
+     * @property-read int $admin_notifications_count
+     * @method HasMany|_IH_AdminNotification_QB adminNotifications()
      * @property _IH_Ad_C|Ad[] $ads
      * @property-read int $ads_count
      * @method HasMany|_IH_Ad_QB ads()
@@ -583,7 +612,7 @@ namespace App\Models {
      * @method false|int decrement(string $column, float|int $amount = 1, array $extra = [])
      * @method static _IH_User_C|User[] all()
      * @ownLinks role_id,\App\Models\Role,id|company_branch_id,\App\Models\Company_branch,id
-     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id|id,\App\Models\Favorite,user_id|id,\App\Models\Cart,user_id|id,\App\Models\BuyProduct,user_id|id,\App\Models\BuyService,user_id
+     * @foreignLinks id,\App\Models\Notification,user_id|id,\App\Models\Address,user_id|id,\App\Models\Favorite,user_id|id,\App\Models\Cart,user_id|id,\App\Models\BuyProduct,user_id|id,\App\Models\BuyService,user_id|id,\App\Models\AdminNotification,user_id
      * @mixin _IH_User_QB
      * @method static UserFactory factory(array|callable|int|null $count = null, array|callable $state = [])
      */

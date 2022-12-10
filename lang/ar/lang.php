@@ -190,5 +190,7 @@ return [
     'change_image' => 'تغيير الصوره',
     'old_password' => 'كلمة السر الحالية',
     'new_password' => 'كلمة السر الجديدة',
+    'notifications' => 'الاشعارات',
+    'read_all' => 'قراءة الكل',
 
 ];

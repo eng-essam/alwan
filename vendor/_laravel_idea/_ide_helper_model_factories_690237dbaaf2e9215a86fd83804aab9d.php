@@ -1,4 +1,4 @@
-<?php //50cfa7c74b1fa6fe9c9f70b9c45d4454
+<?php //21aacffb5ac43c8c35720ea87926757d
 /** @noinspection all */
 
 namespace Database\Factories {
@@ -52,6 +52,7 @@ namespace Database\Factories {
      * @method $this hasProductsCurrent(int $count = 1, $attributes = [])
      * @method $this hasProductsDone(int $count = 1, $attributes = [])
      * @method $this hasAddresses(int $count = 1, $attributes = [])
+     * @method $this hasAdminNotifications(int $count = 1, $attributes = [])
      * @method $this hasAds(int $count = 1, $attributes = [])
      * @method $this hasCartProducts(int $count = 1, $attributes = [])
      * @method $this forCompany($attributes = [])

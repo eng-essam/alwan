@@ -33,6 +33,7 @@ class BuyServiceController extends Controller
         ]);
         $this->sendUserNotification($order->user_id, 4, $order->order_id);
         $this->sendUserNotification($order->user_id, 5, $order->order_id);
+        $this->sendAdminNotification(3, $order->order_id, 'service');
 
 
         return $this->requestSuccess(__('lang.payment_successfully'));

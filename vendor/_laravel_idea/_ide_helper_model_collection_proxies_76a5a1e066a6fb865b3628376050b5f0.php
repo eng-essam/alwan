@@ -1,4 +1,4 @@
-<?php //52e56ebf0d8b04e24d8bce3fb3c36543
+<?php //f3fbc5c3c24f13636b59b7752212bef3
 /** @noinspection all */
 
 namespace LaravelIdea\Helper\App\Models {
@@ -44,6 +44,27 @@ namespace LaravelIdea\Helper\App\Models {
      * @method _IH_Address_C delete()
      */
     class _IH_Address_CP {}
+    
+    /**
+     * @property _IH_AdminNotification_C|mixed $id
+     * @property _IH_AdminNotification_C|mixed $user_id
+     * @property _IH_AdminNotification_C|mixed $desc
+     * @property _IH_AdminNotification_C|mixed $url
+     * @property _IH_AdminNotification_C|mixed $is_read
+     * @property _IH_AdminNotification_C|mixed $created_at
+     * @property _IH_AdminNotification_C|mixed $updated_at
+     * @property _IH_AdminNotification_C|mixed $admin
+     * @method _IH_AdminNotification_C desc($lang = null)
+     * @method _IH_AdminNotification_C refresh()
+     * @method _IH_AdminNotification_C update(array $attributes = [], array $options = [])
+     * @method _IH_AdminNotification_C save(array $options = [])
+     * @method _IH_AdminNotification_C increment(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_AdminNotification_C decrement(string $column, float|int $amount = 1, array $extra = [])
+     * @method _IH_AdminNotification_C touch(null|string $attribute = null)
+     * @method _IH_AdminNotification_C fill(array $attributes)
+     * @method _IH_AdminNotification_C delete()
+     */
+    class _IH_AdminNotification_CP {}
     
     /**
      * @property _IH_BuyProduct_C|mixed $id

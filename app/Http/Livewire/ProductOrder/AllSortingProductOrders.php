@@ -70,6 +70,7 @@ class AllSortingProductOrders extends Component
             'order_status_id' => 6,
         ]);
         $this->sendUserNotification($order->user_id, 6, $order->order_id);
+        $this->sendAdminNotification(4, $order->order_id);
         $this->dispatchBrowserEvent('closeOrderModal');
         toastr()->success(__('lang.done_successfully'));
         $this->cacheClear();
