@@ -17,7 +17,7 @@
         <div class="navbar-right">
             <ul class="navbar-right__menu">
 
-                @livewire('admin-notification.admin-notification')
+                @livewire('notification.notification')
                 <!-- ends: .nav-notification -->
                 <li class="nav-flag-select">
                     <div class="dropdown-custom">
