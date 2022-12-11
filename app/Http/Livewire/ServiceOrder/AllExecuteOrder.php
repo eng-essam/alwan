@@ -8,14 +8,16 @@ use App\Models\Service;
 use App\Traits\SendNotification;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Livewire\WithPagination;
 
 class AllExecuteOrder extends Component
 {
     use WithPagination;
     use SendNotification;
+    use WithFileUploads;
 
-    public $searchOrder, $orderId;
+    public $searchOrder, $orderId, $admin_file;
     protected $paginationTheme = 'bootstrap';
 
     public function render()
@@ -56,10 +58,22 @@ class AllExecuteOrder extends Component
         $this->orderId = $orderId;
     }
 
+    protected $rules = [
+        'admin_file' => 'required|file|max:102400',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submitSendStoreModal()
     {
+        $this->validate();
+        $admin_file = Storage::disk('uploads')->put('files', $this->admin_file);
         $order = BuyService::findOrFail($this->orderId);
         $order->update([
+            'admin_file' => $admin_file,
             'order_status_id' => 7,
         ]);
         $this->sendUserNotification($order->user_id, 7, $order->order_id);

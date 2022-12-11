@@ -5,6 +5,7 @@ namespace App\Http\Livewire\ProductOrder;
 use App\Models\BuyProduct;
 use App\Models\Company_branch;
 use App\Traits\SendNotification;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -40,6 +41,12 @@ class AllStorageProductOrders extends Component
     {
         $this->cacheClear();
         $this->orderId = $orderId;
+    }
+
+    public function downloadAdminFile($orderId)
+    {
+        $file = BuyProduct::findOrFail($orderId);
+        return Storage::disk('uploads')->download($file->admin_file);
     }
 
     public function submitSendReceiveModal()

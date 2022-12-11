@@ -196,4 +196,5 @@ return [
     'services_pending_customer_payment' => 'خدمات في انتظار دفع العميل',
     'Services_products_sorting_stage' => 'خدمات و منتاجات في مرحلة الفرز',
     'Services_products_storeing_stage' => 'خدمات و منتاجات في مرحلة التخزين',
+    'service_files' => 'ملفات الخدمة'
 ];

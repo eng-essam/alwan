@@ -169,17 +169,49 @@
                         </div>
                         <div class="modal-info-text">
                             <p>{{__('lang.send_store_desc')}}</p>
+                            <p>{{__('lang.execution_files_desc')}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" wire:click="cacheClear" class="btn btn-danger btn-outlined btn-sm"
-                            data-dismiss="modal">{{__('lang.no')}}</button>
-                    <button type="button" wire:click="submitSendStoreModal"
-                            class="btn btn-success btn-outlined btn-sm"
-                            data-dismiss="modal">{{__('lang.yes')}}
-                    </button>
-                </div>
+
+                <form wire:submit.prevent="submitSendStoreModal">
+                    <div class="modal-body">
+
+                        <div class="atbd-tag-wrap">
+                            <div class="atbd-upload">
+                                <div class="atbd-upload__button">
+                                    <a href="javascript:void(0)" class="btn btn-lg btn-outline-lighten btn-upload"
+                                       onclick="$('#upload-1').click()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="feather feather-upload">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="17 8 12 3 7 8"></polyline>
+                                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                                        </svg>
+                                        Click to Upload</a>
+                                    <input type="file" wire:model="admin_file" class="upload-one" id="upload-1">
+                                    @error('admin_file')
+                                    <small style="color: red">{{ $message }}.</small>
+                                    @enderror
+                                </div>
+                                <div class="atbd-upload__file">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" wire:click="cacheClear" class="btn btn-danger btn-outlined btn-sm"
+                                data-dismiss="modal">{{__('lang.cancel')}}
+                        </button>
+                        <button type="submit" class="btn btn-success btn-outlined btn-sm">{{__('lang.save')}}
+                        </button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>

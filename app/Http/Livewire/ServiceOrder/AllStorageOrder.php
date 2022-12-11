@@ -44,6 +44,12 @@ class AllStorageOrder extends Component
         $this->orderId = $orderId;
     }
 
+    public function downloadAdminFile($orderId)
+    {
+        $file = BuyService::findOrFail($orderId);
+        return Storage::disk('uploads')->download($file->admin_file);
+    }
+
     public function submitSendReceiveModal()
     {
         $order = BuyService::findOrFail($this->orderId);

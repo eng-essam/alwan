@@ -198,5 +198,5 @@ return [
     'services_pending_customer_payment' => 'Services pending customer payment',
     'Services_products_sorting_stage' => 'Services and products in the sorting stage',
     'Services_products_storeing_stage' => 'Services and products in the storeing stage',
-
+    'service_files' => 'Service files',
 ];

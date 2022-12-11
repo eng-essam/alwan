@@ -61,6 +61,11 @@
 
                                             <th>
                                                 <span style="font-weight: bold;font-size: 15px;"
+                                                      class="userDatatable-title">{{__('lang.service_files')}}</span>
+                                            </th>
+
+                                            <th>
+                                                <span style="font-weight: bold;font-size: 15px;"
                                                       class="userDatatable-title">{{__('lang.action')}}</span>
                                             </th>
 
@@ -107,7 +112,18 @@
                                                           class="atbd-tag tag-success tag-transparented">{{$order->status->status()}}</span>
                                                     </div>
                                                 </td>
-
+                                                <td>
+                                                    <div style="font-size: 15px" class="userDatatable-content">
+                                                        <a href=""
+                                                           wire:click.prevent="downloadAdminFile({{$order->id}})">
+                                                            <i style="color: #4347D9"
+                                                               class="fas fa-file-download fa-2x"></i>
+                                                            <p>
+                                                                <span class="atbd-tag tag-success tag-transparented">{{__('lang.download')}}</span>
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     <div style="width: max-content;margin: auto;" class=" d-flex">
                                                         <button style="margin: 3px"
