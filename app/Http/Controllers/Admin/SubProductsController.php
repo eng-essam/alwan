@@ -62,7 +62,7 @@ class SubProductsController extends Controller
         $QuantityPrice = new Collection();
         foreach ($request->quantity as $key => $oneQuantityPrice) {
             if ($request->quantity[$key] != null and $request->price[$key] != null) {
-                $QuantityPrice->push(['quantity' => $request->quantity[$key], 'price' => $request->price[$key]]);
+                $QuantityPrice->push(['quantity' => (int)$request->quantity[$key], 'price' => (float)$request->price[$key]]);
             }
         }
 

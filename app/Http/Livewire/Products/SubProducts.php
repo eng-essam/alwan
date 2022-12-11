@@ -118,7 +118,7 @@ class SubProducts extends Component
 
         $product_quantity_price = new Collection();
         for ($i = 1; $i <= $this->numberOfQuantityPrice; $i++) {
-            $product_quantity_price->push(['quantity' => $this->quantity[$i], 'price' => $this->price[$i]]);
+            $product_quantity_price->push(['quantity' => (int)$this->quantity[$i], 'price' => (float)$this->price[$i]]);
         }
 
         Product::create([
