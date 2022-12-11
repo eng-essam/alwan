@@ -157,32 +157,23 @@
                     </div>
                     <form wire:submit.prevent="submitSendExecutionModal">
                         <div class="modal-body">
+                            <div x-data="{ isUploading: false, progress: 0 }"
+                                 x-on:livewire-upload-start="isUploading = true"
+                                 x-on:livewire-upload-finish="isUploading = false"
+                                 x-on:livewire-upload-error="isUploading = false"
+                                 x-on:livewire-upload-progress="progress = $event.detail.progress">
+                                <!-- File Input -->
+                                <input type="file" wire:model="admin_file">
 
-                            <div class="atbd-tag-wrap">
-                                <div class="atbd-upload">
-                                    <div class="atbd-upload__button">
-                                        <a href="javascript:void(0)" class="btn btn-lg btn-outline-lighten btn-upload"
-                                           onclick="$('#upload-1').click()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                 stroke-linecap="round" stroke-linejoin="round"
-                                                 class="feather feather-upload">
-                                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                                <polyline points="17 8 12 3 7 8"></polyline>
-                                                <line x1="12" y1="3" x2="12" y2="15"></line>
-                                            </svg>
-                                            Click to Upload</a>
-                                        <input type="file" wire:model="admin_file" class="upload-one" id="upload-1">
-                                        @error('admin_file')
-                                        <small style="color: red">{{ $message }}.</small>
-                                        @enderror
-                                    </div>
-                                    <div class="atbd-upload__file">
-                                        <ul>
-                                        </ul>
-                                    </div>
+                                <!-- Progress Bar -->
+                                <div x-show="isUploading">
+                                    <progress max="100" x-bind:value="progress"></progress>
                                 </div>
                             </div>
+                            @error('admin_file')
+                            <small style="color: red">{{ $message }}.</small>
+                            @enderror
+                            <div wire:loading wire:target="admin_file">{{__('lang.uploading')}}</div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" wire:click="cacheClear" class="btn btn-danger btn-outlined btn-sm"

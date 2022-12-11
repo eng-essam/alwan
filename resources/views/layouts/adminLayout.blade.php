@@ -107,90 +107,93 @@
 <script src="{{asset('admin/assets/theme_assets/js/jvectormap-init.js')}}"></script>
 <script src="{{asset('admin/assets/theme_assets/js/leaflet-init.js')}}"></script>
 <script src="{{asset('admin/assets/theme_assets/js/main.js')}}"></script>
+
 @yield('script')
 @livewireScripts
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
 <script>
-        window.addEventListener('closeEditMainServiceModal', event => {
-          $('#editMainServiceModal').modal('hide');
-        });
-        window.addEventListener('closeAddMainServiceModal', event => {
-          $('#addMainServiceModal').modal('hide');
-        });
-        window.addEventListener('showAddMainServiceModal', event => {
-          $('#addMainServiceModal').modal('show');
-        });
-        window.addEventListener('showEditMainServiceModal', event => {
-          $('#editMainServiceModal').modal('show');
-        });
+    window.addEventListener('closeEditMainServiceModal', event => {
+        $('#editMainServiceModal').modal('hide');
+    });
+    window.addEventListener('closeAddMainServiceModal', event => {
+        $('#addMainServiceModal').modal('hide');
+    });
+    window.addEventListener('showAddMainServiceModal', event => {
+        $('#addMainServiceModal').modal('show');
+    });
+    window.addEventListener('showEditMainServiceModal', event => {
+        $('#editMainServiceModal').modal('show');
+    });
 
-        window.addEventListener('closeAddProductModal', event => {
-          $('#addProductModal').modal('hide');
-        });
-        window.addEventListener('closeAddServiceModal', event => {
-          $('#addServiceModal').modal('hide');
-        });
-        window.addEventListener('closeEditServiceModal', event => {
-          $('#editServiceModal').modal('hide');
-        });
+    window.addEventListener('closeAddProductModal', event => {
+        $('#addProductModal').modal('hide');
+    });
+    window.addEventListener('closeAddServiceModal', event => {
+        $('#addServiceModal').modal('hide');
+    });
+    window.addEventListener('closeEditServiceModal', event => {
+        $('#editServiceModal').modal('hide');
+    });
 
 
-        window.addEventListener('closeOrderModal', event => {
-          $('#acceptOrderModal').modal('hide');
-        });
-        window.addEventListener('closeOrderModal', event => {
-          $('#refusalOrderModal').modal('hide');
-        });
+    window.addEventListener('closeOrderModal', event => {
+        $('#acceptOrderModal').modal('hide');
+    });
+    window.addEventListener('closeOrderModal', event => {
+        $('#refusalOrderModal').modal('hide');
+    });
 
-        window.addEventListener('closeOrderModal', event => {
-          $('#paymentConfirmationModal').modal('hide');
-        });
-        window.addEventListener('closeOrderModal', event => {
-          $('#deleteOrderModal').modal('hide');
-        });
+    window.addEventListener('closeOrderModal', event => {
+        $('#paymentConfirmationModal').modal('hide');
+    });
+    window.addEventListener('closeOrderModal', event => {
+        $('#deleteOrderModal').modal('hide');
+    });
 
-        window.addEventListener('closeOrderModal', event => {
-          $('#submitSendExecutionModal').modal('hide');
-        });
+    window.addEventListener('closeOrderModal', event => {
+        $('#submitSendExecutionModal').modal('hide');
+    });
 
-        window.addEventListener('closeOrderModal', event => {
-          $('#sendStoreModal').modal('hide');
-        });
+    window.addEventListener('closeOrderModal', event => {
+        $('#sendStoreModal').modal('hide');
+    });
 
-        window.addEventListener('closeAddCompany', event => {
-          $('#addCompanyModal').modal('hide');
-        });
-        window.addEventListener('closeEditCompany', event => {
-          $('#editCompanyModal').modal('hide');
-        });
-        window.addEventListener('closeDeleteCompany', event => {
-          $('#deleteCompanyModal').modal('hide');
-        });
+    window.addEventListener('closeAddCompany', event => {
+        $('#addCompanyModal').modal('hide');
+    });
+    window.addEventListener('closeEditCompany', event => {
+        $('#editCompanyModal').modal('hide');
+    });
+    window.addEventListener('closeDeleteCompany', event => {
+        $('#deleteCompanyModal').modal('hide');
+    });
 
-        window.addEventListener('closeAddCoupon', event => {
-          $('#addCouponModal').modal('hide');
-        });
-        window.addEventListener('closeEditCoupon', event => {
-          $('#editCouponModal').modal('hide');
-        });
-        window.addEventListener('closeDeleteCoupon', event => {
-          $('#deleteCouponModal').modal('hide');
-        });
+    window.addEventListener('closeAddCoupon', event => {
+        $('#addCouponModal').modal('hide');
+    });
+    window.addEventListener('closeEditCoupon', event => {
+        $('#editCouponModal').modal('hide');
+    });
+    window.addEventListener('closeDeleteCoupon', event => {
+        $('#deleteCouponModal').modal('hide');
+    });
 
-        window.addEventListener('closeProfile', event => {
-          $('#editName').modal('hide');
-        });
-        window.addEventListener('closeProfile', event => {
-          $('#editEmail').modal('hide');
-        });
-        window.addEventListener('closeProfile', event => {
-          $('#editPhone').modal('hide');
-        });
-        window.addEventListener('closeProfile', event => {
-          $('#editImg').modal('hide');
-        });
-        window.addEventListener('closeProfile', event => {
-          $('#editPassword').modal('hide');
-        });
+    window.addEventListener('closeProfile', event => {
+        $('#editName').modal('hide');
+    });
+    window.addEventListener('closeProfile', event => {
+        $('#editEmail').modal('hide');
+    });
+    window.addEventListener('closeProfile', event => {
+        $('#editPhone').modal('hide');
+    });
+    window.addEventListener('closeProfile', event => {
+        $('#editImg').modal('hide');
+    });
+    window.addEventListener('closeProfile', event => {
+        $('#editPassword').modal('hide');
+    });
 
 </script>
 </body>
