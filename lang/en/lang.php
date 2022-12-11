@@ -156,6 +156,7 @@ return [
     'sorting_order' => 'Sorting order',
     'send_execution' => 'Send to execution',
     'sorting_files_desc' => 'Before sending the service to the execution admin, please send the sorting files for this service (it consists of one compressed file)!',
+    'execution_files_desc' => 'Before sending the service to the storage admin, please send the execution files for this service (it consists of one compressed file)!',
     'sorting_file' => 'Sorting file',
     'execute_services' => 'Execute services',
     'execute_products' => 'Execute products',
